@@ -11,7 +11,7 @@ const jsonld = [{
   itemListElement: ships.map((s,i)=>({'@type':'ListItem',position:i+1,name:s.data.name,url:new URL(`/ships/${s.data.line}/${s.data.id}/`,Astro.site).href}))
 }];
 ---
-<Base title="Cruise ship database | No Fluff Cruising" description="Specs, verdicts and the video that covers each ship. Built to be linked to." jsonld={jsonld}>
+<Base title={`Cruise Ship Database: ${ships.length} Ships, Specs and Full Ship Tours`} description={`Specs, verdicts and a full walkthrough ship tour for ${ships.length} cruise ships across ${lines.length} lines. Royal Caribbean, Carnival, Norwegian, MSC, Disney, Celebrity, Virgin Voyages, Princess and Margaritaville at Sea.`} jsonld={jsonld} breadcrumbs={[{name:"Ships", url:"/ships/"}]}>
   <div class="wrap">
     <span class="eyebrow">Reference</span>
     <h2 class="sec">The ship database</h2>

@@ -6,7 +6,7 @@ import Sponsor from '../components/Sponsor.astro';
 import WatchNext from '../components/WatchNext.astro';
 import VideosReferenced from '../components/VideosReferenced.astro';
 
-const { entry, kind = 'Review' } = Astro.props;
+const { entry, kind = 'Review', section = 'Guides', sectionUrl = '/guides/' } = Astro.props;
 const d = entry.data;
 // Hero: an explicit image wins, then the video's own thumbnail (real photography of a real
 // presenter, which is the point), then the channel's wake shot as a branded fallback.
@@ -45,7 +45,11 @@ const faq = (d.faq?.length) ? {
 } : null;
 const jsonld = [article, video, faq].filter(Boolean);
 ---
-<Base title={`${d.title} | No Fluff Cruising`} description={d.description} jsonld={jsonld} ogImage={hero}>
+<Base title={d.title} description={d.description} jsonld={jsonld} ogImage={hero}
+      breadcrumbs={[{name: section, url: sectionUrl}, {name: d.title, url: Astro.url.pathname}]}
+      published={new Date(d.publishDate).toISOString()}
+      modified={new Date(d.updatedDate ?? d.publishDate).toISOString()}
+      author={d.presenter}>
   <div class="wrap">
     <article>
       <span class="eyebrow">{[d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ') || kind}</span>

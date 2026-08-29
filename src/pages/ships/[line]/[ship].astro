@@ -12,6 +12,10 @@ const d = ship.data;
 const lines = await getCollection('lines');
 const lineName = lines.find((l) => l.data.id === d.line)?.data.name ?? d.line;
 const posts = (await getCollection('reviews')).filter((p) => (p.data.ships ?? []).includes(d.id));
+const relatedGuides = (await getCollection('guides')).filter((g) =>
+  (g.data.ships ?? []).includes(d.id) || (g.data.line && g.data.line === lineName)).slice(0, 4);
+const sisters = (await getCollection('ships')).filter((x) =>
+  x.data.line === d.line && x.data.shipClass === d.shipClass && x.data.id !== d.id).slice(0, 4);
 
 const jsonld: any[] = [{
   '@context':'https://schema.org','@type':'Product',
@@ -26,6 +30,18 @@ const jsonld: any[] = [{
     { '@type':'PropertyValue', name:'Ship class', value:d.shipClass },
   ].filter(Boolean),
 }];
+const faq = [
+  d.guests && { q: `How many guests does ${d.name} hold?`, a: `${d.name} carries ${d.guests.toLocaleString()} guests at double occupancy${d.maxGuests ? `, and up to ${d.maxGuests.toLocaleString()} when every berth is filled` : ''}.` },
+  d.inService && { q: `When did ${d.name} enter service?`, a: `${d.name} entered service in ${d.inService}${d.shipClass ? ` and is a ${d.shipClass}-class ship` : ''}.` },
+  d.grossTonnage && { q: `How big is ${d.name}?`, a: `${d.name} measures ${d.grossTonnage.toLocaleString()} gross tons${d.decks ? ` across ${d.decks} decks` : ''}.` },
+  d.videoTour && { q: `Is there a full ship tour of ${d.name}?`, a: `Yes. ${d.videoTour.channel} filmed a full walkthrough of ${d.name}, covering every deck. It is embedded on this page.` },
+].filter(Boolean);
+if (faq.length) {
+  jsonld.push({
+    '@context':'https://schema.org','@type':'FAQPage',
+    mainEntity: faq.map((f)=>({'@type':'Question', name:f.q, acceptedAnswer:{'@type':'Answer', text:f.a}})),
+  });
+}
 if (d.videoTour) {
   jsonld.push({
     '@context':'https://schema.org','@type':'VideoObject',
@@ -38,7 +54,8 @@ if (d.videoTour) {
   });
 }
 ---
-<Base title={`${d.name} — specs, verdict and what to watch for | No Fluff Cruising`} description={d.verdict ?? `${d.name} specs, verdict and full walkthrough ship tour.`} jsonld={jsonld} ogImage={d.videoTour ? `https://i.ytimg.com/vi/${d.videoTour.id}/maxresdefault.jpg` : undefined}>
+<Base title={`${d.name}: Specs, Ship Tour & Verdict`}
+      breadcrumbs={[{name:'Ships', url:'/ships/'}, {name:lineName, url:`/lines/${d.line}/`}, {name:d.name, url:Astro.url.pathname}]} description={d.verdict ?? `${d.name} specs, verdict and full walkthrough ship tour.`} jsonld={jsonld} ogImage={d.videoTour ? `https://i.ytimg.com/vi/${d.videoTour.id}/maxresdefault.jpg` : undefined}>
   <div class="wrap">
     <nav class="chips" aria-label="Breadcrumb"><a class="chip" href="/ships/">All ships</a><a class="chip" href={`/lines/${d.line}/`}>{lineName}</a></nav>
     <span class="eyebrow">{lineName} &middot; {d.shipClass} class &middot; {d.status}</span>
@@ -87,6 +104,34 @@ if (d.videoTour) {
         </ul>
       </section>
     )}
+    {faq.length > 0 && (
+      <section style="max-width:70ch;margin-top:32px">
+        <h2 style="font-family:var(--fu);font-size:19px;margin:0 0 12px">{d.name} FAQ</h2>
+        <dl style="margin:0">
+          {faq.map((f) => (
+            <div style="border-top:1px solid var(--line);padding:12px 0">
+              <dt style="font-family:var(--fu);font-weight:700;font-size:15.5px;margin:0 0 4px">{f.q}</dt>
+              <dd style="margin:0;color:var(--ink-2)">{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {sisters.length > 0 && (
+      <section class="reflist" style="max-width:70ch">
+        <h2>Sister ships in the {d.shipClass} class</h2>
+        <ul>{sisters.map((x) => <li><a href={`/ships/${x.data.line}/${x.data.id}/`}>{x.data.name}</a></li>)}</ul>
+      </section>
+    )}
+
+    {relatedGuides.length > 0 && (
+      <section class="reflist" style="max-width:70ch">
+        <h2>{lineName} guides</h2>
+        <ul>{relatedGuides.map((g) => <li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}</ul>
+      </section>
+    )}
+
     {d.updated && <p style="font-family:var(--fm);font-size:11px;color:var(--ink-3);margin-top:22px">Last checked {d.updated}</p>}
   </div>
 </Base>

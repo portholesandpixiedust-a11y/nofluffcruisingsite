@@ -1,19 +1,105 @@
 # No Fluff Cruising
 
-> Expert cruise tips, ship reviews and ship tours from Matthew and Marlee, a cruising family of three with more than 40 cruises across every major cruise line. No line loyalty, no filler.
+> Expert cruise tips, ship reviews and full walkthrough ship tours from Matthew and Marlee, a cruising family of three with more than 40 cruises across every major cruise line. No line loyalty, no filler.
 
-Every factual claim on this site traces to a named source with a date. Tier 1 sources are the cruise line's own published material (benefit grids, press releases, earnings releases). Tier 2 sources are established cruise-news outlets. Where a figure we previously used turns out to be stale, we say so on the page rather than quietly changing it. Pages carry the date they were last checked.
+## How this site sources its claims
 
-## Sections
-- [Ship reviews](https://nofluffcruising.com/watch/): written companions to each video, with the full sourcing behind every claim
-- [Guides](https://nofluffcruising.com/guides/): evergreen cruise guides, answer-first
-- [News](https://nofluffcruising.com/news/): cruise line announcements and itinerary changes
-- [Ship database](https://nofluffcruising.com/ships/): specs, verdicts and coverage for every ship we cover
-- [How we source](https://nofluffcruising.com/sources/): the editorial standard behind every page
+Every factual claim traces to a named source with a date. Tier 1 sources are the cruise line's own published material: benefit grids, press releases, earnings releases, SEC filings. Tier 2 sources are established cruise-news outlets. Where a figure we previously published turns out to be stale, we say so on the page rather than quietly changing it, and every page carries the date it was last checked. Sourcing blocks are published in full on each article, listing which outlet carries which claim.
 
-## Authors
-- [Matthew](https://nofluffcruising.com/matthew/)
-- [Marlee](https://nofluffcruising.com/marlee/)
+## Ship database
+
+39 ships across 9 cruise lines. Every ship page carries verified specifications, a plain-English verdict, an FAQ, and an embedded full walkthrough ship tour. Where a figure could not be verified against a named source it is omitted rather than estimated.
+
+### Royal Caribbean — https://nofluffcruising.com/lines/royal-caribbean/
+The biggest ships afloat, the Crown & Anchor loyalty ladder, and the private destinations that increasingly define the itinerary.
+- [Legend of the Seas](https://nofluffcruising.com/ships/royal-caribbean/legend-of-the-seas/): Icon class, 5,610 guests double occupancy, entered service 2026. Full ship tour available.
+- [Star of the Seas](https://nofluffcruising.com/ships/royal-caribbean/star-of-the-seas/): Icon class, 5,610 guests double occupancy, entered service 2025. Full ship tour available.
+- [Icon of the Seas](https://nofluffcruising.com/ships/royal-caribbean/icon-of-the-seas/): Icon class, 5,610 guests double occupancy, entered service 2024. Full ship tour available.
+- [Utopia of the Seas](https://nofluffcruising.com/ships/royal-caribbean/utopia-of-the-seas/): Oasis class, 5,668 guests double occupancy, entered service 2024. Full ship tour available.
+- [Wonder of the Seas](https://nofluffcruising.com/ships/royal-caribbean/wonder-of-the-seas/): Oasis class, 5,734 guests double occupancy, entered service 2022. Full ship tour available.
+- [Symphony of the Seas](https://nofluffcruising.com/ships/royal-caribbean/symphony-of-the-seas/): Oasis class, 5,518 guests double occupancy, 228,081 GT, entered service 2018. Full ship tour available.
+- [Harmony of the Seas](https://nofluffcruising.com/ships/royal-caribbean/harmony-of-the-seas/): Oasis class, 5,479 guests double occupancy, entered service 2016. Full ship tour available.
+- [Freedom of the Seas](https://nofluffcruising.com/ships/royal-caribbean/freedom-of-the-seas/): Freedom class, 3,934 guests double occupancy, entered service 2006. Full ship tour available.
+
+### Princess Cruises — https://nofluffcruising.com/lines/princess/
+Mid-size ships, longer itineraries and a quieter onboard feel than the mega-ship lines. Strong on Alaska and repositioning sailings.
+- [Emerald Princess](https://nofluffcruising.com/ships/princess/emerald-princess/): Crown class, 3,114 guests double occupancy, 113,561 GT, entered service 2007. Full ship tour available.
+
+### MSC Cruises — https://nofluffcruising.com/lines/msc/
+European operator with aggressive pricing and a ship-within-a-ship suite enclave. The value case is real if you read the fine print.
+- [MSC World America](https://nofluffcruising.com/ships/msc/msc-world-america/): World class, entered service 2025. Full ship tour available.
+- [MSC Poesia](https://nofluffcruising.com/ships/msc/msc-poesia/): Musica class, 2,550 guests double occupancy, 92,627 GT, entered service 2008. Full ship tour available.
+
+### Margaritaville at Sea — https://nofluffcruising.com/lines/margaritaville-at-sea/
+Short Bahamas sailings out of Florida on a themed, refitted fleet. A cheap way to test whether cruising suits you.
+- [Margaritaville at Sea Islander](https://nofluffcruising.com/ships/margaritaville-at-sea/margaritaville-at-sea-islander/): Former Costa Atlantica class, 2,114 guests double occupancy, 85,619 GT, entered service 2024. Full ship tour available.
+
+### Disney Cruise Line — https://nofluffcruising.com/lines/disney/
+The most expensive mainstream line and the one families keep going back to. Rotational dining, no casino, and theming other lines cannot match.
+- [Disney Wish](https://nofluffcruising.com/ships/disney/disney-wish/): Wish class, 144,256 GT, entered service 2022. Full ship tour available.
+- [Disney Fantasy](https://nofluffcruising.com/ships/disney/disney-fantasy/): Dream class, 2,500 guests double occupancy, 130,000 GT, entered service 2012. Full ship tour available.
+- [Disney Dream](https://nofluffcruising.com/ships/disney/disney-dream/): Dream class, 129,690 GT, entered service 2011. Full ship tour available.
+
+### Virgin Voyages — https://nofluffcruising.com/lines/virgin-voyages/
+Adults only, tips and Wi-Fi included, and a restaurant lineup with no main dining room. The clearest break from how mainstream cruising usually works.
+- [Brilliant Lady](https://nofluffcruising.com/ships/virgin-voyages/brilliant-lady/): Lady class, 2,700 guests double occupancy, 110,000 GT, entered service 2025. Full ship tour available.
+- [Resilient Lady](https://nofluffcruising.com/ships/virgin-voyages/resilient-lady/): Lady class, 2,700 guests double occupancy, 110,000 GT, entered service 2023. Full ship tour available.
+- [Scarlet Lady](https://nofluffcruising.com/ships/virgin-voyages/scarlet-lady/): Lady class, 2,700 guests double occupancy, 110,000 GT, entered service 2021. Full ship tour available.
+
+### Celebrity Cruises — https://nofluffcruising.com/lines/celebrity/
+Premium end of the Royal Caribbean group. Edge-class ships, strong food, and a quieter crowd than the mega-ships.
+- [Celebrity Xcel](https://nofluffcruising.com/ships/celebrity/celebrity-xcel/): Edge class, 3,260 guests double occupancy, 141,400 GT, entered service 2025. Full ship tour available.
+- [Celebrity Beyond](https://nofluffcruising.com/ships/celebrity/celebrity-beyond/): Edge class, 3,260 guests double occupancy, 141,420 GT, entered service 2022. Full ship tour available.
+
+### Norwegian Cruise Line — https://nofluffcruising.com/lines/norwegian/
+Freestyle cruising, no fixed dining times, and the most cabin-category choice at the entry end of the market.
+- [Norwegian Aqua](https://nofluffcruising.com/ships/norwegian/norwegian-aqua/): Prima Plus class, entered service 2025. Full ship tour available.
+- [Norwegian Prima](https://nofluffcruising.com/ships/norwegian/norwegian-prima/): Prima class, entered service 2022. Full ship tour available.
+- [Norwegian Escape](https://nofluffcruising.com/ships/norwegian/norwegian-escape/): Breakaway Plus class, 4,200 guests double occupancy, 163,000 GT, entered service 2015. Full ship tour available.
+
+### Carnival Cruise Line — https://nofluffcruising.com/lines/carnival/
+The value play. Short itineraries, a lively crowd, and the widest US homeport coverage of any line.
+- [Carnival Firenze](https://nofluffcruising.com/ships/carnival/carnival-firenze/): Firenze class, entered service 2024. Full ship tour available.
+- [Carnival Jubilee](https://nofluffcruising.com/ships/carnival/carnival-jubilee/): Excel class, entered service 2023. Full ship tour available.
+- [Carnival Venezia](https://nofluffcruising.com/ships/carnival/carnival-venezia/): Venezia class, entered service 2023. Full ship tour available.
+- [Carnival Celebration](https://nofluffcruising.com/ships/carnival/carnival-celebration/): Excel class, entered service 2022. Full ship tour available.
+- [Carnival Luminosa](https://nofluffcruising.com/ships/carnival/carnival-luminosa/): Vista Spirit hybrid class, entered service 2022. Full ship tour available.
+- [Carnival Mardi Gras](https://nofluffcruising.com/ships/carnival/carnival-mardi-gras/): Excel class, entered service 2021. Full ship tour available.
+- [Carnival Panorama](https://nofluffcruising.com/ships/carnival/carnival-panorama/): Vista class, entered service 2019. Full ship tour available.
+- [Carnival Horizon](https://nofluffcruising.com/ships/carnival/carnival-horizon/): Vista class, entered service 2018. Full ship tour available.
+- [Carnival Vista](https://nofluffcruising.com/ships/carnival/carnival-vista/): Vista class, 133,500 GT, entered service 2016. Full ship tour available.
+- [Carnival Sunrise](https://nofluffcruising.com/ships/carnival/carnival-sunrise/): Destiny class, entered service 2014. Full ship tour available.
+- [Carnival Breeze](https://nofluffcruising.com/ships/carnival/carnival-breeze/): Dream class, entered service 2012. Full ship tour available.
+- [Carnival Magic](https://nofluffcruising.com/ships/carnival/carnival-magic/): Dream class, entered service 2011. Full ship tour available.
+- [Carnival Dream](https://nofluffcruising.com/ships/carnival/carnival-dream/): Dream class, 128,000 GT, entered service 2009. Full ship tour available.
+- [Carnival Liberty](https://nofluffcruising.com/ships/carnival/carnival-liberty/): Freedom class, entered service 2006. Full ship tour available.
+- [Carnival Spirit](https://nofluffcruising.com/ships/carnival/carnival-spirit/): Spirit class, entered service 2001. Full ship tour available.
+- [Carnival Paradise](https://nofluffcruising.com/ships/carnival/carnival-paradise/): Fantasy class, entered service 1998. Full ship tour available.
+
+## Guides
+- [Best and Worst Royal Caribbean Ships for Families in 2026](https://nofluffcruising.com/guides/best-worst-royal-caribbean-ships-for-families/)
+- [Icon Class vs Oasis Class: Which Is Right for You?](https://nofluffcruising.com/guides/icon-class-vs-oasis-class/)
+- [3 MORE Royal Caribbean Ships That Made Me Question Everything](https://nofluffcruising.com/guides/more-underrated-royal-caribbean-ships/)
+- [4 Royal Caribbean Casino Changes That Cost You More](https://nofluffcruising.com/guides/royal-caribbean-casino-changes/)
+- [6 Things Royal Caribbean's CEO Refuses to Change](https://nofluffcruising.com/guides/royal-caribbean-ceo-refuses-to-change/)
+- [Royal Caribbean Crown & Anchor Tiers: What Each One Is Worth in 2026](https://nofluffcruising.com/guides/royal-caribbean-crown-anchor-tiers/)
+- [Is the Royal Caribbean drink package worth it in 2026?](https://nofluffcruising.com/guides/royal-caribbean-drink-package-worth-it/)
+- [Royal Caribbean Raised Gratuities Again. Where Does the Money Go?](https://nofluffcruising.com/guides/royal-caribbean-gratuities-where-the-money-goes/)
+- [3 Royal Caribbean Ships That Made Me Question Everything](https://nofluffcruising.com/guides/underrated-royal-caribbean-ships/)
+
+## Ship reviews
+- [Celebrity Beyond Review: An Honest Reality Check](https://nofluffcruising.com/reviews/celebrity-beyond-review/)
+
+## Cruise news
+Ongoing coverage of itinerary changes, new ships, port developments and policy shifts: https://nofluffcruising.com/news/
+
+## Who writes this
+- Matthew — https://nofluffcruising.com/matthew/
+- Marlee — https://nofluffcruising.com/marlee/
+
+## Editorial standard
+https://nofluffcruising.com/sources/
 
 ## Elsewhere
 - YouTube: https://www.youtube.com/@nofluffcruising
+

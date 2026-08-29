@@ -6,7 +6,7 @@ const entries = (await getCollection('news')).sort((a,b)=> new Date(b.data.publi
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
 const heading = { watch: 'Ship reviews and video companions', guides: 'Cruise guides', news: 'Cruise news' }['news'];
 ---
-<Base title={heading + ' | No Fluff Cruising'} description={heading + ' from No Fluff Cruising. Every claim named and dated.'}>
+<Base title="Cruise News: Itinerary Changes, Ships & Policy" description="Cruise news that matters to people who are actually booked. Itinerary changes, new ships, policy shifts, each traced to a named source." breadcrumbs={[{name: heading, url: Astro.url.pathname}]}>
   <div class="wrap">
     <span class="eyebrow">news</span>
     <h2 class="sec">{heading}</h2>

@@ -13,7 +13,7 @@ const ships = (await getCollection('ships')).filter((s)=>s.data.line===d.id).sor
 const posts = (await getCollection('reviews')).filter((p)=>p.data.line===d.name);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
 ---
-<Base title={`${d.name} — ships, reviews and guides | No Fluff Cruising`} description={d.blurb}>
+<Base title={`${d.name} Ships: Specs, Reviews and Ship Tours`} description={`Every ${d.name} ship we cover, with specs, verdicts and a full walkthrough tour, plus our ${d.name} guides and reviews.`} breadcrumbs={[{name:"Ships", url:"/ships/"},{name:d.name, url:Astro.url.pathname}]}>
   <div class="wrap">
     <span class="eyebrow">Cruise line</span>
     <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 14px">{d.name}</h1>

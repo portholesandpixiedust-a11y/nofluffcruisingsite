@@ -22,7 +22,10 @@ const weekAgo = new Date(newest.getTime() - 7 * 864e5);
 const thisWeek = news.filter((n) => new Date(n.data.publishDate) >= weekAgo);
 const earlier = news.filter((n) => new Date(n.data.publishDate) < weekAgo);
 ---
-<Base title="No Fluff Cruising — expert cruise tips, ship reviews and ship tours" description="Cruise advice with the receipts attached. Every claim on this site names its source and its date.">
+<Base
+  title="No Fluff Cruising: Expert Cruise Tips & Ship Reviews"
+  ogTitle="Expert Cruise Tips, Ship Reviews, Ship Tours"
+  description="Cruise tips, ship reviews and full walkthrough ship tours across every major cruise line. Every claim names its source and its date. No line loyalty, no filler.">
   <div slot="hero" class="hero">
     <img src="/hero-wake.jpg" width="1600" height="330" alt="" fetchpriority="high" />
     <div class="cap"><div class="wrap">
