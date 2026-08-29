@@ -30,8 +30,8 @@ const articleBase = {
   watchNext: videoRef.optional(),
 };
 
-const posts = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
+const reviews = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/reviews' }),
   schema: z.object({
     ...articleBase,
     video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }),
@@ -89,4 +89,4 @@ const lines = defineCollection({
   }),
 });
 
-export const collections = { posts, guides, news, ships, lines };
+export const collections = { reviews, guides, news, ships, lines };

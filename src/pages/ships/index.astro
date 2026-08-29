@@ -16,6 +16,7 @@ const jsonld = [{
     <span class="eyebrow">Reference</span>
     <h2 class="sec">The ship database</h2>
     <div class="rule"></div>
+    <p style="max-width:70ch;font-size:16px;color:var(--ink-2);margin:0 0 18px">{ships.length} ships across {lines.length} cruise lines, every one with a full walkthrough tour attached.</p>
     <nav class="chips" aria-label="Cruise lines">
       <a class="chip" href="/ships/" aria-current="page">All lines</a>
       {lines.map((l)=> <a class="chip" href={`/lines/${l.data.id}/`}>{l.data.name}</a>)}

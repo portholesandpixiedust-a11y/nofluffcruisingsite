@@ -4,15 +4,27 @@ import Card from '../components/Card.astro';
 import { getCollection } from 'astro:content';
 
 const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
-const posts = (await getCollection('posts')).sort(byDate);
-const news = (await getCollection('news')).sort(byDate).slice(0, 5);
-const guides = (await getCollection('guides')).sort(byDate).slice(0, 3);
-const [lead, ...rest] = posts;
+const guides = (await getCollection('guides')).sort(byDate);
+const reviews = (await getCollection('reviews')).sort(byDate);
+const news = (await getCollection('news')).sort(byDate);
+const ships = await getCollection('ships');
+const lines = await getCollection('lines');
+
+// The three most recent guides always lead the homepage.
+const leadGuides = guides.slice(0, 3);
+const moreGuides = guides.slice(3, 7);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ');
+
+// "This week" = the seven days up to the newest story we hold.
+const newest = news.length ? new Date(news[0].data.publishDate) : new Date();
+const weekAgo = new Date(newest.getTime() - 7 * 864e5);
+const thisWeek = news.filter((n) => new Date(n.data.publishDate) >= weekAgo);
+const earlier = news.filter((n) => new Date(n.data.publishDate) < weekAgo);
 ---
 <Base title="No Fluff Cruising — expert cruise tips, ship reviews and ship tours" description="Cruise advice with the receipts attached. Every claim on this site names its source and its date.">
   <div slot="hero" class="hero">
-    <img src="/hero-wake.jpg" width="1600" height="380" alt="" fetchpriority="high" />
+    <img src="/hero-wake.jpg" width="1600" height="330" alt="" fetchpriority="high" />
     <div class="cap"><div class="wrap">
       <h1>Cruise advice with the receipts attached</h1>
       <p>No fluff. Just the info you need to cruise smarter.</p>
@@ -20,63 +32,82 @@ const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', mon
   </div>
 
   <div class="wrap">
-    <div class="grid g2">
-      <div>
-        <span class="eyebrow">Latest review</span>
-        <h2 class="sec">Every claim, sourced and dated</h2>
-        <div class="rule"></div>
-        {lead && (
-          <Card href={`/watch/${lead.id}/`} title={lead.data.title} kicker={[lead.data.line, ...lead.data.topics].filter(Boolean).join(' · ')}
-                description={lead.data.description} videoId={lead.data.video.id}
-                meta={`${lead.data.presenter} · ${fmt(lead.data.publishDate)} · ${lead.data.sources.length} sources`} />
-        )}
-        {rest.length > 0 && (
-          <div class="grid g2c" style="margin-top:18px">
-            {rest.map((p) => (
-              <Card href={`/watch/${p.id}/`} title={p.data.title} kicker={[p.data.line, ...p.data.topics].filter(Boolean).join(' · ')}
-                    description={p.data.description} videoId={p.data.video.id}
-                    meta={`${p.data.presenter} · ${fmt(p.data.publishDate)} · ${p.data.sources.length} sources`} />
-            ))}
-          </div>
-        )}
-
-        {guides.length > 0 && (
-          <div style="margin-top:34px">
-            <span class="eyebrow">Guides</span>
-            <h2 class="sec">Start here</h2>
-            <div class="rule"></div>
-            <div class="grid g2c">
-              {guides.map((g) => (
-                <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
-                      kicker={[g.data.line, ...g.data.topics].filter(Boolean).join(' · ')} meta={fmt(g.data.publishDate)} />
-              ))}
-            </div>
-          </div>
-        )}
+    <section>
+      <span class="eyebrow">Latest guides</span>
+      <h2 class="sec">Start here</h2>
+      <div class="rule"></div>
+      <div class="grid g3">
+        {leadGuides.map((g) => (
+          <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
+                kicker={kicker(g.data)} videoId={g.data.video?.id}
+                meta={`${g.data.presenter} · ${fmt(g.data.publishDate)}${g.data.sources.length ? ` · ${g.data.sources.length} sources` : ''}`} />
+        ))}
       </div>
+      {moreGuides.length > 0 && (
+        <p style="margin-top:16px"><a href="/guides/">All {guides.length} guides →</a></p>
+      )}
+    </section>
 
-      <div>
+    <div class="grid g2" style="margin-top:44px">
+      <section>
+        <span class="eyebrow">Ship reviews</span>
+        <h2 class="sec">Been aboard, here is the verdict</h2>
+        <div class="rule"></div>
+        <div class="grid g2c">
+          {reviews.map((r) => (
+            <Card href={`/reviews/${r.id}/`} title={r.data.title} description={r.data.description}
+                  kicker={kicker(r.data)} videoId={r.data.video?.id}
+                  meta={`${r.data.presenter} · ${fmt(r.data.publishDate)}`} />
+          ))}
+          <article class="card">
+            <div class="body">
+              <span class="kicker">Ship database</span>
+              <h3><a href="/ships/">{ships.length} ships, {lines.length} cruise lines</a></h3>
+              <p>Specs, verdicts and a full walkthrough tour on every ship we cover.</p>
+              <span class="meta">Updated 29 Aug 2026</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
         <div class="card">
-          <div style="background:var(--navy);color:#fff;font-family:var(--fd);text-transform:uppercase;font-size:15px;letter-spacing:.05em;padding:10px 16px">Cruise News</div>
+          <div style="background:var(--navy);color:#fff;font-family:var(--fd);text-transform:uppercase;font-size:15px;letter-spacing:.05em;padding:10px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+            <span>Cruise News</span>
+            <span style="font-family:var(--fu);font-size:10.5px;font-weight:600;letter-spacing:.1em;color:var(--onnavy-2)">{thisWeek.length} this week</span>
+          </div>
           <ul style="list-style:none;margin:0;padding:0">
-            {news.map((n) => (
+            {thisWeek.map((n) => (
               <li style="padding:13px 16px;border-bottom:1px solid var(--line)">
-                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)}</time>
+                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)} · {n.data.line}</time>
                 <a href={`/news/${n.id}/`} style="font-family:var(--fu);font-weight:600;font-size:14.5px;line-height:1.35;color:var(--ink);text-decoration:none;display:block">{n.data.title}</a>
               </li>
             ))}
+            {earlier.slice(0, 3).map((n) => (
+              <li style="padding:11px 16px;border-bottom:1px solid var(--line)">
+                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)} · {n.data.line}</time>
+                <a href={`/news/${n.id}/`} style="font-family:var(--fu);font-weight:600;font-size:14px;line-height:1.35;color:var(--ink-2);text-decoration:none;display:block">{n.data.title}</a>
+              </li>
+            ))}
           </ul>
+          <div style="padding:12px 16px"><a href="/news/">All cruise news →</a></div>
         </div>
-
-        <div style="margin-top:22px">
-          <span class="eyebrow">Reference</span>
-          <h2 class="sec">The ship database</h2>
-          <div class="rule"></div>
-          <p style="font-size:15.5px;color:var(--ink-2);margin:0 0 14px">Every ship we cover, with the specs, the verdict and the video that discusses it, in one place.</p>
-          <a class="btn" href="/ships/">Browse all ships</a>
-        </div>
-      </div>
+      </section>
     </div>
+
+    {moreGuides.length > 0 && (
+      <section style="margin-top:44px">
+        <span class="eyebrow">More guides</span>
+        <h2 class="sec">Worth reading next</h2>
+        <div class="rule"></div>
+        <div class="grid g3">
+          {moreGuides.map((g) => (
+            <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
+                  kicker={kicker(g.data)} videoId={g.data.video?.id} meta={fmt(g.data.publishDate)} />
+          ))}
+        </div>
+      </section>
+    )}
 
     <section class="nl">
       <div>

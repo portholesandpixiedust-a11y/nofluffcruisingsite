@@ -22,9 +22,9 @@
     "coveredIn": [],
     "updated": "2026-08-29",
     "videoTour": {
-      "id": "E_J_JgzsklU",
-      "title": "Icon of the Seas | Full Walkthrough Ship Tour | Brand New Biggest Ship",
-      "channel": "Cruises It"
+      "id": "wrTyq65mh7s",
+      "title": "Icon of the Seas Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
     }
   },
   {
@@ -98,9 +98,9 @@
     "coveredIn": [],
     "updated": "2026-08-29",
     "videoTour": {
-      "id": "TbpLnoAwXiQ",
-      "title": "Wonder of the Seas | Full Walkthrough Ship Tour & Review | All Public Areas",
-      "channel": "Cruises It"
+      "id": "COWPZI4Pp3I",
+      "title": "Wonder of the Seas Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
     }
   },
   {
@@ -124,9 +124,9 @@
     "coveredIn": [],
     "updated": "2026-08-29",
     "videoTour": {
-      "id": "mcnp0QKFg3Y",
-      "title": "Utopia of the Seas | Full Walkthrough Ship Tour & Review | All Cabin Suites 4K",
-      "channel": "Cruises It"
+      "id": "hpz-9HNbGTM",
+      "title": "Utopia of The Seas Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
     }
   },
   {
@@ -259,10 +259,557 @@
     ],
     "coveredIn": [],
     "videoTour": {
-      "id": "2r8DdPcmSL8",
-      "title": "The Islander Full Walkthrough Ship Tour | Every Deck, Cabin & Hidden Gem",
-      "channel": "Cruises It"
+      "id": "lLzZtLjx25k",
+      "title": "Margaritaville at Sea Islander Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
     },
     "updated": "2026-08-29"
+  },
+  {
+    "id": "symphony-of-the-seas",
+    "name": "Symphony of the Seas",
+    "line": "royal-caribbean",
+    "shipClass": "Oasis",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "-IGY1f8iBBc",
+      "title": "Symphony of The Seas Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 5518,
+    "maxGuests": 6680,
+    "decks": 18,
+    "grossTonnage": 228081,
+    "inService": 2018
+  },
+  {
+    "id": "disney-wish",
+    "name": "Disney Wish",
+    "line": "disney",
+    "shipClass": "Wish",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "Ina5dPu8y4w",
+      "title": "Disney Wish Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "maxGuests": 4000,
+    "grossTonnage": 144256,
+    "inService": 2022
+  },
+  {
+    "id": "disney-fantasy",
+    "name": "Disney Fantasy",
+    "line": "disney",
+    "shipClass": "Dream",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "mkiO5fU2BMQ",
+      "title": "Disney Fantasy Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 2500,
+    "maxGuests": 4000,
+    "grossTonnage": 130000,
+    "inService": 2012
+  },
+  {
+    "id": "disney-dream",
+    "name": "Disney Dream",
+    "line": "disney",
+    "shipClass": "Dream",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "7JiHcV4Iaq0",
+      "title": "Disney Dream Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "maxGuests": 4000,
+    "grossTonnage": 129690,
+    "inService": 2011
+  },
+  {
+    "id": "scarlet-lady",
+    "name": "Scarlet Lady",
+    "line": "virgin-voyages",
+    "shipClass": "Lady",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "HuQT2ENcT1Q",
+      "title": "Scarlet Lady Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 2700,
+    "grossTonnage": 110000,
+    "inService": 2021
+  },
+  {
+    "id": "resilient-lady",
+    "name": "Resilient Lady",
+    "line": "virgin-voyages",
+    "shipClass": "Lady",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "9KKq1E9v9oY",
+      "title": "Resilient Lady Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 2700,
+    "grossTonnage": 110000,
+    "inService": 2023
+  },
+  {
+    "id": "brilliant-lady",
+    "name": "Brilliant Lady",
+    "line": "virgin-voyages",
+    "shipClass": "Lady",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "EIA0IpC1ZiE",
+      "title": "Brilliant Lady Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 2700,
+    "grossTonnage": 110000,
+    "inService": 2025
+  },
+  {
+    "id": "celebrity-beyond",
+    "name": "Celebrity Beyond",
+    "line": "celebrity",
+    "shipClass": "Edge",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "t8hltVUpoqA",
+      "title": "Celebrity Beyond Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 3260,
+    "grossTonnage": 141420,
+    "inService": 2022
+  },
+  {
+    "id": "celebrity-xcel",
+    "name": "Celebrity Xcel",
+    "line": "celebrity",
+    "shipClass": "Edge",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "QdLuw_36asA",
+      "title": "Celebrity XCEL Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 3260,
+    "grossTonnage": 141400,
+    "inService": 2025
+  },
+  {
+    "id": "norwegian-aqua",
+    "name": "Norwegian Aqua",
+    "line": "norwegian",
+    "shipClass": "Prima Plus",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "PX6gYvxg9hA",
+      "title": "Norwegian Aqua 2026 Ship Tour + MUST-KNOW Tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "inService": 2025
+  },
+  {
+    "id": "norwegian-escape",
+    "name": "Norwegian Escape",
+    "line": "norwegian",
+    "shipClass": "Breakaway Plus",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "OQUg_oiJlNI",
+      "title": "Norwegian Escape Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "guests": 4200,
+    "grossTonnage": 163000,
+    "inService": 2015
+  },
+  {
+    "id": "norwegian-prima",
+    "name": "Norwegian Prima",
+    "line": "norwegian",
+    "shipClass": "Prima",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "4SFAHkujk74",
+      "title": "Norwegian Prima Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "inService": 2022
+  },
+  {
+    "id": "msc-world-america",
+    "name": "MSC World America",
+    "line": "msc",
+    "shipClass": "World",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "P2GHnZZCmm8",
+      "title": "MSC World America Ship Tour - NEW for 2026 + MUST-KNOW tips!",
+      "channel": "No Fluff Cruising"
+    },
+    "updated": "2026-08-29",
+    "inService": 2025
+  },
+  {
+    "id": "carnival-mardi-gras",
+    "name": "Carnival Mardi Gras",
+    "line": "carnival",
+    "shipClass": "Excel",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "rTjz76EOn1k",
+      "title": "Carnival Mardi Gras | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2021
+  },
+  {
+    "id": "carnival-celebration",
+    "name": "Carnival Celebration",
+    "line": "carnival",
+    "shipClass": "Excel",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "Nonnl18-EmU",
+      "title": "Carnival Celebration | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2022
+  },
+  {
+    "id": "carnival-jubilee",
+    "name": "Carnival Jubilee",
+    "line": "carnival",
+    "shipClass": "Excel",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "Zo4GLPy73JE",
+      "title": "Carnival Jubilee | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2023
+  },
+  {
+    "id": "carnival-panorama",
+    "name": "Carnival Panorama",
+    "line": "carnival",
+    "shipClass": "Vista",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "RVdUULOv27c",
+      "title": "Carnival Panorama | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2019
+  },
+  {
+    "id": "carnival-vista",
+    "name": "Carnival Vista",
+    "line": "carnival",
+    "shipClass": "Vista",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "scrIoi6yq7Q",
+      "title": "Carnival Vista | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "grossTonnage": 133500,
+    "inService": 2016
+  },
+  {
+    "id": "carnival-horizon",
+    "name": "Carnival Horizon",
+    "line": "carnival",
+    "shipClass": "Vista",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "iKRfeTFgEh8",
+      "title": "Carnival Horizon | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2018
+  },
+  {
+    "id": "carnival-magic",
+    "name": "Carnival Magic",
+    "line": "carnival",
+    "shipClass": "Dream",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "gYxJJ7SDn7g",
+      "title": "Carnival Magic | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2011
+  },
+  {
+    "id": "carnival-breeze",
+    "name": "Carnival Breeze",
+    "line": "carnival",
+    "shipClass": "Dream",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "L1xTjhtUl4w",
+      "title": "Carnival Breeze | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2012
+  },
+  {
+    "id": "carnival-dream",
+    "name": "Carnival Dream",
+    "line": "carnival",
+    "shipClass": "Dream",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "sj5nTi8L-bU",
+      "title": "Carnival Dream | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "grossTonnage": 128000,
+    "inService": 2009
+  },
+  {
+    "id": "carnival-sunrise",
+    "name": "Carnival Sunrise",
+    "line": "carnival",
+    "shipClass": "Destiny",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "31TiImqs4Nw",
+      "title": "Carnival Sunrise | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2014
+  },
+  {
+    "id": "carnival-liberty",
+    "name": "Carnival Liberty",
+    "line": "carnival",
+    "shipClass": "Freedom",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "diT9w4sGTHI",
+      "title": "Carnival Liberty | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2006
+  },
+  {
+    "id": "carnival-venezia",
+    "name": "Carnival Venezia",
+    "line": "carnival",
+    "shipClass": "Venezia",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "7JLLI-KIoKA",
+      "title": "Carnival Venezia | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2023
+  },
+  {
+    "id": "carnival-firenze",
+    "name": "Carnival Firenze",
+    "line": "carnival",
+    "shipClass": "Firenze",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "M51M63KshaE",
+      "title": "Carnival Firenze | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2024
+  },
+  {
+    "id": "carnival-luminosa",
+    "name": "Carnival Luminosa",
+    "line": "carnival",
+    "shipClass": "Vista Spirit hybrid",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "fbYRyri1DgQ",
+      "title": "Carnival Luminosa | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2022
+  },
+  {
+    "id": "carnival-spirit",
+    "name": "Carnival Spirit",
+    "line": "carnival",
+    "shipClass": "Spirit",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "qvY6ZOjsYRk",
+      "title": "Carnival Spirit | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 2001
+  },
+  {
+    "id": "carnival-paradise",
+    "name": "Carnival Paradise",
+    "line": "carnival",
+    "shipClass": "Fantasy",
+    "status": "In service",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": {
+      "id": "dkeos1gMUYs",
+      "title": "Carnival Paradise | Full Walkthrough Cruise Ship Tour",
+      "channel": "Cruises It"
+    },
+    "updated": "2026-08-29",
+    "inService": 1998
   }
 ]

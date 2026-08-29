@@ -11,7 +11,7 @@ const { ship } = Astro.props;
 const d = ship.data;
 const lines = await getCollection('lines');
 const lineName = lines.find((l) => l.data.id === d.line)?.data.name ?? d.line;
-const posts = (await getCollection('posts')).filter((p) => (p.data.ships ?? []).includes(d.id));
+const posts = (await getCollection('reviews')).filter((p) => (p.data.ships ?? []).includes(d.id));
 
 const jsonld: any[] = [{
   '@context':'https://schema.org','@type':'Product',
@@ -65,7 +65,9 @@ if (d.videoTour) {
       <p class="tour-none">No full ship tour filmed for {d.name} yet. When one goes up on <a href="https://www.youtube.com/@nofluffcruising" rel="noopener">No Fluff Cruising</a> or <a href="https://www.youtube.com/@cruisesit" rel="noopener">Cruises It</a>, it lands here.</p>
     )}
 
-    {d.verdict && <div class="answer" style="max-width:70ch"><b>Our take</b>{d.verdict}</div>}
+    {d.verdict
+      ? <div class="answer" style="max-width:70ch"><b>Our take</b>{d.verdict}</div>
+      : <div class="answer" style="max-width:70ch"><b>Our take</b>Our full walkthrough of {d.name} is the video above. A written verdict for this ship is on the way.</div>}
 
     <div class="grid g2c" style="max-width:70ch">
       {d.goodAt.length > 0 && (
@@ -80,7 +82,7 @@ if (d.videoTour) {
       <section class="reflist" style="max-width:70ch">
         <h2>Covered in</h2>
         <ul>
-          {posts.map((p)=> <li><a href={`/watch/${p.id}/`}>{p.data.title}</a></li>)}
+          {posts.map((p)=> <li><a href={`/reviews/${p.id}/`}>{p.data.title}</a></li>)}
           {d.coveredIn.map((v)=> <li><a class="vlink" href={`https://www.youtube.com/watch?v=${v.id}`} rel="noopener">{v.title}</a></li>)}
         </ul>
       </section>

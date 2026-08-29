@@ -6,6 +6,9 @@ presenter: Matthew
 publishDate: 2026-08-27
 line: Royal Caribbean
 topics: [Drinks, Money]
+video:
+  id: MJNRU9Gs-r0
+  title: "Royal Caribbean's Drink Package Math Is Worse Than It Looks"
 faq:
   - q: "How much is the Royal Caribbean drink package in 2026?"
     a: "Roughly $57 to $120 per person per day, priced dynamically by ship and sail date. The fleet median sits near $84 a day, before the 18% gratuity charged on the package price."

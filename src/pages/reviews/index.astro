@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import { getCollection } from 'astro:content';
+const entries = (await getCollection('reviews')).sort((a,b)=> new Date(b.data.publishDate)-new Date(a.data.publishDate));
+const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
+const heading = 'Ship reviews';
+---
+<Base title={heading + ' | No Fluff Cruising'} description={heading + ' from No Fluff Cruising. Every claim named and dated.'}>
+  <div class="wrap">
+    <span class="eyebrow">Ship reviews</span>
+    <h2 class="sec">{heading}</h2>
+    <div class="rule"></div>
+    <div class="grid g3">
+      {entries.map((e) => (
+        <Card href={'/reviews/' + e.id + '/'} title={e.data.title} description={e.data.description}
+              kicker={[e.data.line, ...e.data.topics].filter(Boolean).join(' · ')}
+              videoId={e.data.video?.id} meta={e.data.presenter + ' · ' + fmt(e.data.publishDate)} />
+      ))}
+    </div>
+  </div>
+</Base>

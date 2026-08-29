@@ -5,7 +5,7 @@ const esc = (s = '') => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/
 export async function GET(context) {
   const site = context.site?.href ?? 'https://nofluffcruising.com/';
   const all = [];
-  for (const [coll, route] of [['posts', 'watch'], ['guides', 'guides'], ['news', 'news']]) {
+  for (const [coll, route] of [['reviews', 'reviews'], ['guides', 'guides'], ['news', 'news']]) {
     for (const e of await getCollection(coll)) all.push({ e, route });
   }
   all.sort((a, b) => new Date(b.e.data.publishDate) - new Date(a.e.data.publishDate));

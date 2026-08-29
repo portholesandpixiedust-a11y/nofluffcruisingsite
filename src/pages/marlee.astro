@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import { getCollection } from 'astro:content';
-const posts = (await getCollection('posts')).filter((p)=>p.data.presenter==='Marlee');
+const posts = (await getCollection('reviews')).filter((p)=>p.data.presenter==='Marlee');
 const jsonld = [{
   '@context':'https://schema.org','@type':'Person',
   name:'Marlee', jobTitle:'Cruise reviewer',
@@ -24,7 +24,7 @@ const jsonld = [{
     </div>
     {posts.length > 0 && (<>
       <h2 class="sec" style="margin-top:30px">Reviews by Marlee</h2><div class="rule"></div>
-      <div class="grid">{posts.map((p)=>(<Card href={'/watch/'+p.id+'/'} title={p.data.title} description={p.data.description} videoId={p.data.video.id} />))}</div>
+      <div class="grid">{posts.map((p)=>(<Card href={'/reviews/'+p.id+'/'} title={p.data.title} description={p.data.description} videoId={p.data.video.id} />))}</div>
     </>)}
   </article></div>
 </Base>
