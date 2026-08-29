@@ -33,7 +33,7 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:var(--orange-ink);text-underline-offset:2px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-radius:2px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
@@ -64,8 +64,9 @@ main{padding:34px 0 70px;display:block}
 .eyebrow{font-family:var(--fu);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-ink);margin:0 0 12px;display:block}
 h2.sec{font-family:var(--fd);font-size:clamp(21px,3vw,28px);text-transform:uppercase;line-height:1.05;margin:0 0 4px}
 .rule{height:3px;background:var(--orange);width:46px;margin:10px 0 20px}
-.grid{display:grid;gap:18px}
-@media(min-width:760px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1.35fr 1fr}.g2c{grid-template-columns:1fr 1fr}}
+.grid{display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+.grid>*{min-width:0}
+@media(min-width:760px){.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}.g2c{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
 .card .body{padding:15px 17px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
 .kicker{font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
@@ -99,7 +100,8 @@ article h1{font-family:var(--fd);font-size:clamp(29px,4.6vw,44px);line-height:1.
 .prose li{margin-bottom:6px}
 .prose blockquote{margin:18px 0;padding:2px 0 2px 18px;border-left:3px solid var(--teal);color:var(--ink-2);font-style:italic}
 .prose table{border-collapse:collapse;width:100%;font-family:var(--fu);font-size:14px}
-.prose .tablewrap,.scroller{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:0 0 18px}
+.tablewrap,.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:0 0 18px;max-width:100%}
+.tablewrap table{min-width:520px}
 table{border-collapse:collapse;width:100%;font-family:var(--fu);font-size:14px}
 th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line)}
 thead th{background:var(--navy);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
@@ -149,3 +151,20 @@ tbody tr:nth-child(even){background:var(--sunk)}
 footer.site{background:var(--navy);color:var(--onnavy-2);padding:30px 0;font-family:var(--fu);font-size:13px}
 footer.site .tag{font-family:var(--fd);text-transform:uppercase;color:#fff;font-size:17px;margin:0 0 8px}
 footer.site a{color:var(--onnavy);text-decoration:none}
+
+/* YouTube link in header */
+.yt{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--onnavy);font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px 6px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.22)}
+.yt:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
+.yt svg{flex:none;display:block}
+
+/* article hero image */
+.arthero{margin:0 0 22px;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:var(--sunk);position:relative}
+.arthero img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--sunk)}
+.arthero figcaption{font-family:var(--fm);font-size:11px;color:var(--ink-3);padding:7px 12px;background:var(--surface);border-top:1px solid var(--line)}
+
+/* ship video tour */
+.tour{border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:0 0 4px 4px;background:var(--surface);overflow:hidden;margin:0 0 24px;max-width:70ch}
+.tour .hd{padding:12px 16px 0}
+.tour .hd h2{font-family:var(--fu);font-size:17px;margin:0}
+.tour .hd p{font-family:var(--fm);font-size:11px;color:var(--ink-3);margin:4px 0 12px}
+.tour-none{border:1px dashed var(--line-2);border-radius:4px;padding:14px 16px;background:var(--sunk);font-size:15px;color:var(--ink-3);max-width:70ch;margin:0 0 24px}

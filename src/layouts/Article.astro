@@ -8,6 +8,12 @@ import VideosReferenced from '../components/VideosReferenced.astro';
 
 const { entry, kind = 'Review' } = Astro.props;
 const d = entry.data;
+// Hero: an explicit image wins, then the video's own thumbnail (real photography of a real
+// presenter, which is the point), then the channel's wake shot as a branded fallback.
+const hero = d.heroImage ?? (d.video ? `https://i.ytimg.com/vi/${d.video.id}/maxresdefault.jpg` : '/hero-wake.jpg');
+// maxresdefault does not exist for every upload; hqdefault always does.
+const heroFallback = d.video && !d.heroImage ? `https://i.ytimg.com/vi/${d.video.id}/hqdefault.jpg` : null;
+const heroCredit = d.heroCredit ?? (d.video && !d.heroImage ? `From the video: ${d.video.title}` : null);
 const fmt = (x) => x ? new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }) : undefined;
 
 const article = {
@@ -51,6 +57,13 @@ const jsonld = [article, video, faq].filter(Boolean);
           <span>No Fluff Cruising &middot; {fmt(d.publishDate)}{d.updatedDate ? ` · updated ${fmt(d.updatedDate)}` : ''}</span>
         </div>
       </div>
+
+      <figure class="arthero">
+        <img src={hero} width="1280" height="720" alt="" fetchpriority="high"
+             data-fallback={heroFallback}
+             onerror="if(this.dataset.fallback&&this.src!==this.dataset.fallback){this.src=this.dataset.fallback}" />
+        {heroCredit && <figcaption>{heroCredit}</figcaption>}
+      </figure>
 
       <div class="answer"><b>The short answer</b>{d.answer}</div>
 

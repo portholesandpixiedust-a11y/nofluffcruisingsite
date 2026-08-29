@@ -1,3 +1,6 @@
 [
-  { "id": "royal-caribbean", "name": "Royal Caribbean", "blurb": "The biggest ships afloat, the Crown & Anchor loyalty ladder, and the private destinations that increasingly define the itinerary.", "loyaltyProgram": "Crown & Anchor Society" }
+  { "id": "royal-caribbean", "name": "Royal Caribbean", "blurb": "The biggest ships afloat, the Crown & Anchor loyalty ladder, and the private destinations that increasingly define the itinerary.", "loyaltyProgram": "Crown & Anchor Society" },
+  { "id": "princess", "name": "Princess Cruises", "blurb": "Mid-size ships, longer itineraries and a quieter onboard feel than the mega-ship lines. Strong on Alaska and repositioning sailings.", "loyaltyProgram": "Captain's Circle" },
+  { "id": "msc", "name": "MSC Cruises", "blurb": "European operator with aggressive pricing and a ship-within-a-ship suite enclave. The value case is real if you read the fine print.", "loyaltyProgram": "MSC Voyagers Club" },
+  { "id": "margaritaville-at-sea", "name": "Margaritaville at Sea", "blurb": "Short Bahamas sailings out of Florida on a themed, refitted fleet. A cheap way to test whether cruising suits you.", "loyaltyProgram": "Parrot Points" }
 ]

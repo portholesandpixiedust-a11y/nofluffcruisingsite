@@ -14,6 +14,8 @@ const videoRef = z.object({ title: z.string(), id: z.string() });
 
 const articleBase = {
   title: z.string(),
+  heroImage: z.string().optional(),
+  heroCredit: z.string().optional(),
   description: z.string(),
   answer: z.string(),
   presenter: z.enum(['Matthew', 'Marlee']).default('Matthew'),
@@ -71,6 +73,8 @@ const ships = defineCollection({
     goodAt: z.array(z.string()).default([]),
     watchFor: z.array(z.string()).default([]),
     coveredIn: z.array(videoRef).default([]),
+    videoTour: z.object({ id: z.string(), title: z.string(), channel: z.string() }).nullable().default(null),
+    grossTonnage: z.number().optional(),
     updated: z.string().optional(),
   }),
 });

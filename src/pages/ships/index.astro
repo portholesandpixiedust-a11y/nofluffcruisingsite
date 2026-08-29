@@ -22,7 +22,7 @@ const jsonld = [{
     </nav>
     <div class="scroller">
       <table>
-        <thead><tr><th scope="col">Ship</th><th scope="col">Line</th><th scope="col">Class</th><th scope="col">Guests</th><th scope="col">In service</th></tr></thead>
+        <thead><tr><th scope="col">Ship</th><th scope="col">Line</th><th scope="col">Class</th><th scope="col">Guests</th><th scope="col">In service</th><th scope="col">Ship tour</th></tr></thead>
         <tbody>
           {ships.map((s)=>(
             <tr>
@@ -31,6 +31,9 @@ const jsonld = [{
               <td>{s.data.shipClass}</td>
               <td class="num">{s.data.guests?.toLocaleString()}</td>
               <td class="num">{s.data.inService}</td>
+              <td>{s.data.videoTour
+                ? <a class="vlink" href={`https://www.youtube.com/watch?v=${s.data.videoTour.id}`} rel="noopener">Watch tour</a>
+                : <span style="color:var(--ink-3)">Not filmed yet</span>}</td>
             </tr>
           ))}
         </tbody>
