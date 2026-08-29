@@ -45,7 +45,7 @@ const faq = (d.faq?.length) ? {
 } : null;
 const jsonld = [article, video, faq].filter(Boolean);
 ---
-<Base title={`${d.title} | No Fluff Cruising`} description={d.description} jsonld={jsonld}>
+<Base title={`${d.title} | No Fluff Cruising`} description={d.description} jsonld={jsonld} ogImage={hero}>
   <div class="wrap">
     <article>
       <span class="eyebrow">{[d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ') || kind}</span>

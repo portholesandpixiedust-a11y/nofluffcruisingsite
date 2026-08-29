@@ -3,9 +3,13 @@ import '../styles/brand.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const { title, description, jsonld = [], noindex = false } = Astro.props;
+const { title, description, jsonld = [], noindex = false, ogImage } = Astro.props;
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site).href;
+// Social preview. Article pages pass their own image; everything else gets the brand card.
+const share = ogImage
+  ? (ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href)
+  : new URL('/og-default.jpg', Astro.site).href;
 
 const org = {
   '@context': 'https://schema.org',
@@ -32,7 +36,15 @@ const graph = [org, ...jsonld];
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="No Fluff Cruising" />
+  <meta property="og:image" content={share} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="No Fluff Cruising — expert cruise tips, ship reviews and ship tours" />
+  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={share} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <link rel="icon" href="/avatar.png" />
   <link rel="alternate" type="application/rss+xml" title="No Fluff Cruising" href="/rss.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
