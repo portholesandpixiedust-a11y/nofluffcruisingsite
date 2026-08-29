@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const ships = (await getCollection('ships')).sort((a,b)=> (b.data.inService??0)-(a.data.inService??0));
+const lines = await getCollection('lines');
+const lineName = (id) => lines.find((l)=>l.data.id===id)?.data.name ?? id;
+
+const jsonld = [{
+  '@context':'https://schema.org','@type':'ItemList',
+  name:'Cruise ship database',
+  itemListElement: ships.map((s,i)=>({'@type':'ListItem',position:i+1,name:s.data.name,url:new URL(`/ships/${s.data.line}/${s.data.id}/`,Astro.site).href}))
+}];
+---
+<Base title="Cruise ship database | No Fluff Cruising" description="Specs, verdicts and the video that covers each ship. Built to be linked to." jsonld={jsonld}>
+  <div class="wrap">
+    <span class="eyebrow">Reference</span>
+    <h2 class="sec">The ship database</h2>
+    <div class="rule"></div>
+    <nav class="chips" aria-label="Cruise lines">
+      <a class="chip" href="/ships/" aria-current="page">All lines</a>
+      {lines.map((l)=> <a class="chip" href={`/lines/${l.data.id}/`}>{l.data.name}</a>)}
+    </nav>
+    <div class="scroller">
+      <table>
+        <thead><tr><th scope="col">Ship</th><th scope="col">Line</th><th scope="col">Class</th><th scope="col">Guests</th><th scope="col">In service</th></tr></thead>
+        <tbody>
+          {ships.map((s)=>(
+            <tr>
+              <td><a href={`/ships/${s.data.line}/${s.data.id}/`}>{s.data.name}</a></td>
+              <td>{lineName(s.data.line)}</td>
+              <td>{s.data.shipClass}</td>
+              <td class="num">{s.data.guests?.toLocaleString()}</td>
+              <td class="num">{s.data.inService}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:15px;color:var(--ink-3);max-width:70ch">Every ship page carries structured data, so an answer engine reads it as a thing with attributes rather than prose to guess at.</p>
+  </div>
+</Base>

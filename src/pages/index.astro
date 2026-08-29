@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
+
+const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
+const posts = (await getCollection('posts')).sort(byDate);
+const news = (await getCollection('news')).sort(byDate).slice(0, 5);
+const guides = (await getCollection('guides')).sort(byDate).slice(0, 3);
+const [lead, ...rest] = posts;
+const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+---
+<Base title="No Fluff Cruising — expert cruise tips, ship reviews and ship tours" description="Cruise advice with the receipts attached. Every claim on this site names its source and its date.">
+  <div slot="hero" class="hero">
+    <img src="/hero-wake.jpg" width="1600" height="380" alt="" fetchpriority="high" />
+    <div class="cap"><div class="wrap">
+      <h1>Cruise advice with the receipts attached</h1>
+      <p>No fluff. Just the info you need to cruise smarter.</p>
+    </div></div>
+  </div>
+
+  <div class="wrap">
+    <div class="grid g2">
+      <div>
+        <span class="eyebrow">Latest review</span>
+        <h2 class="sec">Every claim, sourced and dated</h2>
+        <div class="rule"></div>
+        {lead && (
+          <Card href={`/watch/${lead.id}/`} title={lead.data.title} kicker={[lead.data.line, ...lead.data.topics].filter(Boolean).join(' · ')}
+                description={lead.data.description} videoId={lead.data.video.id}
+                meta={`${lead.data.presenter} · ${fmt(lead.data.publishDate)} · ${lead.data.sources.length} sources`} />
+        )}
+        {rest.length > 0 && (
+          <div class="grid g2c" style="margin-top:18px">
+            {rest.map((p) => (
+              <Card href={`/watch/${p.id}/`} title={p.data.title} kicker={[p.data.line, ...p.data.topics].filter(Boolean).join(' · ')}
+                    description={p.data.description} videoId={p.data.video.id}
+                    meta={`${p.data.presenter} · ${fmt(p.data.publishDate)} · ${p.data.sources.length} sources`} />
+            ))}
+          </div>
+        )}
+
+        {guides.length > 0 && (
+          <div style="margin-top:34px">
+            <span class="eyebrow">Guides</span>
+            <h2 class="sec">Start here</h2>
+            <div class="rule"></div>
+            <div class="grid g2c">
+              {guides.map((g) => (
+                <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
+                      kicker={[g.data.line, ...g.data.topics].filter(Boolean).join(' · ')} meta={fmt(g.data.publishDate)} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div>
+        <div class="card">
+          <div style="background:var(--navy);color:#fff;font-family:var(--fd);text-transform:uppercase;font-size:15px;letter-spacing:.05em;padding:10px 16px">Cruise News</div>
+          <ul style="list-style:none;margin:0;padding:0">
+            {news.map((n) => (
+              <li style="padding:13px 16px;border-bottom:1px solid var(--line)">
+                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)}</time>
+                <a href={`/news/${n.id}/`} style="font-family:var(--fu);font-weight:600;font-size:14.5px;line-height:1.35;color:var(--ink);text-decoration:none;display:block">{n.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div style="margin-top:22px">
+          <span class="eyebrow">Reference</span>
+          <h2 class="sec">The ship database</h2>
+          <div class="rule"></div>
+          <p style="font-size:15.5px;color:var(--ink-2);margin:0 0 14px">Every ship we cover, with the specs, the verdict and the video that discusses it, in one place.</p>
+          <a class="btn" href="/ships/">Browse all ships</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="nl">
+      <div>
+        <h2>The first-timer checklist</h2>
+        <p>Twelve things to sort before you board, in one page. Free, and it beats a newsletter signup box.</p>
+      </div>
+      <form class="nlform" action="#" method="post">
+        <label class="skip" for="nl-email">Email address</label>
+        <input id="nl-email" name="email" type="email" placeholder="you@email.com" required />
+        <button class="btn" type="submit">Send it</button>
+      </form>
+    </section>
+  </div>
+</Base>

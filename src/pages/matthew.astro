@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('posts')).filter((p)=>p.data.presenter==='Matthew');
+const jsonld = [{
+  '@context':'https://schema.org','@type':'Person',
+  name:'Matthew', jobTitle:'Cruise reviewer',
+  worksFor:{'@type':'Organization',name:'No Fluff Cruising'},
+  url:new URL('/matthew/',Astro.site).href,
+  sameAs:['https://www.youtube.com/@nofluffcruising'],
+  knowsAbout:['Cruising','Royal Caribbean','Carnival','Norwegian Cruise Line','MSC Cruises','Disney Cruise Line','Princess Cruises','Virgin Voyages','Celebrity Cruises'],
+  description:'Presents expert cruise tips, ship reviews and ship tours on No Fluff Cruising. Part of a cruising family of three with more than 40 cruises across every major line.'
+}];
+---
+<Base title="Matthew — No Fluff Cruising" description="Matthew presents cruise tips, ship reviews and ship tours on No Fluff Cruising." jsonld={jsonld}>
+  <div class="wrap"><article>
+    <span class="eyebrow">Who writes this</span>
+    <h1>Matthew</h1>
+    <div class="byline"><img src="/avatar.png" width="42" height="42" alt="" /><div><strong>Matthew</strong><span>No Fluff Cruising</span></div></div>
+    <div class="prose">
+      <p>Matthew presents expert cruise tips, ship reviews and ship tours on No Fluff Cruising. Between the two presenters, more than 40 cruises across Royal Caribbean, Carnival, Norwegian, MSC, Disney, Princess, Virgin Voyages and Celebrity.</p>
+      <p>No line loyalty. Every claim in a video or on this site names its source and its date. Read <a href="/sources/">how we source</a>.</p>
+    </div>
+    {posts.length > 0 && (<>
+      <h2 class="sec" style="margin-top:30px">Reviews by Matthew</h2><div class="rule"></div>
+      <div class="grid">{posts.map((p)=>(<Card href={'/watch/'+p.id+'/'} title={p.data.title} description={p.data.description} videoId={p.data.video.id} />))}</div>
+    </>)}
+  </article></div>
+</Base>

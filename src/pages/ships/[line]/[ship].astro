@@ -1,0 +1,64 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const ships = await getCollection('ships');
+  return ships.map((s) => ({ params: { line: s.data.line, ship: s.data.id }, props: { ship: s } }));
+}
+const { ship } = Astro.props;
+const d = ship.data;
+const lines = await getCollection('lines');
+const lineName = lines.find((l) => l.data.id === d.line)?.data.name ?? d.line;
+const posts = (await getCollection('posts')).filter((p) => (p.data.ships ?? []).includes(d.id));
+
+const jsonld = [{
+  '@context':'https://schema.org','@type':'Product',
+  name: d.name, category: `${lineName} ${d.shipClass} class cruise ship`,
+  brand: { '@type':'Brand', name: lineName },
+  description: d.verdict,
+  additionalProperty: [
+    d.guests && { '@type':'PropertyValue', name:'Guests (double occupancy)', value:d.guests },
+    d.maxGuests && { '@type':'PropertyValue', name:'Maximum capacity', value:d.maxGuests },
+    d.decks && { '@type':'PropertyValue', name:'Decks', value:d.decks },
+    d.inService && { '@type':'PropertyValue', name:'Entered service', value:d.inService },
+    { '@type':'PropertyValue', name:'Ship class', value:d.shipClass },
+  ].filter(Boolean),
+}];
+---
+<Base title={`${d.name} — specs, verdict and what to watch for | No Fluff Cruising`} description={d.verdict ?? `${d.name} specs and verdict.`} jsonld={jsonld}>
+  <div class="wrap">
+    <nav class="chips" aria-label="Breadcrumb"><a class="chip" href="/ships/">All ships</a><a class="chip" href={`/lines/${d.line}/`}>{lineName}</a></nav>
+    <span class="eyebrow">{lineName} &middot; {d.shipClass} class &middot; {d.status}</span>
+    <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 20px">{d.name}</h1>
+
+    <dl class="specs">
+      {d.guests && <div class="spec"><dt>Guests, double</dt><dd class="num">{d.guests.toLocaleString()}</dd></div>}
+      {d.maxGuests && <div class="spec"><dt>Max capacity</dt><dd class="num">{d.maxGuests.toLocaleString()}</dd></div>}
+      {d.decks && <div class="spec"><dt>Decks</dt><dd class="num">{d.decks}</dd></div>}
+      {d.inService && <div class="spec"><dt>Entered service</dt><dd class="num">{d.inService}</dd></div>}
+    </dl>
+
+    {d.verdict && <div class="answer" style="max-width:70ch"><b>Our take</b>{d.verdict}</div>}
+
+    <div class="grid g2c" style="max-width:70ch">
+      {d.goodAt.length > 0 && (
+        <div><h2 style="font-family:var(--fu);font-size:17px;margin:0 0 8px">Good at</h2><ul>{d.goodAt.map((x)=><li>{x}</li>)}</ul></div>
+      )}
+      {d.watchFor.length > 0 && (
+        <div><h2 style="font-family:var(--fu);font-size:17px;margin:0 0 8px">Watch for</h2><ul>{d.watchFor.map((x)=><li>{x}</li>)}</ul></div>
+      )}
+    </div>
+
+    {(posts.length > 0 || d.coveredIn.length > 0) && (
+      <section class="reflist" style="max-width:70ch">
+        <h2>Covered in</h2>
+        <ul>
+          {posts.map((p)=> <li><a href={`/watch/${p.id}/`}>{p.data.title}</a></li>)}
+          {d.coveredIn.map((v)=> <li><a class="vlink" href={`https://www.youtube.com/watch?v=${v.id}`} rel="noopener">{v.title}</a></li>)}
+        </ul>
+      </section>
+    )}
+    {d.updated && <p style="font-family:var(--fm);font-size:11px;color:var(--ink-3);margin-top:22px">Last checked {d.updated}</p>}
+  </div>
+</Base>
