@@ -47,3 +47,41 @@ public/llms.txt         site map written for language models
 
 Navy `#0A2260`, safety orange `#EE5A28`, ocean `#0A5D81`.
 Anton for display, Source Serif 4 for body, Archivo for UI.
+
+## Automated cruise news
+
+`.github/workflows/cruise-news.yml` runs twice a day, at 11:00 and 23:00 UTC
+(7am and 7pm US Eastern). It calls Claude with the web search tool, which finds and
+verifies cruise news across all nine lines the site covers, writes posts in the voice
+defined in `VOICE.md`, and commits them to `src/content/news/`. Vercel deploys the push.
+
+### One-time setup
+
+1. Create an API key at console.anthropic.com and add a small amount of credit.
+2. In this repo: **Settings → Secrets and variables → Actions → New repository secret**.
+   Name it `ANTHROPIC_API_KEY` and paste the key. It never leaves GitHub.
+3. **Actions → Cruise news → Run workflow** to test it immediately.
+
+Optional: set a repository *variable* named `CLAUDE_MODEL` to override the default
+(`claude-sonnet-5`).
+
+### What stops a bad post going live
+
+- `scripts/news-bot.mjs` rejects any post missing a source, carrying an invalid tier,
+  using a line the site does not cover, duplicating an existing slug, or breaking the
+  voice rules (em dashes, banned adverbs).
+- The workflow then runs a full `astro build`. If the site does not build, nothing is
+  pushed and the run fails loudly.
+- On a quiet day the bot is told to return nothing. A cycle that publishes zero stories
+  is a correct outcome, not a failure.
+
+### Changing the voice
+
+Edit `VOICE.md`. It is passed to the model verbatim on every run, so the news follows it
+without any code change.
+
+### Testing the guardrails
+
+```bash
+node scripts/news-bot.test.mjs
+```
