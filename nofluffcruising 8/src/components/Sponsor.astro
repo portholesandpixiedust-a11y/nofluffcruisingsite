@@ -1,0 +1,11 @@
+---
+const { sponsor } = Astro.props;
+---
+{sponsor && (
+  <aside class="sponsor">
+    <span class="tag">Sponsored &middot; This post includes a paid promotion</span>
+    <h2>{sponsor.name}</h2>
+    <p style="font-size:15px;color:var(--ink-2);margin:0 0 11px">{sponsor.blurb}</p>
+    <a class="btn" href={sponsor.url} rel="sponsored noopener">Book with {sponsor.name}</a>
+  </aside>
+)}

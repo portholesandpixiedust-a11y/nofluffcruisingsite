@@ -1,0 +1,137 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import VideoFacade from '../../../components/VideoFacade.astro';
+
+export async function getStaticPaths() {
+  const ships = await getCollection('ships');
+  return ships.map((s) => ({ params: { line: s.data.line, ship: s.data.id }, props: { ship: s } }));
+}
+const { ship } = Astro.props;
+const d = ship.data;
+const lines = await getCollection('lines');
+const lineName = lines.find((l) => l.data.id === d.line)?.data.name ?? d.line;
+const posts = (await getCollection('reviews')).filter((p) => (p.data.ships ?? []).includes(d.id));
+const relatedGuides = (await getCollection('guides')).filter((g) =>
+  (g.data.ships ?? []).includes(d.id) || (g.data.line && g.data.line === lineName)).slice(0, 4);
+const sisters = (await getCollection('ships')).filter((x) =>
+  x.data.line === d.line && x.data.shipClass === d.shipClass && x.data.id !== d.id).slice(0, 4);
+
+const jsonld: any[] = [{
+  '@context':'https://schema.org','@type':'Product',
+  name: d.name, category: `${lineName} ${d.shipClass} class cruise ship`,
+  brand: { '@type':'Brand', name: lineName },
+  description: d.verdict,
+  additionalProperty: [
+    d.guests && { '@type':'PropertyValue', name:'Guests (double occupancy)', value:d.guests },
+    d.maxGuests && { '@type':'PropertyValue', name:'Maximum capacity', value:d.maxGuests },
+    d.decks && { '@type':'PropertyValue', name:'Decks', value:d.decks },
+    d.inService && { '@type':'PropertyValue', name:'Entered service', value:d.inService },
+    { '@type':'PropertyValue', name:'Ship class', value:d.shipClass },
+  ].filter(Boolean),
+}];
+const faq = [
+  d.guests && { q: `How many guests does ${d.name} hold?`, a: `${d.name} carries ${d.guests.toLocaleString()} guests at double occupancy${d.maxGuests ? `, and up to ${d.maxGuests.toLocaleString()} when every berth is filled` : ''}.` },
+  d.inService && { q: `When did ${d.name} enter service?`, a: `${d.name} entered service in ${d.inService}${d.shipClass ? ` and is a ${d.shipClass}-class ship` : ''}.` },
+  d.grossTonnage && { q: `How big is ${d.name}?`, a: `${d.name} measures ${d.grossTonnage.toLocaleString()} gross tons${d.decks ? ` across ${d.decks} decks` : ''}.` },
+  d.videoTour && { q: `Is there a full ship tour of ${d.name}?`, a: `Yes. ${d.videoTour.channel} filmed a full walkthrough of ${d.name}, covering every deck. It is embedded on this page.` },
+].filter(Boolean);
+if (faq.length) {
+  jsonld.push({
+    '@context':'https://schema.org','@type':'FAQPage',
+    mainEntity: faq.map((f)=>({'@type':'Question', name:f.q, acceptedAnswer:{'@type':'Answer', text:f.a}})),
+  });
+}
+if (d.videoTour) {
+  jsonld.push({
+    '@context':'https://schema.org','@type':'VideoObject',
+    name: d.videoTour.title,
+    description: `Full walkthrough ship tour of ${d.name}.`,
+    thumbnailUrl: `https://i.ytimg.com/vi/${d.videoTour.id}/maxresdefault.jpg`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${d.videoTour.id}`,
+    contentUrl: `https://www.youtube.com/watch?v=${d.videoTour.id}`,
+    uploadDate: new Date(d.updated ?? '2026-01-01').toISOString(),
+  });
+}
+---
+<Base title={`${d.name}: Specs, Ship Tour & Verdict`}
+      breadcrumbs={[{name:'Ships', url:'/ships/'}, {name:lineName, url:`/lines/${d.line}/`}, {name:d.name, url:Astro.url.pathname}]} description={d.verdict ?? `${d.name} specs, verdict and full walkthrough ship tour.`} jsonld={jsonld} ogImage={d.videoTour ? `https://i.ytimg.com/vi/${d.videoTour.id}/maxresdefault.jpg` : undefined}>
+  <div class="wrap">
+    <nav class="chips" aria-label="Breadcrumb"><a class="chip" href="/ships/">All ships</a><a class="chip" href={`/lines/${d.line}/`}>{lineName}</a></nav>
+    <span class="eyebrow">{lineName} &middot; {d.shipClass} class &middot; {d.status}</span>
+    <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 20px">{d.name}</h1>
+
+    <dl class="specs" style="max-width:70ch">
+      {d.guests && <div class="spec"><dt>Guests, double</dt><dd class="num">{d.guests.toLocaleString()}</dd></div>}
+      {d.maxGuests && <div class="spec"><dt>Max capacity</dt><dd class="num">{d.maxGuests.toLocaleString()}</dd></div>}
+      {d.decks && <div class="spec"><dt>Decks</dt><dd class="num">{d.decks}</dd></div>}
+      {d.grossTonnage && <div class="spec"><dt>Gross tonnage</dt><dd class="num">{d.grossTonnage.toLocaleString()}</dd></div>}
+      {d.inService && <div class="spec"><dt>Entered service</dt><dd class="num">{d.inService}</dd></div>}
+    </dl>
+
+    {d.videoTour ? (
+      <section class="tour">
+        <div class="hd">
+          <h2>Full ship tour</h2>
+          <p>{d.videoTour.channel} &middot; walk every deck before you book</p>
+        </div>
+        <VideoFacade id={d.videoTour.id} title={d.videoTour.title} />
+        <div class="hd" style="padding:12px 16px"><p style="margin:0"><a href={`https://www.youtube.com/watch?v=${d.videoTour.id}`} rel="noopener">{d.videoTour.title}</a></p></div>
+      </section>
+    ) : (
+      <p class="tour-none">No full ship tour filmed for {d.name} yet. When one goes up on <a href="https://www.youtube.com/@nofluffcruising" rel="noopener">No Fluff Cruising</a> or <a href="https://www.youtube.com/@cruisesit" rel="noopener">Cruises It</a>, it lands here.</p>
+    )}
+
+    {d.verdict
+      ? <div class="answer" style="max-width:70ch"><b>Our take</b>{d.verdict}</div>
+      : <div class="answer" style="max-width:70ch"><b>Our take</b>Our full walkthrough of {d.name} is the video above. A written verdict for this ship is on the way.</div>}
+
+    <div class="grid g2c" style="max-width:70ch">
+      {d.goodAt.length > 0 && (
+        <div><h2 style="font-family:var(--fu);font-size:17px;margin:0 0 8px">Good at</h2><ul>{d.goodAt.map((x)=><li>{x}</li>)}</ul></div>
+      )}
+      {d.watchFor.length > 0 && (
+        <div><h2 style="font-family:var(--fu);font-size:17px;margin:0 0 8px">Watch for</h2><ul>{d.watchFor.map((x)=><li>{x}</li>)}</ul></div>
+      )}
+    </div>
+
+    {(posts.length > 0 || d.coveredIn.length > 0) && (
+      <section class="reflist" style="max-width:70ch">
+        <h2>Covered in</h2>
+        <ul>
+          {posts.map((p)=> <li><a href={`/reviews/${p.id}/`}>{p.data.title}</a></li>)}
+          {d.coveredIn.map((v)=> <li><a class="vlink" href={`https://www.youtube.com/watch?v=${v.id}`} rel="noopener">{v.title}</a></li>)}
+        </ul>
+      </section>
+    )}
+    {faq.length > 0 && (
+      <section style="max-width:70ch;margin-top:32px">
+        <h2 style="font-family:var(--fu);font-size:19px;margin:0 0 12px">{d.name} FAQ</h2>
+        <dl style="margin:0">
+          {faq.map((f) => (
+            <div style="border-top:1px solid var(--line);padding:12px 0">
+              <dt style="font-family:var(--fu);font-weight:700;font-size:15.5px;margin:0 0 4px">{f.q}</dt>
+              <dd style="margin:0;color:var(--ink-2)">{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {sisters.length > 0 && (
+      <section class="reflist" style="max-width:70ch">
+        <h2>Sister ships in the {d.shipClass} class</h2>
+        <ul>{sisters.map((x) => <li><a href={`/ships/${x.data.line}/${x.data.id}/`}>{x.data.name}</a></li>)}</ul>
+      </section>
+    )}
+
+    {relatedGuides.length > 0 && (
+      <section class="reflist" style="max-width:70ch">
+        <h2>{lineName} guides</h2>
+        <ul>{relatedGuides.map((g) => <li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}</ul>
+      </section>
+    )}
+
+    {d.updated && <p style="font-family:var(--fm);font-size:11px;color:var(--ink-3);margin-top:22px">Last checked {d.updated}</p>}
+  </div>
+</Base>

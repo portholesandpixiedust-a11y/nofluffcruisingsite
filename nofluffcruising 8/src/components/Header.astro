@@ -1,0 +1,31 @@
+---
+const { path = '/' } = Astro.props;
+const nav = [
+  { href: '/reviews/', label: 'Ship Reviews' },
+  { href: '/guides/', label: 'Guides' },
+  { href: '/news/', label: 'News' },
+  { href: '/ships/', label: 'Ships' },
+  { href: '/sources/', label: 'How we source' },
+];
+---
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/">
+      <img src="/avatar.png" width="40" height="40" alt="" />
+      <span class="wm">No Fluff Cruising<small>Expert tips &middot; Ship reviews &middot; Ship tours</small></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      {nav.map((n) => (
+        <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>
+      ))}
+    </nav>
+    <a class="yt" href="https://www.youtube.com/@nofluffcruising" rel="noopener" title="Watch on YouTube">
+      <svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">
+        <rect width="28" height="20" rx="5" fill="#FF0000"></rect>
+        <path d="M11 5.6 L19 10 L11 14.4 Z" fill="#fff"></path>
+      </svg>
+      <span>Watch</span>
+    </a>
+    <a class="quote" href="https://yourcruisebestie.com/free-quote" rel="noopener">Free Quote</a>
+  </div>
+</header>

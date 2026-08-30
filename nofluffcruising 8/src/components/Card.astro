@@ -1,0 +1,16 @@
+---
+const { href, title, kicker, description, meta, videoId } = Astro.props;
+---
+<article class="card">
+  {videoId && (
+    <a href={href} aria-hidden="true" tabindex="-1">
+      <img src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`} width="480" height="360" loading="lazy" alt="" style="aspect-ratio:16/9;object-fit:cover;width:100%" />
+    </a>
+  )}
+  <div class="body">
+    {kicker && <span class="kicker">{kicker}</span>}
+    <h3><a href={href}>{title}</a></h3>
+    {description && <p>{description}</p>}
+    {meta && <span class="meta">{meta}</span>}
+  </div>
+</article>

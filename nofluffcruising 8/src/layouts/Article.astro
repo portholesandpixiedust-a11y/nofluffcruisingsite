@@ -1,0 +1,98 @@
+---
+import Base from './Base.astro';
+import VideoFacade from '../components/VideoFacade.astro';
+import Sources from '../components/Sources.astro';
+import Sponsor from '../components/Sponsor.astro';
+import WatchNext from '../components/WatchNext.astro';
+import VideosReferenced from '../components/VideosReferenced.astro';
+
+const { entry, kind = 'Review', section = 'Guides', sectionUrl = '/guides/' } = Astro.props;
+const d = entry.data;
+// Hero: an explicit image wins, then the video's own thumbnail (real photography of a real
+// presenter, which is the point), then the channel's wake shot as a branded fallback.
+const hero = d.heroImage ?? (d.video ? `https://i.ytimg.com/vi/${d.video.id}/maxresdefault.jpg` : '/hero-wake.jpg');
+// maxresdefault does not exist for every upload; hqdefault always does.
+const heroFallback = d.video && !d.heroImage ? `https://i.ytimg.com/vi/${d.video.id}/hqdefault.jpg` : null;
+const heroCredit = d.heroCredit ?? (d.video && !d.heroImage ? { text: `From the video: ${d.video.title}` } : null);
+const fmt = (x) => x ? new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }) : undefined;
+
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  datePublished: new Date(d.publishDate).toISOString(),
+  dateModified: new Date(d.updatedDate ?? d.publishDate).toISOString(),
+  author: { '@type': 'Person', name: d.presenter, url: new URL(`/${d.presenter.toLowerCase()}/`, Astro.site).href },
+  publisher: { '@type': 'Organization', name: 'No Fluff Cruising' },
+  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).href,
+  citation: (d.sources ?? []).map((s) => s.outlet),
+};
+const video = d.video ? {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: d.video.title,
+  description: d.description,
+  thumbnailUrl: `https://i.ytimg.com/vi/${d.video.id}/maxresdefault.jpg`,
+  uploadDate: new Date(d.publishDate).toISOString(),
+  embedUrl: `https://www.youtube-nocookie.com/embed/${d.video.id}`,
+  contentUrl: `https://www.youtube.com/watch?v=${d.video.id}`,
+} : null;
+const faq = (d.faq?.length) ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: d.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+} : null;
+const jsonld = [article, video, faq].filter(Boolean);
+---
+<Base title={d.title} description={d.description} jsonld={jsonld} ogImage={hero}
+      breadcrumbs={[{name: section, url: sectionUrl}, {name: d.title, url: Astro.url.pathname}]}
+      published={new Date(d.publishDate).toISOString()}
+      modified={new Date(d.updatedDate ?? d.publishDate).toISOString()}
+      author={d.presenter}>
+  <div class="wrap">
+    <article>
+      <span class="eyebrow">{[d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ') || kind}</span>
+      <h1>{d.title}</h1>
+      <div class="byline">
+        <img src="/avatar.png" width="42" height="42" alt="" />
+        <div>
+          <strong>{d.presenter}</strong>
+          <span>No Fluff Cruising &middot; {fmt(d.publishDate)}{d.updatedDate ? ` · updated ${fmt(d.updatedDate)}` : ''}</span>
+        </div>
+      </div>
+
+      <figure class="arthero">
+        <img src={hero} width="1280" height="720" alt="" fetchpriority="high"
+             data-fallback={heroFallback}
+             onerror="if(this.dataset.fallback&&this.src!==this.dataset.fallback){this.src=this.dataset.fallback}" />
+        {heroCredit && (
+          <figcaption>
+            {heroCredit.url ? <a href={heroCredit.url} rel="noopener nofollow">{heroCredit.text}</a> : heroCredit.text}
+            {heroCredit.license && (
+              <> · {heroCredit.licenseUrl
+                ? <a href={heroCredit.licenseUrl} rel="noopener nofollow license">{heroCredit.license}</a>
+                : heroCredit.license}</>
+            )}
+          </figcaption>
+        )}
+      </figure>
+
+      <div class="answer"><b>The short answer</b>{d.answer}</div>
+
+      {d.video && (
+        <div class="card" style="margin:0 0 24px">
+          <VideoFacade id={d.video.id} title={d.video.title} />
+          <div class="body"><span class="kicker">Watch the video</span><h3>{d.video.title}</h3></div>
+        </div>
+      )}
+
+      <div class="prose"><slot /></div>
+
+      <Sponsor sponsor={d.sponsor} />
+      <Sources sources={d.sources} updated={fmt(d.updatedDate ?? d.publishDate)} />
+      <VideosReferenced videos={d.videosReferenced} />
+      <WatchNext video={d.watchNext} />
+    </article>
+  </div>
+</Base>
