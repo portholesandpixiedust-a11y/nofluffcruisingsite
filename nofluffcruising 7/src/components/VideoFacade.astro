@@ -1,0 +1,26 @@
+---
+const { id, title } = Astro.props;
+---
+<div class="vwrap" data-video={id}>
+  <button class="vf" type="button" aria-label={`Play: ${title}`}>
+    <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} width="480" height="360" loading="lazy" alt="" />
+    <span class="play"><i></i></span>
+  </button>
+  <noscript>
+    <p><a href={`https://www.youtube.com/watch?v=${id}`} rel="noopener">Watch {title} on YouTube</a></p>
+  </noscript>
+</div>
+<script>
+  document.querySelectorAll('.vwrap').forEach((w) => {
+    const btn = w.querySelector('.vf');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${w.dataset.video}?autoplay=1`;
+      f.title = 'YouTube video player';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      w.replaceChildren(f);
+    });
+  });
+</script>

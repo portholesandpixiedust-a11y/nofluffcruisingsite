@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import { getCollection } from 'astro:content';
+const entries = (await getCollection('guides')).sort((a,b)=> new Date(b.data.publishDate)-new Date(a.data.publishDate));
+const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
+const heading = { watch: 'Ship reviews and video companions', guides: 'Cruise guides', news: 'Cruise news' }['guides'];
+---
+<Base title="Cruise Guides: Expert Tips You Can Check" description="Cruise guides that name their sources. Loyalty programmes, drink packages, gratuities, ship choice and more, checked against the cruise lines' own published material." breadcrumbs={[{name: heading, url: Astro.url.pathname}]}>
+  <div class="wrap">
+    <span class="eyebrow">guides</span>
+    <h2 class="sec">{heading}</h2>
+    <div class="rule"></div>
+    <div class="grid g3">
+      {entries.map((e) => (
+        <Card href={'/guides/' + e.id + '/'} title={e.data.title} description={e.data.description}
+              kicker={[e.data.line, ...e.data.topics].filter(Boolean).join(' · ')}
+              videoId={e.data.video?.id} meta={e.data.presenter + ' · ' + fmt(e.data.publishDate)} />
+      ))}
+    </div>
+  </div>
+</Base>

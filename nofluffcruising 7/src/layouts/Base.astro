@@ -1,0 +1,84 @@
+---
+import '../styles/brand.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { title, description, jsonld = [], noindex = false, ogImage, ogTitle, breadcrumbs = [], published, modified, author } = Astro.props;
+const path = Astro.url.pathname;
+// Google truncates titles near 60 characters. Append the brand only when the
+// keywords still survive; a cut-off brand name is worth less than a visible keyword.
+const pageTitle = title.includes('No Fluff Cruising')
+  ? title
+  : (title.length <= 44 ? `${title} | No Fluff Cruising` : title);
+const canonical = new URL(path, Astro.site).href;
+// Social preview. Article pages pass their own image; everything else gets the brand card.
+const share = ogImage
+  ? (ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href)
+  : new URL('/og-default.jpg', Astro.site).href;
+
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'No Fluff Cruising',
+  url: Astro.site?.href,
+  logo: new URL('/avatar.png', Astro.site).href,
+  description: 'Expert cruise tips, ship reviews and ship tours. No line loyalty, no filler.',
+  sameAs: ['https://www.youtube.com/@nofluffcruising'],
+};
+const site = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'No Fluff Cruising',
+  url: Astro.site?.href,
+  publisher: { '@type': 'Organization', name: 'No Fluff Cruising' },
+};
+const crumbs = breadcrumbs.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [{ name: 'Home', url: '/' }, ...breadcrumbs].map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name, item: new URL(b.url, Astro.site).href,
+  })),
+} : null;
+const graph = [org, site, crumbs, ...jsonld].filter(Boolean);
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex" />}
+  <meta property="og:title" content={ogTitle ?? title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={published ? 'article' : 'website'} />
+  {published && <meta property="article:published_time" content={published} />}
+  {modified && <meta property="article:modified_time" content={modified} />}
+  {author && <meta name="author" content={author} />}
+  <meta property="og:url" content={canonical} />
+  <meta property="og:site_name" content="No Fluff Cruising" />
+  <meta property="og:image" content={share} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="No Fluff Cruising — expert cruise tips, ship reviews and ship tours" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={share} />
+  <meta name="twitter:title" content={ogTitle ?? title} />
+  <meta name="twitter:description" content={description} />
+  <link rel="icon" href="/avatar.png" />
+  <link rel="alternate" type="application/rss+xml" title="No Fluff Cruising" href="/rss.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500&display=swap" />
+  <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <Header path={path} />
+  <slot name="hero" />
+  <main id="main"><slot /></main>
+  <Footer />
+</body>
+</html>

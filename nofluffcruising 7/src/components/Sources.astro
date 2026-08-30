@@ -1,0 +1,25 @@
+---
+const { sources = [], updated } = Astro.props;
+---
+{sources.length > 0 && (
+  <section class="sources" aria-labelledby="sources-h">
+    <div class="hd">
+      <h2 id="sources-h">Sources</h2>
+      <span>Tier 1 = the cruise line&rsquo;s own published material &middot; Tier 2 = an established cruise-news outlet</span>
+    </div>
+    <ol>
+      {sources.map((s) => (
+        <li>
+          <span class={`tier t${s.tier}`}>TIER {s.tier}</span>
+          <span class="claim">{s.claim}</span><br />
+          <span class="src">
+            {s.url ? <a href={s.url} rel="noopener nofollow">{s.outlet}</a> : s.outlet}
+            {s.date && <>, checked {s.date}</>}
+            {s.note && <> &middot; {s.note}</>}
+          </span>
+        </li>
+      ))}
+    </ol>
+    {updated && <p style="padding:11px 17px;margin:0;font-size:14px;color:var(--ink-3)">Prices and policies move. This page was last checked on {updated}.</p>}
+  </section>
+)}
