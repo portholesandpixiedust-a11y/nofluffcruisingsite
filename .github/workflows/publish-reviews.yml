@@ -1,0 +1,48 @@
+name: Publish video posts
+
+on:
+  schedule:
+    - cron: '25 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-reviews
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+
+      - name: Pull approved posts from Notion
+        id: pub
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: node scripts/publish-reviews.mjs
+
+      - name: Verify the site still builds
+        if: steps.pub.outputs.written != '0'
+        run: npm run build
+
+      - name: Commit and publish
+        if: steps.pub.outputs.written != '0'
+        run: |
+          git config user.name  "No Fluff Cruising bot"
+          git config user.email "noreply@nofluffcruising.com"
+          git add src/content/reviews
+          if git diff --staged --quiet; then echo "Nothing to commit."; exit 0; fi
+          git commit -m "Publish ${{ steps.pub.outputs.written }} video companion post(s)"
+          git push
+
+      - name: Nothing to publish
+        if: steps.pub.outputs.written == '0'
+        run: echo "No new video companion posts ready this cycle."
