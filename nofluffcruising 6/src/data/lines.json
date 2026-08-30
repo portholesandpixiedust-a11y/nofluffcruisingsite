@@ -1,0 +1,56 @@
+[
+  {
+    "id": "royal-caribbean",
+    "name": "Royal Caribbean",
+    "blurb": "The biggest ships afloat, the Crown & Anchor loyalty ladder, and the private destinations that increasingly define the itinerary.",
+    "loyaltyProgram": "Crown & Anchor Society"
+  },
+  {
+    "id": "princess",
+    "name": "Princess Cruises",
+    "blurb": "Mid-size ships, longer itineraries and a quieter onboard feel than the mega-ship lines. Strong on Alaska and repositioning sailings.",
+    "loyaltyProgram": "Captain's Circle"
+  },
+  {
+    "id": "msc",
+    "name": "MSC Cruises",
+    "blurb": "European operator with aggressive pricing and a ship-within-a-ship suite enclave. The value case is real if you read the fine print.",
+    "loyaltyProgram": "MSC Voyagers Club"
+  },
+  {
+    "id": "margaritaville-at-sea",
+    "name": "Margaritaville at Sea",
+    "blurb": "Short Bahamas sailings out of Florida on a themed, refitted fleet. A cheap way to test whether cruising suits you.",
+    "loyaltyProgram": "Parrot Points"
+  },
+  {
+    "id": "disney",
+    "name": "Disney Cruise Line",
+    "blurb": "The most expensive mainstream line and the one families keep going back to. Rotational dining, no casino, and theming other lines cannot match.",
+    "loyaltyProgram": "Castaway Club"
+  },
+  {
+    "id": "virgin-voyages",
+    "name": "Virgin Voyages",
+    "blurb": "Adults only, tips and Wi-Fi included, and a restaurant lineup with no main dining room. The clearest break from how mainstream cruising usually works.",
+    "loyaltyProgram": "The Sailing Club"
+  },
+  {
+    "id": "celebrity",
+    "name": "Celebrity Cruises",
+    "blurb": "Premium end of the Royal Caribbean group. Edge-class ships, strong food, and a quieter crowd than the mega-ships.",
+    "loyaltyProgram": "Captain's Club"
+  },
+  {
+    "id": "norwegian",
+    "name": "Norwegian Cruise Line",
+    "blurb": "Freestyle cruising, no fixed dining times, and the most cabin-category choice at the entry end of the market.",
+    "loyaltyProgram": "Latitudes Rewards"
+  },
+  {
+    "id": "carnival",
+    "name": "Carnival Cruise Line",
+    "blurb": "The value play. Short itineraries, a lively crowd, and the widest US homeport coverage of any line.",
+    "loyaltyProgram": "VIFP Club"
+  }
+]

@@ -1,0 +1,13 @@
+---
+const { videos = [] } = Astro.props;
+---
+{videos.length > 0 && (
+  <section class="reflist" aria-labelledby="refs-h">
+    <h2 id="refs-h">Videos referenced in this post</h2>
+    <ul>
+      {videos.map((v) => (
+        <li><a class="vlink" href={`https://www.youtube.com/watch?v=${v.id}`} rel="noopener">{v.title}</a></li>
+      ))}
+    </ul>
+  </section>
+)}

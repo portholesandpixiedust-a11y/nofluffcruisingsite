@@ -1,0 +1,127 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
+
+const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
+const guides = (await getCollection('guides')).sort(byDate);
+const reviews = (await getCollection('reviews')).sort(byDate);
+const news = (await getCollection('news')).sort(byDate);
+const ships = await getCollection('ships');
+const lines = await getCollection('lines');
+
+// The three most recent guides always lead the homepage.
+const leadGuides = guides.slice(0, 3);
+const moreGuides = guides.slice(3, 7);
+const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ');
+
+// "This week" = the seven days up to the newest story we hold.
+const newest = news.length ? new Date(news[0].data.publishDate) : new Date();
+const weekAgo = new Date(newest.getTime() - 7 * 864e5);
+const thisWeek = news.filter((n) => new Date(n.data.publishDate) >= weekAgo);
+const earlier = news.filter((n) => new Date(n.data.publishDate) < weekAgo);
+---
+<Base
+  title="No Fluff Cruising: Expert Cruise Tips & Ship Reviews"
+  ogTitle="Expert Cruise Tips, Ship Reviews, Ship Tours"
+  description="Cruise tips, ship reviews and full walkthrough ship tours across every major cruise line. Every claim names its source and its date. No line loyalty, no filler.">
+  <div slot="hero" class="hero">
+    <img src="/hero-wake.jpg" width="1600" height="330" alt="" fetchpriority="high" />
+    <div class="cap"><div class="wrap">
+      <h1>Cruise advice with the receipts attached</h1>
+      <p>No fluff. Just the info you need to cruise smarter.</p>
+    </div></div>
+  </div>
+
+  <div class="wrap">
+    <section>
+      <span class="eyebrow">Latest guides</span>
+      <h2 class="sec">Start here</h2>
+      <div class="rule"></div>
+      <div class="grid g3">
+        {leadGuides.map((g) => (
+          <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
+                kicker={kicker(g.data)} videoId={g.data.video?.id}
+                meta={`${g.data.presenter} · ${fmt(g.data.publishDate)}${g.data.sources.length ? ` · ${g.data.sources.length} sources` : ''}`} />
+        ))}
+      </div>
+      {moreGuides.length > 0 && (
+        <p style="margin-top:16px"><a href="/guides/">All {guides.length} guides →</a></p>
+      )}
+    </section>
+
+    <div class="grid g2" style="margin-top:44px">
+      <section>
+        <span class="eyebrow">Ship reviews</span>
+        <h2 class="sec">Been aboard, here is the verdict</h2>
+        <div class="rule"></div>
+        <div class="grid g2c">
+          {reviews.map((r) => (
+            <Card href={`/reviews/${r.id}/`} title={r.data.title} description={r.data.description}
+                  kicker={kicker(r.data)} videoId={r.data.video?.id}
+                  meta={`${r.data.presenter} · ${fmt(r.data.publishDate)}`} />
+          ))}
+          <article class="card">
+            <div class="body">
+              <span class="kicker">Ship database</span>
+              <h3><a href="/ships/">{ships.length} ships, {lines.length} cruise lines</a></h3>
+              <p>Specs, verdicts and a full walkthrough tour on every ship we cover.</p>
+              <span class="meta">Updated 29 Aug 2026</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <div style="background:var(--navy);color:#fff;font-family:var(--fd);text-transform:uppercase;font-size:15px;letter-spacing:.05em;padding:10px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+            <span>Cruise News</span>
+            <span style="font-family:var(--fu);font-size:10.5px;font-weight:600;letter-spacing:.1em;color:var(--onnavy-2)">{thisWeek.length} this week</span>
+          </div>
+          <ul style="list-style:none;margin:0;padding:0">
+            {thisWeek.map((n) => (
+              <li style="padding:13px 16px;border-bottom:1px solid var(--line)">
+                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)} · {n.data.line}</time>
+                <a href={`/news/${n.id}/`} style="font-family:var(--fu);font-weight:600;font-size:14.5px;line-height:1.35;color:var(--ink);text-decoration:none;display:block">{n.data.title}</a>
+              </li>
+            ))}
+            {earlier.slice(0, 3).map((n) => (
+              <li style="padding:11px 16px;border-bottom:1px solid var(--line)">
+                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)} · {n.data.line}</time>
+                <a href={`/news/${n.id}/`} style="font-family:var(--fu);font-weight:600;font-size:14px;line-height:1.35;color:var(--ink-2);text-decoration:none;display:block">{n.data.title}</a>
+              </li>
+            ))}
+          </ul>
+          <div style="padding:12px 16px"><a href="/news/">All cruise news →</a></div>
+        </div>
+      </section>
+    </div>
+
+    {moreGuides.length > 0 && (
+      <section style="margin-top:44px">
+        <span class="eyebrow">More guides</span>
+        <h2 class="sec">Worth reading next</h2>
+        <div class="rule"></div>
+        <div class="grid g3">
+          {moreGuides.map((g) => (
+            <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
+                  kicker={kicker(g.data)} videoId={g.data.video?.id} meta={fmt(g.data.publishDate)} />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="nl">
+      <div>
+        <h2>The first-timer checklist</h2>
+        <p>Twelve things to sort before you board, in one page. Free, and it beats a newsletter signup box.</p>
+      </div>
+      <form class="nlform" action="#" method="post">
+        <label class="skip" for="nl-email">Email address</label>
+        <input id="nl-email" name="email" type="email" placeholder="you@email.com" required />
+        <button class="btn" type="submit">Send it</button>
+      </form>
+    </section>
+  </div>
+</Base>

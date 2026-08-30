@@ -1,0 +1,14 @@
+---
+const { video } = Astro.props;
+---
+{video && (
+  <aside class="watchnext">
+    <img src={`https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`} width="130" height="73" loading="lazy" alt="" />
+    <div>
+      <span class="eyebrow" style="margin-bottom:5px">Watch next</span>
+      <h2 style="font-family:var(--fu);font-size:17px;margin:0">
+        <a href={`https://www.youtube.com/watch?v=${video.id}`} rel="noopener">{video.title}</a>
+      </h2>
+    </div>
+  </aside>
+)}
