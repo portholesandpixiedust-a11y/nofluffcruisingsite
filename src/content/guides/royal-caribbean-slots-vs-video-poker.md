@@ -1,4 +1,3 @@
-[royal-caribbean-slots-vs-video-poker_1.md](https://github.com/user-attachments/files/31656750/royal-caribbean-slots-vs-video-poker_1.md)
 ---
 title: "Royal Caribbean Slots or Video Poker: Which Reaches Prime for Less?"
 description: "What Club Royale Prime status costs on slots versus video poker after the 2026 rate change, worked from Royal Caribbean's own published point rates."
