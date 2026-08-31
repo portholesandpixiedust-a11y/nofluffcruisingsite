@@ -1,8 +1,9 @@
 name: Cruise news
 
+# Scheduled run disabled: the News section was removed from the site
+# (2026-08-31), so there's nowhere left for these stories to show up.
+# Left as workflow_dispatch only in case news coverage comes back later.
 on:
-  schedule:
-    - cron: '0 11,23 * * *'
   workflow_dispatch:
     inputs:
       max_posts:
