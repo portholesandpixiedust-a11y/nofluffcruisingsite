@@ -5,8 +5,16 @@ import { getCollection } from 'astro:content';
 
 const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
 const guides = (await getCollection('guides')).sort(byDate);
-const reviews = (await getCollection('reviews')).sort(byDate);
-const news = (await getCollection('news')).sort(byDate);
+
+// The auto-publish pipeline drops every approved video companion post into the
+// "reviews" collection, whether or not it's actually a per-ship review. Only
+// entries in this allowlist are real ship reviews, so only these surface in
+// the Ship Reviews section. Add a new id here when a genuine ship review
+// publishes, or nothing will show up but Celebrity Beyond.
+const FEATURED_REVIEW_IDS = ['celebrity-beyond-review'];
+const reviews = (await getCollection('reviews'))
+  .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
+  .sort(byDate);
 const ships = await getCollection('ships');
 const lines = await getCollection('lines');
 
@@ -15,12 +23,6 @@ const leadGuides = guides.slice(0, 3);
 const moreGuides = guides.slice(3, 7);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
 const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ');
-
-// "This week" = the seven days up to the newest story we hold.
-const newest = news.length ? new Date(news[0].data.publishDate) : new Date();
-const weekAgo = new Date(newest.getTime() - 7 * 864e5);
-const thisWeek = news.filter((n) => new Date(n.data.publishDate) >= weekAgo);
-const earlier = news.filter((n) => new Date(n.data.publishDate) < weekAgo);
 ---
 <Base
   title="No Fluff Cruising: Expert Cruise Tips & Ship Reviews"
@@ -51,52 +53,26 @@ const earlier = news.filter((n) => new Date(n.data.publishDate) < weekAgo);
       )}
     </section>
 
-    <div class="grid g2" style="margin-top:44px">
-      <section>
-        <span class="eyebrow">Ship reviews</span>
-        <h2 class="sec">Been aboard, here is the verdict</h2>
-        <div class="rule"></div>
-        <div class="grid g2c">
-          {reviews.map((r) => (
-            <Card href={`/reviews/${r.id}/`} title={r.data.title} description={r.data.description}
-                  kicker={kicker(r.data)} videoId={r.data.video?.id}
-                  meta={`${r.data.presenter} · ${fmt(r.data.publishDate)}`} />
-          ))}
-          <article class="card">
-            <div class="body">
-              <span class="kicker">Ship database</span>
-              <h3><a href="/ships/">{ships.length} ships, {lines.length} cruise lines</a></h3>
-              <p>Specs, verdicts and a full walkthrough tour on every ship we cover.</p>
-              <span class="meta">Updated 29 Aug 2026</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section>
-        <div class="card">
-          <div style="background:var(--navy);color:#fff;font-family:var(--fd);text-transform:uppercase;font-size:15px;letter-spacing:.05em;padding:10px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:10px">
-            <span>Cruise News</span>
-            <span style="font-family:var(--fu);font-size:10.5px;font-weight:600;letter-spacing:.1em;color:var(--onnavy-2)">{thisWeek.length} this week</span>
+    <section style="margin-top:44px">
+      <span class="eyebrow">Ship reviews</span>
+      <h2 class="sec">Been aboard, here is the verdict</h2>
+      <div class="rule"></div>
+      <div class="grid g2c">
+        {reviews.map((r) => (
+          <Card href={`/reviews/${r.id}/`} title={r.data.title} description={r.data.description}
+                kicker={kicker(r.data)} videoId={r.data.video?.id}
+                meta={`${r.data.presenter} · ${fmt(r.data.publishDate)}`} />
+        ))}
+        <article class="card">
+          <div class="body">
+            <span class="kicker">Ship database</span>
+            <h3><a href="/ships/">{ships.length} ships, {lines.length} cruise lines</a></h3>
+            <p>Specs, verdicts and a full walkthrough tour on every ship we cover.</p>
+            <span class="meta">Updated 29 Aug 2026</span>
           </div>
-          <ul style="list-style:none;margin:0;padding:0">
-            {thisWeek.map((n) => (
-              <li style="padding:13px 16px;border-bottom:1px solid var(--line)">
-                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)} · {n.data.line}</time>
-                <a href={`/news/${n.id}/`} style="font-family:var(--fu);font-weight:600;font-size:14.5px;line-height:1.35;color:var(--ink);text-decoration:none;display:block">{n.data.title}</a>
-              </li>
-            ))}
-            {earlier.slice(0, 3).map((n) => (
-              <li style="padding:11px 16px;border-bottom:1px solid var(--line)">
-                <time datetime={new Date(n.data.publishDate).toISOString()} style="font-family:var(--fm);font-size:11px;color:var(--ink-3);display:block;margin-bottom:3px">{fmt(n.data.publishDate)} · {n.data.line}</time>
-                <a href={`/news/${n.id}/`} style="font-family:var(--fu);font-weight:600;font-size:14px;line-height:1.35;color:var(--ink-2);text-decoration:none;display:block">{n.data.title}</a>
-              </li>
-            ))}
-          </ul>
-          <div style="padding:12px 16px"><a href="/news/">All cruise news →</a></div>
-        </div>
-      </section>
-    </div>
+        </article>
+      </div>
+    </section>
 
     {moreGuides.length > 0 && (
       <section style="margin-top:44px">
