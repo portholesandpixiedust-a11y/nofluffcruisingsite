@@ -3,7 +3,7 @@ title: "Royal Caribbean Slots or Video Poker: Which Reaches Prime for Less?"
 description: "What Club Royale Prime status costs on slots versus video poker after the 2026 rate change, worked from Royal Caribbean's own published point rates."
 answer: "Slots, on most ships. On the 6/5 paytable that is common at sea, video poker reaches Prime for about what the tightest slot machine on the ship costs, and it takes three times as long. Video poker wins only on a better paytable. Check the machine before you sit down."
 presenter: Marlee
-publishDate: 2026-09-01
+publishDate: 2026-08-31
 line: Royal Caribbean
 ships: []
 topics:
