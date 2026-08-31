@@ -2,7 +2,13 @@
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
-const entries = (await getCollection('reviews')).sort((a,b)=> new Date(b.data.publishDate)-new Date(a.data.publishDate));
+// Keep in sync with the same allowlist in src/pages/index.astro — the
+// auto-publish pipeline drops every approved video companion post into the
+// "reviews" collection whether or not it's a real per-ship review.
+const FEATURED_REVIEW_IDS = ['celebrity-beyond-review'];
+const entries = (await getCollection('reviews'))
+  .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
+  .sort((a,b)=> new Date(b.data.publishDate)-new Date(a.data.publishDate));
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
 const heading = 'Ship reviews';
 ---
