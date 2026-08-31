@@ -47,14 +47,6 @@ const guides = defineCollection({
   }),
 });
 
-const news = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
-  schema: z.object({
-    ...articleBase,
-    video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }).optional(),
-  }),
-});
-
 const ships = defineCollection({
   loader: file('./src/data/ships.json'),
   schema: z.object({
@@ -89,4 +81,4 @@ const lines = defineCollection({
   }),
 });
 
-export const collections = { reviews, guides, news, ships, lines };
+export const collections = { reviews, guides, ships, lines };
