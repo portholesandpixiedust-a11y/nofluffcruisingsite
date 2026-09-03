@@ -11,7 +11,7 @@ const guides = (await getCollection('guides')).sort(byDate);
 // entries in this allowlist are real ship reviews, so only these surface in
 // the Ship Reviews section. Add a new id here when a genuine ship review
 // publishes, or nothing will show up but Celebrity Beyond.
-const FEATURED_REVIEW_IDS = ['celebrity-beyond-review'];
+const FEATURED_REVIEW_IDS = ['celebrity-beyond-review', 'virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change'];
 const reviews = (await getCollection('reviews'))
   .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
   .sort(byDate);
