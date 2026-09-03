@@ -28,5 +28,7 @@ export default defineConfig({
   site: 'https://nofluffcruising.com',
   integrations: [sitemap()],
   build: { format: 'directory' },
+  // The auto-publish pipeline truncates long slugs, so this post first went live at a URL missing the last letter of "change". Point the old path at the corrected one.
+  redirects: { '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang': '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change' },
   markdown: { rehypePlugins: [rehypeWrapTables] },
 });
