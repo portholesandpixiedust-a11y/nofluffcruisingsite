@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 // Keep in sync with the same allowlist in src/pages/index.astro — the
 // auto-publish pipeline drops every approved video companion post into the
 // "reviews" collection whether or not it's a real per-ship review.
-const FEATURED_REVIEW_IDS = ['celebrity-beyond-review'];
+const FEATURED_REVIEW_IDS = ['celebrity-beyond-review', 'virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang'];
 const entries = (await getCollection('reviews'))
   .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
   .sort((a,b)=> new Date(b.data.publishDate)-new Date(a.data.publishDate));
