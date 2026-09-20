@@ -1,0 +1,18 @@
+---
+const here = Astro.url.pathname;
+const links = [
+  { href: '/terms/', label: 'Terms' },
+  { href: '/privacy/', label: 'Privacy' },
+  { href: '/disclosure/', label: 'Disclosure' },
+  { href: '/contact/', label: 'Contact' },
+].filter((l) => !here.startsWith(l.href));
+---
+<p style="margin:28px 0 0;padding-top:18px;border-top:1px solid var(--line, #e5e5e5);font-size:14px;color:var(--ink-3, #666)">
+  Also:{' '}
+  {links.map((l, i) => (
+    <span>
+      {i > 0 ? ' · ' : ''}
+      <a href={l.href}>{l.label}</a>
+    </span>
+  ))}
+</p>
