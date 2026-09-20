@@ -33,9 +33,7 @@ export default defineConfig({
     '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang': '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change',
     '/sitemap.xml': '/sitemap-index.xml',
     '/terms-of-service': '/terms/',
-    '/terms-of-service/': '/terms/',
     '/privacy-policy': '/privacy/',
-    '/privacy-policy/': '/privacy/',
   },
   markdown: { rehypePlugins: [rehypeWrapTables] },
 });

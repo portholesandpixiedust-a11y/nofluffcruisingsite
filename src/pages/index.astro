@@ -24,6 +24,9 @@ const leadGuides = guides.slice(0, 3);
 const moreGuides = guides.slice(3, 7);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
 const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ');
+const guideMeta = (g) => g.data.presenter + ' · ' + fmt(g.data.publishDate) + (g.data.sources.length ? ' · ' + g.data.sources.length + ' sources' : '');
+const reviewMeta = (r) => r.data.presenter + ' · ' + fmt(r.data.publishDate);
+const newsMeta = (n) => n.data.presenter + ' · ' + fmt(n.data.publishDate);
 ---
 <Base
   title="No Fluff Cruising: Expert Cruise Tips & Ship Reviews"
@@ -44,9 +47,9 @@ const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ')
       <div class="rule"></div>
       <div class="grid g3">
         {leadGuides.map((g) => (
-          <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
+          <Card href={'/guides/' + g.id + '/'} title={g.data.title} description={g.data.description}
                 kicker={kicker(g.data)} videoId={g.data.video?.id}
-                meta={`${g.data.presenter} · ${fmt(g.data.publishDate)}${g.data.sources.length ? ` · ${g.data.sources.length} sources` : ''}`} />
+                meta={guideMeta(g)} />
         ))}
       </div>
       {moreGuides.length > 0 && (
@@ -61,9 +64,9 @@ const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ')
         <div class="rule"></div>
         <div class="grid g3">
           {news.map((n) => (
-            <Card href={`/news/${n.id}/`} title={n.data.title} description={n.data.description}
+            <Card href={'/news/' + n.id + '/'} title={n.data.title} description={n.data.description}
                   kicker={kicker(n.data)}
-                  meta={`${n.data.presenter} · ${fmt(n.data.publishDate)}`} />
+                  meta={newsMeta(n)} />
           ))}
         </div>
         <p style="margin-top:16px"><a href="/news/">All cruise news →</a></p>
@@ -76,9 +79,9 @@ const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ')
       <div class="rule"></div>
       <div class="grid g2c">
         {reviews.map((r) => (
-          <Card href={`/reviews/${r.id}/`} title={r.data.title} description={r.data.description}
+          <Card href={'/reviews/' + r.id + '/'} title={r.data.title} description={r.data.description}
                 kicker={kicker(r.data)} videoId={r.data.video?.id}
-                meta={`${r.data.presenter} · ${fmt(r.data.publishDate)}`} />
+                meta={reviewMeta(r)} />
         ))}
         <article class="card">
           <div class="body">
@@ -98,11 +101,12 @@ const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ')
         <div class="rule"></div>
         <div class="grid g3">
           {moreGuides.map((g) => (
-            <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
+            <Card href={'/guides/' + g.id + '/'} title={g.data.title} description={g.data.description}
                   kicker={kicker(g.data)} videoId={g.data.video?.id} meta={fmt(g.data.publishDate)} />
         ))}
-      </div>
-    </section>
+        </div>
+      </section>
+    )}
 
     <section class="nl">
       <div>
