@@ -15,6 +15,7 @@ const FEATURED_REVIEW_IDS = ['disney-wish-review', 'celebrity-beyond-review', 'v
 const reviews = (await getCollection('reviews'))
   .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
   .sort(byDate);
+const news = (await getCollection('news')).sort(byDate).slice(0, 3);
 const ships = await getCollection('ships');
 const lines = await getCollection('lines');
 
@@ -53,6 +54,22 @@ const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ')
       )}
     </section>
 
+    {news.length > 0 && (
+      <section style="margin-top:44px">
+        <span class="eyebrow">Cruise news</span>
+        <h2 class="sec">What changed for people who are booked</h2>
+        <div class="rule"></div>
+        <div class="grid g3">
+          {news.map((n) => (
+            <Card href={`/news/${n.id}/`} title={n.data.title} description={n.data.description}
+                  kicker={kicker(n.data)}
+                  meta={`${n.data.presenter} · ${fmt(n.data.publishDate)}`} />
+          ))}
+        </div>
+        <p style="margin-top:16px"><a href="/news/">All cruise news →</a></p>
+      </section>
+    )}
+
     <section style="margin-top:44px">
       <span class="eyebrow">Ship reviews</span>
       <h2 class="sec">Been aboard, here is the verdict</h2>
@@ -83,10 +100,9 @@ const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ')
           {moreGuides.map((g) => (
             <Card href={`/guides/${g.id}/`} title={g.data.title} description={g.data.description}
                   kicker={kicker(g.data)} videoId={g.data.video?.id} meta={fmt(g.data.publishDate)} />
-          ))}
-        </div>
-      </section>
-    )}
+        ))}
+      </div>
+    </section>
 
     <section class="nl">
       <div>

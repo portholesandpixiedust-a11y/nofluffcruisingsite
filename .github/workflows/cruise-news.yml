@@ -1,9 +1,10 @@
 name: Cruise news
 
-# Scheduled run disabled: the News section was removed from the site
-# (2026-08-31), so there's nowhere left for these stories to show up.
-# Left as workflow_dispatch only in case news coverage comes back later.
+# Weekday daytime ET (EDT): 8am, 11am, 2pm, 5pm → 12,15,18,21 UTC.
+# During EST those clock times shift one hour later UTC; still daytime US East.
 on:
+  schedule:
+    - cron: '0 12,15,18,21 * * 1-5'
   workflow_dispatch:
     inputs:
       max_posts:
@@ -36,6 +37,7 @@ jobs:
           ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL || 'claude-sonnet-5' }}
           MAX_POSTS: ${{ github.event.inputs.max_posts || '3' }}
+          MIN_POSTS_PER_DAY: '3'
         run: node scripts/news-bot.mjs
 
       - name: Find credited images
@@ -44,22 +46,22 @@ jobs:
         continue-on-error: true
 
       - name: Verify the site still builds
-        if: steps.bot.outputs.written != '0' || steps.img.outputs.images != '0'
+        if: steps.bot.outputs.written != '0' || steps.bot.outputs.holds != '0' || steps.img.outputs.images != '0'
         run: npm run build
 
       - name: Commit and publish
-        if: steps.bot.outputs.written != '0' || steps.img.outputs.images != '0'
+        if: steps.bot.outputs.written != '0' || steps.bot.outputs.holds != '0' || steps.img.outputs.images != '0'
         run: |
           git config user.name  "No Fluff Cruising bot"
           git config user.email "noreply@nofluffcruising.com"
-          git add src/content/news public/news
+          git add src/content/news src/content/news-holds public/news
           if git diff --staged --quiet; then
             echo "Nothing to commit."
             exit 0
           fi
-          git commit -m "Cruise news: ${{ steps.bot.outputs.written }} story(ies), ${{ steps.img.outputs.images }} image(s)"
+          git commit -m "Cruise news: ${{ steps.bot.outputs.written }} story(ies), ${{ steps.bot.outputs.holds }} hold(s), ${{ steps.img.outputs.images }} image(s)"
           git push
 
       - name: Quiet cycle
-        if: steps.bot.outputs.written == '0' && steps.img.outputs.images == '0'
+        if: steps.bot.outputs.written == '0' && steps.bot.outputs.holds == '0' && steps.img.outputs.images == '0'
         run: echo "No story cleared the sourcing bar this cycle. Nothing published."

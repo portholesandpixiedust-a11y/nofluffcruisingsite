@@ -8,14 +8,19 @@
  *
  * Safety: nothing is committed unless it validates here AND the site still builds.
  * The workflow runs `astro build` after this script and refuses to push on failure.
+ *
+ * Conflict rule: when outlets disagree on a load-bearing fact, the post goes to
+ * src/content/news-holds/ instead of publishing, so a human can decide.
  */
 
-import { readFile, readdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const NEWS_DIR = 'src/content/news';
+const HOLDS_DIR = 'src/content/news-holds';
 const MODEL = process.env.CLAUDE_MODEL || 'claude-sonnet-5';
 const MAX_POSTS = Number(process.env.MAX_POSTS || 3);
+const MIN_POSTS_PER_DAY = Number(process.env.MIN_POSTS_PER_DAY || 3);
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
 const LINES = {
@@ -30,6 +35,18 @@ const LINES = {
   'Margaritaville at Sea': 'margaritaville-at-sea',
 };
 
+const PREFERRED_SOURCES = [
+  'Cruise line official press rooms and newsrooms (Tier 1)',
+  'Royal Caribbean Blog',
+  'The Points Guy (cruise coverage)',
+  'Cruise Critic news',
+  'Seatrade Cruise News',
+  'Cruise News Radio',
+  'Cruise Industry News',
+  'Travel Weekly (cruise desk)',
+  'Cruise Mapper news (when useful for deployments and itineraries)',
+];
+
 /** Everything already published, so the bot never repeats itself. */
 async function existingCoverage() {
   const files = (await readdir(NEWS_DIR)).filter((f) => f.endsWith('.md'));
@@ -43,6 +60,10 @@ async function existingCoverage() {
   return items.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
+function publishedTodayCount(coverage, today) {
+  return coverage.filter((c) => String(c.date).startsWith(today)).length;
+}
+
 const SCHEMA = `Return ONLY a JSON object, no prose and no code fence, shaped exactly:
 {"posts":[{
   "slug": "kebab-case-url-slug",
@@ -51,16 +72,21 @@ const SCHEMA = `Return ONLY a JSON object, no prose and no code fence, shaped ex
   "answer": "40 to 60 words answering the headline directly. This is the first thing on the page.",
   "line": "One of: ${Object.keys(LINES).join(' | ')}",
   "topics": ["one or two of: Itineraries, Ships, Ports, Policy, Money, Loyalty, Destinations, Sustainability, Dining, Drinks"],
-  "body": "Markdown body, 200 to 400 words, using ## subheadings written as questions where natural. No H1. Tables allowed.",
+  "body": "Markdown body, 300 to 600 words, a longer rewrite in site voice (not a paste of the source). Use ## subheadings. No H1. Tables allowed. Credit every outlet by name in the prose where a claim appears.",
+  "conflict": false,
+  "conflictNote": "If conflict is true: one sentence naming which outlets disagree and on what. Otherwise omit or empty string.",
   "sources": [{"claim":"what this source supports","outlet":"named outlet or the line's own newsroom","tier":1,"date":"29 Aug 2026","url":"https://..."}]
 }]}`;
 
-async function callClaude(coverage) {
+async function callClaude(coverage, { hoursWindow, wantCount }) {
   const today = new Date().toISOString().slice(0, 10);
   const prompt = `Today is ${today}. You are writing cruise news for nofluffcruising.com.
 
-Search the web for cruise news published in roughly the last 18 hours across these lines:
+Search the web for cruise news published in roughly the last ${hoursWindow} hours across these lines:
 ${Object.keys(LINES).join(', ')}.
+
+Prefer these sources, and always name the original outlet with a date and URL when you can:
+${PREFERRED_SOURCES.map((s) => `- ${s}`).join('\n')}
 
 Deliberately look beyond Royal Caribbean. Carnival, Norwegian, MSC, Disney, Celebrity and
 Virgin Voyages are under-covered by other cruise sites and are where this site can win.
@@ -73,10 +99,17 @@ Rules that override everything else:
 2. Every claim needs a named outlet and a date in the sources array. Tier 1 is the
    cruise line's own published material. Tier 2 is an established cruise-news outlet.
 3. If you cannot verify a figure, leave the figure out. Never estimate.
-4. Publish nothing rather than padding. Returning {"posts":[]} is a correct answer on a
-   quiet day and is strongly preferred over a weak story.
-5. At most ${MAX_POSTS} posts. Only things that change what a booked passenger pays or experiences.
+4. Do not invent stories to hit a quota. Returning fewer posts (or {"posts":[]}) is
+   correct when nothing real cleared the bar. Weak filler is worse than a shortfall.
+5. Aim for up to ${wantCount} posts this run (hard max ${MAX_POSTS}). Only things that
+   change what a booked passenger pays or experiences.
 6. Do not cover deals, discount roundups or listicles.
+7. Write a longer rewrite in our voice. Do not paste or closely paraphrase long stretches
+   of another outlet's article. Always credit the original source by name.
+8. CONFLICT HOLD: if two or more outlets disagree on a load-bearing fact (dates, prices,
+   ship names, cancellations, passenger impact), set "conflict": true, explain in
+   conflictNote, still include sources for each side, and still return the draft. Do not
+   pick a winner quietly.
 
 Write in this voice, which is not negotiable:
 <voice>
@@ -94,8 +127,8 @@ ${SCHEMA}`;
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 8000,
-      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 12 }],
+      max_tokens: 12000,
+      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 16 }],
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -128,10 +161,13 @@ export function validate(p, existingSlugs) {
   if (/\b(actually|exactly|simply|genuinely|quietly|basically)\b/i.test(p.body || '')) {
     problems.push('body contains a banned adverb');
   }
+  if (p.conflict && !(p.conflictNote || '').trim()) {
+    problems.push('conflict posts need a conflictNote');
+  }
   return problems;
 }
 
-export function toMarkdown(p) {
+export function toMarkdown(p, { held = false } = {}) {
   const today = new Date().toISOString().slice(0, 10);
   const topics = (p.topics || []).filter(Boolean).slice(0, 2);
   const sources = p.sources.map((s) => {
@@ -146,6 +182,10 @@ export function toMarkdown(p) {
     return rows.join('\n');
   }).join('\n');
 
+  const holdBlock = held
+    ? `status: hold\nconflictNote: ${q(p.conflictNote)}\n`
+    : '';
+
   return `---
 title: ${q(p.title)}
 description: ${q(p.description)}
@@ -154,7 +194,7 @@ presenter: Matthew
 publishDate: ${today}
 line: ${q(p.line)}
 topics: [${topics.join(', ')}]
-sources:
+${holdBlock}sources:
 ${sources}
 ---
 
@@ -167,18 +207,35 @@ const main = async () => {
     console.error('ANTHROPIC_API_KEY is not set. Add it under Settings, Secrets and variables, Actions.');
     process.exit(1);
   }
+  await mkdir(HOLDS_DIR, { recursive: true });
   const coverage = await existingCoverage();
   const existingSlugs = new Set(coverage.map((c) => c.slug));
-  console.log(`Existing news posts: ${coverage.length}`);
+  const today = new Date().toISOString().slice(0, 10);
+  const alreadyToday = publishedTodayCount(coverage, today);
+  const remainingForDay = Math.max(0, MIN_POSTS_PER_DAY - alreadyToday);
+  const wantCount = Math.min(MAX_POSTS, Math.max(1, remainingForDay || 1));
+  // If we are behind the daily floor, widen the research window.
+  const hoursWindow = alreadyToday >= MIN_POSTS_PER_DAY ? 18 : 48;
 
-  const { posts = [] } = await callClaude(coverage);
+  console.log(`Existing news posts: ${coverage.length}`);
+  console.log(`Published today (${today}): ${alreadyToday}; aiming for up to ${wantCount} this run; window ${hoursWindow}h`);
+
+  const { posts = [] } = await callClaude(coverage, { hoursWindow, wantCount });
   console.log(`Model returned ${posts.length} candidate post(s)`);
 
   let written = 0;
+  let holds = 0;
   for (const p of posts.slice(0, MAX_POSTS)) {
     const problems = validate(p, existingSlugs);
     if (problems.length) {
       console.log(`REJECTED "${p.title ?? p.slug}": ${problems.join('; ')}`);
+      continue;
+    }
+    if (p.conflict) {
+      await writeFile(path.join(HOLDS_DIR, `${p.slug}.md`), toMarkdown(p, { held: true }), 'utf8');
+      existingSlugs.add(p.slug);
+      holds++;
+      console.log(`HOLD ${p.slug}.md  [${p.line}] ${p.title} — ${p.conflictNote}`);
       continue;
     }
     await writeFile(path.join(NEWS_DIR, `${p.slug}.md`), toMarkdown(p), 'utf8');
@@ -187,14 +244,16 @@ const main = async () => {
     console.log(`WROTE ${p.slug}.md  [${p.line}] ${p.title}`);
   }
 
-  console.log(`\n${written} post(s) written.`);
-  // Tells the workflow whether there is anything to commit.
+  console.log(`\n${written} post(s) written. ${holds} hold(s) for review.`);
   if (process.env.GITHUB_OUTPUT) {
-    await writeFile(process.env.GITHUB_OUTPUT, `written=${written}\n`, { flag: 'a' });
+    await writeFile(
+      process.env.GITHUB_OUTPUT,
+      `written=${written}\nholds=${holds}\nalready_today=${alreadyToday}\n`,
+      { flag: 'a' },
+    );
   }
 };
 
-// Only run when invoked directly, so the pure functions above stay importable and testable.
 if (import.meta.url === `file://${process.argv[1]}`) {
   main().catch((err) => {
     console.error(err);
