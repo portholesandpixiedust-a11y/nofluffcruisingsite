@@ -1,7 +1,6 @@
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import NewsletterEmbed from '../components/NewsletterEmbed.astro';
-import NewsletterPopup from '../components/NewsletterPopup.astro';
 import { getCollection } from 'astro:content';
 
 const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
@@ -127,5 +126,4 @@ const newsMeta = (n) => n.data.presenter + ' · ' + fmt(n.data.publishDate);
       <NewsletterEmbed />
     </section>
   </div>
-  <NewsletterPopup />
 </Base>
