@@ -29,6 +29,13 @@ export default defineConfig({
   integrations: [sitemap()],
   build: { format: 'directory' },
   // The auto-publish pipeline truncates long slugs, so this post first went live at a URL missing the last letter of "change". Point the old path at the corrected one.
-  redirects: { '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang': '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change' },
+  redirects: {
+    '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang': '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change',
+    '/sitemap.xml': '/sitemap-index.xml',
+    '/terms-of-service': '/terms/',
+    '/terms-of-service/': '/terms/',
+    '/privacy-policy': '/privacy/',
+    '/privacy-policy/': '/privacy/',
+  },
   markdown: { rehypePlugins: [rehypeWrapTables] },
 });

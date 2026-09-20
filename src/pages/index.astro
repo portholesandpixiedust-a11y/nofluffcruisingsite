@@ -91,13 +91,9 @@ const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ')
     <section class="nl">
       <div>
         <h2>The first-timer checklist</h2>
-        <p>Twelve things to sort before you board, in one page. Free, and it beats a newsletter signup box.</p>
+        <p>Twelve things to sort before you board, in one page. The checklist is coming soon. Until then, start with the guides.</p>
       </div>
-      <form class="nlform" action="#" method="post">
-        <label class="skip" for="nl-email">Email address</label>
-        <input id="nl-email" name="email" type="email" placeholder="you@email.com" required />
-        <button class="btn" type="submit">Send it</button>
-      </form>
+      <p style="margin:0"><a class="btn" href="/guides/">Browse guides</a></p>
     </section>
   </div>
 </Base>
