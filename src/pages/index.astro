@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
+import NewsletterEmbed from '../components/NewsletterEmbed.astro';
+import NewsletterPopup from '../components/NewsletterPopup.astro';
 import { getCollection } from 'astro:content';
 
 const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
@@ -118,12 +120,13 @@ const newsMeta = (n) => n.data.presenter + ' · ' + fmt(n.data.publishDate);
       </section>
     )}
 
-    <section class="nl">
+    <section class="nl" id="newsletter">
       <div>
-        <h2>The first-timer checklist</h2>
-        <p>Twelve things to sort before you board, in one page. The checklist is coming soon. Until then, start with the guides.</p>
+        <h2>Cruise news that matters when you're booked</h2>
+        <p>Weekly roundup of policy, price, and itinerary changes. Short. Sourced. No fluff. <a href="/privacy/" style="color:#fff">Privacy</a>.</p>
       </div>
-      <p style="margin:0"><a class="btn" href="/guides/">Browse guides</a></p>
+      <NewsletterEmbed />
     </section>
   </div>
+  <NewsletterPopup />
 </Base>
