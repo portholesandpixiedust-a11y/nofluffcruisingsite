@@ -1,6 +1,6 @@
 ---
 title: "Virgin Voyages sets first four-ship Sisters at Sea for February 2027"
-heroImage: "https://www.cruisehive.com/wp-content/uploads/2026/03/valiant-lady7.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fwww.cruisehive.com%2Fwp-content%2Fuploads%2F2026%2F03%2Fvaliant-lady7.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Cruise Hive · https://www.cruisehive.com/virgin-voyages-sets-date-for-unprecedented-entire-fleet-gathering-at-sea/202788"
 description: "Scarlet Lady, Valiant Lady, Resilient Lady, and Brilliant Lady meet on 16 Feb 2027 north of Cuba. Virgin published the meetup as its first four-ship Sisters at Sea."
 answer: "Virgin Voyages will put all four ships together on 16 Feb 2027 at 22°12'57\"N, 77°16'07\"W, about 38 nautical miles north of Nuevitas, Cuba. Scarlet Lady, Valiant Lady, Resilient Lady, and Brilliant Lady share the celebration. More programming is still to come."

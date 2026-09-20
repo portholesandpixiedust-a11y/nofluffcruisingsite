@@ -1,6 +1,6 @@
 ---
 title: "MSC World Asia clears sea trials ahead of December 2026 debut"
-heroImage: "https://cruiseindustrynews.com/wp-content/uploads/2026/09/MSC-World-Asia-Final-Sea-Trials-Chantiers-de-lAtlantique.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fcruiseindustrynews.com%2Fwp-content%2Fuploads%2F2026%2F09%2FMSC-World-Asia-Final-Sea-Trials-Chantiers-de-lAtlantique.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Cruise Industry News · https://cruiseindustrynews.com/cruise-news/2026/09/msc-world-asia-ready-for-debut-following-sea-trials/"
 description: "MSC World Asia finished final Atlantic sea trials off France. Delivery is set for 25 Nov 2026, naming in Le Havre on 28 Nov, and a Barcelona maiden on 4 Dec 2026."
 answer: "MSC World Asia completed final sea trials in the Atlantic off France after first trials in July. Chantiers de l'Atlantique delivery is listed for 25 Nov 2026, with naming in Le Havre on 28 Nov and a seven-night Mediterranean maiden from Barcelona on 4 Dec 2026."

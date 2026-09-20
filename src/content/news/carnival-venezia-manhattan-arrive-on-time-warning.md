@@ -1,6 +1,6 @@
 ---
 title: "Carnival warns Venezia guests not to arrive early in Manhattan"
-heroImage: "https://www.cruisehive.com/wp-content/uploads/2024/11/carnivalvenezia2.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fwww.cruisehive.com%2Fwp-content%2Fuploads%2F2024%2F11%2Fcarnivalvenezia2.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Cruise Hive · https://www.cruisehive.com/carnival-warns-guests-not-to-arrive-early-ahead-of-busy-new-york-embarkation/216998"
 description: "Carnival told Venezia guests for 14 Sep 2026 at Manhattan Cruise Terminal to keep appointment windows. Pier 88 was shared with Oceania Vista while Pier 90 stayed out of service."
 answer: "Carnival told guests on Carnival Venezia not to arrive early for the 14 Sep 2026 Manhattan Cruise Terminal embarkation. Stick to your appointment window or you may be turned away. Pier 88 was shared that day with Oceania Vista, and Pier 90 has been out of service since January 2026. Departure stayed at 4pm."
