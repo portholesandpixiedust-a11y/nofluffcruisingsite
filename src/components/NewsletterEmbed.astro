@@ -1,26 +1,20 @@
 ---
 /**
- * beehiiv subscribe-form embed.
- * Set PUBLIC_BEEHIIV_FORM_ID in Vercel (UUID from Audience → Subscribe forms).
- * When unset, keep the chrome so design review still works.
+ * beehiiv subscribe-form embed (v3 loader).
+ * Default form ID is the live No Fluff Cruising signup form.
+ * Override with PUBLIC_BEEHIIV_FORM_ID in Vercel if you rotate forms.
  */
-const formId = (import.meta.env.PUBLIC_BEEHIIV_FORM_ID || '').trim();
+const formId = (import.meta.env.PUBLIC_BEEHIIV_FORM_ID || 'd769eb81-bf6c-442c-96b6-7097f59a9f52').trim();
 const hasForm = Boolean(formId);
 ---
 <div class="nfc-nl-embed">
   {hasForm ? (
-    <>
-      <script is:inline async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe
-        src={`https://subscribe-forms.beehiiv.com/${formId}`}
-        class="beehiiv-embed"
-        data-test-id="beehiiv-embed"
-        frameborder="0"
-        scrolling="no"
-        style="width:100%;min-height:180px;border:0;background:transparent;margin:0;border-radius:3px!important;max-width:100%"
-        title="Subscribe to the No Fluff Cruising newsletter"
-      ></iframe>
-    </>
+    <script
+      is:inline
+      async
+      src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+      data-beehiiv-form={formId}
+    ></script>
   ) : (
     <div class="nlform nfc-nl-fallback" aria-live="polite">
       <label class="visually-hidden" for="nfc-nl-email-soon">Email</label>
@@ -39,7 +33,7 @@ const hasForm = Boolean(formId);
 </div>
 
 <style>
-  .nfc-nl-embed { width: 100%; min-width: 0; }
+  .nfc-nl-embed { width: 100%; min-width: 0; min-height: 120px; }
   .nfc-nl-fallback { flex-direction: column; align-items: stretch; }
   .nfc-nl-fallback .btn[disabled],
   .nfc-nl-fallback input[disabled] {
