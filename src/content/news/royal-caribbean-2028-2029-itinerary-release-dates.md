@@ -1,6 +1,6 @@
 ---
 title: "Royal Caribbean sets 2028-2029 itinerary release weeks"
-heroImage: "https://www.cruisehive.com/wp-content/uploads/2026/09/Royal-Caribbean-Ships.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fwww.cruisehive.com%2Fwp-content%2Fuploads%2F2026%2F09%2FRoyal-Caribbean-Ships.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Cruise Hive · https://www.cruisehive.com/royal-caribbean-sets-dates-for-its-next-wave-of-new-itineraries/217950"
 description: "Royal Caribbean told agents and Facebook followers when 2028 Alaska, Europe Part 1, and seven-night summer Caribbean open for booking across late Sep through early Nov 2026."
 answer: "Royal Caribbean will open 2028 Alaska bookings the week of 28 Sep 2026, 2028 Europe Part 1 the week of 12 Oct 2026, and 2028 seven-night summer Caribbean the week of 2 Nov 2026. Other regions remain listed as coming soon. Itineraries can change after release."

@@ -1,6 +1,6 @@
 ---
 title: "Norwegian Joy docks late in Sitka after whale found on bow"
-heroImage: "https://www.cruisehive.com/wp-content/uploads/2026/09/Norwegian-Joy-in-Alaska.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fwww.cruisehive.com%2Fwp-content%2Fuploads%2F2026%2F09%2FNorwegian-Joy-in-Alaska.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Cruise Hive · https://www.cruisehive.com/norwegian-joy-docks-late-in-sitka-with-dead-whale-on-its-bow/218044"
 description: "Norwegian Joy arrived late in Sitka on 17 Sep 2026 after a deceased juvenile male fin whale was found on the bulbous bow. Removal and an extra hour in port followed."
 answer: "Norwegian Joy reached Sitka late on 17 Sep 2026 after a deceased juvenile male fin whale was discovered on the bulbous bow. Removal took more than two hours with U.S. Coast Guard, NOAA, and Alaska Marine Mammal Stranding Network teams. The ship stayed about an hour longer in port to offset the late dock."
