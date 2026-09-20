@@ -1,4 +1,4 @@
-name: Cruise news
+name: Industry news
 
 # Weekday daytime ET (EDT): 8am, 11am, 2pm, 5pm → 12,15,18,21 UTC.
 # During EST those clock times shift one hour later UTC; still daytime US East.
@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: cruise-news
+  group: industry-news
   cancel-in-progress: false
 
 jobs:
@@ -59,7 +59,7 @@ jobs:
             echo "Nothing to commit."
             exit 0
           fi
-          git commit -m "Cruise news: ${{ steps.bot.outputs.written }} story(ies), ${{ steps.bot.outputs.holds }} hold(s), ${{ steps.img.outputs.images }} image(s)"
+          git commit -m "Industry news: ${{ steps.bot.outputs.written }} story(ies), ${{ steps.bot.outputs.holds }} hold(s), ${{ steps.img.outputs.images }} image(s)"
           git push
 
       - name: Quiet cycle
