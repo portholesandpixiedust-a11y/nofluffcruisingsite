@@ -1,8 +1,8 @@
-# Cruise news automation
+# Industry news automation
 
 ## What runs
 
-`.github/workflows/cruise-news.yml` runs on weekdays at 8am, 11am, 2pm, and 5pm US Eastern (cron is UTC). It also supports **Actions → Cruise news → Run workflow**.
+`.github/workflows/industry-news.yml` runs on weekdays at 8am, 11am, 2pm, and 5pm US Eastern (cron is UTC). It also supports **Actions → Industry news → Run workflow**.
 
 `scripts/news-bot.mjs` searches preferred industry sources, writes longer rewrites in `VOICE.md`, validates sourcing, and:
 
