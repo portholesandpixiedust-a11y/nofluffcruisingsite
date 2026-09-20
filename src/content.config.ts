@@ -47,6 +47,14 @@ const guides = defineCollection({
   }),
 });
 
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+  schema: z.object({
+    ...articleBase,
+    video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }).optional(),
+  }),
+});
+
 const ships = defineCollection({
   loader: file('./src/data/ships.json'),
   schema: z.object({
@@ -66,7 +74,6 @@ const ships = defineCollection({
     watchFor: z.array(z.string()).default([]),
     coveredIn: z.array(videoRef).default([]),
     videoTour: z.object({ id: z.string(), title: z.string(), channel: z.string() }).nullable().default(null),
-    grossTonnage: z.number().optional(),
     updated: z.string().optional(),
   }),
 });
@@ -81,4 +88,4 @@ const lines = defineCollection({
   }),
 });
 
-export const collections = { reviews, guides, ships, lines };
+export const collections = { reviews, guides, news, ships, lines };
