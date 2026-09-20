@@ -1,6 +1,6 @@
 ---
 title: "Brilliant Lady wraps Virgin Voyages first Alaska season"
-heroImage: "https://cruiseindustrynews.com/wp-content/uploads/2026/05/Brilliant_Lady_Ketchikan_2.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fcruiseindustrynews.com%2Fwp-content%2Fuploads%2F2026%2F05%2FBrilliant_Lady_Ketchikan_2.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Cruise Industry News · https://cruiseindustrynews.com/cruise-news/2026/09/brilliant-lady-wraps-up-virgins-first-alaska-season/"
 description: "Brilliant Lady finished its inaugural Alaska and British Columbia season in early Sep 2026 after more than 15 sailings from Seattle. The ship now repositions toward Los Angeles and Mexican Riviera runs."
 answer: "Brilliant Lady ended Virgin Voyages first Alaska season in early September 2026. The ship ran more than 15 sailings of seven to 12 nights from late May, then begins a mid-September reposition toward Los Angeles and fall Mexican Riviera cruises."
