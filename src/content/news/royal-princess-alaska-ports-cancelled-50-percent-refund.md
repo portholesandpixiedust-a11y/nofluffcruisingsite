@@ -1,5 +1,7 @@
 ---
 title: "Royal Princess cancels Juneau and Ketchikan, issues 50 percent refund"
+heroImage: "https://d.travelerstoday.com/en/full/55684/princess-cruises-celebrates-record-breaking-alaska-bookings.jpg"
+heroCredit: "Photo: Travelers Today · https://www.travelerstoday.com/articles/61007/20260919/princess-cruises-cancels-alaska-ports-issues-50-refund-after-engine-trouble.htm"
 description: "Engine limits forced Royal Princess to skip Juneau and Ketchikan on its 12 Sep 2026 Alaska cruise from Seattle. Princess is refunding 50 percent of cruise fare."
 answer: "Royal Princess cut Juneau and Ketchikan after an engine technical issue limited speed. Captain Steven Holland notified guests on 13 Sep 2026. Princess is refunding 50 percent of cruise fare to the original payment method in 10 to 15 business days."
 presenter: Matthew

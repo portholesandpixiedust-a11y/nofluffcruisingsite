@@ -1,5 +1,7 @@
 ---
 title: "Norwegian Jade moves off Whittier dock after terminal fire"
+heroImage: "https://www.cruisehive.com/wp-content/uploads/2026/09/Whittier-Cruise-Port-Fire.jpg"
+heroCredit: "Photo: Cruise Hive · https://www.cruisehive.com/norwegian-jade-forced-to-move-as-fire-erupts-at-alaska-cruise-dock/217618"
 description: "A 14 Sep 2026 fire at Whittier's Chugach Glacier Gateway Cruise Terminal destroyed the dock. Norwegian Jade moved away safely with no ship damage. Embarkation shifted to Whittier's existing Cruise Ship Terminal 1."
 answer: "Fire hit the Chugach Glacier Gateway Cruise Terminal in Whittier, Alaska, on 14 Sep 2026 and involved the tour boat Klondike Express. The Alaska fire marshal later called the dock a total loss. Norwegian Jade was alongside, moved away safely, and took no ship damage. Embarkation shifted to Whittier Alaska Cruise Ship Terminal 1."
 presenter: Matthew

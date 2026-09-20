@@ -1,6 +1,5 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 const entries = (await getCollection('news')).sort((a,b)=> new Date(b.data.publishDate)-new Date(a.data.publishDate));
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
@@ -11,11 +10,21 @@ const heading = { watch: 'Ship reviews and video companions', guides: 'Cruise gu
     <span class="eyebrow">news</span>
     <h2 class="sec">{heading}</h2>
     <div class="rule"></div>
-    <div class="grid g3">
+    <div class="news-list">
       {entries.map((e) => (
-        <Card href={'/news/' + e.id + '/'} title={e.data.title} description={e.data.description}
-              kicker={[e.data.line, ...e.data.topics].filter(Boolean).join(' · ')}
-              videoId={e.data.video?.id} meta={e.data.presenter + ' · ' + fmt(e.data.publishDate)} />
+        <article class="news-row">
+          {e.data.heroImage && (
+            <a class="news-thumb" href={'/news/' + e.id + '/'} aria-hidden="true" tabindex="-1">
+              <img src={e.data.heroImage} width="320" height="180" loading="lazy" alt="" />
+            </a>
+          )}
+          <div class="news-body">
+            <span class="kicker">{[e.data.line, ...e.data.topics].filter(Boolean).join(' · ')}</span>
+            <h3><a href={'/news/' + e.id + '/'}>{e.data.title}</a></h3>
+            {e.data.description && <p>{e.data.description}</p>}
+            <span class="meta">{e.data.presenter + ' · ' + fmt(e.data.publishDate)}</span>
+          </div>
+        </article>
       ))}
     </div>
   </div>
