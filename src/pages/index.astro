@@ -15,7 +15,7 @@ const FEATURED_REVIEW_IDS = ['disney-wish-review', 'celebrity-beyond-review', 'v
 const reviews = (await getCollection('reviews'))
   .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
   .sort(byDate);
-const news = (await getCollection('news')).sort(byDate).slice(0, 3);
+const news = (await getCollection('news')).sort(byDate).slice(0, 5);
 const ships = await getCollection('ships');
 const lines = await getCollection('lines');
 
@@ -41,24 +41,8 @@ const newsMeta = (n) => n.data.presenter + ' · ' + fmt(n.data.publishDate);
   </div>
 
   <div class="wrap">
-    <section>
-      <span class="eyebrow">Latest guides</span>
-      <h2 class="sec">Start here</h2>
-      <div class="rule"></div>
-      <div class="grid g3">
-        {leadGuides.map((g) => (
-          <Card href={'/guides/' + g.id + '/'} title={g.data.title} description={g.data.description}
-                kicker={kicker(g.data)} videoId={g.data.video?.id}
-                meta={guideMeta(g)} />
-        ))}
-      </div>
-      {moreGuides.length > 0 && (
-        <p style="margin-top:16px"><a href="/guides/">All {guides.length} guides →</a></p>
-      )}
-    </section>
-
     {news.length > 0 && (
-      <section style="margin-top:44px">
+      <section>
         <span class="eyebrow">Cruise news</span>
         <h2 class="sec">What changed for people who are booked</h2>
         <div class="rule"></div>
@@ -82,6 +66,22 @@ const newsMeta = (n) => n.data.presenter + ' · ' + fmt(n.data.publishDate);
         <p style="margin-top:16px"><a href="/news/">All cruise news →</a></p>
       </section>
     )}
+
+    <section style="margin-top:44px">
+      <span class="eyebrow">Latest guides</span>
+      <h2 class="sec">Start here</h2>
+      <div class="rule"></div>
+      <div class="grid g3">
+        {leadGuides.map((g) => (
+          <Card href={'/guides/' + g.id + '/'} title={g.data.title} description={g.data.description}
+                kicker={kicker(g.data)} videoId={g.data.video?.id}
+                meta={guideMeta(g)} />
+        ))}
+      </div>
+      {moreGuides.length > 0 && (
+        <p style="margin-top:16px"><a href="/guides/">All {guides.length} guides →</a></p>
+      )}
+    </section>
 
     <section style="margin-top:44px">
       <span class="eyebrow">Ship reviews</span>
