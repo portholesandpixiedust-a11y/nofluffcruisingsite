@@ -62,11 +62,21 @@ const newsMeta = (n) => n.data.presenter + ' · ' + fmt(n.data.publishDate);
         <span class="eyebrow">Cruise news</span>
         <h2 class="sec">What changed for people who are booked</h2>
         <div class="rule"></div>
-        <div class="grid g3">
+        <div class="news-list">
           {news.map((n) => (
-            <Card href={'/news/' + n.id + '/'} title={n.data.title} description={n.data.description}
-                  kicker={kicker(n.data)}
-                  meta={newsMeta(n)} />
+            <article class="news-row">
+              {n.data.heroImage && (
+                <a class="news-thumb" href={'/news/' + n.id + '/'} aria-hidden="true" tabindex="-1">
+                  <img src={n.data.heroImage} width="320" height="180" loading="lazy" alt="" />
+                </a>
+              )}
+              <div class="news-body">
+                <span class="kicker">{kicker(n.data)}</span>
+                <h3><a href={'/news/' + n.id + '/'}>{n.data.title}</a></h3>
+                {n.data.description && <p>{n.data.description}</p>}
+                <span class="meta">{newsMeta(n)}</span>
+              </div>
+            </article>
           ))}
         </div>
         <p style="margin-top:16px"><a href="/news/">All cruise news →</a></p>
