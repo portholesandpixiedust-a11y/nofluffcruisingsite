@@ -1,5 +1,7 @@
 ---
 title: "Ruby Princess skips Kauai, adds Honolulu overnight"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F41%2FRuby_Princess_moored_in_Bridgetown.JPG&w=1280&output=jpg"
+heroCredit: "Photo: Jean-Philippe Boulet (CC BY 3.0) | Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Ruby_Princess_moored_in_Bridgetown.JPG"
 description: "Princess cancelled Ruby Princess Nawiliwili on 22 Sep 2026 after Hurricane Lowell damage on Kauai. The ship reaches Honolulu early for an overnight stay. Kauai Princess tours refund to the original card."
 answer: "Ruby Princess drops Nawiliwili, Kauai, on 22 Sep 2026 during its current 16-night Hawaii cruise from San Francisco. Hurricane Lowell damage forced the cut. The ship arrives Honolulu about 8am on 22 Sep and stays overnight until the scheduled 11pm departure on 23 Sep. Princess refunds Kauai shore excursions to the original payment method."
 presenter: Matthew
