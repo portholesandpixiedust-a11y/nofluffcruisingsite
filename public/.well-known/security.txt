@@ -1,0 +1,3 @@
+Contact: mailto:portholesandpixiedust@gmail.com
+Preferred-Languages: en
+Canonical: https://nofluffcruising.com/.well-known/security.txt
