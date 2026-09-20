@@ -1,5 +1,7 @@
 ---
 title: "Oasis of the Seas delayed into Cape Liberty, Port Canaveral cancelled"
+heroImage: "https://www.cruisehive.com/wp-content/uploads/2026/09/Oasis-of-the-Seas-Dock.jpg"
+heroCredit: "Photo: Cruise Hive · https://www.cruisehive.com/two-guests-rushed-ashore-oasis-of-the-seas-delayed-and-port-cancelled/218240"
 description: "Two medical evacuations pushed Oasis about eight hours late into Cape Liberty on 20 Sep 2026. Port Canaveral on 22 Sep is gone. Royal is paying OBC, internet, and flight change help."
 answer: "Oasis of the Seas returns to Cape Liberty around 2pm on Sunday 20 Sep 2026, about eight hours late. Debarkation starts around 2:30pm. The next sailing boards late, Port Canaveral on Tuesday is cancelled, and Royal is issuing onboard credit plus flight and internet help."
 presenter: Matthew
