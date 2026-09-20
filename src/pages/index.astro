@@ -1,1 +1,130 @@
-PLACEHOLDER
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import NewsletterEmbed from '../components/NewsletterEmbed.astro';
+import { getCollection } from 'astro:content';
+
+const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
+const guides = (await getCollection('guides')).sort(byDate);
+
+// The auto-publish pipeline drops every approved video companion post into the
+// "reviews" collection, whether or not it's actually a per-ship review. Only
+// entries in this allowlist are real ship reviews, so only these surface in
+// the Ship Reviews section. Add a new id here when a genuine ship review
+// publishes, or nothing will show up but Celebrity Beyond.
+const FEATURED_REVIEW_IDS = ['disney-wish-review', 'celebrity-beyond-review', 'virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change'];
+const reviews = (await getCollection('reviews'))
+  .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
+  .sort(byDate);
+const news = (await getCollection('news')).sort(byDate).slice(0, 5);
+const ships = await getCollection('ships');
+const lines = await getCollection('lines');
+
+// The three most recent guides always lead the homepage.
+const leadGuides = guides.slice(0, 3);
+const moreGuides = guides.slice(3, 7);
+const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+const kicker = (d) => [d.line, ...(d.topics ?? [])].filter(Boolean).join(' \u00b7 ');
+const guideMeta = (g) => g.data.presenter + ' \u00b7 ' + fmt(g.data.publishDate) + (g.data.sources.length ? ' \u00b7 ' + g.data.sources.length + ' sources' : '');
+const reviewMeta = (r) => r.data.presenter + ' \u00b7 ' + fmt(r.data.publishDate);
+const newsMeta = (n) => n.data.presenter + ' \u00b7 ' + fmt(n.data.publishDate);
+---
+<Base
+  title="No Fluff Cruising: Expert Cruise Tips & Ship Reviews"
+  ogTitle="Expert Cruise Tips, Ship Reviews, Ship Tours"
+  description="Cruise tips, ship reviews and full walkthrough ship tours across every major cruise line. Every claim names its source and its date. No line loyalty, no filler.">
+  <div slot="hero" class="hero">
+    <img src="/hero-wake.jpg" width="1600" height="330" alt="" fetchpriority="high" />
+    <div class="cap"><div class="wrap">
+      <h1>Cruise advice with the receipts attached</h1>
+      <p>No fluff. Just the info you need to cruise smarter.</p>
+    </div></div>
+  </div>
+
+  <div class="wrap">
+    {news.length > 0 && (
+      <section>
+        <span class="eyebrow">Cruise News</span>
+        <h2 class="sec">All the news you need without the fluff</h2>
+        <div class="rule"></div>
+        <div class="news-list">
+          {news.map((n) => (
+            <article class="news-row">
+              {n.data.heroImage && (
+                <a class="news-thumb" href={'/news/' + n.id + '/'} aria-hidden="true" tabindex="-1">
+                  <img src={n.data.heroImage} width="320" height="180" loading="lazy" alt="" />
+                </a>
+              )}
+              <div class="news-body">
+                <span class="kicker">{kicker(n.data)}</span>
+                <h3><a href={'/news/' + n.id + '/'}>{n.data.title}</a></h3>
+                {n.data.description && <p>{n.data.description}</p>}
+                <span class="meta">{newsMeta(n)}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p style="margin-top:16px"><a href="/news/">All cruise news \u2192</a></p>
+      </section>
+    )}
+
+    <section style="margin-top:44px">
+      <span class="eyebrow">Latest guides</span>
+      <h2 class="sec">Start here</h2>
+      <div class="rule"></div>
+      <div class="grid g3">
+        {leadGuides.map((g) => (
+          <Card href={'/guides/' + g.id + '/'} title={g.data.title} description={g.data.description}
+                kicker={kicker(g.data)} videoId={g.data.video?.id}
+                meta={guideMeta(g)} />
+        ))}
+      </div>
+      {moreGuides.length > 0 && (
+        <p style="margin-top:16px"><a href="/guides/">All {guides.length} guides \u2192</a></p>
+      )}
+    </section>
+
+    <section style="margin-top:44px">
+      <span class="eyebrow">Ship reviews</span>
+      <h2 class="sec">Been aboard, here is the verdict</h2>
+      <div class="rule"></div>
+      <div class="grid g2c">
+        {reviews.map((r) => (
+          <Card href={'/reviews/' + r.id + '/'} title={r.data.title} description={r.data.description}
+                kicker={kicker(r.data)} videoId={r.data.video?.id}
+                meta={reviewMeta(r)} />
+        ))}
+        <article class="card">
+          <div class="body">
+            <span class="kicker">Ship database</span>
+            <h3><a href="/ships/">{ships.length} ships, {lines.length} cruise lines</a></h3>
+            <p>Specs, verdicts and a full walkthrough tour on every ship we cover.</p>
+            <span class="meta">Updated 29 Aug 2026</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    {moreGuides.length > 0 && (
+      <section style="margin-top:44px">
+        <span class="eyebrow">More guides</span>
+        <h2 class="sec">Worth reading next</h2>
+        <div class="rule"></div>
+        <div class="grid g3">
+          {moreGuides.map((g) => (
+            <Card href={'/guides/' + g.id + '/'} title={g.data.title} description={g.data.description}
+                  kicker={kicker(g.data)} videoId={g.data.video?.id} meta={fmt(g.data.publishDate)} />
+        ))}
+        </div>
+      </section>
+    )}
+
+    <section class="nl" id="newsletter">
+      <div>
+        <h2>No Fluff Weekly</h2>
+        <p>Cruise news, guides, reviews, and a little chaos. Short. Sourced. No fluff. <a href="/privacy/" style="color:#fff">Privacy</a>.</p>
+      </div>
+      <NewsletterEmbed />
+    </section>
+  </div>
+</Base>
