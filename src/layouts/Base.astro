@@ -6,13 +6,10 @@ import Footer from '../components/Footer.astro';
 
 const { title, description, jsonld = [], noindex = false, ogImage, ogTitle, breadcrumbs = [], published, modified, author } = Astro.props;
 const path = Astro.url.pathname;
-// Google truncates titles near 60 characters. Append the brand only when the
-// keywords still survive; a cut-off brand name is worth less than a visible keyword.
 const pageTitle = title.includes('No Fluff Cruising')
   ? title
   : (title.length <= 44 ? `${title} | No Fluff Cruising` : title);
 const canonical = new URL(path, Astro.site).href;
-// Social preview. Article pages pass their own image; everything else gets the brand card.
 const share = ogImage
   ? (ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href)
   : new URL('/og-default.jpg', Astro.site).href;
@@ -62,7 +59,7 @@ const graph = [org, site, crumbs, ...jsonld].filter(Boolean);
   <meta property="og:image" content={share} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="No Fluff Cruising — expert cruise tips, ship reviews and ship tours" />
+  <meta property="og:image:alt" content="No Fluff Cruising - expert cruise tips, ship reviews and ship tours" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content={share} />
