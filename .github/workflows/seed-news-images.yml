@@ -1,0 +1,54 @@
+name: Seed news images
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/news-image-manifest.json'
+      - '.github/workflows/seed-news-images.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seed-news-images
+  cancel-in-progress: true
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Download outlet images from manifest
+        run: |
+          node <<'NODE'
+          import { readFile, writeFile, mkdir } from 'node:fs/promises';
+          import path from 'node:path';
+          const UA = 'NoFluffCruisingBot/1.0 (https://nofluffcruising.com; site image credit bot)';
+          const manifest = JSON.parse(await readFile('scripts/news-image-manifest.json', 'utf8'));
+          await mkdir('public/news', { recursive: true });
+          let n = 0;
+          for (const [slug, info] of Object.entries(manifest)) {
+            const dest = path.join('public/news', `${slug}.jpg`);
+            const res = await fetch(info.url, { headers: { 'User-Agent': UA, Referer: info.source || info.url } });
+            if (!res.ok) { console.log('FAIL', slug, res.status); continue; }
+            await writeFile(dest, Buffer.from(await res.arrayBuffer()));
+            n++;
+            console.log('OK', slug, res.headers.get('content-type'));
+          }
+          console.log('downloaded', n);
+          NODE
+      - name: Commit images
+        run: |
+          git config user.name  "No Fluff Cruising bot"
+          git config user.email "noreply@nofluffcruising.com"
+          git add public/news
+          if git diff --staged --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Add news hero images from cited outlet articles"
+          git push
