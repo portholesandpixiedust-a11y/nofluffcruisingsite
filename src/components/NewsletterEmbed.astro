@@ -1,0 +1,66 @@
+---
+/**
+ * beehiiv subscribe-form embed.
+ * Set PUBLIC_BEEHIIV_FORM_ID in Vercel (UUID from Audience → Subscribe forms).
+ * When unset, keep the chrome so design review still works.
+ */
+const formId = (import.meta.env.PUBLIC_BEEHIIV_FORM_ID || '').trim();
+const hasForm = Boolean(formId);
+---
+<div class="nfc-nl-embed">
+  {hasForm ? (
+    <>
+      <script is:inline async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+      <iframe
+        src={`https://subscribe-forms.beehiiv.com/${formId}`}
+        class="beehiiv-embed"
+        data-test-id="beehiiv-embed"
+        frameborder="0"
+        scrolling="no"
+        style="width:100%;min-height:180px;border:0;background:transparent;margin:0;border-radius:3px!important;max-width:100%"
+        title="Subscribe to the No Fluff Cruising newsletter"
+      ></iframe>
+    </>
+  ) : (
+    <div class="nlform nfc-nl-fallback" aria-live="polite">
+      <label class="visually-hidden" for="nfc-nl-email-soon">Email</label>
+      <input
+        id="nfc-nl-email-soon"
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        disabled
+        autocomplete="email"
+      />
+      <button class="btn" type="button" disabled>Signup opens soon</button>
+      <p class="nfc-nl-note">Coming soon. Form ID not set yet.</p>
+    </div>
+  )}
+</div>
+
+<style>
+  .nfc-nl-embed { width: 100%; min-width: 0; }
+  .nfc-nl-fallback { flex-direction: column; align-items: stretch; }
+  .nfc-nl-fallback .btn[disabled],
+  .nfc-nl-fallback input[disabled] {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+  .nfc-nl-note {
+    margin: 4px 0 0;
+    font-family: var(--fu);
+    font-size: 12px;
+    color: var(--onnavy-2);
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
