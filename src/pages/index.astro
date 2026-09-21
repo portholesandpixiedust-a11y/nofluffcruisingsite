@@ -3,8 +3,8 @@ import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import NewsletterEmbed from '../components/NewsletterEmbed.astro';
 import { getCollection } from 'astro:content';
+import { byPublishDate as byDate } from '../utils/byPublishDate.js';
 
-const byDate = (a, b) => new Date(b.data.publishDate) - new Date(a.data.publishDate);
 const guides = (await getCollection('guides')).sort(byDate);
 
 // The auto-publish pipeline drops every approved video companion post into the

@@ -1,7 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-const entries = (await getCollection('news')).sort((a,b)=> new Date(b.data.publishDate)-new Date(a.data.publishDate));
+import { byPublishDate } from '../../utils/byPublishDate.js';
+const entries = (await getCollection('news')).sort(byPublishDate);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
 const heading = { watch: 'Ship reviews and video companions', guides: 'Cruise guides', news: 'Cruise news' }['news'];
 ---
