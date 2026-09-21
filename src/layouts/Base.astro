@@ -14,6 +14,8 @@ const share = ogImage
   ? (ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href)
   : new URL('/og-default.jpg', Astro.site).href;
 
+const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+
 const org = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -38,7 +40,6 @@ const crumbs = breadcrumbs.length ? {
   })),
 } : null;
 const graph = [org, site, crumbs, ...jsonld].filter(Boolean);
-const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 <!doctype html>
 <html lang="en">
@@ -72,16 +73,16 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500&display=swap" />
   <script type="application/ld+json" set:html={JSON.stringify(graph)} />
-  {gaMeasurementId && (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
-      <script is:inline define:vars={{ gaMeasurementId }}>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', gaMeasurementId);
-      </script>
-    </>
+  {gaId && (
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+  )}
+  {gaId && (
+    <script is:inline define:vars={{ gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gaId);
+    </script>
   )}
 </head>
 <body>

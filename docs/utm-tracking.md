@@ -1,95 +1,112 @@
-# YouTube on-video QR tracking (UTM + GA4)
+# UTM tracking
 
-Track how often a QR code shown **on a YouTube video** is scanned by counting successful page loads on nofluffcruising.com.
+UTM parameters **label** where a visit came from. They travel on the URL query string. **Google Analytics 4** (when enabled) **counts** those labeled visits.
 
-## How a scan becomes a count
+This site does not ship analytics unless you set a measurement ID. To turn GA4 on in production:
 
-1. Viewer scans the on-video QR with their phone camera.
-2. The phone opens the **full destination URL** (including UTM query string).
-3. If GA4 is enabled on the site, that visit starts a GA4 session attributed to the UTM tags.
-4. **Only loads that reach the site count.** Failed scans, camera apps that preview without opening, or users who never land on the page do not appear in GA4.
+1. Create a GA4 property and copy the Measurement ID (`G-XXXXXXXX`).
+2. In Vercel → Project → Settings → Environment Variables, add:
+   - **Name:** `PUBLIC_GA_MEASUREMENT_ID`
+   - **Value:** your `G-…` ID
+   - Scope: Production (and Preview only if you want test traffic separated carefully)
+3. Redeploy so the build picks up the env var.
 
-You are not counting “QR impressions” inside YouTube. You are counting **sessions (and page views) that arrived via the tagged URL**.
+When `PUBLIC_GA_MEASUREMENT_ID` is unset, `Base.astro` injects no gtag scripts.
 
-## UTM convention for on-video QR
+## Naming convention
 
-Use this query string on every on-video QR destination:
+Keep values lowercase, hyphenated, and stable so reports stay comparable over time.
 
-```
-utm_source=youtube&utm_medium=qr&utm_campaign=<youtubeVideoId>&utm_content=on_video
-```
-
-| Param | Value | Purpose |
-| --- | --- | --- |
-| `utm_source` | `youtube` | Channel / platform |
-| `utm_medium` | `qr` | Distinguishes QR scans from other YouTube traffic |
-| `utm_campaign` | YouTube video ID (e.g. `hVsaSdh5TD8`) | Ties scans to a specific video |
-| `utm_content` | `on_video` | Marks codes burned into the video frame |
-| `utm_term` | *(optional)* | A/B creative label later (e.g. `cta_v1`) |
-
-Description-bar / comment links can use `utm_medium=video&utm_content=description` instead of `qr` / `on_video`.
-
-## Example QR destination URLs
-
-Replace `VIDEO_ID` with the YouTube video id the QR appears in (the characters after `v=` / `youtu.be/`).
-
-**Homepage**
+### QR codes (offline)
 
 ```
-https://nofluffcruising.com/?utm_source=youtube&utm_medium=qr&utm_campaign=VIDEO_ID&utm_content=on_video
+utm_source=qr
+utm_medium=offline
+utm_campaign=<campaign-slug>
+utm_content=<optional-placement>
 ```
 
-**Drink package guide**
+Examples of campaign slugs: `flyer-spring-2026`, `booth-cruise-show`, `business-card`.  
+Examples of content (placement): `front`, `back`, `table-tent`, `poster`.
+
+### YouTube description links
 
 ```
-https://nofluffcruising.com/guides/royal-caribbean-drink-package-worth-it/?utm_source=youtube&utm_medium=qr&utm_campaign=VIDEO_ID&utm_content=on_video
+utm_source=youtube
+utm_medium=video
+utm_campaign=<videoId>
+utm_content=description
 ```
 
-**Crown & Anchor tiers**
+Use the YouTube video ID (the `v=` value) as `utm_campaign` so each video is separable in reports.
+
+## How to view in GA4
+
+1. Open your GA4 property.
+2. Go to **Reports → Acquisition → Traffic acquisition**.
+3. Add a secondary dimension such as **Session source / medium** or **Session campaign** (Campaign) to split QR vs YouTube and see campaign slugs.
+
+Allow a day or so for standard reports to populate after first traffic. Realtime can confirm a tagged hit sooner.
+
+## Example URLs
+
+Base site: `https://nofluffcruising.com`
+
+### Homepage
+
+QR (flyer front):
 
 ```
-https://nofluffcruising.com/guides/royal-caribbean-crown-anchor-tiers/?utm_source=youtube&utm_medium=qr&utm_campaign=VIDEO_ID&utm_content=on_video
+https://nofluffcruising.com/?utm_source=qr&utm_medium=offline&utm_campaign=flyer-spring-2026&utm_content=front
 ```
 
-**2027 announcements**
+YouTube description (replace `VIDEO_ID`):
 
 ```
-https://nofluffcruising.com/guides/royal-caribbean-2027-announcements-most-cruisers-missed/?utm_source=youtube&utm_medium=qr&utm_campaign=VIDEO_ID&utm_content=on_video
+https://nofluffcruising.com/?utm_source=youtube&utm_medium=video&utm_campaign=VIDEO_ID&utm_content=description
 ```
 
-## Build the QR
-
-Encode the **full URL including the query string**. Do not encode a bare path and append UTMs later—most QR generators will not keep parameters you add after generation.
-
-1. Copy one of the example URLs above.
-2. Swap `VIDEO_ID` for the real video id.
-3. Paste that complete URL into your QR tool (Canva, qr-code-generator, etc.).
-4. Place the QR in the video frame; keep contrast high and hold it on screen long enough to scan.
-
-## Read counts in GA4
-
-After `PUBLIC_GA_MEASUREMENT_ID` is live on production:
-
-1. Open **Reports → Acquisition → Traffic acquisition**.
-2. Filter or break down by **Session source / medium** = `youtube / qr`.
-3. Or use **Explorations** and dimension **Session campaign** = the video id (your `utm_campaign`).
-
-Session counts for that source/medium (or campaign) are the practical “successful QR scan → page load” metric.
-
-## Enable GA4 on Vercel
-
-In the Vercel project for this site, add:
+### Drink package guide
 
 ```
-PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXX
+https://nofluffcruising.com/guides/royal-caribbean-drink-package-worth-it/?utm_source=qr&utm_medium=offline&utm_campaign=flyer-spring-2026&utm_content=front
 ```
 
-Redeploy after setting it. Until this env var is set, Base.astro injects no gtag and QR landings are not counted in GA4.
-
-Optional local `.env`:
-
 ```
-PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXX
+https://nofluffcruising.com/guides/royal-caribbean-drink-package-worth-it/?utm_source=youtube&utm_medium=video&utm_campaign=VIDEO_ID&utm_content=description
 ```
 
-Do not commit a real measurement ID. Do not hardcode a fake `G-` id in the repo.
+### Crown & Anchor tiers guide
+
+```
+https://nofluffcruising.com/guides/royal-caribbean-crown-anchor-tiers/?utm_source=qr&utm_medium=offline&utm_campaign=booth-cruise-show&utm_content=handout
+```
+
+```
+https://nofluffcruising.com/guides/royal-caribbean-crown-anchor-tiers/?utm_source=youtube&utm_medium=video&utm_campaign=VIDEO_ID&utm_content=description
+```
+
+### 2027 announcements guide
+
+```
+https://nofluffcruising.com/guides/royal-caribbean-2027-announcements-most-cruisers-missed/?utm_source=qr&utm_medium=offline&utm_campaign=flyer-spring-2026&utm_content=back
+```
+
+```
+https://nofluffcruising.com/guides/royal-caribbean-2027-announcements-most-cruisers-missed/?utm_source=youtube&utm_medium=video&utm_campaign=VIDEO_ID&utm_content=description
+```
+
+## Making a QR code
+
+1. Build the full URL including UTMs (copy one of the examples and edit the campaign/content).
+2. Paste that exact URL into any QR generator.
+3. Print or place the QR. Do not shorten in a way that strips query parameters unless the shortener preserves them.
+
+The QR must encode the **full tagged URL**, not a bare path.
+
+## What is and is not countable
+
+- **Countable:** Someone opens the tagged URL in a browser and the site loads (GA4 then records the session with those campaign parameters).
+- **Not countable:** A camera “scans” the QR but never opens a browser, or the visit uses a URL without UTMs. Those never reach the site as labeled traffic.
+
+UTMs alone do not send data anywhere; they only label the request. Counting requires GA4 (or another analytics product) to be configured and loaded on the page.
