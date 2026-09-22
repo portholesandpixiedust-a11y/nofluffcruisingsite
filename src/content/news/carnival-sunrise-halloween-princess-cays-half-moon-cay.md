@@ -1,6 +1,6 @@
 ---
 title: "Carnival Sunrise Halloween cruise swaps Princess Cays for Half Moon Cay"
-heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F87%2FCarnival_Sunrise_Anchored_in_Grand_Cayman_%2528May_2025%2529.jpg&w=1280&output=jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F%2FCarnival_Sunrise_Anchored_in_Grand_Cayman_%2528May_2025%2529.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Jack Adamenko (CC BY 4.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Carnival_Sunrise_Anchored_in_Grand_Cayman_(May_2025).jpg"
 description: "Carnival Sunrise's 31 Oct 2026 Miami Halloween cruise drops Princess Cays. Same Monday window now goes to RelaxAway, Half Moon Cay. Nassau and Celebration Key stay. Princess Cays tours refund to original payment."
 answer: "Carnival Sunrise's 31 Oct 2026 five-night Miami Halloween cruise no longer calls Princess Cays. Monday 2 Nov 2026 from 8am to 4pm is now RelaxAway, Half Moon Cay. Nassau and Celebration Key stay on the schedule."
