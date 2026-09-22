@@ -1,7 +1,7 @@
 ---
 title: "Norwegian drops Daniel's Head Bermuda private destination plans"
-heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F8e%2FKing%2527s_Wharf_-_also_called_the_Royal_Naval_Dockyard_is_located_in_Bermuda%2527s_Sandys_Parish%2C_on_Ireland_Island_-_panoramio.jpg&w=1280&output=jpg"
-heroCredit: "Photo: MARELBU (CC BY 3.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:King%27s_Wharf_-_also_called_the_Royal_Naval_Dockyard_is_located_in_Bermuda%27s_Sandys_Parish,_on_Ireland_Island_-_panoramio.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fab%2FKing%2527s_Wharf%252C_Ireland_Island%252C_Sandys%252C_Bermuda_-_panoramio.jpg&w=1280&output=jpg"
+heroCredit: "Photo: MARELBU (CC BY 3.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:King%27s_Wharf,_Ireland_Island,_Sandys,_Bermuda_-_panoramio.jpg"
 description: "NCL Holdings will not build a day destination at Daniel's Head in western Bermuda. Exploratory talks with BLMC ended. Booked Bermuda calls, including Norwegian Aqua's 25-26 Sep overnight at King's Wharf, still stand."
 answer: "Norwegian Cruise Line Holdings will not develop Daniel's Head in western Bermuda into a private day destination. The Bermuda Land Management Corporation said exploratory talks ended after NCLH notified it on 17 Aug 2026. Your booked Bermuda port calls are not cancelled."
 presenter: Matthew
