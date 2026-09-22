@@ -1,7 +1,7 @@
 ---
 title: "Royal Caribbean in reported talks for a Sandals stake. No deal yet."
-heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc4%2FIcon_of_the_Seas_Puerto_Rico_2025.jpg&w=1280&output=jpg"
-heroCredit: "Photo: Corey Seeman (CC BY-SA 4.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Icon_of_the_Seas_Puerto_Rico_2025.jpg"
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4a%2FIcon_of_the_Seas_%28kahunapulej%29.jpg&w=1280&output=jpg"
+heroCredit: "Photo: Kahunapule Michael Johnson (CC BY-SA 2.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Icon_of_the_Seas_(kahunapulej).jpg"
 description: "Financial Times and CNBC say Royal Caribbean Group is in talks for a large Sandals stake valuing the resort company around $6 billion. No agreement is signed. Your booked cruise does not change."
 answer: "Royal Caribbean Group is in reported talks to take a large stake in Sandals Resorts International. CNBC put the price near $3 billion for about half the company, valuing Sandals around $6 billion. No deal is signed. Neither company has confirmed it."
 presenter: Matthew
