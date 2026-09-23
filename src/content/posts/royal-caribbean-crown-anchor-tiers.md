@@ -12,8 +12,8 @@ video:
   title: "6 Royal Caribbean Crown & Anchor Tiers Worth Chasing"
   duration: "22:14"
 sponsor:
-  name: Cruises It
-  url: "https://book.cruisesit.com/home-page"
+  name: Member Cruises
+  url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "A Dream Vacations advisor team that has helped more than 75,000 clients save money on their cruises. They track which loyalty promotions are live and which sailings qualify, and every booking carries a 24-hour Best Price Guarantee."
 sources:
   - claim: "Tier thresholds and point-earning rates, including the solo rate"

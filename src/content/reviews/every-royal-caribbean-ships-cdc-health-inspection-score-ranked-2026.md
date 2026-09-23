@@ -15,8 +15,8 @@ video:
   id: NWx3fJptb0E
   title: "These Royal Caribbean Health Inspection Scores Shocked Me"
 sponsor:
-  name: Cruises It
-  url: "https://book.cruisesit.com/home-page"
+  name: Member Cruises
+  url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "Cruises It is a Dream Vacations travel advisor team that has helped more than 75,000 clients save money on their cruises. Ship condition, dry dock schedules and itinerary changes are the kind of thing an advisor tracks as part of the job. They also back bookings with a Best Price Guarantee: find a lower advertised rate within 24 hours of booking and depositing, for the same ship, sailing date and cabin category, and they'll match it. The guarantee covers cruise fare and port charges only. It excludes taxes and fees, group sailings, land bookings and Princess Cruises sailings."
 sources:
   - claim: "All 28 Royal Caribbean ship scores and inspection dates."
@@ -52,7 +52,7 @@ sources:
     tier: 1
     date: "2026-08-29"
   - claim: "Cruises It proof points and Best Price Guarantee terms, including its exclusions."
-    outlet: "book.cruisesit.com home page and live terms page"
+    outlet: "Member Cruises (nofluffcruising.membercruises.com) home page and live terms page"
     tier: 1
     date: "2026-08-29"
   - claim: "The seven lowest-scoring cruise ships of 2026 as a named set, and the 'dirtiest ships' framing of the August coverage."

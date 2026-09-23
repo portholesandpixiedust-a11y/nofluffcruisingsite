@@ -15,8 +15,8 @@ video:
   id: tNPR71IheoU
   title: "6 Royal Caribbean Crown & Anchor Tiers Worth Chasing"
 sponsor:
-  name: Cruises It
-  url: "https://book.cruisesit.com/home-page"
+  name: Member Cruises
+  url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "Cruises It is a Dream Vacations travel advisor team, powered by CruiseOne, a division of World Travel Holdings. Their site states they have saved over 75,000 clients money on their cruises, and their advisors are CLIA-affiliated. They track which loyalty promotions are live and which sailings qualify, and they structure bookings so they count toward Crown & Anchor progress the way you intend. Every booking carries their Best Price Guarantee: book and deposit, then find a lower advertised rate within 24 hours for the identical ship, sailing date and cabin category, and they will match it. The guarantee covers cruise fare and port charges. It excludes taxes and fees, promotional packages, group deals, air and land components, shipboard credit, travel insurance, transfers, pre- and post-cruise hotels, shore excursions and Princess Cruises sailings."
 sources:
   - claim: "Tier thresholds: Gold 3, Platinum 30, Emerald 55, Diamond 80, Diamond Plus 175, Pinnacle Club 700. One point per night in a standard cabin, two per night in a suite, two per night solo."
@@ -52,7 +52,7 @@ sources:
     tier: 2
     date: "2026-07-21"
   - claim: "Cruises It proof points and Best Price Guarantee terms."
-    outlet: "book.cruisesit.com home page and price guarantee page"
+    outlet: "Member Cruises (nofluffcruising.membercruises.com) home page and price guarantee page"
     tier: 1
     date: "2026-08-29"
 videosReferenced:
