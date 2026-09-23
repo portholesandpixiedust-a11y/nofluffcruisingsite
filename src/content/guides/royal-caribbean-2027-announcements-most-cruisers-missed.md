@@ -20,8 +20,8 @@ faq:
   - q: "When does Royal Beach Club Lelepa open?"
     a: "Royal Beach Club Lelepa in Vanuatu opens with sailings from late October 2027. Admission is included in the cruise fare on confirmed South Pacific sailings from Sydney and Brisbane."
 sponsor:
-  name: Cruises It
-  url: "https://book.cruisesit.com/home-page"
+  name: Member Cruises
+  url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "A Dream Vacations advisor team that has helped more than 75,000 clients save money on their cruises. They track which ship sails from which port after deployment swaps, and every booking carries a 24-hour Best Price Guarantee."
 sources:
   - claim: "PortMiami Cruise Terminal G groundbreaking; $345 million investment; capacity up to 7,000 passengers; LEED-targeted; Icon-class capable; completion late 2027; Royal Caribbean, Celebrity, Silversea use"

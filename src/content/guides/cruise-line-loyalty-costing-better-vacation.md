@@ -21,8 +21,8 @@ faq:
   - q: "When does loyalty make sense?"
     a: "Stay when you already like the product and the perk value beats the price gap to another line. Walk when you are chasing a pin, lounge access, or a tier you no longer enjoy while a better ship or itinerary sits on another brand."
 sponsor:
-  name: Cruises It
-  url: "https://book.cruisesit.com/home-page"
+  name: Member Cruises
+  url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "A Dream Vacations advisor team that has helped more than 75,000 clients save money on their cruises. They compare loyalty value against itinerary and fare across lines, and every booking carries a 24-hour Best Price Guarantee."
 sources:
   - claim: "Carnival Rewards announced June 18, 2025; dual points and Status Qualifying Stars; four tiers Red, Gold, Platinum, Diamond; status earned over a two-year period and retained for the following two years; planned June 1, 2026 launch replacing VIFP"

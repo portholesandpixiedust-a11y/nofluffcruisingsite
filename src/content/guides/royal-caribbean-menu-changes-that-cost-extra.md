@@ -18,8 +18,8 @@ faq:
   - q: "Is Giovanni's Table included in the cruise fare?"
     a: "No. It is a specialty restaurant. Royal Caribbean Blog's January 2026 pricing guide lists Giovanni's Italian Table at $49.99 for dinner and $24.99 for lunch, before promotions. Check Cruise Planner for your sailing."
 sponsor:
-  name: Cruises It
-  url: "https://book.cruisesit.com/home-page"
+  name: Member Cruises
+  url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "A Dream Vacations advisor team that has helped more than 75,000 clients save money on their cruises. They walk you through current dining packages and specialty pricing before you sail, and every booking carries a 24-hour Best Price Guarantee."
 sources:
   - claim: "Second lobster tail $16.99 plus 18% gratuity; first tail complimentary on formal/Royal Night; Symphony of the Seas test late 2022"

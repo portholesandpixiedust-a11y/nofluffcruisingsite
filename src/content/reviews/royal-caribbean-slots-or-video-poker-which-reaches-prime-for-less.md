@@ -15,8 +15,8 @@ video:
   id: mXt6fuTuznw
   title: "Royal Caribbean Slots or Video Poker: Which Gets You to Prime Faster?"
 sponsor:
-  name: Cruises It
-  url: "https://book.cruisesit.com/home-page"
+  name: Member Cruises
+  url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "Cruises It is a Dream Vacations travel advisor team, powered by CruiseOne, a division of World Travel Holdings. Their site states they have saved over 75,000 clients money on their cruises, and their advisors are CLIA-affiliated. They read the fine print on casino offers and comp certificates before you commit to one. They also run a Best Price Guarantee: book and deposit, then find a lower advertised rate within 24 hours for the identical ship, sailing date and cabin category, and they will match it. The guarantee covers cruise fare and port charges. It excludes taxes and fees, promotional packages, group deals, air and land components, shipboard credit, travel insurance, transfers, pre- and post-cruise hotels, shore excursions and Princess Cruises sailings."
 sources:
   - claim: "Point rates of one point per $5 wagered on reel slots and one point per $15 on video poker. Table games rated by game type, average bet and length of play. Entertainment games and Texas Hold'em excluded."
@@ -52,7 +52,7 @@ sources:
     tier: 1
     date: "2026-08-29"
   - claim: "Cruises It proof points and Best Price Guarantee terms."
-    outlet: "book.cruisesit.com home page and price guarantee page"
+    outlet: "Member Cruises (nofluffcruising.membercruises.com) home page and price guarantee page"
     tier: 1
     date: "2026-08-29"
 videosReferenced:
