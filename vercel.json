@@ -49,6 +49,16 @@
       "source": "/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang/",
       "destination": "/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change/",
       "statusCode": 301
+    },
+    {
+      "source": "/news/margaritaville-at-sea",
+      "destination": "/news/margaritaville/",
+      "statusCode": 301
+    },
+    {
+      "source": "/news/margaritaville-at-sea/",
+      "destination": "/news/margaritaville/",
+      "statusCode": 301
     }
   ]
 }

@@ -1,27 +1,20 @@
-# Industry news automation
+# Industry news
 
-## What runs
+## How news is published
 
-`.github/workflows/industry-news.yml` runs on weekdays at 8am, 11am, 2pm, and 5pm US Eastern (cron is UTC). It also supports **Actions → Industry news → Run workflow**.
+Weekday industry news is handled by Grok Bot (research plus pull requests) or by a manual pull request into `src/content/news/`.
 
-`scripts/news-bot.mjs` searches preferred industry sources, writes longer rewrites in `VOICE.md`, validates sourcing, and:
-
-- publishes clean stories to `src/content/news/`
-- parks **conflict** drafts in `src/content/news-holds/` (outlets disagree on a load-bearing fact)
-
-Target: at least three published stories per day when the industry actually produced that much. Quiet shortfalls are allowed; filler is not.
+`.github/workflows/industry-news.yml` is retired. It used to run `scripts/news-bot.mjs` (Claude / Anthropic) on weekdays and from **Actions → Industry news → Run workflow**. That Action must not be used. It has no schedule and no manual dispatch. `scripts/news-bot.mjs` is unused by CI.
 
 ## Preferred sources
 
 Cruise line press rooms, Royal Caribbean Blog, The Points Guy, Cruise Critic, Seatrade Cruise News, Cruise News Radio, Cruise Industry News, Travel Weekly cruise desk, Cruise Mapper when useful.
 
-## Secrets
+## Reviewing an old hold
 
-Repository secret `ANTHROPIC_API_KEY` is required. Optional variable `CLAUDE_MODEL`.
-
-## Reviewing a hold
+Older conflict drafts may still sit in `src/content/news-holds/`. They are not published.
 
 1. Open the markdown under `src/content/news-holds/`.
 2. Resolve the conflict in the copy and sources.
 3. Move the file into `src/content/news/` and remove `status` / `conflictNote` frontmatter fields.
-4. Commit, or ask the site assistant to publish the approved hold.
+4. Commit, or open a pull request with the approved hold.
