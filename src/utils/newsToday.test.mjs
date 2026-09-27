@@ -29,7 +29,7 @@ const posts = loadNewsPosts();
 const now = new Date('2026-09-27T16:00:00-04:00');
 const model = buildNewsTodayModel(posts, now);
 check('build day is Sep 27 ET', model.today === '2026-09-27');
-check('Sep 27 has five stories', model.edition('2026-09-27').posts.length === 5);
+check('Sep 27 has eight stories', model.edition('2026-09-27').posts.length === 8);
 check('Sep 27 edition is indexable', model.edition('2026-09-27').indexable === true);
 check('every loaded news day has an indexable summary', model.days.every((ymd) => model.edition(ymd).indexable));
 
