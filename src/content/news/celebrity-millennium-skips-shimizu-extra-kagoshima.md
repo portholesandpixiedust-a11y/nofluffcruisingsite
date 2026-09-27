@@ -8,6 +8,11 @@ presenter: Matthew
 publishDate: 2026-09-20
 line: "Celebrity Cruises"
 topics: [Itineraries, Destinations]
+itineraryChange:
+  kinds: [port-skip]
+  ship: "Celebrity Millennium"
+  sailing: "Current Japan cruise. Kagoshima runs 19 Sep from 7am through 20 Sep at 5pm, with Tokyo arrival at 8am on 22 Sep."
+  changed: "Mt Fuji (Shimizu) is dropped. The ship stays in Kagoshima for a second day, then a sea day. Prepaid Shimizu tours refund as onboard credit."
 sources:
   - claim: "Celebrity Millennium mid-cruise letter replaces Shimizu with extra Kagoshima day due to Typhoon Dujuan; Kagoshima 19 Sep 7am to 20 Sep 5pm, sea day 21 Sep, Tokyo 22 Sep 8am; prepaid Shimizu shore excursions refund as SeaPass onboard credit with unused balance back to card in up to 14 business days"
     outlet: "Celebrity Cruises"

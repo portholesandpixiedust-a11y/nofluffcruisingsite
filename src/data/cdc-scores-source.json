@@ -1,0 +1,11 @@
+{
+  "program": "CDC Vessel Sanitation Program",
+  "report": "Green Sheet Report",
+  "reportUrl": "https://wwwn.cdc.gov/InspectionQueryTool/InspectionGreenSheetRpt.aspx",
+  "lineLookup": "CDC Inspection Query Tool, most recent inspection, all cruise lines",
+  "lineLookupUrl": "https://wwwn.cdc.gov/InspectionQueryTool/InspectionSearch.aspx",
+  "retrieved": "2026-09-27",
+  "satisfactoryAt": 86,
+  "shipCount": 207,
+  "note": "Each row is the most recent Green Sheet score for a ship in VSP jurisdiction on the retrieval date. The cruise line is the CDC search label for that same ship, date, and score. Do not type scores by hand. Refresh this file with node scripts/fetch-cdc-scores.mjs."
+}

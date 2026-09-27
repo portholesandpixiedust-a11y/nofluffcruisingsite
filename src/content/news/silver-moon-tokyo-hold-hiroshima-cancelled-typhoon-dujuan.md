@@ -9,6 +9,11 @@ publishDate: 2026-09-23T08:00:00-04:00
 line: "Silversea"
 ships: ["Silver Moon"]
 topics: [Itineraries, Ports, Weather]
+itineraryChange:
+  kinds: [delay, port-skip]
+  ship: "Silver Moon"
+  sailing: "14-night Japan cruise, with a Tokyo hold until about 9pm Monday 21 Sep 2026"
+  changed: "Hiroshima is cancelled. Osaka becomes a 23 Sep day call. Kochi moves to 24 Sep. Cruise length in nights is unchanged."
 sources:
   - claim: "Silver Moon delayed Tokyo departure to 9pm 21 Sep 2026 from planned 7pm 19 Sep due to Typhoon Dujuan; guests boarded as planned for 14-night Japan voyage; Hiroshima cancelled; Osaka overnight becomes day call 23 Sep 8am–7pm; Kochi moves to 24 Sep 8am–4pm; Miyako 1 Oct extended to 6pm; Busan/Kanazawa/Hakodate unchanged; Silversea Hiroshima and original Osaka tours cancelled; Kochi tours transfer automatically; Osaka rebook available; email did not mention compensation; overall cruise length unchanged"
     outlet: "Cruise News IO"

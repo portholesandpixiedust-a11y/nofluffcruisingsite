@@ -8,6 +8,11 @@ presenter: Matthew
 publishDate: 2026-09-19
 line: "Norwegian Cruise Line"
 topics: [Ports, Policy]
+itineraryChange:
+  kinds: [delay]
+  ship: "Norwegian Joy"
+  sailing: "Sitka call on 17 Sep 2026"
+  changed: "The ship reached Sitka late after a deceased juvenile male fin whale was found on the bulbous bow. Removal took more than two hours. The ship stayed about an hour longer in port."
 sources:
   - claim: "Norwegian Joy late Sitka arrival 17 Sep 2026, deceased juvenile male fin whale on bow, 2+ hour removal, extra hour in port"
     outlet: "Cruise Hive"

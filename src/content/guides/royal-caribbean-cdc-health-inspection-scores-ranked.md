@@ -185,7 +185,7 @@ They don't carry equal weight, which is why two ships scoring the same number ca
 
 ## Check any ship yourself in about 90 seconds
 
-Search for the CDC Vessel Sanitation Program inspection tool. The **Green Sheet** report lists every currently-inspected ship with its most recent score and date on one page — that's where every number above came from. For history instead of just the latest score, use the advanced search, pick a ship, and select all dates rather than most recent; that's how you see a trend instead of a snapshot.
+Search for the CDC Vessel Sanitation Program inspection tool. The **Green Sheet** report lists every currently-inspected ship with its most recent score and date on one page — that's where every number above came from. A structured copy of that Green Sheet, with ship, line, score, and inspection date, is on the [CDC scores tracker](/trackers/cdc-scores/). That table is a later retrieval. This ranking is the 29 Aug 2026 read. For history instead of just the latest score, use the advanced search, pick a ship, and select all dates rather than most recent; that's how you see a trend instead of a snapshot.
 
 There's also a separate list of every ship that has scored a perfect 100 — worth checking before you book, with one caveat: it runs on a rolling 12-month basis and keeps superseded inspections, so it currently lists ten Royal Caribbean ships even though nine currently hold a 100 as their most recent score. (The tenth, Jewel of the Seas, scored 100 last September and a 99 this June — check the date next to any perfect score.)
 

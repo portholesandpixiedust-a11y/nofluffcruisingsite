@@ -8,6 +8,11 @@ presenter: Matthew
 publishDate: 2026-09-21T07:00:00-04:00
 line: "Carnival Cruise Line"
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [swap]
+  ship: "Carnival Encounter"
+  sailing: "26 Sep 2026 sailing from Brisbane"
+  changed: "The Cairns overnight is gone. The ship still reaches Cairns at 9:30am on 29 Sep and leaves at 8:00pm the same day. Townsville runs 8:00am to 4:00pm on 30 Sep. Sep 30 Cairns shore excursions move to the 29th or refund."
 sources:
   - claim: "Carnival Encounter 26 Sep 2026 Brisbane 7-night sailing: guest notice dated 16 Sep cites channel depths and forecast tides, Cairns arrive 9:30am 29 Sep depart 8:00pm same day instead of overnight through 30 Sep 6:00pm, Townsville added 30 Sep 8:00am-4:00pm, Willis Island cruise-by one hour earlier 9:00-10:00am 1 Oct, Airlie Beach and Brisbane unchanged, Sep 30 Cairns excursions move to 29th or refund, second Cairns disruption after 5 Sep sailing cancelled Cairns entirely, next Cairns call 28 Oct with no change announced"
     outlet: "Cruise Hive"

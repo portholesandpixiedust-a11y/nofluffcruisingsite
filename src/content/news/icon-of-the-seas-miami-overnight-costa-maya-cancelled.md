@@ -9,6 +9,11 @@ publishDate: 2026-09-23T20:10:00-04:00
 line: "Royal Caribbean"
 ships: ["Icon of the Seas"]
 topics: [Itineraries, Ports, Ships]
+itineraryChange:
+  kinds: [delay, port-skip]
+  ship: "Icon of the Seas"
+  sailing: "26 Sep to 3 Oct 2026 from Miami"
+  changed: "You still board Saturday 26 Sep. The ship stays overnight and sails at 4pm Sunday 27 Sep. Costa Maya on Monday 28 Sep is cancelled. Roatan, Cozumel, and Perfect Day at CocoCay stay. Royal Caribbean is posting refundable onboard credit."
 sources:
   - claim: "Royal Caribbean guest email shared via Cruise Hive 23 Sep 2026: Icon of the Seas 7-night Miami sailing boarding 26 Sep 2026 delayed for required maintenance; guests still board Saturday per CBP; departure moves to 4pm Sunday 27 Sep 2026; gangway closes 8pm Saturday and reopens Sunday morning with all-aboard 2:30pm; Casino Royale and shops closed until departure; bars, lounges, entertainment, dining, spa available; Costa Maya 28 Sep 8am–5pm cancelled and replaced with sea day; Roatan 29 Sep, Cozumel 30 Sep, Perfect Day CocoCay 2 Oct, Miami return 3 Oct unchanged; refundable OBC goodwill $300 inside/oceanview, $350 balcony, $800 suite per stateroom plus $50 for third/fourth guest; Royal Caribbean Costa Maya shore tours auto-cancelled and refunded to original payment; no details on the maintenance work; no impact announced on later sailings"
     outlet: "Cruise Hive"

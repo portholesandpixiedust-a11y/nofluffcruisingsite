@@ -49,6 +49,10 @@ export function buildLastmodMap(root = process.cwd()) {
       if (folder === 'news') {
         const hub = newsHubSlug(grab(block, 'line'));
         if (hub) bump(`/news/${hub}/`, updated);
+        if (/(^|\n)itineraryChange:/.test(block)) {
+          bump('/trackers/itinerary-changes/', updated);
+          bump('/trackers/', updated);
+        }
       }
       if (!sectionNewest || updated > sectionNewest) sectionNewest = updated;
       if (!newest || updated > newest) newest = updated;
@@ -56,6 +60,14 @@ export function buildLastmodMap(root = process.cwd()) {
     if (sectionNewest) bump(prefix, sectionNewest);
   }
   if (newest) bump('/', newest);
+
+  const cdcFile = path.join(root, 'src/data/cdc-scores-source.json');
+  if (fs.existsSync(cdcFile)) {
+    const source = JSON.parse(fs.readFileSync(cdcFile, 'utf8'));
+    const retrieved = normalizeContentDate(source.retrieved);
+    bump('/trackers/cdc-scores/', retrieved);
+    bump('/trackers/', retrieved);
+  }
 
   const shipsFile = path.join(root, 'src/data/ships.json');
   if (fs.existsSync(shipsFile)) {

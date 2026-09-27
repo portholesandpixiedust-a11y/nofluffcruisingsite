@@ -103,6 +103,12 @@ Rules that override everything else:
    ship names, cancellations, passenger impact), set "conflict": true, explain in
    conflictNote, still include sources for each side, and still return the draft. Do not
    pick a winner quietly.
+9. If, and only if, the story changes a specific sailing already on sale (a port skip,
+   a delay, or a swap), add "itineraryChange": {"kinds":["port-skip"],"ship":"Ship name",
+   "sailing":"sailing window already in the answer","changed":"what the booked passenger
+   loses or gains, using only facts already in the answer"}. kinds may include port-skip,
+   delay, and swap. Omit itineraryChange for new itinerary releases, ship news, policy,
+   and anything that does not change a sailing the reader could already hold.
 
 Write in this voice, which is not negotiable:
 <voice>
@@ -162,7 +168,37 @@ export function validate(p, existingSlugs) {
   if (p.conflict && !(p.conflictNote || '').trim()) {
     problems.push('conflict posts need a conflictNote');
   }
+  if (p.itineraryChange != null) {
+    const change = p.itineraryChange;
+    const allowed = new Set(['port-skip', 'delay', 'swap']);
+    const kinds = Array.isArray(change?.kinds) ? change.kinds : [];
+    if (!change || typeof change !== 'object' || kinds.length === 0 || kinds.some((kind) => !allowed.has(kind)) || new Set(kinds).size !== kinds.length) {
+      problems.push('itineraryChange.kinds must be port-skip, delay, and/or swap');
+    }
+    for (const field of ['ship', 'sailing', 'changed']) {
+      if (!change?.[field] || typeof change[field] !== 'string' || !change[field].trim()) {
+        problems.push(`itineraryChange missing ${field}`);
+      }
+    }
+    const blob = `${change?.ship || ''} ${change?.sailing || ''} ${change?.changed || ''}`;
+    if (blob.includes('—')) problems.push('itineraryChange contains an em dash');
+    const prose = `${p.answer || ''}\n${p.body || ''}`;
+    if (change?.ship && !prose.includes(change.ship)) {
+      problems.push('itineraryChange.ship is not named in the answer or body');
+    }
+  }
   return problems;
+}
+
+function itineraryFrontmatter(p) {
+  const change = p.itineraryChange;
+  if (!change) return '';
+  return `itineraryChange:
+  kinds: [${change.kinds.join(', ')}]
+  ship: ${q(change.ship)}
+  sailing: ${q(change.sailing)}
+  changed: ${q(change.changed)}
+`;
 }
 
 export function toMarkdown(p, { held = false } = {}) {
@@ -192,7 +228,7 @@ presenter: Matthew
 publishDate: ${today}
 line: ${q(canonicalLine(p.line))}
 topics: [${topics.join(', ')}]
-${holdBlock}sources:
+${itineraryFrontmatter(p)}${holdBlock}sources:
 ${sources}
 ---
 

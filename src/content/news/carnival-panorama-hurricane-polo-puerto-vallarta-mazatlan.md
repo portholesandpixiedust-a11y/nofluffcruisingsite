@@ -9,6 +9,11 @@ publishDate: 2026-09-27T09:10:00-04:00
 line: "Carnival Cruise Line"
 ships: ["Carnival Panorama"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [port-skip, swap]
+  ship: "Carnival Panorama"
+  sailing: "26 Sep 2026 Long Beach sailing, eight-night Mexican Riviera"
+  changed: "Puerto Vallarta on 29 Sep and Mazatlán on 30 Sep are dropped. Ensenada is added Monday 28 Sep, 8am to 5pm. La Paz on 1 Oct and Cabo San Lucas on 2 Oct stay. Carnival tours for the cancelled ports are refunded."
 sources:
   - claim: "Cruise Industry News 26 Sep 2026: Carnival revised Carnival Panorama's next cruise because of Hurricane Polo; 4,000-passenger ship sailing from Long Beach on 26 Sep 2026 for an eight-night Mexican Riviera cruise; guest statement says the Fleet Operations Center is monitoring Hurricane Polo in the Eastern Pacific, a partial itinerary change is required to stay a safe distance from the storm, and planned visits to Puerto Vallarta and Mazatlán cannot be kept; Ensenada is added, then La Paz and Cabo San Lucas remain as originally scheduled; Carnival will keep monitoring because forecasts can change and may make further changes; shore excursions purchased through Carnival for the cancelled destinations will be cancelled and fully refunded; Carnival said it is sorry the weather is not cooperating and that prioritizing safety is the better call"
     outlet: "Cruise Industry News"

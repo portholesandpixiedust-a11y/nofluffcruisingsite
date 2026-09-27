@@ -61,6 +61,12 @@ const news = defineCollection({
   schema: z.object({
     ...articleBase,
     video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }).optional(),
+    itineraryChange: z.object({
+      kinds: z.array(z.enum(['port-skip', 'delay', 'swap'])).min(1),
+      ship: z.string().min(1),
+      sailing: z.string().min(1),
+      changed: z.string().min(1),
+    }).optional(),
   }),
 });
 
@@ -99,4 +105,15 @@ const lines = defineCollection({
   }),
 });
 
-export const collections = { reviews, guides, news, ships, lines };
+const cdcScores = defineCollection({
+  loader: file('./src/data/cdc-scores.json'),
+  schema: z.object({
+    id: z.string(),
+    ship: z.string(),
+    line: z.string(),
+    score: z.number().int().min(0).max(100),
+    inspectionDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  }),
+});
+
+export const collections = { reviews, guides, news, ships, lines, cdcScores };

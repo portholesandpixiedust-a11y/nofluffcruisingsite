@@ -9,6 +9,11 @@ publishDate: 2026-09-23T20:20:00-04:00
 line: "Royal Caribbean"
 ships: ["Liberty of the Seas"]
 topics: [Ports, Ships]
+itineraryChange:
+  kinds: [swap]
+  ship: "Liberty of the Seas"
+  sailing: "25 Sep to 3 Oct 2026 from Southampton"
+  changed: "You embark at Horizon Cruise Terminal and debark at City Cruise Terminal. The port list and 5pm sailaway stay the same. Enter via Dock Gate 8. Southampton International Boat Show runs through 27 Sep."
 sources:
   - claim: "Cruise Hive 23 Sep 2026 quoting ABParking guest email: Liberty of the Seas 8-night Southampton sailing departs Horizon Cruise Terminal 25 Sep 2026 and returns City Cruise Terminal 3 Oct 2026; arrangements requested by cruise line for shore power from local grid; terminals adjacent ~0.25 mile; enter Dock Gate 8 east end Herbert Walker Avenue; staff direct to parking; porters available; accessible Blue Badge parking gets complimentary accessible shuttle; print and display parking permit; Southampton International Boat Show 18–27 Sep 2026 near Mayflower Park/City Cruise Terminal may add traffic; ship departs 5pm; itinerary unchanged Le Havre (Paris), Bilbao, La Coruna, Vigo, Cherbourg; no embarkation or itinerary change beyond terminal split"
     outlet: "Cruise Hive"

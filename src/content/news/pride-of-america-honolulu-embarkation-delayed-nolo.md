@@ -9,6 +9,11 @@ publishDate: 2026-09-25T14:40:00-04:00
 line: "Norwegian Cruise Line"
 ships: ["Pride of America"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [delay]
+  ship: "Pride of America"
+  sailing: "26 Sep 2026 Honolulu sailing. Boarding moves to Monday 28 Sep, with return on 3 Oct."
+  changed: "Norwegian cut two days for Hurricane Nolo. Ports on the shortened cruise: Hilo 29 Sep, Kona 30 Sep, Nawiliwili 1 Oct, Kahului 2 Oct. Sail for a 50% fare refund plus 50% future cruise credit, or cancel by 26 Sep for a full refund."
 sources:
   - claim: "Cruise Hive 25 Sep 2026: Pride of America seven-night Honolulu cruise planned for Sat 26 Sep delayed; NCL guest letter dated 24 Sep cites Tropical Storm Nolo and says Honolulu Harbor will be unable to safely support embarkation operations on Sat 26 Sep; current voyage returning early; embarkation pushed to Mon 28 Sep; NCL says further updates via text and email may follow; shortened itinerary Tue 29 Sep Hilo 8am–6pm, Wed 30 Sep Kona 7am–5:30pm, Thu 1 Oct Nawiliwili 8am–6pm, Fri 2 Oct Kahului 8am–6pm, return Honolulu 3 Oct; Option 1 continue embark Monday: 50% refund of original fare, service charges, and applicable Free at Sea drink package charges plus Future Cruise Credit of 50% of fare paid usable through 31 Dec 2027; Option 2 cancel by 26 Sep: full refund plus Future Cruise Credit with 10% discount toward any Norwegian cruise through 31 Dec 2027; NCL shore excursions being adjusted to new port times; ~2,180-passenger ship"
     outlet: "Cruise Hive"

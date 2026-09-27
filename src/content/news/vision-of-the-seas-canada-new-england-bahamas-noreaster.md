@@ -9,6 +9,11 @@ publishDate: 2026-09-25T14:30:00-04:00
 line: "Royal Caribbean"
 ships: ["Vision of the Seas"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [swap, delay]
+  ship: "Vision of the Seas"
+  sailing: "Nine-night cruise from Baltimore on 24 Sep 2026"
+  changed: "Boston, Portland, Saint John, and Halifax are gone. The ship stays overnight in Baltimore and departs 3pm Friday 25 Sep for Port Canaveral, Nassau, and Grand Bahama. Boarding moves to 4:30pm Thursday. Prepaid Royal Caribbean tours for the cancelled ports refund as onboard credit."
 sources:
   - claim: "Cruise Industry News 24 Sep 2026: Vision of the Seas next cruise sails Bahamas and Florida instead of Canada and New England due to adverse weather impacting the Northeast coast; ship was scheduled to depart Baltimore 24 Sep 2026 for a nine-night Canada/Maine/Massachusetts cruise; instead remains docked another day then sails to Port Canaveral, Nassau, and Grand Bahama; guest statement cites unfavorable weather conditions and high winds; check-in postponed to 4:30 PM Thursday due to delayed previous sailing; departure now 3:00 PM Friday 25 Sep 2026; prepaid shore excursions for cancelled ports refunded as refundable onboard credits; original itinerary included Boston, Portland, Halifax, overnight Saint John, and three North Atlantic sea days"
     outlet: "Cruise Industry News"

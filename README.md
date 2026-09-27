@@ -28,6 +28,8 @@ Blocking it silently defeats the entire AEO strategy and nothing in analytics wi
   post for the frontmatter shape, including the `sources` array that renders the citation block.
 - Guide: `src/content/guides/` (supports a `faq` array which emits FAQPage schema).
 - News: `src/content/news/`.
+- Itinerary changes: add an `itineraryChange` block to a news post (port skip, delay, or swap). The page `/trackers/itinerary-changes/` reads that block. Leave it off for announcements that do not change a sailing someone already holds. See that page for the fields.
+- CDC scores: `src/data/cdc-scores.json`, refreshed with `node scripts/fetch-cdc-scores.mjs` from the CDC Green Sheet. Do not type scores by hand.
 - Ships: one object in `src/data/ships.json` generates a full ship page.
 - Cruise lines: `src/data/lines.json`.
 

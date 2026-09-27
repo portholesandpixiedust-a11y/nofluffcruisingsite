@@ -9,6 +9,11 @@ publishDate: 2026-09-23T08:30:00-04:00
 line: "Cunard"
 ships: ["Queen Elizabeth"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [delay, port-skip]
+  ship: "Queen Elizabeth"
+  sailing: "17 to 24 Sep 2026 Alaska cruise from Seattle"
+  changed: "The ship left about 24 hours late, at 5pm on 18 Sep, for essential maintenance. Juneau and Endicott Arm scenic cruising are cut. Ketchikan and Victoria stay. The Seattle return remains 24 Sep 2026."
 sources:
   - claim: "Queen Elizabeth Alaska cruise delayed ~24 hours from Seattle; originally due late afternoon 17 Sep 2026, departed 5pm 18 Sep after berth change and overnight stay; onboard statement cited essential maintenance; guest reports Juneau visit and Endicott Fjord scenic cruising cancelled; Ketchikan and Victoria still scheduled; Seattle return 24 Sep 2026 unchanged; seven-night sailing wraps Cunard Alaska summer on Queen Elizabeth; then Panama Canal reposition toward Miami"
     outlet: "Cruise Industry News"

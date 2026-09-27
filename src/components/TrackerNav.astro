@@ -1,0 +1,13 @@
+---
+const { current } = Astro.props;
+const links = [
+  { href: '/trackers/', id: 'index', label: 'Trackers' },
+  { href: '/trackers/itinerary-changes/', id: 'itinerary', label: 'Itinerary changes' },
+  { href: '/trackers/cdc-scores/', id: 'cdc', label: 'CDC scores' },
+];
+---
+<nav class="chips" aria-label="Trackers">
+  {links.map((link) => (
+    <a class="chip" href={link.href} aria-current={current === link.id ? 'page' : undefined}>{link.label}</a>
+  ))}
+</nav>
