@@ -1,0 +1,147 @@
+---
+import Base from '../layouts/Base.astro';
+import { formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
+import { formatDayHeading, formatDayShort } from '../utils/newsToday.js';
+import { newsHubSlug } from '../utils/newsLines.js';
+
+const { edition, model, mode } = Astro.props;
+const isLive = mode === 'live';
+const headingDate = formatDayHeading(edition.ymd);
+const isCurrentDay = edition.ymd === model.today;
+const canonicalPath = isLive || isCurrentDay ? '/news/today/' : `/news/today/${edition.ymd}/`;
+const h1 = isLive ? 'Cruise news today' : `Cruise news for ${headingDate}`;
+const title = isLive ? 'Cruise News Today' : `Cruise News for ${headingDate}`;
+const description = edition.description
+  || (edition.posts.length
+    ? `Cruise news for ${formatDayShort(edition.ymd)}. ${edition.posts.length} stories, each linking to the full post.`
+    : `Cruise news today. No new story has published yet on ${headingDate}.`);
+const publishedISO = edition.published ? formatEasternISO(edition.published) : null;
+const modifiedISO = edition.modified ? formatEasternISO(edition.modified) : null;
+const publishedLabel = edition.published ? formatEasternDisplay(edition.published) : null;
+const modifiedLabel = edition.modified ? formatEasternDisplay(edition.modified) : null;
+const showUpdated = publishedISO && modifiedISO && publishedISO !== modifiedISO;
+const paragraphs = edition.summary ? edition.summary.split(/\n\n+/).map((p) => p.trim()).filter(Boolean) : [];
+const lines = [...new Set(edition.posts.map((post) => post.line).filter(Boolean))];
+const dayIndex = model.days.indexOf(edition.ymd);
+const newer = dayIndex >= 0 ? model.days[dayIndex + 1] : null;
+const older = dayIndex > 0 ? model.days[dayIndex - 1] : null;
+const latestEdition = model.latest ? model.edition(model.latest) : null;
+const authorUrl = new URL('/matthew/', Astro.site).href;
+const pageUrl = new URL(canonicalPath, Astro.site).href;
+const jsonld = edition.posts.length ? [{
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: h1,
+  headline: h1,
+  description,
+  url: pageUrl,
+  ...(publishedISO ? { datePublished: publishedISO } : {}),
+  ...(modifiedISO ? { dateModified: modifiedISO } : {}),
+  author: { '@type': 'Person', name: 'Matthew', url: authorUrl },
+  publisher: { '@type': 'Organization', name: 'No Fluff Cruising', url: Astro.site?.href },
+  isPartOf: { '@type': 'WebSite', name: 'No Fluff Cruising', url: Astro.site?.href },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: edition.posts.length,
+    itemListElement: edition.posts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: post.title,
+      url: new URL(`/news/${post.id}/`, Astro.site).href,
+    })),
+  },
+}] : [];
+const crumbs = isLive
+  ? [{ name: 'News', url: '/news/' }, { name: 'Cruise news today', url: '/news/today/' }]
+  : [{ name: 'News', url: '/news/' }, { name: 'Cruise news today', url: '/news/today/' }, { name: formatDayShort(edition.ymd), url: Astro.url.pathname }];
+const dayHref = (ymd) => (ymd === model.today ? '/news/today/' : `/news/today/${ymd}/`);
+---
+<Base
+  title={title}
+  description={description}
+  jsonld={jsonld}
+  noindex={!edition.indexable}
+  canonical={canonicalPath}
+  breadcrumbs={crumbs}
+  published={publishedISO}
+  modified={modifiedISO}
+  author="Matthew"
+>
+  <div class="wrap">
+    <article>
+      <span class="eyebrow">Cruise news</span>
+      <h1>{h1}</h1>
+      <div class="byline">
+        <img src="/avatar.png" width="42" height="42" alt="" />
+        <div>
+          <strong><a href="/matthew/">Matthew</a></strong>
+          <span>
+            No Fluff Cruising
+            {publishedLabel && <> &middot; <time datetime={publishedISO}>{publishedLabel}</time></>}
+            {showUpdated && <> &middot; Updated <time datetime={modifiedISO}>{modifiedLabel}</time></>}
+          </span>
+        </div>
+      </div>
+
+      {isLive && edition.posts.length === 0 && (
+        <p style="max-width:70ch">Nothing new has published yet on {formatDayHeading(model.today)}.</p>
+      )}
+
+      {edition.answer && (
+        <div class="answer"><b>The short answer</b>{edition.answer}</div>
+      )}
+
+      {paragraphs.length > 0 && (
+        <div class="prose">
+          {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      )}
+
+      <h2 class="sec">{edition.posts.length ? `Stories on ${formatDayShort(edition.ymd)}` : 'Stories'}</h2>
+      <div class="rule"></div>
+      {edition.posts.length > 0 ? (
+        <ol class="today-list">
+          {edition.posts.map((post) => (
+            <li>
+              <a href={`/news/${post.id}/`}>{post.title}</a>
+              {post.line ? <span> · {post.line}</span> : null}
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p>
+          {latestEdition
+            ? <>The latest edition is <a href={dayHref(model.latest)}>cruise news for {formatDayHeading(model.latest)}</a>.</>
+            : <>No cruise news has published yet.</>}
+        </p>
+      )}
+
+      <p class="today-links">
+        <a href="/news/">All cruise news</a>
+        {' · '}
+        <a href="/trackers/itinerary-changes/">Itinerary change tracker</a>
+        {lines.map((line) => {
+          const hub = newsHubSlug(line);
+          return hub ? <span> · <a href={`/news/${hub}/`}>{line} news</a></span> : null;
+        })}
+      </p>
+
+      {(older || newer) && (
+        <p class="today-links">
+          {older && <a href={dayHref(older)}>Older: {formatDayShort(older)}</a>}
+          {older && newer && ' · '}
+          {newer && <a href={dayHref(newer)}>Newer: {formatDayShort(newer)}</a>}
+        </p>
+      )}
+
+      {model.days.length > 1 && (
+        <p class="today-links">
+          Archive:
+          {model.days.map((ymd, index) => (
+            <span>{index ? ' · ' : ' '}<a href={dayHref(ymd)} aria-current={ymd === edition.ymd ? 'page' : undefined}>{formatDayShort(ymd)}</a></span>
+          ))}
+        </p>
+      )}
+    </article>
+  </div>
+</Base>

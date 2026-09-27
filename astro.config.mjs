@@ -1,6 +1,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { buildLastmodMap } from './src/utils/lastmodMap.js';
+import { loadNewsPosts, newsTodayPublicPaths } from './src/utils/newsToday.js';
+
+const newsTodayPaths = newsTodayPublicPaths(loadNewsPosts());
 
 const lastmodMap = buildLastmodMap();
 
@@ -33,6 +36,12 @@ export default defineConfig({
     sitemap({
       // lastmod is updatedAt ?? updatedDate ?? publishedAt ?? publishDate.
       // @astrojs/sitemap writes that instant as UTC ISO. Date-only values are noon ET, not midnight UTC.
+      filter(page) {
+        const path = new URL(page).pathname;
+        const key = path.endsWith('/') ? path : `${path}/`;
+        if (!key.startsWith('/news/today')) return true;
+        return newsTodayPaths.has(key);
+      },
       serialize(item) {
         const path = new URL(item.url).pathname;
         const key = path.endsWith('/') ? path : `${path}/`;

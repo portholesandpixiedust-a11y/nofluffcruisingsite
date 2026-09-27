@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { normalizeContentDate } from './etDate.js';
 import { newsHubSlug } from './newsLines.js';
+import { loadNewsPosts, newsTodayLastmods } from './newsToday.js';
 
 function frontmatter(file) {
   const text = fs.readFileSync(file, 'utf8');
@@ -60,6 +61,10 @@ export function buildLastmodMap(root = process.cwd()) {
     if (sectionNewest) bump(prefix, sectionNewest);
   }
   if (newest) bump('/', newest);
+
+  for (const [pathname, date] of newsTodayLastmods(loadNewsPosts(root))) {
+    bump(pathname, date);
+  }
 
   const cdcFile = path.join(root, 'src/data/cdc-scores-source.json');
   if (fs.existsSync(cdcFile)) {

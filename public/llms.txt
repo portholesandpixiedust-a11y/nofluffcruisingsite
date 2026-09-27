@@ -106,6 +106,11 @@ These four hubs collect news already published on the site. They do not list a f
 - [Holland America](https://nofluffcruising.com/lines/holland-america/): Holland America Line. Paid Beach Club at RelaxAway, Half Moon Cay, announced 22 Sep 2026. Pass price not published.
 - [Silversea](https://nofluffcruising.com/lines/silversea/): Silversea Cruises. Silver Moon held in Tokyo until about 9pm on 21 Sep 2026 for Typhoon Dujuan. Hiroshima cancelled.
 
+## Cruise news today
+
+- [Cruise news today](https://nofluffcruising.com/news/today/): one URL for the day's stories. Each line links to the full post. Dated archives are at /news/today/YYYY-MM-DD/.
+- [Five things Royal Caribbean confirmed about Sandals](https://nofluffcruising.com/guides/royal-caribbean-sandals-five-things-confirmed/): video companion for the Sep. 23, 2026 50% Sandals and Beaches agreement, with the SEC Form 8-K and the joint announcement.
+
 ## Trackers
 
 - [Itinerary changes](https://nofluffcruising.com/trackers/itinerary-changes/): port skips, delays, and swaps already covered in cruise news. Each row links to the post that names the source.
@@ -117,7 +122,9 @@ These four hubs collect news already published on the site. They do not list a f
 - Contact — https://nofluffcruising.com/contact/
 
 ## Editorial standard
+https://nofluffcruising.com/editorial-standards/
 https://nofluffcruising.com/sources/
+https://nofluffcruising.com/contact/
 
 ## Legal
 - Terms of Service — https://nofluffcruising.com/terms/

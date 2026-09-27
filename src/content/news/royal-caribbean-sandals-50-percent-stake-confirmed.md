@@ -6,6 +6,7 @@ description: "Royal Caribbean Group signed a deal for a 50% equity stake in Sand
 answer: "Royal Caribbean Group has signed an agreement to buy a 50% equity stake in Sandals and Beaches Resorts for about $3 billion. The joint venture is due to close in early 2027, subject to approvals. Your booked Sandals stay and Royal, Celebrity, or Silversea cruise do not change today."
 presenter: Matthew
 publishDate: 2026-09-23T09:00:00-04:00
+updatedAt: 2026-09-27T18:00:00-04:00
 line: "Royal Caribbean"
 topics: [Company, Destinations]
 sources:
@@ -24,6 +25,8 @@ sources:
 Royal Caribbean Group has signed the Sandals deal. This is no longer the 22 Sep rumor post. PR Newswire carried the joint release early on 23 Sep 2026. Reuters confirmed the same day.
 
 Your booked Sandals or Beaches stay stays put. Your Royal Caribbean, Celebrity, or Silversea cruise stays put. No package product is live yet.
+
+The video companion walks five passenger-impact points from the signed terms, including the SEC Form 8-K: [5 Things Royal Caribbean Just Confirmed About Sandals](/guides/royal-caribbean-sandals-five-things-confirmed/).
 
 ## What was signed
 
