@@ -5,7 +5,8 @@ import Sources from '../components/Sources.astro';
 import Sponsor from '../components/Sponsor.astro';
 import WatchNext from '../components/WatchNext.astro';
 import VideosReferenced from '../components/VideosReferenced.astro';
-import { formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
+import { easternCalendarDate, formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
+import { formatDayHeading } from '../utils/newsToday.js';
 import { newsHubSlug } from '../utils/newsLines.js';
 
 const {
@@ -31,7 +32,11 @@ const logoUrl = new URL('/avatar.png', Astro.site).href;
 const hero = d.heroImage ?? (d.video ? `https://i.ytimg.com/vi/${d.video.id}/maxresdefault.jpg` : '/hero-wake.jpg');
 // maxresdefault does not exist for every upload; hqdefault always does.
 const heroFallback = d.video && !d.heroImage ? `https://i.ytimg.com/vi/${d.video.id}/hqdefault.jpg` : null;
-const heroCredit = d.heroCredit ?? (d.video && !d.heroImage ? `From the video: ${d.video.title}` : null);
+const heroCredit = d.heroCredit ?? (d.video && !d.heroImage ? `Still from the No Fluff Cruising video "${d.video.title}" on YouTube.` : null);
+const newsDay = schemaType === 'NewsArticle' ? easternCalendarDate(published) : null;
+const todayKey = newsDay ? easternCalendarDate(new Date()) : null;
+const roundupHref = newsDay ? (newsDay === todayKey ? '/news/today/' : `/news/today/${newsDay}/`) : null;
+const roundupLabel = newsDay ? (newsDay === todayKey ? 'Cruise news today' : `Cruise news for ${formatDayHeading(newsDay)}`) : null;
 const article = {
   '@context': 'https://schema.org',
   '@type': schemaType,
@@ -119,6 +124,21 @@ const newsHub = schemaType === 'NewsArticle' ? newsHubSlug(d.line) : null;
       <div class="prose"><slot /></div>
 
       {newsHub && <p><a href={`/news/${newsHub}/`}>More {d.line} news</a></p>}
+      {roundupHref && <p><a href={roundupHref}>{roundupLabel}</a></p>}
+
+      {d.faq?.length > 0 && (
+        <section class="faq" aria-labelledby="faq-h">
+          <h2 id="faq-h">Questions</h2>
+          <dl>
+            {d.faq.map((item) => (
+              <div>
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
 
       <Sponsor sponsor={d.sponsor} />
       <Sources sources={d.sources} updated={showUpdated ? updatedLabel : publishedLabel} />

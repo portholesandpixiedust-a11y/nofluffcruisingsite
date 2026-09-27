@@ -1,9 +1,12 @@
 ---
 title: "5 Things Royal Caribbean Just Confirmed About Sandals"
 description: "Royal Caribbean Group signed for 50% of Sandals and Beaches for about $3 billion cash, with an early 2027 close target. Bookings and loyalty stay as usual for now. Reciprocal status is a plan, not a published perk. Beaches growth sites are named without open dates."
+heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fda%2FSandals_La_Toc_Beach_Resort_%2824265586066%29.jpg&w=1280&output=jpg"
+heroCredit: "Photo: Prayitno (CC BY 2.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Sandals_La_Toc_Beach_Resort_(24265586066).jpg"
 answer: "On Sep. 23, 2026, Royal Caribbean Group signed definitive agreements to buy 50% of Sandals and Beaches for a base purchase price of about $3.0 billion cash. Close is targeted for early 2027, subject to approvals. Cruise and resort bookings keep running as usual until then. Reciprocal loyalty is a plan with no program, perk list, or date."
 presenter: Matthew
 publishDate: 2026-09-27T08:00:00-04:00
+updatedAt: 2026-09-27T18:00:00-04:00
 line: Royal Caribbean
 topics: [Company, Loyalty, Destinations]
 ships: []
@@ -66,7 +69,7 @@ sources:
 videosReferenced: []
 ---
 
-Royal Caribbean Group signed the Sandals deal. This companion walks the five passenger-impact points from the video. For the same-day deal bulletin, see [Royal Caribbean Group confirms 50% Sandals and Beaches stake](/news/royal-caribbean-sandals-50-percent-stake-confirmed/). The earlier rumor roundup is [Royal Caribbean in reported talks for a Sandals stake](/news/royal-caribbean-sandals-talks-reported/).
+Royal Caribbean Group signed the Sandals deal. This companion walks the five passenger-impact points from the video. The signed terms are in the [SEC Form 8-K dated Sep. 23, 2026](https://www.sec.gov/Archives/edgar/data/884887/000110465926109755/tm2625963d1_8k.htm) and the [joint announcement on PR Newswire](https://www.prnewswire.com/news-releases/royal-caribbean-group-and-sandals-resorts-announce-landmark-partnership-to-accelerate-their-leading-vacation-experiences-302887131.html). For the same-day deal bulletin, see [Royal Caribbean Group confirms 50% Sandals and Beaches stake](/news/royal-caribbean-sandals-50-percent-stake-confirmed/). The earlier rumor roundup is [Royal Caribbean in reported talks for a Sandals stake](/news/royal-caribbean-sandals-talks-reported/).
 
 Watch the video above for the full rundown. The booking rules below are what you can hold today.
 

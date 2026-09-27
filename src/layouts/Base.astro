@@ -4,12 +4,12 @@ import '../styles/news-list.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const { title, description, jsonld = [], noindex = false, ogImage, ogTitle, breadcrumbs = [], published, modified, author } = Astro.props;
+const { title, description, jsonld = [], noindex = false, ogImage, ogTitle, breadcrumbs = [], published, modified, author, canonical: canonicalPath } = Astro.props;
 const path = Astro.url.pathname;
 const pageTitle = title.includes('No Fluff Cruising')
   ? title
   : (title.length <= 44 ? `${title} | No Fluff Cruising` : title);
-const canonical = new URL(path, Astro.site).href;
+const canonical = new URL(canonicalPath || path, Astro.site).href;
 const share = ogImage
   ? (ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href)
   : new URL('/og-default.jpg', Astro.site).href;
@@ -72,7 +72,9 @@ const graph = [org, site, crumbs, ...jsonld].filter(Boolean);
   <meta name="twitter:image" content={share} />
   <meta name="twitter:title" content={ogTitle ?? title} />
   <meta name="twitter:description" content={description} />
-  <link rel="icon" href="/avatar.png" type="image/png" sizes="256x256" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/favicon-192.png" />
   <link rel="alternate" type="application/rss+xml" title="No Fluff Cruising" href="/rss.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
