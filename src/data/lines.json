@@ -88,5 +88,41 @@
       "https://en.wikipedia.org/wiki/Carnival_Cruise_Line",
       "https://www.wikidata.org/wiki/Q656554"
     ]
+  },
+  {
+    "id": "azamara",
+    "name": "Azamara",
+    "blurb": "Azamara is a luxury cruise line. On 23 Sep 2026 it opened bookings for a 195-night 2029 World Cruise on Azamara Quest, from San Diego to Copenhagen, 3 Jan to 17 Jul 2029.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Azamara",
+      "https://www.wikidata.org/wiki/Q2875081"
+    ]
+  },
+  {
+    "id": "cunard",
+    "name": "Cunard",
+    "blurb": "Cunard Line is a British cruise line. On the 17–24 Sep 2026 Alaska cruise, Queen Elizabeth left Seattle about 24 hours late. Juneau and Endicott Arm scenic cruising were cut. Ketchikan, Victoria, and the 24 Sep Seattle return stayed.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Cunard_Line",
+      "https://www.wikidata.org/wiki/Q730587"
+    ]
+  },
+  {
+    "id": "holland-america",
+    "name": "Holland America",
+    "blurb": "Holland America Line is a British-American cruise line. On 22 Sep 2026 it announced a paid Beach Club at RelaxAway, Half Moon Cay. Day passes go on sale in early October. The pass price is not published.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Holland_America_Line",
+      "https://www.wikidata.org/wiki/Q1624735"
+    ]
+  },
+  {
+    "id": "silversea",
+    "name": "Silversea",
+    "blurb": "Silversea Cruises is a luxury cruise line. Silver Moon stayed in Tokyo until about 9pm on 21 Sep 2026 for Typhoon Dujuan. Hiroshima was cancelled. The cruise length in nights did not change.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Silversea_Cruises",
+      "https://www.wikidata.org/wiki/Q2286599"
+    ]
   }
 ]

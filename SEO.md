@@ -47,6 +47,18 @@ A `publishDate` that is only a calendar date is shown and marked up as 12:00 PM 
 
 Real 301s for the old CDC, slots, Crown & Anchor, and truncated Virgin Voyages URLs are in `vercel.json`. The duplicate sources are unpublished so they drop out of the sitemap.
 
+### Still a click, not a repo change
+
+Checked 27 Sep 2026 from the agent environment, before this follow-up was merged:
+
+- `https://nofluffcruising.com/6d65ffe6fc6a01f5603dbd5bd7a31f66.txt` was not live yet (the production response was 404, `x-vercel-error: NOT_FOUND`). Do not treat IndexNow as submitted. After merge, if the IndexNow workflow fails because the key file was still deploying, re-run it.
+- This environment has no Bing Webmaster Tools, Google Search Console, Vercel, X, or YouTube credentials. Bing is not verified. Neither sitemap has been submitted from here. Vercel Firewall / Bot Management was not opened, so it is not confirmed that OAI-SearchBot, GPTBot, and the other bots allowed in `robots.txt` are unblocked.
+- X posts and YouTube description edits were not published. YouTube description links, when you add them, should keep the UTM pattern in `docs/utm-tracking.md` (`utm_source=youtube`, `utm_medium=video`, `utm_campaign` = video id, `utm_content=description`).
+- The news bot now accepts Azamara, Cunard, Holland America, and Silversea. It was not run. `src/content/news-holds/` has no drafts to publish.
+- Google Analytics loads only when `PUBLIC_GA_MEASUREMENT_ID` is set. It is not set in this environment, and Search Console numbers were not pulled.
+
+Ship hub leads are assembled from the specs, verdict, and tour already on each ship page. They are not new essays. Author pages still use the first names already on the site. No legal surname was added. The Azamara, Cunard, Holland America, and Silversea hubs repeat the Wikidata one-line description and facts already in the published news. They do not invent fleets or loyalty programs.
+
 ## Notes
 
 - Contact for site ownership questions: portholesandpixiedust@gmail.com

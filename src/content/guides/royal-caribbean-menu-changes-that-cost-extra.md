@@ -1,7 +1,7 @@
 ---
 title: "3 Royal Caribbean Menu Changes That Cost You Extra"
 description: "Second lobster tails, specialty upcharges that survive the dining package, and the included-vs-chargeable line Royal Caribbean now spells out in writing."
-answer: "Three menu patterns now cost you money that used to feel included. A second lobster tail in the Main Dining Room is $16.99 plus 18% gratuity. Premium venues like Empire Supper Club and Chef's Table still charge on top of the Unlimited Dining Package. Specialty cover charges and room service sit in the chargeable tier while the Main Dining Room and Windjammer stay included."
+answer: "Three menu patterns now cost money that used to feel included. A second lobster tail in the Main Dining Room is $16.99 plus 18% gratuity. Empire Supper Club and Chef's Table still charge on top of the Unlimited Dining Package. Cover charges and room service are extra. The Main Dining Room and Windjammer stay included."
 presenter: Matthew
 publishDate: 2026-09-17
 line: Royal Caribbean

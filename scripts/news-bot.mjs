@@ -34,6 +34,10 @@ const LINES = {
   'Virgin Voyages': 'virgin-voyages',
   'Princess Cruises': 'princess',
   'Margaritaville at Sea': 'margaritaville-at-sea',
+  'Azamara': 'azamara',
+  'Cunard': 'cunard',
+  'Holland America': 'holland-america',
+  'Silversea': 'silversea',
 };
 
 // Short labels already used in older posts. Stored line names follow lines.json.
@@ -103,8 +107,9 @@ ${Object.keys(LINES).join(', ')}.
 Prefer these sources, and always name the original outlet with a date and URL when you can:
 ${PREFERRED_SOURCES.map((s) => `- ${s}`).join('\n')}
 
-Deliberately look beyond Royal Caribbean. Carnival, Norwegian, MSC, Disney, Celebrity and
-Virgin Voyages are under-covered by other cruise sites and are where this site can win.
+Deliberately look beyond Royal Caribbean. Carnival, Norwegian, MSC, Disney, Celebrity,
+Virgin Voyages, Azamara, Cunard, Holland America and Silversea are under-covered
+by other cruise sites and are where this site can win.
 
 ALREADY PUBLISHED ON THIS SITE — do not repeat any of these stories:
 ${coverage.slice(0, 40).map((c) => `- ${c.date} ${c.title}`).join('\n') || '(nothing yet)'}
