@@ -7,6 +7,7 @@ answer: "Carnival is holding full, in-person muster drills on five ships this we
 presenter: Matthew
 publishDate: 2026-09-22
 line: "Carnival Cruise Line"
+ships: ["Carnival Horizon", "Carnival Panorama", "Carnival Sunshine", "Carnival Vista", "Carnival Firenze", "Carnival Magic", "Carnival Paradise"]
 topics: [Policy]
 sources:
   - claim: "Five ships (Horizon, Panorama, Sunshine, Vista, Firenze) running full in-person muster drills for Sept 26-28, 2026 departures, affecting over 18,700 guests, with specific departure times and itineraries"

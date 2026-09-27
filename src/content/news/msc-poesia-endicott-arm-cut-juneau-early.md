@@ -7,6 +7,7 @@ answer: "MSC Poesia will not scenic-cruise Endicott Arm on its last Alaska saili
 presenter: Matthew
 publishDate: 2026-09-21T19:02:00-04:00
 line: "MSC Cruises"
+ships: ["MSC Poesia"]
 topics: [Itineraries, Destinations]
 sources:
   - claim: "MSC guest notice: Sept 21 2026 Poesia Seattle Alaska cruise drops Endicott Arm scenic cruising for seasonal operational considerations; Juneau arrives 8:00 AM instead of 2:00 PM for six extra hours; sailing closes inaugural Alaska season then repositions toward Miami"

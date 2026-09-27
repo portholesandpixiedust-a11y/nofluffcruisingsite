@@ -1,0 +1,704 @@
+{
+  "carnival-paradise": {
+    "title": "Carnival Paradise: Specs, Class, CDC Score",
+    "description": "Carnival calls Paradise its last Fantasy-class ship. The line lists 71,925 gross tons, 2,124 guests, and a 1998 entry into service. CDC score 99 on 30 Jul 2026.",
+    "lead": "Carnival Paradise is the last Fantasy-class ship Carnival says it built. The ship page lists 71,925 gross tons, a guest capacity of 2,124, a length of 855 feet, and 920 crew. The fact sheet matches the tonnage and the guest count, and it lists 1998, Kvaerner Masa-Yards, and a Panama registry.",
+    "paragraphs": [
+      "This page uses Carnival's published pages and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Class", "value": "Fantasy, last of the class", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-paradise", "checked": "27 Sep 2026"},
+      {"label": "Gross tonnage", "value": "71,925", "source": "Carnival.com and fact sheet", "url": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Guest capacity", "value": "2,124", "source": "Carnival.com and fact sheet", "url": "https://www.carnival.com/cruise-ships/carnival-paradise", "checked": "27 Sep 2026"},
+      {"label": "Length", "value": "855 feet", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-paradise", "checked": "27 Sep 2026"},
+      {"label": "Crew", "value": "920", "source": "Carnival.com and fact sheet", "url": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Entered service", "value": "1998", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Shipyard", "value": "Kvaerner Masa-Yards", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Registry", "value": "Panama", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "Carnival's ship page names the food and drink spots below. That page does not say which meals are in the fare and which add a charge. Check the current dining list before you budget."
+        ],
+        "items": [
+          "JavaBlue Cafe",
+          "Bonsai Sushi Express",
+          "Guy's Burger Joint",
+          "BlueIguana Cantina",
+          "RedFrog Rum Bar",
+          "BlueIguana Tequila Bar"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "The same Carnival page names the stage shows and the water features. It also says the ship has three youth programs under Seuss at Sea."
+        ],
+        "items": [
+          "Punchliner Comedy Club",
+          "Playlist Productions",
+          "Piano bar",
+          "Carnival WaterWorks, with a spiraling slide and a pair of racing slides",
+          "Pools and hot tubs",
+          "Cloud 9 Spa",
+          "Seuss at Sea, three youth programs"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "Carnival's stateroom list on that page uses these names. The overview also says the ship now has more balcony staterooms than before. It does not print square footage in the overview."
+        ],
+        "items": [
+          "Interior",
+          "Interior Upper/Lower",
+          "Porthole",
+          "Scenic Ocean View",
+          "Ocean View",
+          "Balcony",
+          "Aft-View Extended Balcony",
+          "Junior Suite",
+          "Junior Suite (Obstructed View)",
+          "Grand Suite",
+          "Grand Suite Extended Balcony",
+          "Grand Vista Suite"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 99,
+      "inspected": "30 Jul 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/news/carnival-full-in-person-muster-drills-five-ships-september-26-28/", "label": "Full muster drills, including an earlier Paradise departure"},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "How this site reads a CDC Vessel Sanitation score"}
+    ],
+    "faq": [
+      {"q": "What class is Carnival Paradise?", "a": "Carnival's ship page calls Carnival Paradise the final Fantasy-class ship the line created."},
+      {"q": "How many guests does Carnival Paradise list?", "a": "Carnival.com and Carnival's fact sheet both list a guest capacity of 2,124. The fact sheet labels that figure as double occupancy."},
+      {"q": "What is Carnival Paradise's latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists Carnival Paradise at 99 from an inspection on 30 Jul 2026. The sheet says scores of 85 or lower are not satisfactory."}
+    ],
+    "sources": [
+      {"claim": "Final Fantasy-class ship. 71,925 gross tons, guest capacity 2,124, length 855 feet, 920 crew. Named venues and stateroom categories on the ship page.", "outlet": "Carnival.com, Carnival Paradise", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival.com/cruise-ships/carnival-paradise"},
+      {"claim": "71,925 gross tons, double occupancy 2,124, 920 team members, Kvaerner Masa-Yards, Panama registry, entered service 1998.", "outlet": "Carnival Paradise fact sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet"},
+      {"claim": "Most recent score 99 on 30 Jul 2026. Footnote: scores of 85 or lower are not satisfactory.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-firenze": {
+    "title": "Carnival Firenze: Specs, Class, CDC Score",
+    "description": "Carnival took Firenze from Costa on 2 Feb 2024. The ship page lists 135,156 gross tons and 4,126 guests. A naming story said 5,000 guests. CDC score 98 on 12 Jan 2026.",
+    "lead": "Carnival Firenze joined Carnival from Costa Cruises on 2 Feb 2024. Carnival's president called Carnival Venezia her sister in that handover release. The current ship page lists 135,156 gross tons, a guest capacity of 4,126, a length of 1,061 feet, and 1,425 crew.",
+    "paragraphs": [
+      "Carnival's 25 Apr 2024 naming story calls Firenze a 5,000-guest ship. The ship page lists 4,126. Use 4,126 when you compare cabins. The rounded line is Carnival's own wording from the naming day.",
+      "This page uses Carnival's published pages and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Carnival handover", "value": "2 Feb 2024, from Costa", "source": "Carnival News", "url": "https://www.carnival-news.com/2024/02/02/carnival-cruise-line-fleet-grows-to-27-ships-as-carnival-firenze-officially-joins", "checked": "27 Sep 2026"},
+      {"label": "Sister named by Carnival", "value": "Carnival Venezia", "source": "Carnival News", "url": "https://www.carnival-news.com/2024/02/02/carnival-cruise-line-fleet-grows-to-27-ships-as-carnival-firenze-officially-joins", "checked": "27 Sep 2026"},
+      {"label": "First Carnival sail date", "value": "25 Apr 2024, Long Beach", "source": "Carnival News", "url": "https://www.carnival-news.com/2024/02/02/carnival-cruise-line-fleet-grows-to-27-ships-as-carnival-firenze-officially-joins", "checked": "27 Sep 2026"},
+      {"label": "Gross tonnage", "value": "135,156", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-firenze", "checked": "27 Sep 2026"},
+      {"label": "Guest capacity", "value": "4,126 on the ship page", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-firenze", "checked": "27 Sep 2026"},
+      {"label": "Length", "value": "1,061 feet", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-firenze", "checked": "27 Sep 2026"},
+      {"label": "Crew", "value": "1,425", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-firenze", "checked": "27 Sep 2026"},
+      {"label": "Rounded capacity", "value": "5,000 in the naming story", "source": "Carnival News, 25 Apr 2024", "url": "https://www.carnival-news.com/2024/04/25/buongiorno-west-coast-carnival-firenze-named-in-long-beach", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "Carnival's current ship page names these rooms. The 2 Feb 2024 handover release also named Fahrenheit 555 Steakhouse, the Heroes Tribute Lounge, and JavaBlue as venues the ship would carry. The current overview we checked does not repeat those three names, so confirm them on the live dining list. Neither page prints which meals are included."
+        ],
+        "items": [
+          "Michelangelo and Medici Restaurants",
+          "Il Viaggio",
+          "La Strada Grill",
+          "Il Mercato",
+          "Tomodoro",
+          "Guy's Burger Joint, described with Italian twists",
+          "Amari",
+          "Rococó",
+          "Frizzante",
+          "Moda Bar and Lounge"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "The ship page names these public rooms. Piazza Duomo is the atrium, which Carnival ties to Florence's main square."
+        ],
+        "items": [
+          "Piazza Duomo",
+          "Teatro Rosso, with Playlist Productions shows",
+          "Tuscan Lounge",
+          "Terrazza Moda, the private deck tied to Terrazza staterooms"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "Carnival's stateroom headings split ordinary cabins from Terrazza cabins. The page says Terrazza guests must be 12 or older and get access to Terrazza Moda. It does not print square footage in those headings."
+        ],
+        "items": [
+          "Interior, including picture-window, porthole, and upper/lower layouts",
+          "Ocean View and Deluxe Ocean View, including obstructed-view versions",
+          "Balcony, Premium Balcony, Aft-View Extended Balcony, and Cove Balcony",
+          "Terrazza Interior, Terrazza Premium Balcony, Terrazza Premium Vista Balcony, Terrazza Aft-View Extended Balcony, and Terrazza Cabana",
+          "Ocean Suite, including an obstructed-view version"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 98,
+      "inspected": "12 Jan 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/ships/carnival/carnival-venezia/", "label": "Carnival Venezia, the sister Carnival named in the handover"},
+      {"href": "/news/carnival-full-in-person-muster-drills-five-ships-september-26-28/", "label": "Full muster drill on the 28 Sep 2026 Long Beach departure"},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "How this site reads a CDC Vessel Sanitation score"}
+    ],
+    "faq": [
+      {"q": "When did Carnival Firenze join Carnival?", "a": "Carnival's 2 Feb 2024 release says the line took the ship from Costa Cruises that morning in Cadiz. The same release set the first Carnival sailings from Long Beach on 25 Apr 2024."},
+      {"q": "How many guests does Carnival list?", "a": "The ship page lists 4,126. Carnival's 25 Apr 2024 naming story says 5,000 guests. Those are both Carnival figures. They are not the same number."},
+      {"q": "What is Carnival Firenze's latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists Carnival Firenze at 98 from an inspection on 12 Jan 2026."}
+    ],
+    "sources": [
+      {"claim": "Handover from Costa on 2 Feb 2024 in Cadiz. Sister ship Carnival Venezia. Fun Italian Style. Year-round Long Beach service from 25 Apr 2024. La Strada Grill, Tomodoro, Il Viaggio, Amari, Frizzante, Heroes Tribute Lounge, Fahrenheit 555, JavaBlue named in the release.", "outlet": "Carnival News", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival-news.com/2024/02/02/carnival-cruise-line-fleet-grows-to-27-ships-as-carnival-firenze-officially-joins"},
+      {"claim": "Naming story calls Firenze a 5,000-guest ship.", "outlet": "Carnival News, 25 Apr 2024", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival-news.com/2024/04/25/buongiorno-west-coast-carnival-firenze-named-in-long-beach"},
+      {"claim": "135,156 gross tons, guest capacity 4,126, length 1,061 feet, 1,425 crew. Current venue and stateroom names on the ship page.", "outlet": "Carnival.com, Carnival Firenze", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival.com/cruise-ships/carnival-firenze"},
+      {"claim": "Most recent score 98 on 12 Jan 2026.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-horizon": {
+    "title": "Carnival Horizon: Specs, Class, CDC Score",
+    "description": "Carnival lists Horizon at 133,500 gross tons and 3,960 guests, in service since 2018. Fincantieri calls it Vista class and also prints 133,596. CDC score 95 on 8 Feb 2026.",
+    "lead": "Carnival Horizon is a Vista-class ship. Fincantieri, the builder, calls it a sister to Carnival Vista and lists delivery in 2018. Carnival's ship page and fact sheet both list 133,500 gross tons, a guest capacity of 3,960, and 1,450 crew.",
+    "paragraphs": [
+      "Fincantieri's product page says 133,500 tons in the introduction and prints 133,596 in the specification table on the same page. Carnival's public figure is 133,500. Use Carnival's number for the line's capacity claims, and treat 133,596 as the builder's table figure.",
+      "Carnival.com lists length as 1,055 feet. Fincantieri lists length overall as 323.4 meters. This page does not convert one into the other.",
+      "Fincantieri lists 1,987 passenger cabins and a maximum of 6,538 persons on board. That persons figure is larger than Carnival's guest capacity of 3,960. Do not read 6,538 as double occupancy.",
+      "This page uses those published pages and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Class", "value": "Vista, sister to Carnival Vista", "source": "Fincantieri", "url": "https://www.fincantieri.com/en/business/products/cruise-ships/Carnival-Horizon", "checked": "27 Sep 2026"},
+      {"label": "Delivery", "value": "2018", "source": "Fincantieri and Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-horizon-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Gross tonnage", "value": "133,500 on Carnival's pages", "source": "Carnival.com and fact sheet", "url": "https://www.carnival.com/cruise-ships/carnival-horizon", "checked": "27 Sep 2026"},
+      {"label": "Builder tonnage table", "value": "133,596", "source": "Fincantieri", "url": "https://www.fincantieri.com/en/business/products/cruise-ships/Carnival-Horizon", "checked": "27 Sep 2026"},
+      {"label": "Guest capacity", "value": "3,960", "source": "Carnival.com and fact sheet", "url": "https://www.carnival-news.com/ship/carnival-horizon-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Length", "value": "1,055 feet on Carnival.com", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-horizon", "checked": "27 Sep 2026"},
+      {"label": "Builder length", "value": "323.4 meters", "source": "Fincantieri", "url": "https://www.fincantieri.com/en/business/products/cruise-ships/Carnival-Horizon", "checked": "27 Sep 2026"},
+      {"label": "Crew", "value": "1,450", "source": "Carnival.com and fact sheet", "url": "https://www.carnival.com/cruise-ships/carnival-horizon", "checked": "27 Sep 2026"},
+      {"label": "Shipyard", "value": "Fincantieri, Marghera", "source": "Fincantieri and Carnival fact sheet", "url": "https://www.fincantieri.com/en/business/products/cruise-ships/Carnival-Horizon", "checked": "27 Sep 2026"},
+      {"label": "Registry", "value": "Panama", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-horizon-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Passenger cabins", "value": "1,987", "source": "Fincantieri", "url": "https://www.fincantieri.com/en/business/products/cruise-ships/Carnival-Horizon", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "Carnival's ship page names these venues. It does not say which ones are included in the fare."
+        ],
+        "items": [
+          "Guy's Burger Joint",
+          "Guy's Pig & Anchor Smokehouse | Brewhouse",
+          "Seafood Shack",
+          "Bonsai Teppanyaki",
+          "Fahrenheit 555",
+          "Jiji Asian Kitchen",
+          "Cucina del Capitano"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "The same page names the theater, water park, and adult areas below. It also says the ship has three age-specific youth spaces."
+        ],
+        "items": [
+          "IMAX theater",
+          "Dr. Seuss WaterWorks",
+          "SkyRide",
+          "Punchliner Comedy Club",
+          "Playlist Productions",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa",
+          "Havana Bar and Pool"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "Carnival sorts staterooms into interior, ocean view, balcony, and suite headings, then repeats many of them as Havana, Cloud 9 Spa, or Family Harbor versions. Havana headings say guests must be 12 or older. Family Harbor headings list a lounge, kids-eat-free at most specialty restaurants, and one evening of Night Owls babysitting. Cloud 9 headings list thermal-suite access and priority spa bookings. The page does not print square footage in those headings.",
+          "Fincantieri's cabin table, which is a count rather than a name list, shows 729 standard inside cabins, 883 balcony cabins, 64 window cabins, 215 window deluxe and family cabins, 49 suites, 8 penthouse suites, and 25 fully accessible cabins."
+        ],
+        "items": [
+          "Interior, porthole, and upper/lower layouts",
+          "Ocean view, deluxe ocean view, and obstructed-view versions",
+          "Balcony, premium balcony, cove balcony, and aft-view extended balcony",
+          "Junior Suite, Ocean Suite, and Grand Suite",
+          "Havana, Cloud 9 Spa, and Family Harbor versions of those layouts"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 95,
+      "inspected": "8 Feb 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/ships/carnival/carnival-vista/", "label": "Carnival Vista, the sister Fincantieri names"},
+      {"href": "/news/carnival-full-in-person-muster-drills-five-ships-september-26-28/", "label": "Full muster drill on the 26 Sep 2026 Miami departure"},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "How this site reads a CDC Vessel Sanitation score"}
+    ],
+    "faq": [
+      {"q": "What class is Carnival Horizon?", "a": "Fincantieri calls Carnival Horizon a Vista-class ship and a sister to Carnival Vista, delivered in 2018."},
+      {"q": "Why are there two tonnage figures?", "a": "Carnival.com and Carnival's fact sheet list 133,500. Fincantieri's page says 133,500 in the introduction and 133,596 in the specification table."},
+      {"q": "What is Carnival Horizon's latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists Carnival Horizon at 95 from an inspection on 8 Feb 2026."}
+    ],
+    "sources": [
+      {"claim": "133,500 gross tons, guest capacity 3,960, length 1,055 feet, 1,450 crew. Venue names and stateroom headings, including Havana, Cloud 9 Spa, and Family Harbor perks.", "outlet": "Carnival.com, Carnival Horizon", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival.com/cruise-ships/carnival-horizon"},
+      {"claim": "133,500 gross tons, double occupancy 3,960, 1,450 team members, Fincantieri Cantieri Navali, Panama, entered service 2018.", "outlet": "Carnival Horizon fact sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival-news.com/ship/carnival-horizon-fact-sheet"},
+      {"claim": "Vista class, sister to Carnival Vista, built in Marghera, delivery 2018. Intro tonnage 133,500. Table tonnage 133,596. Length 323.4 meters. 1,987 passenger cabins. Max persons on board 6,538. Cabin mix in the builder table.", "outlet": "Fincantieri, Carnival Horizon", "tier": 1, "date": "27 Sep 2026", "url": "https://www.fincantieri.com/en/business/products/cruise-ships/Carnival-Horizon"},
+      {"claim": "Most recent score 95 on 8 Feb 2026.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-spirit": {
+    "title": "Carnival Spirit: Specs, Class, CDC Score",
+    "description": "Carnival's fact sheet lists Spirit at 88,500 gross tons, double occupancy 2,124, in service since 2001. The ship page lists guest capacity 2,134. CDC score 99 on 8 Feb 2026.",
+    "lead": "Carnival Spirit entered service in 2001 from Kvaerner Masa-Yards, per Carnival's fact sheet. That sheet lists 88,500 gross tons and double occupancy of 2,124, with 930 team members. The ship page lists the same tonnage, the same crew count, a length of 963 feet, and a guest capacity of 2,134.",
+    "paragraphs": [
+      "Those two Carnival pages disagree by 10 guests. The fact sheet says double occupancy 2,124. The ship page says guest capacity 2,134. This page does not pick a winner. Check the booking engine for the cabin you want.",
+      "This database files the ship as Spirit class. Carnival's fact-sheet facts block does not print a class name. It does print the yard, the year, and the tonnage.",
+      "This page uses those Carnival pages and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Gross tonnage", "value": "88,500", "source": "Carnival.com and fact sheet", "url": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Double occupancy", "value": "2,124", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Guest capacity", "value": "2,134", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-spirit", "checked": "27 Sep 2026"},
+      {"label": "Length", "value": "963 feet", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-spirit", "checked": "27 Sep 2026"},
+      {"label": "Crew", "value": "930", "source": "Carnival.com and fact sheet", "url": "https://www.carnival.com/cruise-ships/carnival-spirit", "checked": "27 Sep 2026"},
+      {"label": "Entered service", "value": "2001", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Shipyard", "value": "Kvaerner Masa-Yards", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Registry on the fact sheet", "value": "Panama", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "Carnival's ship page names these rooms. It does not say which meals are included."
+        ],
+        "items": [
+          "Empire Restaurant, described as three-course dining",
+          "Lido Restaurant",
+          "RedFrog Pub",
+          "Guy's Burger Joint",
+          "BlueIguana Cantina",
+          "Nouveau Steakhouse",
+          "Late-night soft-serve and pizza, named only as a style of food"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "The same page names the activity list below, plus bars, lounges, live comedy, and musical performances. It says the ship has three age-appropriate youth programs."
+        ],
+        "items": [
+          "WaterWorks, including a slide named Green Thunder",
+          "Domed swimming pool",
+          "Serenity Adult-Only Retreat",
+          "Mini-golf",
+          "Two-deck fitness center",
+          "Jogging track",
+          "Spa"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "Carnival's stateroom headings on the ship page are the list below. The page does not print square footage in those headings."
+        ],
+        "items": [
+          "Interior",
+          "Interior with Window (Obstructed View)",
+          "Ocean View",
+          "Balcony and Balcony (Obstructed View)",
+          "Premium Balcony and Premium Balcony (Obstructed View)",
+          "Extended Balcony",
+          "Aft-View Extended Balcony",
+          "Junior Suite",
+          "Ocean Suite",
+          "Vista Suite",
+          "Grand Suite"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 99,
+      "inspected": "8 Feb 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/news/carnival-sunrise-halloween-princess-cays-half-moon-cay/", "label": "Sunrise port swap. The post mentions Spirit only as context, not a confirmed Spirit date."},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "How this site reads a CDC Vessel Sanitation score"}
+    ],
+    "faq": [
+      {"q": "How many guests does Carnival Spirit hold?", "a": "Carnival's fact sheet lists double occupancy of 2,124. Carnival.com lists guest capacity of 2,134. Both pages were checked 27 Sep 2026."},
+      {"q": "When did Carnival Spirit enter service?", "a": "Carnival's fact sheet lists 2001 and names the yard as Kvaerner Masa-Yards."},
+      {"q": "What is Carnival Spirit's latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists Carnival Spirit at 99 from an inspection on 8 Feb 2026."}
+    ],
+    "sources": [
+      {"claim": "88,500 gross tons, guest capacity 2,134, length 963 feet, 930 crew. Venue names and stateroom headings.", "outlet": "Carnival.com, Carnival Spirit", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival.com/cruise-ships/carnival-spirit"},
+      {"claim": "88,500 gross tons, double occupancy 2,124, 930 team members, Kvaerner Masa-Yards, Panama, entered service 2001.", "outlet": "Carnival Spirit fact sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet"},
+      {"claim": "Most recent score 99 on 8 Feb 2026.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-sunrise": {
+    "title": "Carnival Sunrise: Specs, Class, CDC Score",
+    "description": "Carnival's fact sheet lists Sunrise at 101,509 gross tons and 2,984 guests, entered service 1999. A 2018 Carnival release said Triumph would be renamed Sunrise. CDC score 100 on 12 Feb 2026.",
+    "lead": "Carnival Sunrise is the ship Carnival renamed from Carnival Triumph. A 31 Jul 2018 Carnival announcement said a Cadiz dry dock would lead to the new name and place the ship in the Sunshine class. Carnival's fact sheet now lists entered service as 1999, 101,509 gross tons, and double occupancy of 2,984.",
+    "paragraphs": [
+      "An earlier version of this page listed 2014. That year is wrong against Carnival's fact sheet, which lists 1999. This database still files the ship as Destiny class. Carnival's 2018 announcement said the renamed ship would join the Sunshine class. Those are two labels for one hull.",
+      "The fact sheet's shipyard field reads Cadiz, Spain. The 2018 announcement describes Cadiz as the dry-dock yard for the rename, starting 1 Mar 2019. Do not read that field as a claim about the original builder. Carnival's fact sheet does not name the original yard.",
+      "The ship page matches the fact sheet on tonnage, the 2,984 guest capacity, 1,108 crew, and a length of 893 feet.",
+      "This page uses those Carnival pages and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Former name", "value": "Carnival Triumph", "source": "Carnival announcement, 31 Jul 2018", "url": "https://www.prnewswire.com/news-releases/carnival-cruise-line-announces-major-dry-dock-makeover-for-carnival-triumph-leading-to-renaming-as-carnival-sunrise-300689215.html", "checked": "27 Sep 2026"},
+      {"label": "Entered service", "value": "1999", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Class on this site", "value": "Destiny", "source": "This database", "url": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Class in the 2018 release", "value": "Sunshine", "source": "Carnival announcement", "url": "https://www.prnewswire.com/news-releases/carnival-cruise-line-announces-major-dry-dock-makeover-for-carnival-triumph-leading-to-renaming-as-carnival-sunrise-300689215.html", "checked": "27 Sep 2026"},
+      {"label": "Gross tonnage", "value": "101,509", "source": "Carnival.com and fact sheet", "url": "https://www.carnival.com/cruise-ships/carnival-sunrise", "checked": "27 Sep 2026"},
+      {"label": "Guest capacity", "value": "2,984", "source": "Carnival.com and fact sheet", "url": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet", "checked": "27 Sep 2026"},
+      {"label": "Length", "value": "893 feet", "source": "Carnival.com", "url": "https://www.carnival.com/cruise-ships/carnival-sunrise", "checked": "27 Sep 2026"},
+      {"label": "Crew", "value": "1,108", "source": "Carnival.com and fact sheet", "url": "https://www.carnival.com/cruise-ships/carnival-sunrise", "checked": "27 Sep 2026"},
+      {"label": "Registry", "value": "Bahamas", "source": "Carnival fact sheet", "url": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "Carnival's ship page names these venues. It does not say which meals are included."
+        ],
+        "items": [
+          "Guy's Pig & Anchor Bar-B-Que Smokehouse | Brewhouse",
+          "Bonsai Sushi",
+          "Cucina del Capitano",
+          "Fahrenheit 555 Steakhouse",
+          "RedFrog Pub",
+          "Heroes Tribute Bar"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "The same page names the shows and the water park below. It says the ship has three youth spaces."
+        ],
+        "items": [
+          "Playlist Productions",
+          "Punchliner Comedy Club",
+          "Piano Bar 88",
+          "Carnival WaterWorks"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "Carnival's stateroom headings run from interiors through suites, with Cloud 9 Spa versions that list thermal-suite access. The page does not print square footage in those headings."
+        ],
+        "items": [
+          "Interior, picture-window, porthole, and upper/lower layouts",
+          "Cloud 9 Spa Interior versions",
+          "Scenic Ocean View, Ocean View, and an obstructed-view ocean view",
+          "Balcony, Premium Balcony, Premium Vista Balcony, Aft-View Extended Balcony",
+          "Cloud 9 Spa Balcony versions",
+          "Ocean Suite, Grand Suite, Extended Balcony Grand Suite, Captain's Suite"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 100,
+      "inspected": "12 Feb 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/news/carnival-sunrise-halloween-princess-cays-half-moon-cay/", "label": "31 Oct 2026 Halloween cruise: Princess Cays swapped for Half Moon Cay"},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "How this site reads a CDC Vessel Sanitation score"}
+    ],
+    "faq": [
+      {"q": "What was Carnival Sunrise called before the rename?", "a": "Carnival Triumph. Carnival's 31 Jul 2018 announcement said a Cadiz dry dock would lead to the name Carnival Sunrise."},
+      {"q": "When did the ship enter service?", "a": "Carnival's fact sheet lists 1999. This page previously listed 2014. Use 1999."},
+      {"q": "What is Carnival Sunrise's latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists Carnival Sunrise at 100 from an inspection on 12 Feb 2026."}
+    ],
+    "sources": [
+      {"claim": "Triumph dry dock in Cadiz from 1 Mar 2019, rename to Carnival Sunrise, ship to join the Sunshine class. Norfolk service from 29 Apr 2019 in that announcement.", "outlet": "Carnival Cruise Line via PR Newswire, 31 Jul 2018", "tier": 1, "date": "27 Sep 2026", "url": "https://www.prnewswire.com/news-releases/carnival-cruise-line-announces-major-dry-dock-makeover-for-carnival-triumph-leading-to-renaming-as-carnival-sunrise-300689215.html"},
+      {"claim": "101,509 gross tons, double occupancy 2,984, 1,108 team members, shipyard field Cadiz Spain, Bahamas registry, entered service 1999.", "outlet": "Carnival Sunrise fact sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet"},
+      {"claim": "101,509 gross tons, guest capacity 2,984, length 893 feet, 1,108 crew. Venue names and stateroom headings.", "outlet": "Carnival.com, Carnival Sunrise", "url": "https://www.carnival.com/cruise-ships/carnival-sunrise", "tier": 1, "date": "27 Sep 2026"},
+      {"claim": "Most recent score 100 on 12 Feb 2026.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "wonder-of-the-seas": {
+    "title": "Wonder of the Seas: Specs and CDC Score",
+    "description": "Royal Caribbean's 11 Sep 2025 guide lists Wonder at 235,600 gross tons, 18 decks, and 5,734 guests at double occupancy. CDC score 99 on 13 Feb 2026. The guide's 'largest ship' line is stale.",
+    "lead": "Wonder of the Seas is an Oasis-class ship. Royal Caribbean's own size guide, published 11 Sep 2025, lists 235,600 gross tons, 18 decks, eight neighborhoods, 1,188 feet long, 215 feet wide, 5,734 guests at double occupancy, and a crew of 2,204.",
+    "paragraphs": [
+      "That same guide still calls Wonder the largest cruise ship in the world. Treat that superlative as stale. Icon of the Seas is already in service in this database, and the guide's own date is 11 Sep 2025. This page uses the measurements and does not repeat 'largest' as a current fact.",
+      "The guide does not print a maximum berth count above the 5,734 double-occupancy figure. This page does not repeat an older unsourced maximum.",
+      "This page uses Royal Caribbean's guide and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Class", "value": "Oasis", "source": "Royal Caribbean", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"},
+      {"label": "Gross tonnage", "value": "235,600", "source": "Royal Caribbean, 11 Sep 2025", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"},
+      {"label": "Decks", "value": "18", "source": "Royal Caribbean", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"},
+      {"label": "Double occupancy", "value": "5,734", "source": "Royal Caribbean", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"},
+      {"label": "Length", "value": "1,188 feet", "source": "Royal Caribbean", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"},
+      {"label": "Width", "value": "215 feet", "source": "Royal Caribbean", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"},
+      {"label": "Crew", "value": "2,204", "source": "Royal Caribbean", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"},
+      {"label": "Neighborhoods", "value": "8, listed on the guide", "source": "Royal Caribbean", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "Royal Caribbean's 11 Sep 2025 guide names the venues below. It is not a full restaurant list, and it does not print cover charges. For fleet charges that can show up on a Wonder sailing, use our menu-changes guide and confirm the current ship menu."
+        ],
+        "items": [
+          "150 Central Park",
+          "Chops Grille",
+          "Johnny Rockets",
+          "Playmakers Sports Bar & Arcade",
+          "Coastal Kitchen, described as the Suite Neighborhood restaurant"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "The guide names eight neighborhoods: Central Park, Boardwalk, Royal Promenade, Entertainment Place, Youth Zone, Vitality Spa and Fitness, Pool and Sports Zone, and the Suite Neighborhood. It calls the Suite Neighborhood exclusive to Wonder. That sentence is dated 11 Sep 2025, so check a newer Oasis ship before you treat 'exclusive' as current.",
+          "Named activity and show spaces on that guide:"
+        ],
+        "items": [
+          "AquaTheater",
+          "Studio B ice rink",
+          "Music Hall",
+          "A grand theater for Broadway-style productions",
+          "Ultimate Abyss dry slide, described as 10 stories",
+          "The Perfect Storm waterslides",
+          "FlowRider",
+          "Adventure Ocean youth program"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "The guide names these stateroom types. It does not print a full category count or square footage."
+        ],
+        "items": [
+          "Interior",
+          "Ocean View",
+          "Balcony",
+          "Virtual Balcony",
+          "Ultimate Family Suite",
+          "Royal Suite",
+          "Owner's Suite",
+          "Crown Loft Suite",
+          "Grand Suites",
+          "AquaTheater Suites"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 99,
+      "inspected": "13 Feb 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "Royal Caribbean CDC scores, including Wonder at 99"},
+      {"href": "/guides/icon-class-vs-oasis-class/", "label": "Icon class vs Oasis class"},
+      {"href": "/guides/royal-caribbean-2027-announcements-most-cruisers-missed/", "label": "2027 announcements, including Wonder's Miami short cruises"},
+      {"href": "/guides/royal-caribbean-predictions-for-2027/", "label": "2027 predictions that tag Wonder of the Seas"},
+      {"href": "/guides/royal-caribbean-menu-changes-that-cost-extra/", "label": "Main Dining Room and specialty charges to check before you sail"},
+      {"href": "/guides/royal-caribbean-leadership-just-confirmed/", "label": "Freedom of the Seas rebooking note that names Wonder"}
+    ],
+    "faq": [
+      {"q": "How big is Wonder of the Seas?", "a": "Royal Caribbean's guide published 11 Sep 2025 lists 235,600 gross tons, 18 decks, and 5,734 guests at double occupancy."},
+      {"q": "Is Wonder still the largest cruise ship?", "a": "Royal Caribbean's 11 Sep 2025 guide still says yes. This page treats that line as stale and does not repeat it as a current fact."},
+      {"q": "What is Wonder of the Seas' latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists Wonder of the Seas at 99 from an inspection on 13 Feb 2026. Our Royal Caribbean ranking also lists 99."}
+    ],
+    "sources": [
+      {"claim": "235,600 gross tons, 18 decks, eight neighborhoods, 1,188 feet long, 215 feet wide, 5,734 guests at double occupancy, crew 2,204. Neighborhood, venue, and stateroom names. The guide still calls the ship the largest in the world.", "outlet": "Royal Caribbean, How Big Is Wonder of the Seas, by Lissa Poirot, 11 Sep 2025", "tier": 1, "date": "27 Sep 2026", "url": "https://www.royalcaribbean.com/guides/how-big-is-wonder-of-the-seas"},
+      {"claim": "Most recent score 99 on 13 Feb 2026. Footnote: scores of 85 or lower are not satisfactory.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "disney-dream": {
+    "title": "Disney Dream: Specs, Class, CDC Score",
+    "description": "Disney's technical sheet lists Dream at 129,690 gross tons, delivered December 2010, built by Meyer Werft. The sheet has no guest count. CDC score 100 on 2 May 2026.",
+    "lead": "Disney Dream is grouped on this site with Disney Fantasy in the Dream class. Disney's technical information sheet lists 129,690 gross tons, a length of 339.8 meters (1,114.7 feet), builder Meyer Werft in Papenburg, keel laid August 2009, and delivery in December 2010.",
+    "paragraphs": [
+      "That sheet does not print a guest count. This page does not repeat an older maximum, because that number is not on the sheet. This database still carries 2011 as the in-service year. The sheet lists delivery in December 2010 and does not print a maiden-voyage date.",
+      "The sheet was retrieved from Disney Cruise Line Blog, which hosts the Disney document. Figures below are the ones printed on that sheet.",
+      "This page uses that sheet, Disney's ship and dining pages, and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Gross tonnage", "value": "129,690", "source": "Disney technical sheet", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "checked": "27 Sep 2026"},
+      {"label": "Length", "value": "339.8 m (1,114.7 ft)", "source": "Disney technical sheet", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "checked": "27 Sep 2026"},
+      {"label": "Builder", "value": "Meyer Werft, Papenburg", "source": "Disney technical sheet", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "checked": "27 Sep 2026"},
+      {"label": "Delivered", "value": "December 2010", "source": "Disney technical sheet", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "checked": "27 Sep 2026"},
+      {"label": "Flag", "value": "Bahamas", "source": "Disney technical sheet", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "checked": "27 Sep 2026"},
+      {"label": "Hull number", "value": "687", "source": "Disney technical sheet", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "checked": "27 Sep 2026"},
+      {"label": "Guest count", "value": "Not on the technical sheet", "source": "Disney technical sheet", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "Disney's Dream ship page names Enchanted Garden, Animator's Palate, Palo Steakhouse, and Enchanté by Chef Arnaud Lallement. Disney's Animator's Palate page says that restaurant is a main dining room in rotational dining, and it has a section written for Disney Dream and Disney Fantasy. Disney's Royal Palace page says Royal Palace is a main dining room in rotational dining on all Disney ships. Disney's Enchanted Garden page uses that same all-ships line. Confirm the rotational set on your sailing, because an all-ships sentence can lag a new ship.",
+          "Those pages do not print prices."
+        ],
+        "items": [
+          "Animator's Palate",
+          "Enchanted Garden",
+          "Royal Palace, per Disney's all-ships rotational-dining line",
+          "Palo Steakhouse",
+          "Enchanté by Chef Arnaud Lallement"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "Disney's Dream ship page names these spaces. The page does not describe show times."
+        ],
+        "items": [
+          "Funnel Vision",
+          "Slide-a-saurus Rex",
+          "Toy Story Splash Zone",
+          "Wheezy's Freezies",
+          "The Hideaway",
+          "Concierge Lounge"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "Disney's Dream ship page lists these stateroom labels. It does not print a category count or square footage in the extract we checked."
+        ],
+        "items": [
+          "Oceanview",
+          "Verandah",
+          "Concierge",
+          "Concierge 1-Bedroom Suite with Verandah",
+          "Concierge Family Oceanview Stateroom with Verandah"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 100,
+      "inspected": "2 May 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/ships/disney/disney-fantasy/", "label": "Disney Fantasy, the other Dream-class ship in this database"},
+      {"href": "/reviews/disney-wish-review/", "label": "Disney Wish review. A different ship, useful if you are comparing Disney classes."},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "How this site reads a CDC Vessel Sanitation score"}
+    ],
+    "faq": [
+      {"q": "How big is Disney Dream?", "a": "Disney's technical sheet lists 129,690 gross tons and a length of 339.8 meters, or 1,114.7 feet."},
+      {"q": "When was Disney Dream delivered?", "a": "The technical sheet lists delivery in December 2010 and the keel in August 2009. It does not print a guest count."},
+      {"q": "What is Disney Dream's latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists Disney Dream at 100 from an inspection on 2 May 2026."}
+    ],
+    "sources": [
+      {"claim": "129,690 gross tons. Length overall 339.8 m (1,114.7 ft). Flag Bahamas. Builder Meyer Werft, Papenburg. Hull 687. Keel laid August 2009. Delivered December 2010.", "outlet": "Disney Cruise Line technical information sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://disneycruiselineblog.com/wp-content/uploads/2012/05/Disney-Dream-Technical-Information-Sheet.pdf", "note": "Disney document retrieved from Disney Cruise Line Blog."},
+      {"claim": "Dream ship page names Enchanted Garden, Animator's Palate, Palo Steakhouse, Enchanté, Funnel Vision, Slide-a-saurus Rex, Toy Story Splash Zone, Wheezy's Freezies, The Hideaway, and the stateroom labels listed above.", "outlet": "Disney Cruise Line, Disney Dream", "tier": 1, "date": "27 Sep 2026", "url": "https://disneycruise.disney.go.com/en-ph/ships/dream/"},
+      {"claim": "Animator's Palate is a rotational main dining room, with a section for Disney Dream and Disney Fantasy.", "outlet": "Disney Cruise Line, Animator's Palate", "tier": 1, "date": "27 Sep 2026", "url": "https://disneycruise.disney.go.com/onboard-activities/animators-palate-restaurant/"},
+      {"claim": "Royal Palace is described as a rotational main dining room on all Disney ships.", "outlet": "Disney Cruise Line, Royal Palace", "tier": 1, "date": "27 Sep 2026", "url": "https://disneycruise.disney.go.com/en-as/onboard-activities/royal-palace-restaurant/"},
+      {"claim": "Most recent score 100 on 2 May 2026.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "msc-poesia": {
+    "title": "MSC Poesia: Specs, Class, CDC Score",
+    "description": "MSC's technical sheet lists Poesia at 92,627 gross tons and 13 guest decks. Passenger counts disagree across MSC pages. A 15 Apr 2026 release added the Yacht Club. CDC score 97 on 23 Apr 2026.",
+    "lead": "MSC Poesia is a Musica-class ship. MSC's 15 Apr 2026 release says she is the second of the four Musica-class ships through a Palumbo Malta dry dock, after MSC Magnifica. The same release says the work added the MSC Yacht Club before Alaska sailings from Seattle.",
+    "paragraphs": [
+      "MSC's technical sheet lists 92,627 gross tons, 16 decks including 13 for guests, length 293.80 meters, beam 32.20 meters, height 59.64 meters, and a maximum speed of 23 knots. It lists 3,223 passengers, 1,275 cabins, and about 987 crew.",
+      "MSC's public ship pages do not agree with each other, or with that sheet, on the head count. The Canada page lists 3,013 passengers, about 987 crew, and 1,229 cabins. The Australia page lists 3,223 passengers, about 1,039 crew, and 1,223 cabins. An earlier version of this page listed 2,550 guests at double occupancy. That figure is not on these current MSC pages. Do not use 2,550.",
+      "Suite counts also disagree. The 15 Apr 2026 release says 69 Yacht Club suites. The Canada and Australia pages say 63 suites, available from 23 Apr 2026. Confirm the count in the booking flow.",
+      "This database still lists 2008 as the in-service year. The technical sheet and the April 2026 release do not restate a delivery year, so this page does not treat 2008 as a freshly checked fact.",
+      "This page uses MSC's documents and the CDC green sheet. It does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Class", "value": "Musica", "source": "MSC Cruises, 15 Apr 2026", "url": "https://www.mscpressarea.com/en_INT/press-releases/newly-transformed-msc-poesia-set-to-sail-for-alaska-ahead-of-her-2026-summer-seas/", "checked": "27 Sep 2026"},
+      {"label": "Gross tonnage", "value": "92,627", "source": "MSC technical sheet", "url": "https://assets.ctfassets.net/wvgaszxkj2ha/1HZ0yPVexsB6yTHUmwOMVf/ddab1a0c55aca3cbd2f043f678e8c7dc/MSC_POESIA_TECHNICAL_SHEET_ENG.pdf", "checked": "27 Sep 2026"},
+      {"label": "Decks", "value": "16 total, 13 for guests", "source": "MSC technical sheet", "url": "https://assets.ctfassets.net/wvgaszxkj2ha/1HZ0yPVexsB6yTHUmwOMVf/ddab1a0c55aca3cbd2f043f678e8c7dc/MSC_POESIA_TECHNICAL_SHEET_ENG.pdf", "checked": "27 Sep 2026"},
+      {"label": "Length / beam / height", "value": "293.80 m / 32.20 m / 59.64 m", "source": "MSC technical sheet", "url": "https://assets.ctfassets.net/wvgaszxkj2ha/1HZ0yPVexsB6yTHUmwOMVf/ddab1a0c55aca3cbd2f043f678e8c7dc/MSC_POESIA_TECHNICAL_SHEET_ENG.pdf", "checked": "27 Sep 2026"},
+      {"label": "Passengers on the sheet", "value": "3,223", "source": "MSC technical sheet", "url": "https://assets.ctfassets.net/wvgaszxkj2ha/1HZ0yPVexsB6yTHUmwOMVf/ddab1a0c55aca3cbd2f043f678e8c7dc/MSC_POESIA_TECHNICAL_SHEET_ENG.pdf", "checked": "27 Sep 2026"},
+      {"label": "Passengers, Canada page", "value": "3,013", "source": "MSC Cruises Canada", "url": "https://www.msccruises.ca/plan-a-cruise/ships/msc-poesia", "checked": "27 Sep 2026"},
+      {"label": "Passengers, Australia page", "value": "3,223", "source": "MSC Cruises Australia", "url": "https://www.msccruises.com.au/our-cruises/ships/msc-poesia", "checked": "27 Sep 2026"},
+      {"label": "Yacht Club suites", "value": "69 in the release, 63 on the ship pages", "source": "MSC Cruises", "url": "https://www.mscpressarea.com/en_INT/press-releases/newly-transformed-msc-poesia-set-to-sail-for-alaska-ahead-of-her-2026-summer-seas/", "checked": "27 Sep 2026"},
+      {"label": "Dry dock", "value": "Completed at Palumbo Malta by 15 Apr 2026", "source": "MSC Cruises", "url": "https://www.mscpressarea.com/en_INT/press-releases/newly-transformed-msc-poesia-set-to-sail-for-alaska-ahead-of-her-2026-summer-seas/", "checked": "27 Sep 2026"}
+    ],
+    "sections": [
+      {
+        "heading": "Dining",
+        "paragraphs": [
+          "The technical sheet names the restaurants below. The 15 Apr 2026 release adds Butcher's Cut, which it calls an American-style steakhouse, and it also names Kaito Sushi Bar as a specialty venue after the dry dock. The sheet already lists Kaito, so both documents name it. The release does not print prices. The sheet's main restaurants are labeled upper and lower main restaurant, plus a self-service buffet."
+        ],
+        "items": [
+          "Il Palladio, upper main restaurant on the sheet",
+          "Le Fontane, lower main restaurant on the sheet",
+          "Villa Pompeiana and L'Obelisco, self-service buffet and pizzeria on the sheet",
+          "Kaito Sushi Bar",
+          "Butcher's Cut, named in the 15 Apr 2026 release",
+          "A Yacht Club restaurant, lounge, and grill, named in that release without a separate public name"
+        ]
+      },
+      {
+        "heading": "Entertainment",
+        "paragraphs": [
+          "The technical sheet names these public rooms. The April 2026 release adds the MSC Aurea Spa, an MSC gym, and the Top 15 Exclusive Solarium for Aurea guests. Musica-class sisters named in that release are MSC Magnifica, MSC Musica, and MSC Orchestra. They do not have pages in this database yet."
+        ],
+        "items": [
+          "Teatro Carlo Felice",
+          "S32 Disco",
+          "Pigalle Lounge",
+          "The Zebra Bar",
+          "MSC Yacht Club, added in the 2026 dry dock",
+          "MSC Aurea Spa and gym, named in the 15 Apr 2026 release"
+        ]
+      },
+      {
+        "heading": "Cabins",
+        "paragraphs": [
+          "The technical sheet lists 1,275 cabins, including 17 for guests with disabilities or reduced mobility. The Canada page lists 1,229 cabins, including 17 accessible cabins. The Australia page lists 1,223 cabins, including 17 accessible cabins. Use the count on the page you book from.",
+          "Yacht Club suites are the post-refit product. The release says 69 suites with 24-hour butler and concierge service, a private restaurant, lounge, sundeck with whirlpools, and a grill. The Canada and Australia pages say 63 suites from 23 Apr 2026, with the Top Sail Lounge."
+        ],
+        "items": [
+          "Technical sheet: 1,275 cabins, 17 accessible",
+          "Canada page: 1,229 cabins, 17 accessible",
+          "Australia page: 1,223 cabins, 17 accessible",
+          "Yacht Club suites: 69 or 63, depending on the MSC page"
+        ]
+      }
+    ],
+    "cdc": {
+      "score": 97,
+      "inspected": "23 Apr 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/news/msc-poesia-endicott-arm-cut-juneau-early/", "label": "Endicott Arm cut on the last Alaska sailings from Seattle"},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "How this site reads a CDC Vessel Sanitation score"}
+    ],
+    "faq": [
+      {"q": "How many guests does MSC Poesia carry?", "a": "MSC's technical sheet lists 3,223 passengers. The Canada page lists 3,013. The Australia page lists 3,223. This page no longer uses 2,550."},
+      {"q": "What changed in the 2026 dry dock?", "a": "MSC's 15 Apr 2026 release says the Palumbo Malta dry dock added the Yacht Club, Butcher's Cut, Kaito Sushi Bar, and an updated Aurea spa and gym."},
+      {"q": "What is MSC Poesia's latest CDC score?", "a": "The CDC green sheet checked 27 Sep 2026 lists MSC Poesia at 97 from an inspection on 23 Apr 2026."}
+    ],
+    "sources": [
+      {"claim": "92,627 gross tons. Decks 16, including 13 for guests. Length 293.80 m, beam 32.20 m, height 59.64 m. Maximum speed 23 knots. 3,223 passengers. 1,275 cabins, 17 accessible. Crew about 987. Restaurant and public-room names on the sheet.", "outlet": "MSC Poesia technical sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://assets.ctfassets.net/wvgaszxkj2ha/1HZ0yPVexsB6yTHUmwOMVf/ddab1a0c55aca3cbd2f043f678e8c7dc/MSC_POESIA_TECHNICAL_SHEET_ENG.pdf"},
+      {"claim": "Dry dock complete at Palumbo Malta. Musica class. Yacht Club with 69 suites. Butcher's Cut and Kaito Sushi Bar. Aurea spa and gym. Sisters Magnifica, Musica, and Orchestra. Alaska from Seattle May through September 2026, then Miami in winter 2026-2027.", "outlet": "MSC Cruises press release, 15 Apr 2026", "tier": 1, "date": "27 Sep 2026", "url": "https://www.mscpressarea.com/en_INT/press-releases/newly-transformed-msc-poesia-set-to-sail-for-alaska-ahead-of-her-2026-summer-seas/"},
+      {"claim": "92,627 tons. 3,013 passengers. About 987 crew. 1,229 cabins. Yacht Club with 63 suites from 23 Apr 2026. Butcher's Cut and Kaito named on the page.", "outlet": "MSC Cruises Canada", "tier": 1, "date": "27 Sep 2026", "url": "https://www.msccruises.ca/plan-a-cruise/ships/msc-poesia"},
+      {"claim": "92,627 tons. 3,223 passengers. About 1,039 crew. 1,223 cabins. Yacht Club with 63 suites from 23 Apr 2026.", "outlet": "MSC Cruises Australia", "tier": 1, "date": "27 Sep 2026", "url": "https://www.msccruises.com.au/our-cruises/ships/msc-poesia"},
+      {"claim": "Most recent score 97 on 23 Apr 2026.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  }
+}

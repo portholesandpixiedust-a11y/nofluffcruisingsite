@@ -95,8 +95,8 @@
     "line": "royal-caribbean",
     "shipClass": "Oasis",
     "guests": 5734,
-    "maxGuests": 6988,
     "decks": 18,
+    "grossTonnage": 235600,
     "inService": 2022,
     "status": "In service",
     "verdict": "The Oasis formula at its most polished, and still the better choice if you want Central Park.",
@@ -246,20 +246,13 @@
     "name": "MSC Poesia",
     "line": "msc",
     "shipClass": "Musica",
-    "guests": 2550,
     "decks": 13,
     "grossTonnage": 92627,
     "inService": 2008,
     "status": "In service",
-    "verdict": "Refitted February to April 2026, which added an MSC Yacht Club enclave and new specialty dining. A 2008 hull with 2026 interiors.",
-    "goodAt": [
-      "Value pricing against comparable ships",
-      "The new Yacht Club suite enclave",
-      "Alaska and Caribbean deployment"
-    ],
-    "watchFor": [
-      "The Yacht Club is a genuinely separate experience, so the value case differs sharply by cabin"
-    ],
+    "verdict": "MSC's 15 April 2026 release says a Palumbo Malta dry dock added the Yacht Club before the Alaska season.",
+    "goodAt": [],
+    "watchFor": [],
     "coveredIn": [],
     "videoTour": {
       "id": "GMU0dbsTIiQ",
@@ -396,7 +389,6 @@
       "channel": "No Fluff Cruising"
     },
     "updated": "2026-08-29",
-    "maxGuests": 4000,
     "grossTonnage": 129690,
     "inService": 2011,
     "sameAs": [
@@ -736,6 +728,8 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
+    "guests": 3960,
+    "grossTonnage": 133500,
     "inService": 2018,
     "sameAs": [
       "https://en.wikipedia.org/wiki/Carnival_Horizon",
@@ -825,7 +819,9 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2014,
+    "guests": 2984,
+    "grossTonnage": 101509,
+    "inService": 1999,
     "sameAs": [
       "https://en.wikipedia.org/wiki/Carnival_Sunrise",
       "https://www.wikidata.org/wiki/Q1044086"
@@ -891,6 +887,8 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
+    "guests": 4126,
+    "grossTonnage": 135156,
     "inService": 2024,
     "sameAs": [
       "https://en.wikipedia.org/wiki/Carnival_Firenze",
@@ -957,6 +955,8 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
+    "guests": 2124,
+    "grossTonnage": 71925,
     "inService": 1998,
     "sameAs": [
       "https://en.wikipedia.org/wiki/Carnival_Paradise",

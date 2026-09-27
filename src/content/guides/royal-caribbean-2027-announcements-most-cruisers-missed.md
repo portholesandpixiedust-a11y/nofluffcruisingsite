@@ -6,7 +6,7 @@ presenter: Matthew
 publishDate: 2026-09-20
 line: Royal Caribbean
 topics: [Fleet, Itineraries]
-ships: [Hero of the Seas, Icon of the Seas, Harmony of the Seas, Liberty of the Seas, Symphony of the Seas, Freedom of the Seas, Legend of the Seas, Star of the Seas, Anthem of the Seas, Quantum of the Seas, Voyager of the Seas, Serenade of the Seas, Navigator of the Seas, Ovation of the Seas]
+ships: [Hero of the Seas, Icon of the Seas, Harmony of the Seas, Liberty of the Seas, Symphony of the Seas, Freedom of the Seas, Legend of the Seas, Star of the Seas, Anthem of the Seas, Quantum of the Seas, Voyager of the Seas, Serenade of the Seas, Navigator of the Seas, Ovation of the Seas, Wonder of the Seas]
 video:
   id: hVsaSdh5TD8
   title: "9 Royal Caribbean 2027 Announcements Most Cruisers Missed"
