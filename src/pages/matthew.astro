@@ -6,14 +6,15 @@ import { byPublishDate } from '../utils/byPublishDate.js';
 const posts = (await getCollection('reviews')).filter((p)=>p.data.presenter==='Matthew').sort(byPublishDate);
 const guides = (await getCollection('guides')).filter((p)=>p.data.presenter==='Matthew').sort(byPublishDate);
 const news = (await getCollection('news')).filter((p)=>p.data.presenter==='Matthew').sort(byPublishDate);
-const bio = 'Matthew presents expert cruise tips, ship reviews and ship tours on No Fluff Cruising. Between the two presenters, more than 40 cruises across Royal Caribbean, Carnival, Norwegian, MSC, Disney, Princess, Virgin Voyages and Celebrity.';
+const bio = 'Matthew presents expert cruise tips, ship reviews and ship tours on No Fluff Cruising. Between the two presenters, more than 40 cruises across Royal Caribbean, Carnival, Norwegian, MSC, Disney, Virgin Voyages and Celebrity.';
 const jsonld = [{
   '@context':'https://schema.org','@type':'Person',
   name:'Matthew', jobTitle:'Cruise reviewer',
   worksFor:{'@type':'Organization',name:'No Fluff Cruising'},
   url:new URL('/matthew/',Astro.site).href,
+  email:'portholesandpixiedust@gmail.com',
   sameAs:['https://www.youtube.com/@nofluffcruising'],
-  knowsAbout:['Cruising','Royal Caribbean','Carnival','Norwegian','MSC','Disney','Princess','Virgin Voyages','Celebrity'],
+  knowsAbout:['Cruising','Royal Caribbean','Carnival','Norwegian','MSC','Disney','Virgin Voyages','Celebrity'],
   description: bio
 }];
 ---
@@ -24,7 +25,8 @@ const jsonld = [{
     <div class="byline"><img src="/avatar.png" width="42" height="42" alt="" /><div><strong>Matthew</strong><span>No Fluff Cruising</span></div></div>
     <div class="prose">
       <p>{bio}</p>
-      <p>No line loyalty. Every claim in a video or on this site names its source and its date. Read <a href="/sources/">how we source</a>.</p>
+      <p>No line loyalty. Every claim in a video or on this site names its source and its date. Read the <a href="/editorial-standards/">editorial standards</a> and <a href="/sources/">how we source</a>.</p>
+      <p>The channel is <a href="https://www.youtube.com/@nofluffcruising" rel="noopener">YouTube @nofluffcruising</a>. Corrections and questions: <a href="mailto:portholesandpixiedust@gmail.com">portholesandpixiedust@gmail.com</a>.</p>
     </div>
     {posts.length > 0 && (<>
       <h2 class="sec" style="margin-top:30px">Reviews by Matthew</h2><div class="rule"></div>

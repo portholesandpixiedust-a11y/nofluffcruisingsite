@@ -6,6 +6,7 @@ import Sponsor from '../components/Sponsor.astro';
 import WatchNext from '../components/WatchNext.astro';
 import VideosReferenced from '../components/VideosReferenced.astro';
 import { formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
+import { newsHubSlug } from '../utils/newsLines.js';
 
 const {
   entry,
@@ -69,6 +70,8 @@ const faq = (d.faq?.length) ? {
   mainEntity: d.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 } : null;
 const jsonld = [article, video, faq].filter(Boolean);
+const topicLabel = (d.topics ?? []).filter(Boolean).join(' · ');
+const newsHub = schemaType === 'NewsArticle' ? newsHubSlug(d.line) : null;
 ---
 <Base title={d.title} description={d.description} jsonld={jsonld} ogImage={hero}
       breadcrumbs={[{name: section, url: sectionUrl}, {name: d.title, url: Astro.url.pathname}]}
@@ -77,7 +80,10 @@ const jsonld = [article, video, faq].filter(Boolean);
       author={d.presenter}>
   <div class="wrap">
     <article>
-      <span class="eyebrow">{[d.line, ...(d.topics ?? [])].filter(Boolean).join(' · ') || kind}</span>
+      <span class="eyebrow">
+        {d.line ? (newsHub ? <a href={`/news/${newsHub}/`}>{d.line}</a> : d.line) : (topicLabel || kind)}
+        {d.line && topicLabel ? ` · ${topicLabel}` : ''}
+      </span>
       <h1>{d.title}</h1>
       <div class="byline">
         <img src="/avatar.png" width="42" height="42" alt="" />
@@ -111,6 +117,8 @@ const jsonld = [article, video, faq].filter(Boolean);
       )}
 
       <div class="prose"><slot /></div>
+
+      {newsHub && <p><a href={`/news/${newsHub}/`}>More {d.line} news</a></p>}
 
       <Sponsor sponsor={d.sponsor} />
       <Sources sources={d.sources} updated={showUpdated ? updatedLabel : publishedLabel} />

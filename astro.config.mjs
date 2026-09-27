@@ -48,6 +48,7 @@ export default defineConfig({
     '/sitemap.xml': '/sitemap-index.xml',
     '/terms-of-service': '/terms/',
     '/privacy-policy': '/privacy/',
+    '/news/margaritaville-at-sea': '/news/margaritaville/',
   },
   markdown: { rehypePlugins: [rehypeWrapTables] },
 });
