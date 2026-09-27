@@ -6,7 +6,7 @@ description: "Carnival Freedom is swapping its shortened, straight funnel for a 
 answer: "Carnival Freedom is receiving a new whale-tail funnel during its current drydock at Chantier Naval de Marseille in France. The ship has sailed with a shortened, straight funnel since a March 2024 lightning strike. It returns to service October 9, 2026, with an 8-night Mediterranean sailing from Barcelona, then heads back to Port Canaveral."
 presenter: Matthew
 publishDate: 2026-09-21
-line: "Carnival"
+line: "Carnival Cruise Line"
 topics: [Ships]
 sources:
   - claim: "Carnival Freedom is getting a new funnel during drydock in Marseille, France, reported 19 September 2026"

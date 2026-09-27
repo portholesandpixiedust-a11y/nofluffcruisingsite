@@ -3,7 +3,7 @@ title: "Pride of America boarding slips to 28 Sep as Hurricane Nolo hits Hawaii"
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fcb%2FPride_of_America_%2528ship%252C_2005%2529_001.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Daniel Ramirez (CC BY 2.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Pride_of_America_(ship,_2005)_001.jpg"
 description: "Norwegian delayed Pride of America’s 26 Sep 2026 Honolulu embarkation to Monday 28 Sep for Tropical Storm/Hurricane Nolo. The usual seven-night Hawaii cruise shortens to five nights with Hilo, Kona, Nawiliwili, and Kahului. Guests get sail-or-cancel compensation options."
-answer: "Pride of America guests for the 26 Sep 2026 Honolulu sailing now board Monday 28 Sep and return 3 Oct after NCL cut two days for Hurricane Nolo. Revised ports: Hilo 29 Sep, Kona 30 Sep, Nawiliwili 1 Oct, Kahului 2 Oct. Option 1: sail and take 50% fare refund plus 50% future cruise credit. Option 2: cancel by 26 Sep for a full refund plus 10% future cruise discount."
+answer: "Pride of America guests on the 26 Sep 2026 Honolulu sailing board Monday 28 Sep and return 3 Oct after Norwegian cut two days for Hurricane Nolo. Ports: Hilo 29 Sep, Kona 30 Sep, Nawiliwili 1 Oct, Kahului 2 Oct. Sail for a 50% fare refund plus 50% future cruise credit, or cancel by 26 Sep for a full refund."
 presenter: Matthew
 publishDate: 2026-09-25T14:40:00-04:00
 line: "Norwegian Cruise Line"

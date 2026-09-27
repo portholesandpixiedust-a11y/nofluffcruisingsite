@@ -1,7 +1,7 @@
 ---
 title: "9 Royal Caribbean 2027 Announcements Most Cruisers Missed"
 description: "Terminal G in Miami, Harmony's Amplification, Royal Beach Club Lelepa, a six-ship Europe season, a 13-ship Caribbean map, the Galveston Icon swap, Alaska and Asia-Pacific expansions, and Hero of the Seas. Sourced from Royal Caribbean press releases and trade reporting."
-answer: "Royal Caribbean confirmed nine separate 2027 moves over the past year. A new Icon-class terminal in Miami. Harmony of the Seas rebuilt and sent to Port Canaveral. The first Royal Beach Club in the Southern Hemisphere. A six-ship Europe season. A 13-ship Caribbean and Bahamas map. Icon of the Seas into Galveston while Symphony leaves. A four-ship Alaska season. A bigger Asia-Pacific deployment. And Hero of the Seas into Miami in August 2027. Most of it never got a launch event."
+answer: "Royal Caribbean confirmed nine 2027 moves: an Icon-class Miami terminal, Harmony of the Seas rebuilt for Port Canaveral, the first Southern Hemisphere Royal Beach Club, a six-ship Europe season, a 13-ship Caribbean and Bahamas map, Icon into Galveston as Symphony leaves, a four-ship Alaska season, a bigger Asia-Pacific deployment, and Hero of the Seas into Miami in August 2027."
 presenter: Matthew
 publishDate: 2026-09-20
 line: Royal Caribbean

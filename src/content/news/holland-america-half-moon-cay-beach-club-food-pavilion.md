@@ -3,7 +3,7 @@ title: "Holland America adds paid Beach Club at Half Moon Cay. Day passes in ear
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F62%2FHolland_America_Eurodam_at_Half_Moon_Cay.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Matthew Groh (CC BY-SA 4.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Holland_America_Eurodam_at_Half_Moon_Cay.jpg"
 description: "Holland America unveiled a paid Beach Club at RelaxAway, Half Moon Cay on 22 Sep 2026. Day passes open early October with priority tendering, waiter service, all-inclusive drinks, and specialty food. A new complimentary barbecue pavilion and upgraded cabanas are free to every island guest. Price not published."
-answer: "Holland America Line announced on 22 Sep 2026 a new paid Beach Club at RelaxAway, Half Moon Cay. Day passes go on sale in early October 2026 and include priority tendering, dedicated waiter service, all-inclusive alcoholic and non-alcoholic drinks, beach accessories, and specialty food. A new food pavilion with a complimentary island barbecue menu is open to all guests. Price for the Beach Club pass is not yet published. More than two dozen HAL Caribbean itineraries call the island from October 2026 through April 2027."
+answer: "Holland America announced on 22 Sep 2026 a paid Beach Club at RelaxAway, Half Moon Cay. Day passes go on sale in early October and include priority tendering, waiter service, all-inclusive drinks, beach accessories, and specialty food. A complimentary island barbecue pavilion is open to every guest. The pass price is not published."
 presenter: Matthew
 publishDate: 2026-09-24T08:20:00-04:00
 line: "Holland America"

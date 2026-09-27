@@ -3,10 +3,10 @@ title: "Carnival Panorama drops Puerto Vallarta and Mazatlán for Polo"
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc5%2FCarnival_Panorama_sideview.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Josie St.John MacDonagh (CC0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Carnival_Panorama_sideview.jpg"
 description: "Carnival cancelled Puerto Vallarta and Mazatlán on Panorama's 26 Sep 2026 Long Beach cruise for Hurricane Polo. Ensenada is added 28 Sep. La Paz and Cabo stay."
-answer: "Carnival Panorama's 26 Sep 2026 Long Beach sailing lost Puerto Vallarta on 29 Sep and Mazatlán on 30 Sep because of Hurricane Polo. Ensenada is added Monday 28 Sep, 8am to 5pm, in the guest advisory Cruise Hive quotes. La Paz on 1 Oct and Cabo San Lucas on 2 Oct stay. Carnival tours for the cancelled ports are refunded. The Long Beach return is still set for 4 Oct."
+answer: "Carnival Panorama's 26 Sep 2026 Long Beach sailing lost Puerto Vallarta on 29 Sep and Mazatlán on 30 Sep because of Hurricane Polo. Ensenada is added Monday 28 Sep, 8am to 5pm. La Paz on 1 Oct and Cabo San Lucas on 2 Oct stay. Carnival tours for the cancelled ports are refunded."
 presenter: Matthew
 publishDate: 2026-09-27T09:10:00-04:00
-line: "Carnival"
+line: "Carnival Cruise Line"
 ships: ["Carnival Panorama"]
 topics: [Itineraries, Ports]
 sources:

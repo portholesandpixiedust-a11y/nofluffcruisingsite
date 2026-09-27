@@ -6,7 +6,7 @@ description: "Celebrity Constellation's 21 Sep 2026 Rome Best of Italy and Croat
 answer: "Celebrity Constellation leaves Civitavecchia on 21 Sep 2026 with Kotor cut. A Dubrovnik berth conflict puts Dubrovnik on Monday 7:00am to 8:00pm and Bar, Montenegro, on Tuesday 7:00am to 7:00pm. Celebrity says prepaid Kotor shore excursions stay on sale with adjusted times. Independent Kotor pier plans need a rewrite."
 presenter: Matthew
 publishDate: 2026-09-21T07:01:00-04:00
-line: "Celebrity"
+line: "Celebrity Cruises"
 topics: [Itineraries, Ports]
 sources:
   - claim: "Celebrity Constellation 21 Sep 2026 Best of Italy and Croatia guest letter: Dubrovnik berth conflict, Dubrovnik Monday 7:00am-8:00pm, Kotor replaced by Bar Tuesday 7:00am-7:00pm, prepaid Celebrity Kotor excursions remain offered with timing adjusted, full revised port table through Ravenna"

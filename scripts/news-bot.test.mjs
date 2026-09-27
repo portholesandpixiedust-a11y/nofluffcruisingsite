@@ -9,7 +9,7 @@ const good = {
   slug: 'test-story-slug',
   title: 'Carnival raises gratuities to $18.50 "per day"',
   description: 'A test description under 155 characters.',
-  answer: 'A test answer of roughly forty to sixty words that opens the page and answers the headline directly, with no preamble at all, for testing purposes.',
+  answer: 'A test answer of roughly forty to sixty words that opens the page and answers the headline directly, with no preamble at all, for testing purposes only. It names the fact, the date, and the ship, and it stays inside the range every published cruise story is expected to hit on this site today.',
   line: 'Carnival',
   topics: ['Money', 'Policy'],
   body: '## What changed?\n\nA test body with a table.\n\n| A | B |\n|---|---|\n| 1 | 2 |',
@@ -19,6 +19,7 @@ const good = {
 check('valid post passes', validate(good, new Set()).length === 0);
 check('duplicate slug rejected', validate(good, new Set(['test-story-slug'])).length > 0);
 check('unknown line rejected', validate({ ...good, line: 'Wat' }, new Set()).some(p => p.includes('unknown line')));
+check('short answer rejected', validate({ ...good, answer: 'Too short to extract from the page.' }, new Set()).some(p => p.includes('40 to 60')));
 check('missing sources rejected', validate({ ...good, sources: [] }, new Set()).some(p => p.includes('no sources')));
 check('bad tier rejected', validate({ ...good, sources: [{ claim: 'a', outlet: 'b', tier: 5 }] }, new Set()).length > 0);
 check('em dash rejected', validate({ ...good, body: 'a — b' }, new Set()).some(p => p.includes('em dash')));

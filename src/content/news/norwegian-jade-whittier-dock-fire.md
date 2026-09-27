@@ -6,7 +6,7 @@ description: "A 14 Sep 2026 fire at Whittier's Chugach Glacier Gateway Cruise Te
 answer: "Fire hit the Chugach Glacier Gateway Cruise Terminal in Whittier, Alaska, on 14 Sep 2026 and involved the tour boat Klondike Express. The Alaska fire marshal later called the dock a total loss. Norwegian Jade was alongside, moved away safely, and took no ship damage. Embarkation shifted to Whittier Alaska Cruise Ship Terminal 1."
 presenter: Matthew
 publishDate: 2026-09-19
-line: "Norwegian"
+line: "Norwegian Cruise Line"
 topics: [Ports, Ships]
 sources:
   - claim: "Fire at Chugach Glacier Gateway Cruise Terminal Whittier on 14 Sep 2026 involving Klondike Express, Norwegian Jade moved safely with no ship damage, embarkation relocated"

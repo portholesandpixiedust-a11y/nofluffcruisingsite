@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
+import { byPublishDate } from '../../utils/byPublishDate.js';
 
 export async function getStaticPaths() {
   const lines = await getCollection('lines');
@@ -11,19 +12,55 @@ const { line } = Astro.props;
 const d = line.data;
 const ships = (await getCollection('ships')).filter((s)=>s.data.line===d.id).sort((a,b)=>(b.data.inService??0)-(a.data.inService??0));
 const posts = (await getCollection('reviews')).filter((p)=>p.data.line===d.name);
+const news = (await getCollection('news')).filter((p)=>p.data.line===d.name).sort(byPublishDate);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
+const title = ships.length
+  ? `${d.name} Ships: Specs, Reviews and Ship Tours`
+  : `${d.name} Cruise News`;
+const description = ships.length
+  ? `Every ${d.name} ship we cover, with specs, verdicts and a full walkthrough tour, plus our ${d.name} guides and reviews.`
+  : d.blurb;
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: d.name,
+  description: d.blurb,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  ...(d.sameAs?.length ? { sameAs: d.sameAs } : {}),
+}];
 ---
-<Base title={`${d.name} Ships: Specs, Reviews and Ship Tours`} description={`Every ${d.name} ship we cover, with specs, verdicts and a full walkthrough tour, plus our ${d.name} guides and reviews.`} breadcrumbs={[{name:"Ships", url:"/ships/"},{name:d.name, url:Astro.url.pathname}]}>
+<Base title={title} description={description} breadcrumbs={[{name:"Ships", url:"/ships/"},{name:d.name, url:Astro.url.pathname}]} jsonld={jsonld}>
   <div class="wrap">
     <span class="eyebrow">Cruise line</span>
     <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 14px">{d.name}</h1>
     <p style="max-width:70ch;font-size:18px;color:var(--ink-2)">{d.blurb}</p>
 
-    <h2 class="sec" style="margin-top:30px">Ships</h2><div class="rule"></div>
-    <div class="scroller"><table>
-      <thead><tr><th scope="col">Ship</th><th scope="col">Class</th><th scope="col">Guests</th><th scope="col">In service</th></tr></thead>
-      <tbody>{ships.map((s)=>(<tr><td><a href={`/ships/${d.id}/${s.data.id}/`}>{s.data.name}</a></td><td>{s.data.shipClass}</td><td class="num">{s.data.guests?.toLocaleString()}</td><td class="num">{s.data.inService}</td></tr>))}</tbody>
-    </table></div>
+    {ships.length > 0 && (<>
+      <h2 class="sec" style="margin-top:30px">Ships</h2><div class="rule"></div>
+      <div class="scroller"><table>
+        <thead><tr><th scope="col">Ship</th><th scope="col">Class</th><th scope="col">Guests</th><th scope="col">In service</th></tr></thead>
+        <tbody>{ships.map((s)=>(<tr><td><a href={`/ships/${d.id}/${s.data.id}/`}>{s.data.name}</a></td><td>{s.data.shipClass}</td><td class="num">{s.data.guests?.toLocaleString()}</td><td class="num">{s.data.inService}</td></tr>))}</tbody>
+      </table></div>
+    </>)}
+
+    {news.length > 0 && (<>
+      <h2 class="sec" style="margin-top:30px">News</h2><div class="rule"></div>
+      <div class="news-list">{news.map((n)=>(
+        <article class="news-row">
+          {n.data.heroImage && (
+            <a class="news-thumb" href={'/news/' + n.id + '/'} aria-hidden="true" tabindex="-1">
+              <img src={n.data.heroImage} width="320" height="180" loading="lazy" alt="" />
+            </a>
+          )}
+          <div class="news-body">
+            <span class="kicker">{[n.data.line, ...n.data.topics].filter(Boolean).join(' · ')}</span>
+            <h3><a href={'/news/' + n.id + '/'}>{n.data.title}</a></h3>
+            {n.data.description && <p>{n.data.description}</p>}
+            <span class="meta">{n.data.presenter + ' · ' + fmt(n.data.publishDate)}</span>
+          </div>
+        </article>
+      ))}</div>
+    </>)}
 
     {posts.length > 0 && (<>
       <h2 class="sec" style="margin-top:30px">Reviews</h2><div class="rule"></div>

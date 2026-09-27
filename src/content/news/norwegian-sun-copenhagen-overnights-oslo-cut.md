@@ -6,7 +6,7 @@ description: "Norwegian Sun's 23 Sep 2026 Copenhagen sailing keeps you docked fo
 answer: "Norwegian Sun's 23 Sep 2026 nine-night Baltic sailing from Copenhagen replaces Oslo and one sea day with two overnight stays in Copenhagen for required maintenance. You still embark on your assigned window. The ship leaves Friday 25 Sep around 5pm for Warnemünde on Saturday."
 presenter: Matthew
 publishDate: 2026-09-21T19:01:00-04:00
-line: "Norwegian"
+line: "Norwegian Cruise Line"
 topics: [Itineraries, Ships]
 sources:
   - claim: "NCL guest statement: Norwegian Sun Sept 23 2026 Copenhagen departure replaces Oslo and one sea day with two Copenhagen overnights for required maintenance that does not affect safety; guests must still arrive in designated check-in windows; $100 non-refundable OBC per stateroom as $50 for guest one and guest two; later ports include Warnemunde, Gdynia, Klaipeda, Riga, Nynashamn, Tallinn, end Helsinki"

@@ -52,6 +52,8 @@ sources:
 videosReferenced:
   - title: "6 Things Royal Caribbean's CEO Refuses to Change"
     id: "21bQ4f4ehuE"
+  - title: "4 Royal Caribbean Casino Changes That Cost You More"
+    id: "DKjVOnY_y3k"
 watchNext:
   title: "6 Things Royal Caribbean's CEO Refuses to Change"
   id: "21bQ4f4ehuE"
@@ -120,6 +122,8 @@ Internet runs a median of about $20 a day, in a range from roughly $18 to $40 de
 
 Add priority boarding, lounge access, earlier cabin selection windows and faster casino comps, and the case for the top tiers stops being an argument about drinks. It becomes a bundle of smaller perks that add up.
 
+If the casino side is what pulls you, the four Club Royale changes that landed this year are worked through in [4 Royal Caribbean Casino Changes That Cost You More](/guides/royal-caribbean-casino-changes/).
+
 ## Is the Crown Lounge as crowded as people say?
 
 Michael Bayley, Royal Caribbean's CEO, has been asked directly about tightening Diamond Plus and Pinnacle requirements to relieve crowding. He said there are no plans to.
@@ -144,7 +148,7 @@ Solo travelers get the better end of this trade. The solo rate doubles your poin
 
 Royal Caribbean's leadership has described using these promotions strategically rather than as a standing offer, so no calendar exists to plan around. Check the current Crown & Anchor page for whatever is live when you read this.
 
-## So which tiers are worth chasing?
+## Which Crown & Anchor tiers are worth chasing?
 
 **Gold, Platinum and Emerald** happen on their own. Worth having, not worth planning around.
 

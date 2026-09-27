@@ -6,7 +6,7 @@ description: "Norwegian Joy arrived late in Sitka on 17 Sep 2026 after a decease
 answer: "Norwegian Joy reached Sitka late on 17 Sep 2026 after a deceased juvenile male fin whale was discovered on the bulbous bow. Removal took more than two hours with U.S. Coast Guard, NOAA, and Alaska Marine Mammal Stranding Network teams. The ship stayed about an hour longer in port to offset the late dock."
 presenter: Matthew
 publishDate: 2026-09-19
-line: "Norwegian"
+line: "Norwegian Cruise Line"
 topics: [Ports, Policy]
 sources:
   - claim: "Norwegian Joy late Sitka arrival 17 Sep 2026, deceased juvenile male fin whale on bow, 2+ hour removal, extra hour in port"

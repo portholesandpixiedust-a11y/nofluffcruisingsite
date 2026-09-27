@@ -6,7 +6,7 @@ description: "Celebrity Beyond's 20 Sep 2026 Miami cruise puts Grand Cayman on D
 answer: "Celebrity Beyond's 20 Sep 2026 Miami sailing swaps port order. Grand Cayman moves to Day 4, 10:00am to 4:30pm by tender. Cozumel moves to Day 5, 11:00am to 7:30pm. CocoCay and Nassau times shift too. Prepaid Celebrity shore excursions get rescheduled or refunded. Mobility scooter users should read the tender note for Grand Cayman."
 presenter: Matthew
 publishDate: 2026-09-20
-line: "Celebrity"
+line: "Celebrity Cruises"
 topics: [Itineraries, Ports]
 sources:
   - claim: "Celebrity Beyond 20 Sep 2026 Miami sailing revised port order and times for CocoCay, Grand Cayman tender, Cozumel, Nassau, plus shore excursion reschedule or refund policy and Grand Cayman mobility tender note"

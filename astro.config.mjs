@@ -1,5 +1,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { buildLastmodMap } from './src/utils/lastmodMap.js';
+
+const lastmodMap = buildLastmodMap();
 
 // Markdown emits bare <table> elements, which blow past the viewport on phones.
 // Wrap each one so it scrolls inside its own box instead of scrolling the page.
@@ -26,11 +29,22 @@ function rehypeWrapTables() {
 
 export default defineConfig({
   site: 'https://nofluffcruising.com',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // lastmod is updatedAt ?? updatedDate ?? publishedAt ?? publishDate.
+      // @astrojs/sitemap writes that instant as UTC ISO. Date-only values are noon ET, not midnight UTC.
+      serialize(item) {
+        const path = new URL(item.url).pathname;
+        const key = path.endsWith('/') ? path : `${path}/`;
+        const date = lastmodMap.get(key);
+        if (date) item.lastmod = date;
+        return item;
+      },
+    }),
+  ],
   build: { format: 'directory' },
-  // The auto-publish pipeline truncates long slugs, so this post first went live at a URL missing the last letter of "change". Point the old path at the corrected one.
+  // Duplicate-URL 301s live in vercel.json (real HTTP redirects). These remain HTML fallbacks for hosts without that file.
   redirects: {
-    '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang': '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change',
     '/sitemap.xml': '/sitemap-index.xml',
     '/terms-of-service': '/terms/',
     '/privacy-policy': '/privacy/',

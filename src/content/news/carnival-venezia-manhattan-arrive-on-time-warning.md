@@ -6,7 +6,7 @@ description: "Carnival told Venezia guests for 14 Sep 2026 at Manhattan Cruise T
 answer: "Carnival told guests on Carnival Venezia not to arrive early for the 14 Sep 2026 Manhattan Cruise Terminal embarkation. Stick to your appointment window or you may be turned away. Pier 88 was shared that day with Oceania Vista, and Pier 90 has been out of service since January 2026. Departure stayed at 4pm."
 presenter: Matthew
 publishDate: 2026-09-19
-line: "Carnival"
+line: "Carnival Cruise Line"
 topics: [Ports, Policy]
 sources:
   - claim: "Carnival Venezia 14 Sep 2026 Manhattan embark warning against early arrival, Pier 88 shared with Oceania Vista, Pier 90 out of service since Jan 2026, 4pm departure unchanged"

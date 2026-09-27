@@ -37,4 +37,9 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+# OAI-SearchBot, GPTBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot,
+# and Google-Extended are allowed above. This repo has no Vercel Firewall config.
+# Matthew: confirm the project firewall and bot management are not blocking them.
+
 Sitemap: https://nofluffcruising.com/sitemap-index.xml
+Sitemap: https://nofluffcruising.com/news-sitemap.xml

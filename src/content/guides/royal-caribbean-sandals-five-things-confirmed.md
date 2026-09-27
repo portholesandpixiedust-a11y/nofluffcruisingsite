@@ -1,7 +1,7 @@
 ---
 title: "5 Things Royal Caribbean Just Confirmed About Sandals"
 description: "Royal Caribbean Group signed for 50% of Sandals and Beaches for about $3 billion cash, with an early 2027 close target. Bookings and loyalty stay as usual for now. Reciprocal status is a plan, not a published perk. Beaches growth sites are named without open dates."
-answer: "Royal Caribbean Group signed definitive agreements on Sep. 23, 2026, to buy 50% of the Sandals and Beaches business for a base purchase price of about $3.0 billion cash. Close is targeted for early 2027, subject to approvals. Your cruise and resort bookings keep running as usual until then. Reciprocal loyalty recognition is a stated plan with no program, perk list, or date. New Beaches sites are named for later. Day-pass cruise beach clubs are not the priority."
+answer: "On Sep. 23, 2026, Royal Caribbean Group signed definitive agreements to buy 50% of Sandals and Beaches for a base purchase price of about $3.0 billion cash. Close is targeted for early 2027, subject to approvals. Cruise and resort bookings keep running as usual until then. Reciprocal loyalty is a plan with no program, perk list, or date."
 presenter: Matthew
 publishDate: 2026-09-27T08:00:00-04:00
 line: Royal Caribbean

@@ -6,7 +6,7 @@ description: "Disney Wish left Terminal 10 on Friday 11 Sep 2026 and returned to
 answer: "Disney Cruise Line moved Disney Wish embarkation to Terminal 10 at Port Canaveral for the three-night Halloween sailing departing Friday 11 Sep 2026, with return to Terminal 8 on Monday 14 Sep. Guests dropped luggage at Terminal 10, parked at Terminal 8, and took a shuttle to check in."
 presenter: Matthew
 publishDate: 2026-09-19
-line: "Disney"
+line: "Disney Cruise Line"
 topics: [Ports, Itineraries]
 sources:
   - claim: "Disney Wish 11 Sep 2026 Terminal 10 embark and Terminal 8 return, guest parking and luggage instructions, possible link to Terminal 10 renovation"

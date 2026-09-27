@@ -25,7 +25,11 @@
       "id": "wrTyq65mh7s",
       "title": "Icon of the Seas Ship Tour - NEW for 2026 + MUST-KNOW tips!",
       "channel": "No Fluff Cruising"
-    }
+    },
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Icon_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q111169252"
+    ]
   },
   {
     "id": "star-of-the-seas",
@@ -50,7 +54,11 @@
       "id": "lMNxnKrLwUc",
       "title": "Star of the Seas | Full Walkthrough Tour of 30 Cabins + $100,000 Suite",
       "channel": "Cruises It"
-    }
+    },
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Star_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q123134298"
+    ]
   },
   {
     "id": "legend-of-the-seas",
@@ -75,7 +83,11 @@
       "id": "9Jy0yIEOnyo",
       "title": "Legend of the Seas | Full Walkthrough Tour | Is this Royal Caribbean ship worth the hype in 2026?",
       "channel": "Cruises It"
-    }
+    },
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Legend_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q134470234"
+    ]
   },
   {
     "id": "wonder-of-the-seas",
@@ -101,7 +113,11 @@
       "id": "COWPZI4Pp3I",
       "title": "Wonder of the Seas Ship Tour - NEW for 2026 + MUST-KNOW tips!",
       "channel": "No Fluff Cruising"
-    }
+    },
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Wonder_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q101936512"
+    ]
   },
   {
     "id": "utopia-of-the-seas",
@@ -127,7 +143,11 @@
       "id": "hpz-9HNbGTM",
       "title": "Utopia of The Seas Ship Tour - NEW for 2026 + MUST-KNOW tips!",
       "channel": "No Fluff Cruising"
-    }
+    },
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Utopia_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q111936667"
+    ]
   },
   {
     "id": "harmony-of-the-seas",
@@ -153,7 +173,11 @@
       "id": "yTgVChvo74A",
       "title": "Harmony of the Seas | Full Walkthrough Ship Tour & Review",
       "channel": "Cruises It"
-    }
+    },
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Harmony_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q20489530"
+    ]
   },
   {
     "id": "freedom-of-the-seas",
@@ -179,7 +203,11 @@
       "id": "9do4s-QL9UY",
       "title": "Freedom of the Seas | Full Walkthrough Ship Tour & Review | 4K",
       "channel": "Cruises It"
-    }
+    },
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/MS_Freedom_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q194109"
+    ]
   },
   {
     "id": "emerald-princess",
@@ -207,7 +235,11 @@
       "title": "Emerald Princess | Full Walkthrough Cruise Ship Tour & Review",
       "channel": "Cruises It"
     },
-    "updated": "2026-08-29"
+    "updated": "2026-08-29",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Emerald_Princess",
+      "https://www.wikidata.org/wiki/Q2714441"
+    ]
   },
   {
     "id": "msc-poesia",
@@ -234,7 +266,11 @@
       "title": "MSC Poesia | Full Walkthrough Ship Tour 4K | Newly Refurbished for 2026",
       "channel": "Cruises It"
     },
-    "updated": "2026-08-29"
+    "updated": "2026-08-29",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/MSC_Poesia",
+      "https://www.wikidata.org/wiki/Q1881875"
+    ]
   },
   {
     "id": "margaritaville-at-sea-islander",
@@ -263,7 +299,11 @@
       "title": "Margaritaville at Sea Islander Ship Tour - NEW for 2026 + MUST-KNOW tips!",
       "channel": "No Fluff Cruising"
     },
-    "updated": "2026-08-29"
+    "updated": "2026-08-29",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Margaritaville_at_Sea_Islander",
+      "https://www.wikidata.org/wiki/Q1136328"
+    ]
   },
   {
     "id": "symphony-of-the-seas",
@@ -285,7 +325,11 @@
     "maxGuests": 6680,
     "decks": 18,
     "grossTonnage": 228081,
-    "inService": 2018
+    "inService": 2018,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Symphony_of_the_Seas",
+      "https://www.wikidata.org/wiki/Q30125043"
+    ]
   },
   {
     "id": "disney-wish",
@@ -305,7 +349,11 @@
     "updated": "2026-08-29",
     "maxGuests": 4000,
     "grossTonnage": 144256,
-    "inService": 2022
+    "inService": 2022,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Disney_Wish",
+      "https://www.wikidata.org/wiki/Q101008728"
+    ]
   },
   {
     "id": "disney-fantasy",
@@ -326,7 +374,11 @@
     "guests": 2500,
     "maxGuests": 4000,
     "grossTonnage": 130000,
-    "inService": 2012
+    "inService": 2012,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Disney_Fantasy",
+      "https://www.wikidata.org/wiki/Q1228992"
+    ]
   },
   {
     "id": "disney-dream",
@@ -346,7 +398,11 @@
     "updated": "2026-08-29",
     "maxGuests": 4000,
     "grossTonnage": 129690,
-    "inService": 2011
+    "inService": 2011,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Disney_Dream",
+      "https://www.wikidata.org/wiki/Q1228989"
+    ]
   },
   {
     "id": "scarlet-lady",
@@ -366,7 +422,11 @@
     "updated": "2026-08-29",
     "guests": 2700,
     "grossTonnage": 110000,
-    "inService": 2021
+    "inService": 2021,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Scarlet_Lady",
+      "https://www.wikidata.org/wiki/Q65091893"
+    ]
   },
   {
     "id": "resilient-lady",
@@ -386,7 +446,11 @@
     "updated": "2026-08-29",
     "guests": 2700,
     "grossTonnage": 110000,
-    "inService": 2023
+    "inService": 2023,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Resilient_Lady",
+      "https://www.wikidata.org/wiki/Q113679865"
+    ]
   },
   {
     "id": "brilliant-lady",
@@ -406,7 +470,11 @@
     "updated": "2026-08-29",
     "guests": 2700,
     "grossTonnage": 110000,
-    "inService": 2025
+    "inService": 2025,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Brilliant_Lady",
+      "https://www.wikidata.org/wiki/Q135706602"
+    ]
   },
   {
     "id": "celebrity-beyond",
@@ -426,7 +494,11 @@
     "updated": "2026-08-29",
     "guests": 3260,
     "grossTonnage": 141420,
-    "inService": 2022
+    "inService": 2022,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Celebrity_Beyond",
+      "https://www.wikidata.org/wiki/Q97174237"
+    ]
   },
   {
     "id": "celebrity-xcel",
@@ -446,7 +518,11 @@
     "updated": "2026-08-29",
     "guests": 3260,
     "grossTonnage": 141400,
-    "inService": 2025
+    "inService": 2025,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Celebrity_Xcel",
+      "https://www.wikidata.org/wiki/Q137168318"
+    ]
   },
   {
     "id": "norwegian-aqua",
@@ -464,7 +540,11 @@
       "channel": "No Fluff Cruising"
     },
     "updated": "2026-08-29",
-    "inService": 2025
+    "inService": 2025,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Norwegian_Aqua",
+      "https://www.wikidata.org/wiki/Q133844779"
+    ]
   },
   {
     "id": "norwegian-escape",
@@ -484,7 +564,11 @@
     "updated": "2026-08-29",
     "guests": 4200,
     "grossTonnage": 163000,
-    "inService": 2015
+    "inService": 2015,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Norwegian_Escape",
+      "https://www.wikidata.org/wiki/Q16223577"
+    ]
   },
   {
     "id": "norwegian-prima",
@@ -502,7 +586,11 @@
       "channel": "No Fluff Cruising"
     },
     "updated": "2026-08-29",
-    "inService": 2022
+    "inService": 2022,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Norwegian_Prima",
+      "https://www.wikidata.org/wiki/Q106994165"
+    ]
   },
   {
     "id": "msc-world-america",
@@ -520,7 +608,10 @@
       "channel": "No Fluff Cruising"
     },
     "updated": "2026-08-29",
-    "inService": 2025
+    "inService": 2025,
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q130004631"
+    ]
   },
   {
     "id": "carnival-mardi-gras",
@@ -556,7 +647,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2022
+    "inService": 2022,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Celebration",
+      "https://www.wikidata.org/wiki/Q104842314"
+    ]
   },
   {
     "id": "carnival-jubilee",
@@ -574,7 +669,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2023
+    "inService": 2023,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Jubilee",
+      "https://www.wikidata.org/wiki/Q113519341"
+    ]
   },
   {
     "id": "carnival-panorama",
@@ -592,7 +691,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2019
+    "inService": 2019,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Panorama",
+      "https://www.wikidata.org/wiki/Q48808929"
+    ]
   },
   {
     "id": "carnival-vista",
@@ -611,7 +714,11 @@
     },
     "updated": "2026-08-29",
     "grossTonnage": 133500,
-    "inService": 2016
+    "inService": 2016,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Vista",
+      "https://www.wikidata.org/wiki/Q16224105"
+    ]
   },
   {
     "id": "carnival-horizon",
@@ -629,7 +736,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2018
+    "inService": 2018,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Horizon",
+      "https://www.wikidata.org/wiki/Q26218353"
+    ]
   },
   {
     "id": "carnival-magic",
@@ -647,7 +758,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2011
+    "inService": 2011,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Magic",
+      "https://www.wikidata.org/wiki/Q1044070"
+    ]
   },
   {
     "id": "carnival-breeze",
@@ -665,7 +780,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2012
+    "inService": 2012,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Breeze",
+      "https://www.wikidata.org/wiki/Q727472"
+    ]
   },
   {
     "id": "carnival-dream",
@@ -684,7 +803,11 @@
     },
     "updated": "2026-08-29",
     "grossTonnage": 128000,
-    "inService": 2009
+    "inService": 2009,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Dream",
+      "https://www.wikidata.org/wiki/Q1044042"
+    ]
   },
   {
     "id": "carnival-sunrise",
@@ -702,7 +825,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2014
+    "inService": 2014,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Sunrise",
+      "https://www.wikidata.org/wiki/Q1044086"
+    ]
   },
   {
     "id": "carnival-liberty",
@@ -720,7 +847,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2006
+    "inService": 2006,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Liberty",
+      "https://www.wikidata.org/wiki/Q1044066"
+    ]
   },
   {
     "id": "carnival-venezia",
@@ -738,7 +869,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2023
+    "inService": 2023,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Venezia",
+      "https://www.wikidata.org/wiki/Q48808915"
+    ]
   },
   {
     "id": "carnival-firenze",
@@ -756,7 +891,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2024
+    "inService": 2024,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Firenze",
+      "https://www.wikidata.org/wiki/Q63532617"
+    ]
   },
   {
     "id": "carnival-luminosa",
@@ -774,7 +913,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2022
+    "inService": 2022,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Luminosa",
+      "https://www.wikidata.org/wiki/Q1136365"
+    ]
   },
   {
     "id": "carnival-spirit",
@@ -792,7 +935,11 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 2001
+    "inService": 2001,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Spirit",
+      "https://www.wikidata.org/wiki/Q1044093"
+    ]
   },
   {
     "id": "carnival-paradise",
@@ -810,6 +957,10 @@
       "channel": "Cruises It"
     },
     "updated": "2026-08-29",
-    "inService": 1998
+    "inService": 1998,
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Paradise",
+      "https://www.wikidata.org/wiki/Q2062115"
+    ]
   }
 ]

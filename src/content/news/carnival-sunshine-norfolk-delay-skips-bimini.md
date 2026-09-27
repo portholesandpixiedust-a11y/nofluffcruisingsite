@@ -6,7 +6,7 @@ description: "A nor'easter pushed Carnival Sunshine into Norfolk on Monday 28 Se
 answer: "Carnival Sunshine is now due in Norfolk on Monday 28 Sep 2026, one day late, after slowing for the East Coast nor'easter. The next cruise leaves that Monday instead of Sunday. Bimini is cancelled. Nassau moves to 1pm-9pm on Wednesday 30 Sep. Celebration Key on 1 Oct stays put. Cruise Hive quotes a one-day pro-rated fare refund."
 presenter: Matthew
 publishDate: 2026-09-27T09:00:00-04:00
-line: "Carnival"
+line: "Carnival Cruise Line"
 ships: ["Carnival Sunshine"]
 topics: [Itineraries, Ports]
 sources:

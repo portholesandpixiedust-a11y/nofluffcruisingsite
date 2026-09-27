@@ -3,7 +3,7 @@ title: "Navigator of the Seas drops Ensenada and Cabo for Hurricane Polo"
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F3%2F3e%2FRoyal_Caribbean_MS_Navigator_of_the_Seas_01.JPG&w=1280&output=jpg"
 heroCredit: "Photo: Piergiuliano Chesi (CC BY 3.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Royal_Caribbean_MS_Navigator_of_the_Seas_01.JPG"
 description: "Royal Caribbean cut Ensenada and Cabo San Lucas on Navigator of the Seas’ 25 Sep 2026 Los Angeles Mexican Riviera cruise for Category 5 Hurricane Polo. Mazatlán moves earlier. Puerto Vallarta is added 29 Sep. Royal Caribbean shore tours for the dropped ports refund as onboard credit."
-answer: "Navigator of the Seas guests for the 25 Sep–2 Oct 2026 Los Angeles sailing lose Ensenada on 26 Sep and Cabo San Lucas on 28 Sep because of Hurricane Polo. Mazatlán moves to Monday 28 Sep. Puerto Vallarta is added Tuesday 29 Sep from 8am to 6pm. Prepaid Royal Caribbean tours for the cancelled ports refund as onboard credit. No separate goodwill credit package was listed in the guest email outlets quoted."
+answer: "Navigator of the Seas guests on the 25 Sep to 2 Oct 2026 Los Angeles sailing lose Ensenada on 26 Sep and Cabo San Lucas on 28 Sep because of Hurricane Polo. Mazatlán moves to Monday 28 Sep. Puerto Vallarta is added Tuesday 29 Sep, 8am to 6pm. Prepaid Royal Caribbean tours for those ports refund as onboard credit."
 presenter: Matthew
 publishDate: 2026-09-24T08:10:00-04:00
 line: "Royal Caribbean"

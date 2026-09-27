@@ -15,6 +15,7 @@
 
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { easternCalendarDate, formatEasternISO } from '../src/utils/etDate.js';
 
 const NEWS_DIR = 'src/content/news';
 const HOLDS_DIR = 'src/content/news-holds';
@@ -25,15 +26,33 @@ const API_KEY = process.env.ANTHROPIC_API_KEY;
 
 const LINES = {
   'Royal Caribbean': 'royal-caribbean',
-  'Carnival': 'carnival',
-  'Norwegian': 'norwegian',
-  'MSC': 'msc',
-  'Disney': 'disney',
-  'Celebrity': 'celebrity',
+  'Carnival Cruise Line': 'carnival',
+  'Norwegian Cruise Line': 'norwegian',
+  'MSC Cruises': 'msc',
+  'Disney Cruise Line': 'disney',
+  'Celebrity Cruises': 'celebrity',
   'Virgin Voyages': 'virgin-voyages',
-  'Princess': 'princess',
+  'Princess Cruises': 'princess',
   'Margaritaville at Sea': 'margaritaville-at-sea',
+  'Azamara': 'azamara',
+  'Cunard': 'cunard',
+  'Holland America': 'holland-america',
+  'Silversea': 'silversea',
 };
+
+// Short labels already used in older posts. Stored line names follow lines.json.
+const LINE_ALIASES = {
+  Carnival: 'Carnival Cruise Line',
+  Norwegian: 'Norwegian Cruise Line',
+  MSC: 'MSC Cruises',
+  Disney: 'Disney Cruise Line',
+  Celebrity: 'Celebrity Cruises',
+  Princess: 'Princess Cruises',
+};
+
+export function canonicalLine(name) {
+  return LINE_ALIASES[name] || name;
+}
 
 const PREFERRED_SOURCES = [
   'Cruise line official press rooms and newsrooms (Tier 1)',
@@ -72,14 +91,14 @@ const SCHEMA = `Return ONLY a JSON object, no prose and no code fence, shaped ex
   "answer": "40 to 60 words answering the headline directly. This is the first thing on the page.",
   "line": "One of: ${Object.keys(LINES).join(' | ')}",
   "topics": ["one or two of: Itineraries, Ships, Ports, Policy, Money, Loyalty, Destinations, Sustainability, Dining, Drinks"],
-  "body": "Markdown body, 300 to 600 words, a longer rewrite in site voice (not a paste of the source). Use ## subheadings. No H1. Tables allowed. Credit every outlet by name in the prose where a claim appears.",
+  "body": "Markdown body, 300 to 600 words, a longer rewrite in site voice (not a paste of the source). Use ## subheadings, and prefer a question-style H2 when the section answers a question. No H1. Tables allowed. Credit every outlet by name in the prose where a claim appears.",
   "conflict": false,
   "conflictNote": "If conflict is true: one sentence naming which outlets disagree and on what. Otherwise omit or empty string.",
   "sources": [{"claim":"what this source supports","outlet":"named outlet or the line's own newsroom","tier":1,"date":"29 Aug 2026","url":"https://..."}]
 }]}`;
 
 async function callClaude(coverage, { hoursWindow, wantCount }) {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = easternCalendarDate();
   const prompt = `Today is ${today}. You are writing cruise news for nofluffcruising.com.
 
 Search the web for cruise news published in roughly the last ${hoursWindow} hours across these lines:
@@ -88,8 +107,9 @@ ${Object.keys(LINES).join(', ')}.
 Prefer these sources, and always name the original outlet with a date and URL when you can:
 ${PREFERRED_SOURCES.map((s) => `- ${s}`).join('\n')}
 
-Deliberately look beyond Royal Caribbean. Carnival, Norwegian, MSC, Disney, Celebrity and
-Virgin Voyages are under-covered by other cruise sites and are where this site can win.
+Deliberately look beyond Royal Caribbean. Carnival, Norwegian, MSC, Disney, Celebrity,
+Virgin Voyages, Azamara, Cunard, Holland America and Silversea are under-covered
+by other cruise sites and are where this site can win.
 
 ALREADY PUBLISHED ON THIS SITE — do not repeat any of these stories:
 ${coverage.slice(0, 40).map((c) => `- ${c.date} ${c.title}`).join('\n') || '(nothing yet)'}
@@ -151,7 +171,12 @@ export function validate(p, existingSlugs) {
   }
   if (!/^[a-z0-9-]+$/.test(p.slug || '')) problems.push('slug is not kebab-case');
   if (existingSlugs.has(p.slug)) problems.push('slug already exists');
-  if (!LINES[p.line]) problems.push(`unknown line "${p.line}"`);
+  const line = canonicalLine(p.line);
+  if (!LINES[line]) problems.push(`unknown line "${p.line}"`);
+  const answerWords = (p.answer || '').trim().split(/\s+/).filter(Boolean);
+  if (p.answer && (answerWords.length < 40 || answerWords.length > 60)) {
+    problems.push(`answer is ${answerWords.length} words; need 40 to 60`);
+  }
   if (!Array.isArray(p.sources) || p.sources.length === 0) problems.push('no sources');
   else for (const s of p.sources) {
     if (!s.claim || !s.outlet) problems.push('a source is missing claim or outlet');
@@ -168,7 +193,7 @@ export function validate(p, existingSlugs) {
 }
 
 export function toMarkdown(p, { held = false } = {}) {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = formatEasternISO(new Date());
   const topics = (p.topics || []).filter(Boolean).slice(0, 2);
   const sources = p.sources.map((s) => {
     const rows = [
@@ -192,7 +217,7 @@ description: ${q(p.description)}
 answer: ${q(p.answer)}
 presenter: Matthew
 publishDate: ${today}
-line: ${q(p.line)}
+line: ${q(canonicalLine(p.line))}
 topics: [${topics.join(', ')}]
 ${holdBlock}sources:
 ${sources}
@@ -210,7 +235,7 @@ const main = async () => {
   await mkdir(HOLDS_DIR, { recursive: true });
   const coverage = await existingCoverage();
   const existingSlugs = new Set(coverage.map((c) => c.slug));
-  const today = new Date().toISOString().slice(0, 10);
+  const today = easternCalendarDate();
   const alreadyToday = publishedTodayCount(coverage, today);
   const remainingForDay = Math.max(0, MIN_POSTS_PER_DAY - alreadyToday);
   const wantCount = Math.min(MAX_POSTS, Math.max(1, remainingForDay || 1));

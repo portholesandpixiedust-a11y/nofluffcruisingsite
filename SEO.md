@@ -23,6 +23,42 @@ Use this checklist after the legal and footer pages ship.
 2. Import from Google Search Console if offered, or verify with the Bing meta/XML/DNS method.
 3. Submit the same sitemap: `https://nofluffcruising.com/sitemap-index.xml`.
 
+## DEPLOY (Matthew)
+
+These steps are not done from the repo. Do not treat Bing as verified.
+
+### Bing Webmaster Tools and IndexNow
+
+1. Open [Bing Webmaster Tools](https://www.bing.com/webmasters) and add `https://nofluffcruising.com/` if it is not there yet.
+2. Verify the property, or import it from Google Search Console.
+3. In Bing, and again in Google Search Console, submit `https://nofluffcruising.com/sitemap-index.xml` and `https://nofluffcruising.com/news-sitemap.xml`.
+4. The IndexNow key file is deployed with the site at `https://nofluffcruising.com/6d65ffe6fc6a01f5603dbd5bd7a31f66.txt`. The GitHub Action `.github/workflows/indexnow.yml` POSTs changed URLs after a push to `main`. It waits two minutes so Vercel can publish first. If the first run fails because the key file was not live yet, re-run the **IndexNow** workflow.
+5. IndexNow does not replace the Bing verification click above.
+
+### Vercel Firewall
+
+`robots.txt` allows OAI-SearchBot, GPTBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, Google-Extended, and Applebot-Extended. This repository has no Vercel Firewall or bot-management config, so those allows cannot be confirmed from the code. In the Vercel project, check Firewall and Bot Management and make sure those crawlers are not blocked.
+
+### News timestamps
+
+A `publishDate` that is only a calendar date is shown and marked up as 12:00 PM America/New_York. Posts that already had a clock time keep that time, displayed in ET. `updatedAt` (or `updatedDate`) is shown only when it differs from the published time.
+
+### Duplicate URLs
+
+Real 301s for the old CDC, slots, Crown & Anchor, and truncated Virgin Voyages URLs are in `vercel.json`. The duplicate sources are unpublished so they drop out of the sitemap.
+
+### Still a click, not a repo change
+
+Checked 27 Sep 2026 from the agent environment, before this follow-up was merged:
+
+- `https://nofluffcruising.com/6d65ffe6fc6a01f5603dbd5bd7a31f66.txt` was not live yet (the production response was 404, `x-vercel-error: NOT_FOUND`). Do not treat IndexNow as submitted. After merge, if the IndexNow workflow fails because the key file was still deploying, re-run it.
+- This environment has no Bing Webmaster Tools, Google Search Console, Vercel, X, or YouTube credentials. Bing is not verified. Neither sitemap has been submitted from here. Vercel Firewall / Bot Management was not opened, so it is not confirmed that OAI-SearchBot, GPTBot, and the other bots allowed in `robots.txt` are unblocked.
+- X posts and YouTube description edits were not published. YouTube description links, when you add them, should keep the UTM pattern in `docs/utm-tracking.md` (`utm_source=youtube`, `utm_medium=video`, `utm_campaign` = video id, `utm_content=description`).
+- The news bot now accepts Azamara, Cunard, Holland America, and Silversea. It was not run. `src/content/news-holds/` has no drafts to publish.
+- Google Analytics loads only when `PUBLIC_GA_MEASUREMENT_ID` is set. It is not set in this environment, and Search Console numbers were not pulled.
+
+Ship hub leads are assembled from the specs, verdict, and tour already on each ship page. They are not new essays. Author pages still use the first names already on the site. No legal surname was added. The Azamara, Cunard, Holland America, and Silversea hubs repeat the Wikidata one-line description and facts already in the published news. They do not invent fleets or loyalty programs.
+
 ## Notes
 
 - Contact for site ownership questions: portholesandpixiedust@gmail.com

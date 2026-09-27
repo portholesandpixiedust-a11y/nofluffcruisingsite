@@ -1,7 +1,7 @@
 ---
 title: "5 Things Royal Caribbean's Leadership Just Confirmed"
 description: "Two more Icon-class ships, quietly rerouted 2027 itineraries, AI running 90% of pricing, and more. Straight from earnings calls and one CEO interview, not fan speculation."
-answer: "Across two 2026 earnings calls and one magazine interview, Royal Caribbean's own leadership confirmed five things: two more Icon-class ships are funded, some 2027 itineraries are being quietly rerouted, pricing is now 90% run by AI, Royal Beach Club Paradise Island is nearly matching Perfect Day CocoCay on satisfaction, and dining reservations no longer require a phone call. Three of the five are straightforwardly good news for cruisers; two are worth watching if you have money on the table."
+answer: "Across two 2026 earnings calls and one magazine interview, Royal Caribbean leadership confirmed five things: two more Icon-class ships are funded, some 2027 itineraries are being quietly rerouted, pricing is 90% run by AI, Royal Beach Club Paradise Island nearly matches Perfect Day CocoCay on satisfaction, and dining reservations no longer require a phone call."
 presenter: Matthew
 publishDate: 2026-09-08
 line: Royal Caribbean

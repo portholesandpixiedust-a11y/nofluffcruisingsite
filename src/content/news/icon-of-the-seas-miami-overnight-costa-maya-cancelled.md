@@ -3,7 +3,7 @@ title: "Icon of the Seas stays overnight in Miami. Costa Maya cancelled."
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4a%2FIcon_of_the_Seas_%28kahunapulej%29.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Kahunapule Michael Johnson (CC BY-SA 2.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Icon_of_the_Seas_(kahunapulej).jpg"
 description: "Royal Caribbean delayed Icon of the Seas departure from Miami to 4pm Sunday 27 Sep 2026 for required maintenance. Guests still board Saturday 26 Sep. Costa Maya on 28 Sep is cancelled. Roatan, Cozumel, and CocoCay stay. Refundable onboard credit offered."
-answer: "Icon of the Seas guests for the 26 Sep–3 Oct 2026 Miami Western Caribbean cruise still board Saturday 26 Sep, but the ship stays overnight for required maintenance and now sails at 4pm Sunday 27 Sep. Costa Maya on Monday 28 Sep is cancelled. Roatan, Cozumel, and Perfect Day CocoCay are unchanged. Royal Caribbean is posting refundable onboard credit per stateroom."
+answer: "Icon of the Seas guests for the 26 Sep–3 Oct 2026 Miami cruise still board Saturday 26 Sep, but the ship stays overnight for required maintenance and sails at 4pm Sunday 27 Sep. Costa Maya on Monday 28 Sep is cancelled. Roatan, Cozumel, and Perfect Day CocoCay are unchanged. Royal Caribbean is posting refundable onboard credit."
 presenter: Matthew
 publishDate: 2026-09-23T20:10:00-04:00
 line: "Royal Caribbean"

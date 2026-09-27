@@ -6,7 +6,7 @@ description: "MSC World Asia finished final Atlantic sea trials off France. Deli
 answer: "MSC World Asia completed final sea trials in the Atlantic off France after first trials in July. Chantiers de l'Atlantique delivery is listed for 25 Nov 2026, with naming in Le Havre on 28 Nov and a seven-night Mediterranean maiden from Barcelona on 4 Dec 2026."
 presenter: Matthew
 publishDate: 2026-09-19
-line: "MSC"
+line: "MSC Cruises"
 topics: [Ships, Itineraries]
 sources:
   - claim: "MSC World Asia final sea trials complete, delivery 25 Nov 2026, Le Havre naming 28 Nov, Barcelona maiden 4 Dec, ship features including Spiral slide and LNG capability"

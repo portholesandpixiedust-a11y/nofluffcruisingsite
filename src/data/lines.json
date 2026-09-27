@@ -3,54 +3,126 @@
     "id": "royal-caribbean",
     "name": "Royal Caribbean",
     "blurb": "The biggest ships afloat, the Crown & Anchor loyalty ladder, and the private destinations that increasingly define the itinerary.",
-    "loyaltyProgram": "Crown & Anchor Society"
+    "loyaltyProgram": "Crown & Anchor Society",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Royal_Caribbean_International",
+      "https://www.wikidata.org/wiki/Q929872"
+    ]
   },
   {
     "id": "princess",
     "name": "Princess Cruises",
     "blurb": "Mid-size ships, longer itineraries and a quieter onboard feel than the mega-ship lines. Strong on Alaska and repositioning sailings.",
-    "loyaltyProgram": "Captain's Circle"
+    "loyaltyProgram": "Captain's Circle",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Princess_Cruises",
+      "https://www.wikidata.org/wiki/Q745700"
+    ]
   },
   {
     "id": "msc",
     "name": "MSC Cruises",
     "blurb": "European operator with aggressive pricing and a ship-within-a-ship suite enclave. The value case is real if you read the fine print.",
-    "loyaltyProgram": "MSC Voyagers Club"
+    "loyaltyProgram": "MSC Voyagers Club",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/MSC_Cruises",
+      "https://www.wikidata.org/wiki/Q663626"
+    ]
   },
   {
     "id": "margaritaville-at-sea",
     "name": "Margaritaville at Sea",
     "blurb": "Short Bahamas sailings out of Florida on a themed, refitted fleet. A cheap way to test whether cruising suits you.",
-    "loyaltyProgram": "Parrot Points"
+    "loyaltyProgram": "Parrot Points",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Margaritaville_at_Sea",
+      "https://www.wikidata.org/wiki/Q115631702"
+    ]
   },
   {
     "id": "disney",
     "name": "Disney Cruise Line",
     "blurb": "The most expensive mainstream line and the one families keep going back to. Rotational dining, no casino, and theming other lines cannot match.",
-    "loyaltyProgram": "Castaway Club"
+    "loyaltyProgram": "Castaway Club",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Disney_Cruise_Line",
+      "https://www.wikidata.org/wiki/Q420947"
+    ]
   },
   {
     "id": "virgin-voyages",
     "name": "Virgin Voyages",
     "blurb": "Adults only, tips and Wi-Fi included, and a restaurant lineup with no main dining room. The clearest break from how mainstream cruising usually works.",
-    "loyaltyProgram": "The Sailing Club"
+    "loyaltyProgram": "The Sailing Club",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Virgin_Voyages",
+      "https://www.wikidata.org/wiki/Q20539284"
+    ]
   },
   {
     "id": "celebrity",
     "name": "Celebrity Cruises",
     "blurb": "Premium end of the Royal Caribbean group. Edge-class ships, strong food, and a quieter crowd than the mega-ships.",
-    "loyaltyProgram": "Captain's Club"
+    "loyaltyProgram": "Captain's Club",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+      "https://www.wikidata.org/wiki/Q1052823"
+    ]
   },
   {
     "id": "norwegian",
     "name": "Norwegian Cruise Line",
     "blurb": "Freestyle cruising, no fixed dining times, and the most cabin-category choice at the entry end of the market.",
-    "loyaltyProgram": "Latitudes Rewards"
+    "loyaltyProgram": "Latitudes Rewards",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Norwegian_Cruise_Line",
+      "https://www.wikidata.org/wiki/Q130309"
+    ]
   },
   {
     "id": "carnival",
     "name": "Carnival Cruise Line",
     "blurb": "The value play. Short itineraries, a lively crowd, and the widest US homeport coverage of any line.",
-    "loyaltyProgram": "VIFP Club"
+    "loyaltyProgram": "VIFP Club",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Carnival_Cruise_Line",
+      "https://www.wikidata.org/wiki/Q656554"
+    ]
+  },
+  {
+    "id": "azamara",
+    "name": "Azamara",
+    "blurb": "Azamara is a luxury cruise line. On 23 Sep 2026 it opened bookings for a 195-night 2029 World Cruise on Azamara Quest, from San Diego to Copenhagen, 3 Jan to 17 Jul 2029.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Azamara",
+      "https://www.wikidata.org/wiki/Q2875081"
+    ]
+  },
+  {
+    "id": "cunard",
+    "name": "Cunard",
+    "blurb": "Cunard Line is a British cruise line. On the 17–24 Sep 2026 Alaska cruise, Queen Elizabeth left Seattle about 24 hours late. Juneau and Endicott Arm scenic cruising were cut. Ketchikan, Victoria, and the 24 Sep Seattle return stayed.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Cunard_Line",
+      "https://www.wikidata.org/wiki/Q730587"
+    ]
+  },
+  {
+    "id": "holland-america",
+    "name": "Holland America",
+    "blurb": "Holland America Line is a British-American cruise line. On 22 Sep 2026 it announced a paid Beach Club at RelaxAway, Half Moon Cay. Day passes go on sale in early October. The pass price is not published.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Holland_America_Line",
+      "https://www.wikidata.org/wiki/Q1624735"
+    ]
+  },
+  {
+    "id": "silversea",
+    "name": "Silversea",
+    "blurb": "Silversea Cruises is a luxury cruise line. Silver Moon stayed in Tokyo until about 9pm on 21 Sep 2026 for Typhoon Dujuan. Hiroshima was cancelled. The cruise length in nights did not change.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Silversea_Cruises",
+      "https://www.wikidata.org/wiki/Q2286599"
+    ]
   }
 ]

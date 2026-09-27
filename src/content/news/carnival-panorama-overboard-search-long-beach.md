@@ -6,7 +6,7 @@ description: "A male guest jumped overboard from Carnival Panorama on 19 Sep 202
 answer: "Carnival confirmed a male guest jumped overboard from Carnival Panorama on Saturday 19 Sep 2026 between Puerto Vallarta and Long Beach. Guests were ordered back to cabins for a shipwide search. The US and Mexican Coast Guards took over search and rescue after CCTV confirmed the overboard."
 presenter: Matthew
 publishDate: 2026-09-22T07:02:00-04:00
-line: "Carnival"
+line: "Carnival Cruise Line"
 ships: ["Carnival Panorama"]
 topics: [Ships, Ports]
 sources:

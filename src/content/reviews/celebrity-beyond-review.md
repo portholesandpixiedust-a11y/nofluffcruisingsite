@@ -4,7 +4,7 @@ description: "Testing the arrival experience, the design, the cabins and the foo
 answer: "Celebrity Beyond is a genuine step up from mainstream Royal Caribbean on food and design, and the crowd is noticeably quieter. Whether that is worth the higher fare depends on whether you value those things over the entertainment and activity range of a mega-ship."
 presenter: Matthew
 publishDate: 2026-08-02
-line: Celebrity
+line: "Celebrity Cruises"
 ships: [celebrity-beyond]
 topics: [Review]
 video:

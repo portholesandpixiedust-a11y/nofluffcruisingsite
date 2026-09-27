@@ -1,7 +1,7 @@
 ---
 title: "6 Royal Caribbean Predictions for 2027"
 description: "Six 2027 forecasts built from what Royal Caribbean has already announced: gratuities still at $18.50/$21 since Nov. 1, 2024, Hero of the Seas cooking venue TBA, Discovery Class for 2029, Icon 5 for summer 2028, Seward terminal economics, and how you may pay. Predictions are graded in the video, not company confirmations."
-answer: "Royal Caribbean has not announced a 2027 gratuity hike. Sister brand Celebrity and several Carnival Corp. lines already raised tips in 2026. Hero of the Seas still hides its Surfside cooking venue name. Discovery Class is ordered for 2029 with Panama Canal access. Icon 5 is under construction for summer 2028 with no name or homeport. Seward’s new terminal opened in June 2026 on a 30-year Royal Caribbean Group pier deal. The six 2027 calls, and the confidence grade on each, are in the video linked below."
+answer: "Royal Caribbean announced no 2027 gratuity hike. Celebrity and Carnival Corp. lines raised tips in 2026. Hero of the Seas hides its Surfside venue name. Discovery Class is ordered for 2029 with Panama Canal access. Icon 5, summer 2028, is under construction with no name or homeport. Seward’s terminal opened June 2026 on a 30-year Royal Caribbean Group pier deal."
 presenter: Matthew
 publishDate: 2026-09-25
 line: Royal Caribbean
