@@ -1,0 +1,204 @@
+---
+/**
+ * Past-collaboration marks are each brand's own published logo, saved under /public/partners/
+ * so the page does not hotlink a third-party CDN.
+ * - Hammies: hammies.com header (Logo_Rainbow.png)
+ * - Duvin: duvindesign.com header (web-logo.png). Native file is small; scaled with nearest-neighbor.
+ * - Blue Lagoon Park Nassau: dolphinencounters.com "Blue Lagoon Island" logo (the Nassau operator's mark)
+ * - Kuza Adventure Park Cozumel: kuzapark.com header (Logo-v_web.png)
+ * - Margaritaville at Sea: margaritavilleatsea.com header logo.svg (nav glow removed, viewBox cropped)
+ * - Norwegian Cruise Line: ncl.com header logo-ncl-black.svg
+ * - Swoveralls: swoveralls.com header (Swoveralls_logo_FTW.png)
+ *
+ * Reel labels come from public Instagram page titles. One reel does not name a brand in this list,
+ * so its caption stays "Partner reel".
+ */
+const partners = [
+  { name: 'Hammies', src: '/partners/hammies.png', w: 720, h: 365 },
+  { name: 'Duvin', src: '/partners/duvin.png', w: 555, h: 240 },
+  { name: 'Blue Lagoon Park Nassau', src: '/partners/blue-lagoon.png', w: 640, h: 387 },
+  { name: 'Kuza Adventure Park Cozumel', src: '/partners/kuza.png', w: 720, h: 280 },
+  { name: 'Margaritaville at Sea', src: '/partners/margaritaville-at-sea.svg', w: 290, h: 100 },
+  { name: 'Norwegian Cruise Line', src: '/partners/norwegian-cruise-line.svg', w: 201, h: 32 },
+  { name: 'Swoveralls', src: '/partners/swoveralls.png', w: 720, h: 127 },
+];
+
+const reels = [
+  { id: 'DcylwbVRVVy', label: 'Norwegian Cruise Line' },
+  { id: 'Dcn8131Rr6v', label: 'Margaritaville at Sea' },
+  { id: 'DYXgrJou4Ml', label: 'Kuza Adventure Park Cozumel' },
+  { id: 'DW6cmaqjQIU', label: 'Partner reel' },
+  { id: 'DVkOoZkDTUv', label: 'Swoveralls' },
+];
+
+const mail = 'mailto:portholesandpixiedust@gmail.com';
+---
+<section class="partner-proof" aria-labelledby="past-collabs">
+  <h2 id="past-collabs">Past collaborations</h2>
+  <p>Work already done includes these brands and destinations.</p>
+  <ul class="partner-logos">
+    {partners.map((partner) => (
+      <li>
+        <figure>
+          <img src={partner.src} alt="" width={partner.w} height={partner.h} loading="lazy" decoding="async" />
+          <figcaption>{partner.name}</figcaption>
+        </figure>
+      </li>
+    ))}
+  </ul>
+
+  <div
+    class="reel-carousel"
+    data-reel-carousel
+    aria-roledescription="carousel"
+    aria-label="Partner Instagram reels"
+  >
+    <div class="reel-bar">
+      <h3 id="partner-reels">Partner reels</h3>
+      <div class="reel-nav">
+        <button type="button" data-reel-prev aria-label="Previous reel">Previous</button>
+        <button type="button" data-reel-next aria-label="Next reel">Next</button>
+      </div>
+    </div>
+    <p class="reel-intro">Instagram reels from partner posts. Use the arrows, the dots, or the left and right arrow keys.</p>
+    <p class="reel-status" data-reel-status aria-live="polite">1 of {reels.length}, {reels[0].label}</p>
+    <ol class="reel-track">
+      {reels.map((reel, i) => {
+        const permalink = `https://www.instagram.com/reel/${reel.id}/`;
+        const embed = `${permalink}embed`;
+        const active = i === 0;
+        return (
+          <li
+            class:list={['reel-slide', { 'is-active': active }]}
+            data-label={reel.label}
+            aria-roledescription="slide"
+            aria-label={`${i + 1} of ${reels.length}: ${reel.label}`}
+            aria-hidden={active ? 'false' : 'true'}
+            inert={!active}
+          >
+            <div class="reel-frame">
+              <p class="reel-pending">Loading Instagram reel</p>
+              <iframe
+                title={`Instagram reel: ${reel.label}`}
+                src={active ? embed : 'about:blank'}
+                data-src={embed}
+                data-loaded={active ? '1' : '0'}
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="fullscreen; encrypted-media; picture-in-picture"
+              />
+            </div>
+            <p class="reel-caption">{reel.label}</p>
+            <a class="reel-out" href={permalink}>Watch on Instagram</a>
+          </li>
+        );
+      })}
+    </ol>
+    <div class="reel-dots">
+      {reels.map((reel, i) => (
+        <button
+          type="button"
+          data-reel-dot
+          aria-label={`Show reel ${i + 1} of ${reels.length}: ${reel.label}`}
+          aria-current={i === 0 ? 'true' : 'false'}
+        />
+      ))}
+    </div>
+    <noscript>
+      <ul class="reel-fallback">
+        {reels.map((reel) => (
+          <li><a href={`https://www.instagram.com/reel/${reel.id}/`}>{reel.label} on Instagram</a></li>
+        ))}
+      </ul>
+    </noscript>
+  </div>
+
+  <div class="partner-cta">
+    <h2>Start a conversation</h2>
+    <p>Tell us who you are, what you want covered, and the dates that matter. We read every message. Reply times follow sailing schedules.</p>
+    <a class="btn" href={mail}>Email portholesandpixiedust@gmail.com</a>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-reel-carousel]').forEach((root) => {
+    const slides = [...root.querySelectorAll('.reel-slide')];
+    const dots = [...root.querySelectorAll('[data-reel-dot]')];
+    const prev = root.querySelector('[data-reel-prev]');
+    const next = root.querySelector('[data-reel-next]');
+    const status = root.querySelector('[data-reel-status]');
+    if (!slides.length || !prev || !next) return;
+
+    let index = 0;
+    let startX = 0;
+    let startY = 0;
+    let pointerId = null;
+
+    const hidePending = (frame) => {
+      if (!frame?.src.includes('instagram.com')) return;
+      frame.closest('.reel-frame')?.querySelector('.reel-pending')?.setAttribute('hidden', '');
+    };
+
+    const load = (frame) => {
+      if (!frame || frame.dataset.loaded === '1' || !frame.dataset.src) return;
+      frame.src = frame.dataset.src;
+      frame.dataset.loaded = '1';
+    };
+
+    root.querySelectorAll('iframe').forEach((frame) => {
+      frame.addEventListener('load', () => hidePending(frame));
+      hidePending(frame);
+    });
+
+    const go = (nextIndex) => {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach((slide, n) => {
+        const on = n === index;
+        slide.classList.toggle('is-active', on);
+        slide.setAttribute('aria-hidden', on ? 'false' : 'true');
+        if (on) slide.removeAttribute('inert');
+        else slide.setAttribute('inert', '');
+        if (on) load(slide.querySelector('iframe'));
+      });
+      dots.forEach((dot, n) => {
+        dot.setAttribute('aria-current', n === index ? 'true' : 'false');
+      });
+      const label = slides[index].dataset.label || 'Partner reel';
+      if (status) status.textContent = `${index + 1} of ${slides.length}, ${label}`;
+    };
+
+    prev.addEventListener('click', () => go(index - 1));
+    next.addEventListener('click', () => go(index + 1));
+    dots.forEach((dot, n) => dot.addEventListener('click', () => go(n)));
+
+    root.addEventListener('keydown', (event) => {
+      const key = event.key;
+      if (key !== 'ArrowLeft' && key !== 'ArrowRight' && key !== 'Home' && key !== 'End') return;
+      event.preventDefault();
+      const fromSlide = event.target instanceof Element && event.target.closest('.reel-slide');
+      if (key === 'ArrowRight') go(index + 1);
+      else if (key === 'ArrowLeft') go(index - 1);
+      else if (key === 'Home') go(0);
+      else go(slides.length - 1);
+      if (fromSlide) (key === 'ArrowLeft' ? prev : next).focus();
+    });
+
+    root.addEventListener('pointerdown', (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      pointerId = event.pointerId;
+      startX = event.clientX;
+      startY = event.clientY;
+    });
+    root.addEventListener('pointerup', (event) => {
+      if (event.pointerId !== pointerId) return;
+      pointerId = null;
+      const dx = event.clientX - startX;
+      const dy = event.clientY - startY;
+      if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.2) return;
+      go(dx < 0 ? index + 1 : index - 1);
+    });
+    root.addEventListener('pointercancel', () => {
+      pointerId = null;
+    });
+  });
+</script>
