@@ -9,6 +9,11 @@ publishDate: 2026-09-27T09:00:00-04:00
 line: "Carnival Cruise Line"
 ships: ["Carnival Sunshine"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [delay, port-skip]
+  ship: "Carnival Sunshine"
+  sailing: "Norfolk return now Monday 28 Sep 2026, one day late. The next cruise leaves that Monday instead of Sunday."
+  changed: "Bimini is cancelled. Nassau moves to 1pm-9pm on Wednesday 30 Sep. Celebration Key on 1 Oct stays. Cruise Hive quotes a one-day pro-rated fare refund."
 sources:
   - claim: "Cruise Industry News 27 Sep 2026: Carnival Sunshine returns to Norfolk one day late because of a nor'easter off the U.S. East Coast; ship was due Sunday 27 Sep 2026 at the end of an eight-night Canada cruise that visited Halifax, Sydney, and Saint John; Carnival guest statement to people booked on the next sailing says the Fleet Operations Center is monitoring the nor'easter, the ship is sailing south after the Canadian itinerary, speed was reduced and course adjusted toward calmer waters for safety, arrival is now expected Monday 28 Sep 2026, and that next cruise will operate as a five-day voyage with a modified Bahamas itinerary; original plan was a six-night sailing to Celebration Key, Bimini, and Nassau; Carnival said it would share further updates on the revised sailing on Saturday; 1996-built, 3,000-passenger ship; CIN also notes Carnival Venezia, Norwegian Escape, and Vision of the Seas adjusted itineraries for the same nor'easter, and that West Coast ships cancelled Mexico calls for Hurricane Polo"
     outlet: "Cruise Industry News"

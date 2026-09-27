@@ -9,6 +9,11 @@ publishDate: 2026-09-27T11:40:00-04:00
 line: "Norwegian Cruise Line"
 ships: ["Norwegian Escape"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [delay]
+  ship: "Norwegian Escape"
+  sailing: "Seven-night Canada and New England cruise that left New York on 18 Sep 2026"
+  changed: "The ship left Halifax at 5pm on 24 Sep 2026, five hours early. New York arrival was set for just after midnight on 26 Sep, about seven hours early. Halifax tours that could not shift were refunded onboard."
 sources:
   - claim: "Cruise Industry News 26 Sep 2026, quoting Captain Simone Croci's onboard letter: Norwegian Escape, a 2015-built 4,200-passenger ship, is on a seven-night Canada and New England cruise roundtrip from New York that started 18 Sep 2026; Newport, Boston, and Sydney ran as planned; the final leg changed for a developing nor'easter expected to hit the northeastern United States and the Canada Atlantic coast; Escape left Halifax at 5:00pm on 24 Sep 2026, five hours earlier than planned, so the ship could reach New York ahead of the storm's strongest conditions; homeport arrival was expected just after midnight on 26 Sep, about seven hours early; Halifax shore excursions booked through Norwegian were adjusted to the new hours, and tours that could not be adapted were cancelled with full refunds to the onboard account; after New York the ship is scheduled to start a 16-night transatlantic to Barcelona calling Canada, Portugal, Spain, and the United Kingdom"
     outlet: "Cruise Industry News"

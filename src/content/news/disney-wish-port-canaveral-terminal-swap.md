@@ -8,6 +8,11 @@ presenter: Matthew
 publishDate: 2026-09-19
 line: "Disney Cruise Line"
 topics: [Ports, Itineraries]
+itineraryChange:
+  kinds: [swap]
+  ship: "Disney Wish"
+  sailing: "Three-night Halloween sailing departing Friday 11 Sep 2026, returning Monday 14 Sep"
+  changed: "Embarkation moves to Terminal 10 at Port Canaveral. The return is Terminal 8. Luggage drop is Terminal 10. Parking stays at Terminal 8, then a shuttle to check in."
 sources:
   - claim: "Disney Wish 11 Sep 2026 Terminal 10 embark and Terminal 8 return, guest parking and luggage instructions, possible link to Terminal 10 renovation"
     outlet: "Cruise Hive"

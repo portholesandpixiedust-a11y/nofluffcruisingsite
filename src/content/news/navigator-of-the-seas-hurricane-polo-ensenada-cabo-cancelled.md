@@ -9,6 +9,11 @@ publishDate: 2026-09-24T08:10:00-04:00
 line: "Royal Caribbean"
 ships: ["Navigator of the Seas"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [port-skip, swap]
+  ship: "Navigator of the Seas"
+  sailing: "25 Sep to 2 Oct 2026 from Los Angeles"
+  changed: "Ensenada on 26 Sep and Cabo San Lucas on 28 Sep are dropped. Mazatlán moves to Monday 28 Sep. Puerto Vallarta is added Tuesday 29 Sep, 8am to 6pm. Prepaid Royal Caribbean tours for those ports refund as onboard credit."
 sources:
   - claim: "Royal Caribbean Blog 23 Sep 2026 quoting Royal Caribbean guest email for Navigator of the Seas sailing this weekend: Ensenada replaced with a sea day due to Hurricane Polo near Western Mexico; Mazatlán replaces Cabo San Lucas; Puerto Vallarta added as a new call 8:00 AM–6:00 PM; Ensenada and Cabo San Lucas removed; prepaid Royal Caribbean excursions for Ensenada and Cabo refunded as onboard credit usable anywhere on the ship, with unused credit reimbursed to the card on the onboard account at end of sailing; email says sorry for last-minute weather change and that safety is top priority / ship can move out of weather; email did not list separate compensation for the sailing beyond tour refunds"
     outlet: "Royal Caribbean Blog"

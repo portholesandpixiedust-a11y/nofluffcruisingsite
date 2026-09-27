@@ -9,6 +9,11 @@ publishDate: 2026-09-22T07:01:00-04:00
 line: "Carnival Cruise Line"
 ships: ["Carnival Sunrise"]
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [swap]
+  ship: "Carnival Sunrise"
+  sailing: "31 Oct 2026 five-night Miami Halloween cruise"
+  changed: "Princess Cays is gone. Monday 2 Nov 2026, 8am to 4pm, is now RelaxAway, Half Moon Cay. Nassau on 3 Nov and Celebration Key on 4 Nov stay. Prepaid Princess Cays excursions are cancelled and refunded to the original payment."
 sources:
   - claim: "Carnival guest email: Carnival Sunrise 31 Oct 2026 5-night Miami sailing replaces Princess Cays Mon 2 Nov 8am-4pm with RelaxAway Half Moon Cay same hours; Nassau Tue 3 Nov and Celebration Key Wed 4 Nov unchanged; return Miami 8am Thu 5 Nov; prepaid Princess Cays excursions cancelled and refunded to original payment; guests may book Half Moon Cay tours via website, Hub app, or Adventures desk Deck 3"
     outlet: "Cruise Hive"

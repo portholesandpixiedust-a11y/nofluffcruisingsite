@@ -1,0 +1,140 @@
+---
+import Base from '../../layouts/Base.astro';
+import TrackerNav from '../../components/TrackerNav.astro';
+import { getCollection } from 'astro:content';
+import cdcSource from '../../data/cdc-scores-source.json';
+
+const scores = (await getCollection('cdcScores')).sort((a, b) => a.data.score - b.data.score || a.data.ship.localeCompare(b.data.ship));
+const lines = [...new Set(scores.map((entry) => entry.data.line))].sort((a, b) => a.localeCompare(b));
+const passAt = cdcSource.satisfactoryAt;
+const below = scores.filter((entry) => entry.data.score < passAt);
+const perfect = scores.filter((entry) => entry.data.score === 100);
+const fmt = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', {
+  day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
+});
+const checked = fmt(cdcSource.retrieved);
+
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'CDC Vessel Sanitation Program scores',
+  description: `Most recent CDC Green Sheet score for ${scores.length} ships in Vessel Sanitation Program jurisdiction, retrieved ${cdcSource.retrieved}.`,
+  url: new URL('/trackers/cdc-scores/', Astro.site).href,
+  dateModified: cdcSource.retrieved,
+  creator: {
+    '@type': 'Organization',
+    name: 'Centers for Disease Control and Prevention',
+    url: 'https://www.cdc.gov/vessel-sanitation/',
+  },
+  isBasedOn: cdcSource.reportUrl,
+  publisher: { '@type': 'Organization', name: 'No Fluff Cruising' },
+}];
+---
+<Base
+  title="CDC Vessel Sanitation Scores by Ship"
+  description={`CDC Vessel Sanitation Program scores for ${scores.length} ships: ship, cruise line, score, and inspection date from the Green Sheet retrieved ${checked}.`}
+  jsonld={jsonld}
+  breadcrumbs={[{ name: 'Trackers', url: '/trackers/' }, { name: 'CDC scores', url: '/trackers/cdc-scores/' }]}
+>
+  <div class="wrap">
+    <span class="eyebrow">Trackers</span>
+    <h1 class="sec">CDC sanitation scores</h1>
+    <div class="rule"></div>
+    <TrackerNav current="cdc" />
+    <div class="answer" style="max-width:70ch"><b>The short answer</b>{scores.length} ships were on the CDC Green Sheet on {checked}. {perfect.length} scored 100. {below.length} scored 85 or lower, which the CDC marks not satisfactory. A score of {passAt} or higher is satisfactory.</div>
+    <p style="max-width:70ch">Every score and inspection date is the most recent row on the <a href={cdcSource.reportUrl} rel="noopener">CDC Vessel Sanitation Program Green Sheet</a>, retrieved {checked}. The cruise line is the label the <a href={cdcSource.lineLookupUrl} rel="noopener">CDC Inspection Query Tool</a> returned for that same ship, date, and score. Line names below are the CDC's own wording.</p>
+    <p style="max-width:70ch">The <a href="/guides/royal-caribbean-cdc-health-inspection-scores-ranked/">Royal Caribbean ranked guide</a> is an earlier write-up, checked 29 Aug 2026. Read the inspection date on each row here. A later inspection replaces an older one. Ships missing from this table were not on the Green Sheet that day. The CDC archives ships that are not calling at a US port.</p>
+
+    <div class="tracker-tools">
+      <label>Line
+        <select id="cdc-line">
+          <option value="">All lines</option>
+          {lines.map((line) => <option value={line}>{line}</option>)}
+        </select>
+      </label>
+      <label>Score
+        <select id="cdc-score">
+          <option value="">All scores</option>
+          <option value="below">85 or lower, not satisfactory</option>
+          <option value="pass">{passAt} or higher, satisfactory</option>
+          <option value="100">Perfect 100</option>
+        </select>
+      </label>
+      <p id="cdc-shown" class="meta" aria-live="polite">{scores.length} ships</p>
+    </div>
+
+    <div class="scroller">
+      <table id="cdc-scores" data-pass-at={passAt}>
+        <thead>
+          <tr>
+            <th scope="col">Ship</th>
+            <th scope="col">Line</th>
+            <th scope="col">Score</th>
+            <th scope="col">Inspection date</th>
+            <th scope="col">CDC result</th>
+          </tr>
+        </thead>
+        <tbody>
+          {scores.map((entry) => {
+            const satisfactory = entry.data.score >= passAt;
+            return (
+              <tr data-line={entry.data.line} data-score={entry.data.score}>
+                <td>{entry.data.ship}</td>
+                <td>{entry.data.line}</td>
+                <td class:list={['num', { 'score-low': !satisfactory }]}>{entry.data.score}</td>
+                <td class="num"><time datetime={entry.data.inspectionDate}>{fmt(entry.data.inspectionDate)}</time></td>
+                <td>{satisfactory ? 'Satisfactory' : 'Not satisfactory'}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>How to refresh the scores</h2>
+    <div class="prose" style="max-width:70ch">
+      <p>The rows live in <code>src/data/cdc-scores.json</code>. The retrieval note lives in <code>src/data/cdc-scores-source.json</code>. Regenerate both with <code>node scripts/fetch-cdc-scores.mjs</code>.</p>
+      <p>The script reads the Green Sheet, then matches each ship, date, and score to the CDC inspection search. The line name has to come from that match. If any Green Sheet ship cannot be matched, the script writes nothing. Do not type a score, a date, or a line by hand.</p>
+      <p>Source: {cdcSource.program}, {cdcSource.report}. Checked {checked}.</p>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const lineSelect = document.getElementById('cdc-line');
+  const scoreSelect = document.getElementById('cdc-score');
+  const shown = document.getElementById('cdc-shown');
+  const rows = [...document.querySelectorAll('#cdc-scores tbody tr')];
+  const passAt = Number(document.getElementById('cdc-scores').dataset.passAt);
+
+  function apply() {
+    const line = lineSelect.value;
+    const band = scoreSelect.value;
+    let count = 0;
+    for (const row of rows) {
+      const value = Number(row.dataset.score);
+      const lineOk = !line || row.dataset.line === line;
+      const scoreOk = band === ''
+        || (band === 'below' && value < passAt)
+        || (band === 'pass' && value >= passAt)
+        || (band === '100' && value === 100);
+      row.hidden = !(lineOk && scoreOk);
+      if (!row.hidden) count += 1;
+    }
+    shown.textContent = `${count} ship${count === 1 ? '' : 's'}`;
+  }
+
+  lineSelect.addEventListener('change', apply);
+  scoreSelect.addEventListener('change', apply);
+</script>
+
+<style>
+  .tracker-tools{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:0 0 16px}
+  .tracker-tools label{font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-direction:column;gap:6px}
+  .tracker-tools select{font-family:var(--fu);font-size:14px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:3px;padding:8px 10px;min-width:14rem}
+  .tracker-tools .meta{margin:0 0 8px}
+  .scroller table{min-width:720px}
+  .score-low{color:var(--orange-ink);font-weight:700}
+  h2{font-family:var(--fu);font-weight:700;font-size:22px;margin:36px 0 10px}
+  .prose code{font-family:var(--fm);font-size:.92em}
+</style>

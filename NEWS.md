@@ -10,6 +10,14 @@ Weekday industry news is handled by Grok Bot (research plus pull requests) or by
 
 Cruise line press rooms, Royal Caribbean Blog, The Points Guy, Cruise Critic, Seatrade Cruise News, Cruise News Radio, Cruise Industry News, Travel Weekly cruise desk, Cruise Mapper when useful.
 
+## Itinerary change tracker
+
+Posts that change a sailing someone could already hold (a port skip, a delay, or a swap) should include an `itineraryChange` block. `/trackers/itinerary-changes/` lists those posts. The block is optional. New itinerary releases, ship news, and policy notes leave it off.
+
+`ship`, `sailing`, and `changed` must repeat facts already in the post and its sources. `changed` leads with what the booked passenger loses or gains. `kinds` is one or more of `port-skip`, `delay`, `swap`.
+
+Add the block in the news pull request. The field shape is on the tracker page.
+
 ## Reviewing an old hold
 
 Older conflict drafts may still sit in `src/content/news-holds/`. They are not published.

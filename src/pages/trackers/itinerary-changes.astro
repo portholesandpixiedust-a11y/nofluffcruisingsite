@@ -1,0 +1,145 @@
+---
+import Base from '../../layouts/Base.astro';
+import TrackerNav from '../../components/TrackerNav.astro';
+import { getCollection } from 'astro:content';
+import { byPublishDate } from '../../utils/byPublishDate.js';
+
+const KIND_LABEL = {
+  'port-skip': 'Port skip',
+  delay: 'Delay',
+  swap: 'Swap',
+};
+const entries = (await getCollection('news'))
+  .filter((entry) => entry.data.itineraryChange)
+  .sort(byPublishDate);
+const fmt = (value) => new Date(value).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Itinerary change tracker',
+  itemListElement: entries.map((entry, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: entry.data.itineraryChange.ship,
+    url: new URL(`/news/${entry.id}/`, Astro.site).href,
+  })),
+}];
+---
+<Base
+  title="Itinerary Change Tracker: Port Skips, Delays, Swaps"
+  description="Port skips, delays, and swaps already reported on No Fluff Cruising, with the ship, line, sailing window, what changed, and a link to the sourced news post."
+  jsonld={jsonld}
+  breadcrumbs={[{ name: 'Trackers', url: '/trackers/' }, { name: 'Itinerary changes', url: '/trackers/itinerary-changes/' }]}
+>
+  <div class="wrap">
+    <span class="eyebrow">Trackers</span>
+    <h1 class="sec">Itinerary changes</h1>
+    <div class="rule"></div>
+    <TrackerNav current="itinerary" />
+    <div class="answer" style="max-width:70ch"><b>The short answer</b>This list is {entries.length} itinerary changes already published in our news: port skips, delays, and swaps. Each row names the ship, the line, the sailing window, and what changed for you, then links to the post that cites the source.</div>
+    <p style="max-width:70ch;margin-top:-6px">The newest published post is first. Open the news post before you change a tour or a flight. The post is where the named source and the date live.</p>
+
+    <div class="tracker">
+      <input class="tracker-radio" type="radio" name="change-kind" id="chg-all" checked />
+      <input class="tracker-radio" type="radio" name="change-kind" id="chg-skip" />
+      <input class="tracker-radio" type="radio" name="change-kind" id="chg-delay" />
+      <input class="tracker-radio" type="radio" name="change-kind" id="chg-swap" />
+      <div class="chips filter-chips" aria-label="Filter by change type">
+        <label class="chip" for="chg-all">All</label>
+        <label class="chip" for="chg-skip">Port skips</label>
+        <label class="chip" for="chg-delay">Delays</label>
+        <label class="chip" for="chg-swap">Swaps</label>
+      </div>
+      <div class="scroller">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Ship</th>
+              <th scope="col">Line</th>
+              <th scope="col">Sailing</th>
+              <th scope="col">What changed</th>
+              <th scope="col">News</th>
+            </tr>
+          </thead>
+          <tbody>
+            {entries.map((entry) => {
+              const change = entry.data.itineraryChange;
+              return (
+                <tr data-kinds={change.kinds.join(' ')}>
+                  <td>{change.ship}</td>
+                  <td>{entry.data.line}</td>
+                  <td>{change.sailing}</td>
+                  <td>
+                    <span class="kinds">{change.kinds.map((kind) => <span class="kind">{KIND_LABEL[kind]}</span>)}</span>
+                    {change.changed}
+                  </td>
+                  <td><a href={`/news/${entry.id}/`}>{entry.data.title}</a><span class="meta">{fmt(entry.data.publishDate)}</span></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2>How to add a row</h2>
+    <div class="prose" style="max-width:70ch">
+      <p>Add an <code>itineraryChange</code> block to the news post in <code>src/content/news/</code>. This page reads that block. It does not keep a second list.</p>
+      <pre class="howto"><code>{`itineraryChange:
+  kinds: [port-skip, delay]
+  ship: "Ship name"
+  sailing: "The sailing window, as the post states it"
+  changed: "What you lose or gain, then any replacement port or refund"`}</code></pre>
+      <ul>
+        <li><code>port-skip</code> when a port or a scenic call is dropped.</li>
+        <li><code>delay</code> when departure, arrival, embarkation, or the return moves.</li>
+        <li><code>swap</code> when the order, the port, or the terminal changes and something else takes its place.</li>
+      </ul>
+      <p>A post can carry more than one kind. Write <code>ship</code>, <code>sailing</code>, and <code>changed</code> from facts already in that post and its sources. <code>changed</code> leads with the guest impact. Leave the block off for a new itinerary release, a ship announcement, or a policy note that does not change a sailing someone already holds.</p>
+      <p>Add the block in the news pull request when you publish a port skip, delay, or swap. A held draft can gain the block when you move it into <code>src/content/news/</code>.</p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .tracker{position:relative}
+  .scroller table{min-width:920px}
+  .tracker-radio{
+    position:absolute;
+    width:1px;
+    height:1px;
+    margin:-1px;
+    padding:0;
+    border:0;
+    clip:rect(0 0 0 0);
+    overflow:hidden;
+  }
+  #chg-all:checked ~ .filter-chips label[for="chg-all"],
+  #chg-skip:checked ~ .filter-chips label[for="chg-skip"],
+  #chg-delay:checked ~ .filter-chips label[for="chg-delay"],
+  #chg-swap:checked ~ .filter-chips label[for="chg-swap"]{
+    background:var(--navy);
+    border-color:var(--navy);
+    color:#fff;
+  }
+  #chg-all:focus-visible ~ .filter-chips label[for="chg-all"],
+  #chg-skip:focus-visible ~ .filter-chips label[for="chg-skip"],
+  #chg-delay:focus-visible ~ .filter-chips label[for="chg-delay"],
+  #chg-swap:focus-visible ~ .filter-chips label[for="chg-swap"]{
+    outline:2px solid var(--orange);
+    outline-offset:2px;
+  }
+  #chg-skip:checked ~ .scroller tbody tr{display:none}
+  #chg-skip:checked ~ .scroller tbody tr[data-kinds~="port-skip"]{display:table-row}
+  #chg-delay:checked ~ .scroller tbody tr{display:none}
+  #chg-delay:checked ~ .scroller tbody tr[data-kinds~="delay"]{display:table-row}
+  #chg-swap:checked ~ .scroller tbody tr{display:none}
+  #chg-swap:checked ~ .scroller tbody tr[data-kinds~="swap"]{display:table-row}
+  .kinds{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 6px}
+  .kind{font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+  td .meta{display:block;margin-top:4px}
+  h2{font-family:var(--fu);font-weight:700;font-size:22px;margin:36px 0 10px}
+  pre.howto{font-family:var(--fm);font-size:13px;line-height:1.45;background:var(--sunk);border:1px solid var(--line);border-radius:4px;padding:14px 16px;overflow:auto;margin:0 0 15px}
+  .prose code{font-family:var(--fm);font-size:.92em}
+</style>

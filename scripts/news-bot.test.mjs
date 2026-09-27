@@ -26,6 +26,23 @@ check('em dash rejected', validate({ ...good, body: 'a — b' }, new Set()).some
 check('banned adverb rejected', validate({ ...good, body: 'this is actually fine' }, new Set()).some(p => p.includes('adverb')));
 check('non-kebab slug rejected', validate({ ...good, slug: 'Not Kebab' }, new Set()).length > 0);
 
+const change = {
+  kinds: ['port-skip', 'delay'],
+  ship: 'Carnival Sunshine',
+  sailing: '28 Sep 2026 from Norfolk',
+  changed: 'Bimini is cancelled. The ship returns one day late.',
+};
+const withChange = {
+  ...good,
+  body: `${good.body}\n\nCarnival Sunshine skips Bimini.`,
+  itineraryChange: change,
+};
+check('itinerary change passes when the ship is in the post', validate(withChange, new Set()).length === 0);
+check('itinerary change rejects an unknown kind', validate({ ...withChange, itineraryChange: { ...change, kinds: ['weather'] } }, new Set()).some((p) => p.includes('itineraryChange.kinds')));
+check('itinerary change rejects a ship the post never names', validate({ ...good, itineraryChange: change }, new Set()).some((p) => p.includes('not named')));
+check('markdown includes itineraryChange', toMarkdown(withChange).includes('itineraryChange:') && toMarkdown(withChange).includes('port-skip, delay'));
+check('markdown omits itineraryChange when absent', !toMarkdown(good).includes('itineraryChange:'));
+
 // the real test: does the emitted frontmatter survive the site's own YAML parser?
 const md = toMarkdown(good);
 await writeFile('src/content/news/__bot-test__.md', md);

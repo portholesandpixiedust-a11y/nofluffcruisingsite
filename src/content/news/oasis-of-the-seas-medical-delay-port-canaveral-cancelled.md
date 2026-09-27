@@ -8,6 +8,11 @@ presenter: Matthew
 publishDate: 2026-09-20
 line: "Royal Caribbean"
 topics: [Itineraries, Ports]
+itineraryChange:
+  kinds: [delay, port-skip]
+  ship: "Oasis of the Seas"
+  sailing: "Return to Cape Liberty around 2pm Sunday 20 Sep 2026, and the following cruise"
+  changed: "Arrival is about eight hours late. Debarkation starts around 2:30pm. The next sailing boards late. Port Canaveral on Tuesday 22 Sep is cancelled. Royal is issuing onboard credit plus flight and internet help."
 sources:
   - claim: "Oasis delayed ~8 hours into Cape Liberty after two medical evacuations, Port Canaveral cancelled, compensation tiers for OBC, internet, and flight changes"
     outlet: "Cruise Hive"
