@@ -6,7 +6,7 @@ description: "Celebrity Millennium cut Mt Fuji (Shimizu) on its 11 Sep 2026 Japa
 answer: "Celebrity Millennium dropped Mt Fuji (Shimizu) on its current Japan cruise and stayed in Kagoshima for a second day. Celebrity's onboard guest letter cites Typhoon Dujuan. Kagoshima runs 19 Sep from 7am through 20 Sep at 5pm, then a sea day, with Tokyo arrival at 8am on 22 Sep. Prepaid Shimizu tours refund as onboard credit."
 presenter: Matthew
 publishDate: 2026-09-20
-line: "Celebrity"
+line: "Celebrity Cruises"
 topics: [Itineraries, Destinations]
 sources:
   - claim: "Celebrity Millennium mid-cruise letter replaces Shimizu with extra Kagoshima day due to Typhoon Dujuan; Kagoshima 19 Sep 7am to 20 Sep 5pm, sea day 21 Sep, Tokyo 22 Sep 8am; prepaid Shimizu shore excursions refund as SeaPass onboard credit with unused balance back to card in up to 14 business days"

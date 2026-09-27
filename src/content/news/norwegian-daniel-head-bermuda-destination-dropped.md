@@ -6,7 +6,7 @@ description: "NCL Holdings will not build a day destination at Daniel's Head in 
 answer: "Norwegian Cruise Line Holdings will not develop Daniel's Head in western Bermuda into a private day destination. The Bermuda Land Management Corporation said exploratory talks ended after NCLH notified it on 17 Aug 2026. Your booked Bermuda port calls are not cancelled."
 presenter: Matthew
 publishDate: 2026-09-22T07:00:00-04:00
-line: "Norwegian"
+line: "Norwegian Cruise Line"
 ships: []
 topics: [Ports, Ships]
 sources:

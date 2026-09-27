@@ -6,7 +6,7 @@ description: "Princess cancelled Ruby Princess Nawiliwili on 22 Sep 2026 after H
 answer: "Ruby Princess drops Nawiliwili, Kauai, on 22 Sep 2026 during its current 16-night Hawaii cruise from San Francisco. Hurricane Lowell damage forced the cut. The ship arrives Honolulu about 8am on 22 Sep and stays overnight until the scheduled 11pm departure on 23 Sep. Princess refunds Kauai shore excursions to the original payment method."
 presenter: Matthew
 publishDate: 2026-09-20
-line: "Princess"
+line: "Princess Cruises"
 topics: [Itineraries, Ports]
 sources:
   - claim: "Ruby Princess cancels Nawiliwili Kauai on 22 Sep 2026 due to Hurricane Lowell, replaces with early Honolulu arrival and overnight through 23 Sep departure, refunds Princess Kauai shore excursions, other Hawaii ports unchanged; Pride of America also cut Kauai on 12 Sep sailing for Hilo overnight"

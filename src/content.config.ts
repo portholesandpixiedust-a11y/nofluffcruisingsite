@@ -1,5 +1,12 @@
 import { defineCollection, z } from 'astro:content';
 import { glob, file } from 'astro/loaders';
+import { normalizeContentDate } from './utils/etDate.js';
+
+// Date-only frontmatter becomes noon America/New_York. Full timestamps are kept.
+const contentDate = (required) => z.preprocess((val) => {
+  if (val == null || val === '') return undefined;
+  return normalizeContentDate(val);
+}, required ? z.date() : z.date().optional());
 
 const source = z.object({
   claim: z.string(),
@@ -19,8 +26,10 @@ const articleBase = {
   description: z.string(),
   answer: z.string(),
   presenter: z.enum(['Matthew', 'Marlee']).default('Matthew'),
-  publishDate: z.coerce.date(),
-  updatedDate: z.coerce.date().optional(),
+  publishDate: contentDate(true),
+  publishedAt: contentDate(false),
+  updatedDate: contentDate(false),
+  updatedAt: contentDate(false),
   line: z.string().optional(),
   ships: z.array(z.string()).default([]),
   topics: z.array(z.string()).default([]),
@@ -75,6 +84,7 @@ const ships = defineCollection({
     coveredIn: z.array(videoRef).default([]),
     videoTour: z.object({ id: z.string(), title: z.string(), channel: z.string() }).nullable().default(null),
     updated: z.string().optional(),
+    sameAs: z.array(z.string().url()).default([]),
   }),
 });
 
@@ -85,6 +95,7 @@ const lines = defineCollection({
     name: z.string(),
     blurb: z.string(),
     loyaltyProgram: z.string().optional(),
+    sameAs: z.array(z.string().url()).default([]),
   }),
 });
 

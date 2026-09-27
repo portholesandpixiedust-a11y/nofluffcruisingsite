@@ -6,7 +6,7 @@ description: "Engine limits forced Royal Princess to skip Juneau and Ketchikan o
 answer: "Royal Princess cut Juneau and Ketchikan after an engine technical issue limited speed. Captain Steven Holland notified guests on 13 Sep 2026. Princess is refunding 50 percent of cruise fare to the original payment method in 10 to 15 business days."
 presenter: Matthew
 publishDate: 2026-09-19
-line: "Princess"
+line: "Princess Cruises"
 topics: [Itineraries, Money]
 sources:
   - claim: "Royal Princess engine issue, Juneau and Ketchikan cancellations, 50% fare refund, Victoria call, related Emerald and Island Princess cabin give-up offers"

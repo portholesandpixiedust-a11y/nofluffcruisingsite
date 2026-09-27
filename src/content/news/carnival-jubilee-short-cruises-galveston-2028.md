@@ -6,7 +6,7 @@ description: "Carnival opened 2028-29 Galveston bookings on 17 Sep 2026 with Jub
 answer: "Carnival opened 2028-29 Galveston bookings on 17 Sep 2026 with Carnival Jubilee's first regular four- and five-day Excel-class sailings from Texas. Four-day Cozumel trips leave select Thursdays from 27 Apr 2028. Five-day Cozumel and Progreso trips leave select Saturdays and Mondays from 17 Apr 2028 through April 2029."
 presenter: Matthew
 publishDate: 2026-09-20
-line: "Carnival"
+line: "Carnival Cruise Line"
 topics: [Itineraries, Ships]
 sources:
   - claim: "Carnival opened 2028-29 Galveston season on 17 Sep 2026 with Jubilee first regular 4- and 5-day Excel-class sailings, 4-day Cozumel Thursdays 27 Apr 2028 to 26 Apr 2029, 5-day Cozumel and Progreso Saturdays and Mondays 17 Apr 2028 to 30 Apr 2029, plus 6-day 29 Oct 2028 and 8-day 1 Apr and 9 Apr 2028 itineraries"

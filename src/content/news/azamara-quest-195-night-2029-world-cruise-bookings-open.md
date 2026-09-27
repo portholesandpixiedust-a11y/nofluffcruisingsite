@@ -3,7 +3,7 @@ title: "Azamara opens 195-night 2029 World Cruise bookings on Quest"
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa1%2FAzamara_Quest_%28ship%2C_2000%29_IMO_9210218%3B_in_Split%2C_2011-11-13.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Ivan T. (CC BY-SA 3.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Azamara_Quest_(ship,_2000)_IMO_9210218;_in_Split,_2011-11-13.jpg"
 description: "Azamara opened bookings 23 Sep 2026 for a 195-night 2029 World Cruise on Azamara Quest from San Diego to Copenhagen, 3 Jan–17 Jul 2029. Shorter 179- and 139-night options open 14 Oct. Loyalty discounts 6–12% apply early. Deposits start at $7,000 per person."
-answer: "Azamara opened full 195-night 2029 World Cruise bookings on 23 Sep 2026 aboard Azamara Quest, San Diego to Copenhagen, 3 Jan–17 Jul 2029. The route covers five continents, 40 countries and territories, and 126 ports with 16 overnights and 60 late nights. 179-night San Diego–London and 139-night Sydney–Copenhagen segments open 14 Oct 2026. Listed interior fares start at $49,999 per person. First deposit is $7,000 per person ($14,000 suites)."
+answer: "Azamara opened full 195-night 2029 World Cruise bookings on 23 Sep 2026 aboard Azamara Quest, sailing San Diego to Copenhagen from 3 Jan to 17 Jul 2029. The route covers five continents, 40 countries and territories, and 126 ports, with 16 overnights and 60 late nights. Shorter 179-night and 139-night segments open for booking on 14 Oct 2026."
 presenter: Matthew
 publishDate: 2026-09-24T21:20:00-04:00
 line: "Azamara"

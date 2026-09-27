@@ -12,8 +12,16 @@ const d = line.data;
 const ships = (await getCollection('ships')).filter((s)=>s.data.line===d.id).sort((a,b)=>(b.data.inService??0)-(a.data.inService??0));
 const posts = (await getCollection('reviews')).filter((p)=>p.data.line===d.name);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: d.name,
+  description: d.blurb,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  ...(d.sameAs?.length ? { sameAs: d.sameAs } : {}),
+}];
 ---
-<Base title={`${d.name} Ships: Specs, Reviews and Ship Tours`} description={`Every ${d.name} ship we cover, with specs, verdicts and a full walkthrough tour, plus our ${d.name} guides and reviews.`} breadcrumbs={[{name:"Ships", url:"/ships/"},{name:d.name, url:Astro.url.pathname}]}>
+<Base title={`${d.name} Ships: Specs, Reviews and Ship Tours`} description={`Every ${d.name} ship we cover, with specs, verdicts and a full walkthrough tour, plus our ${d.name} guides and reviews.`} breadcrumbs={[{name:"Ships", url:"/ships/"},{name:d.name, url:Astro.url.pathname}]} jsonld={jsonld}>
   <div class="wrap">
     <span class="eyebrow">Cruise line</span>
     <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 14px">{d.name}</h1>

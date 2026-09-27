@@ -6,7 +6,7 @@ description: "Carnival is running full in-person safety drills on five ships dep
 answer: "Carnival is holding full, in-person muster drills on five ships this week: Horizon, Panorama, Sunshine, Vista and Firenze, all departing September 26-28, 2026. It is a twice-yearly SOLAS compliance requirement, not a permanent policy change. More than 18,700 guests must gather at assigned stations before sailing, replacing the usual faster self-muster check-in."
 presenter: Matthew
 publishDate: 2026-09-22
-line: "Carnival"
+line: "Carnival Cruise Line"
 topics: [Policy]
 sources:
   - claim: "Five ships (Horizon, Panorama, Sunshine, Vista, Firenze) running full in-person muster drills for Sept 26-28, 2026 departures, affecting over 18,700 guests, with specific departure times and itineraries"

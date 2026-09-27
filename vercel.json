@@ -1,0 +1,54 @@
+{
+  "redirects": [
+    {
+      "source": "/reviews/every-royal-caribbean-ships-cdc-health-inspection-score-ranked-2026",
+      "destination": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/every-royal-caribbean-ships-cdc-health-inspection-score-ranked-2026/",
+      "destination": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked_2",
+      "destination": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked_2/",
+      "destination": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/royal-caribbean-slots-or-video-poker-which-reaches-prime-for-less",
+      "destination": "/guides/royal-caribbean-slots-vs-video-poker/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/royal-caribbean-slots-or-video-poker-which-reaches-prime-for-less/",
+      "destination": "/guides/royal-caribbean-slots-vs-video-poker/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/royal-caribbean-crown-and-anchor-tiers-what-each-one-is-worth-in-2026",
+      "destination": "/guides/royal-caribbean-crown-anchor-tiers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/royal-caribbean-crown-and-anchor-tiers-what-each-one-is-worth-in-2026/",
+      "destination": "/guides/royal-caribbean-crown-anchor-tiers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang",
+      "destination": "/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-chang/",
+      "destination": "/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change/",
+      "statusCode": 301
+    }
+  ]
+}

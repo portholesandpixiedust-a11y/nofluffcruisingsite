@@ -3,7 +3,7 @@ title: "Cunard Queen Elizabeth drops Juneau and Endicott Arm after Seattle delay
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Faf%2FCunards_Queen_Elizabeth_Ship._%286006048323%29.jpg&w=1280&output=jpg"
 heroCredit: "Photo: Tom Bayly (CC BY-SA 2.0) · Wikimedia Commons · https://commons.wikimedia.org/wiki/File:Cunards_Queen_Elizabeth_Ship._(6006048323).jpg"
 description: "Queen Elizabeth left Seattle a day late for essential maintenance on its 17–24 Sep 2026 Alaska cruise. Juneau and Endicott Arm scenic cruising are gone. Ketchikan, Victoria, and the 24 Sep Seattle return stay."
-answer: "Cunard's Queen Elizabeth left Seattle about 24 hours late on its 17–24 Sep 2026 Alaska cruise for essential maintenance. Juneau and Endicott Arm scenic cruising are cut. Ketchikan and Victoria stay. Seattle return remains 24 Sep 2026."
+answer: "Cunard's Queen Elizabeth left Seattle about 24 hours late, at 5pm on 18 Sep, on its 17–24 Sep 2026 Alaska cruise for essential maintenance. Juneau and Endicott Arm scenic cruising are cut. Ketchikan and Victoria stay. The Seattle return remains 24 Sep 2026."
 presenter: Matthew
 publishDate: 2026-09-23T08:30:00-04:00
 line: "Cunard"

@@ -1,0 +1,30 @@
+name: IndexNow
+
+# Posts changed URLs to IndexNow after a push to main.
+# This does not verify Bing Webmaster Tools. Matthew still needs to verify the
+# property there (or import it from Google Search Console). See SEO.md.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Submit changed URLs
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          INDEXNOW_DELAY_SECONDS: "120"
+        run: node scripts/indexnow.mjs

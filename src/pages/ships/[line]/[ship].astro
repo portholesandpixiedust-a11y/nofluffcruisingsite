@@ -22,6 +22,7 @@ const jsonld: any[] = [{
   name: d.name, category: `${lineName} ${d.shipClass} class cruise ship`,
   brand: { '@type':'Brand', name: lineName },
   description: d.verdict,
+  ...(d.sameAs?.length ? { sameAs: d.sameAs } : {}),
   additionalProperty: [
     d.guests && { '@type':'PropertyValue', name:'Guests (double occupancy)', value:d.guests },
     d.maxGuests && { '@type':'PropertyValue', name:'Maximum capacity', value:d.maxGuests },

@@ -6,7 +6,7 @@ description: "Meyer Werft floated out Disney Believe's first midship gigablock i
 answer: "Disney Believe's first of three gigablocks floated out of Meyer Werft Hall 6 in Papenburg. Cruise Hive and the Disney Cruise Line Blog reported the midship section, including the Grand Hall structure, on 19 Sep 2026. Forward and aft blocks come next. Disney still lists a late calendar 2027 debut with no homeport or itineraries published."
 presenter: Matthew
 publishDate: 2026-09-20
-line: "Disney"
+line: "Disney Cruise Line"
 topics: [Ships, Destinations]
 sources:
   - claim: "First of three Disney Believe gigablocks floated out at Meyer Werft Papenburg; midship includes Grand Hall; next is forward then aft; gigablocks can weigh over 31,000 tons with walls plumbing wiring; delivery 2027; late calendar 2027 launch per August 2026 Disney timeline; no homeport or itineraries announced; Moana Grand Hall statue announced August 2026"

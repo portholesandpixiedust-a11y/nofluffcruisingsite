@@ -90,6 +90,9 @@ article{max-width:70ch;margin:0 auto}
 article h1{font-family:var(--fd);font-size:clamp(29px,4.6vw,44px);line-height:1.03;text-transform:uppercase;margin:0 0 16px;text-wrap:balance}
 .answer{background:var(--sunk);border-left:4px solid var(--orange);border-radius:0 4px 4px 0;padding:16px 20px;font-size:18px;line-height:1.55;margin:0 0 22px}
 .answer b{font-family:var(--fu);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-ink);display:block;margin-bottom:7px}
+.preferred{border:1px solid var(--line);border-radius:4px;padding:14px 16px;margin:0 0 22px;background:var(--surface)}
+.preferred b{font-family:var(--fu);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-ink);display:block;margin-bottom:6px}
+.preferred a{font-family:var(--fu);font-weight:700;font-size:15px}
 .byline{display:flex;align-items:center;gap:11px;margin:0 0 22px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 .byline img{width:42px;height:42px;border-radius:50%;background:#A2A2A2}
 .byline strong{display:block;font-family:var(--fu);font-size:14.5px}

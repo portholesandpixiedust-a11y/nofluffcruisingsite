@@ -21,7 +21,12 @@ const org = {
   '@type': 'Organization',
   name: 'No Fluff Cruising',
   url: Astro.site?.href,
-  logo: new URL('/avatar.png', Astro.site).href,
+  logo: {
+    '@type': 'ImageObject',
+    url: new URL('/avatar.png', Astro.site).href,
+    width: 256,
+    height: 256,
+  },
   description: 'Expert cruise tips, ship reviews and ship tours. No line loyalty, no filler.',
   sameAs: ['https://www.youtube.com/@nofluffcruising'],
 };
@@ -49,7 +54,7 @@ const graph = [org, site, crumbs, ...jsonld].filter(Boolean);
   <title>{pageTitle}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
-  {noindex && <meta name="robots" content="noindex" />}
+  <meta name="robots" content={noindex ? 'noindex, max-image-preview:large' : 'max-image-preview:large'} />
   <meta property="og:title" content={ogTitle ?? title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content={published ? 'article' : 'website'} />
@@ -67,7 +72,7 @@ const graph = [org, site, crumbs, ...jsonld].filter(Boolean);
   <meta name="twitter:image" content={share} />
   <meta name="twitter:title" content={ogTitle ?? title} />
   <meta name="twitter:description" content={description} />
-  <link rel="icon" href="/avatar.png" />
+  <link rel="icon" href="/avatar.png" type="image/png" sizes="256x256" />
   <link rel="alternate" type="application/rss+xml" title="No Fluff Cruising" href="/rss.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
