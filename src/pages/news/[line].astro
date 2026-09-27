@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { byPublishDate } from '../../utils/byPublishDate.js';
+import { canonicalLine, newsHubSlug } from '../../utils/newsLines.js';
+
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+  const articleIds = new Set(news.map((post) => post.id));
+  const seen = new Set();
+  const paths = [];
+  for (const post of news) {
+    const lineName = canonicalLine(post.data.line);
+    const slug = newsHubSlug(lineName);
+    if (!slug || seen.has(slug)) continue;
+    if (articleIds.has(slug)) {
+      throw new Error(`News hub /news/${slug}/ collides with a news article slug.`);
+    }
+    seen.add(slug);
+    paths.push({ params: { line: slug }, props: { lineName } });
+  }
+  return paths;
+}
+
+const { lineName } = Astro.props;
+const lineEntry = (await getCollection('lines')).find((line) => line.data.name === lineName) ?? null;
+const posts = (await getCollection('news'))
+  .filter((post) => canonicalLine(post.data.line) === lineName)
+  .sort(byPublishDate);
+const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+const lineHref = lineEntry ? `/lines/${lineEntry.data.id}/` : null;
+const title = `${lineName} News`;
+const description = `${lineName} cruise news for a booked passenger. Itinerary changes, refunds, fees, and ship moves, each traced to a named source.`;
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: title,
+  description,
+  url: pageUrl,
+  isPartOf: { '@type': 'WebSite', name: 'No Fluff Cruising', url: Astro.site?.href },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: posts.length,
+    itemListElement: posts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: post.data.title,
+      url: new URL(`/news/${post.id}/`, Astro.site).href,
+    })),
+  },
+}];
+---
+<Base title={title} description={description} breadcrumbs={[{ name: 'News', url: '/news/' }, { name: lineName, url: Astro.url.pathname }]} jsonld={jsonld}>
+  <div class="wrap">
+    <span class="eyebrow">Cruise news</span>
+    <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 14px">{lineName} news</h1>
+    <p style="max-width:70ch;font-size:18px;color:var(--ink-2)">{lineName} news for people who are booked. Port cuts, refunds, fees, and ship moves. Each post names its source and its date.</p>
+    <p style="max-width:70ch;font-size:16px">
+      <a href="/news/">All cruise news</a>
+      {lineHref && <> · <a href={lineHref}>{lineName} line page</a></>}
+    </p>
+
+    <h2 class="sec" style="margin-top:30px">Latest</h2><div class="rule"></div>
+    <div class="news-list">
+      {posts.map((post) => (
+        <article class="news-row">
+          {post.data.heroImage && (
+            <a class="news-thumb" href={'/news/' + post.id + '/'} aria-hidden="true" tabindex="-1">
+              <img src={post.data.heroImage} width="320" height="180" loading="lazy" alt="" />
+            </a>
+          )}
+          <div class="news-body">
+            <span class="kicker">{[post.data.line, ...post.data.topics].filter(Boolean).join(' · ')}</span>
+            <h3><a href={'/news/' + post.id + '/'}>{post.data.title}</a></h3>
+            {post.data.description && <p>{post.data.description}</p>}
+            <span class="meta">{post.data.presenter + ' · ' + fmt(post.data.publishDate)}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</Base>

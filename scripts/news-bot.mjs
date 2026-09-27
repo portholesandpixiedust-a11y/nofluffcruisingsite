@@ -16,6 +16,7 @@
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { easternCalendarDate, formatEasternISO } from '../src/utils/etDate.js';
+import { NEWS_LINES, canonicalLine } from '../src/utils/newsLines.js';
 
 const NEWS_DIR = 'src/content/news';
 const HOLDS_DIR = 'src/content/news-holds';
@@ -24,35 +25,7 @@ const MAX_POSTS = Number(process.env.MAX_POSTS || 3);
 const MIN_POSTS_PER_DAY = Number(process.env.MIN_POSTS_PER_DAY || 3);
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
-const LINES = {
-  'Royal Caribbean': 'royal-caribbean',
-  'Carnival Cruise Line': 'carnival',
-  'Norwegian Cruise Line': 'norwegian',
-  'MSC Cruises': 'msc',
-  'Disney Cruise Line': 'disney',
-  'Celebrity Cruises': 'celebrity',
-  'Virgin Voyages': 'virgin-voyages',
-  'Princess Cruises': 'princess',
-  'Margaritaville at Sea': 'margaritaville-at-sea',
-  'Azamara': 'azamara',
-  'Cunard': 'cunard',
-  'Holland America': 'holland-america',
-  'Silversea': 'silversea',
-};
-
-// Short labels already used in older posts. Stored line names follow lines.json.
-const LINE_ALIASES = {
-  Carnival: 'Carnival Cruise Line',
-  Norwegian: 'Norwegian Cruise Line',
-  MSC: 'MSC Cruises',
-  Disney: 'Disney Cruise Line',
-  Celebrity: 'Celebrity Cruises',
-  Princess: 'Princess Cruises',
-};
-
-export function canonicalLine(name) {
-  return LINE_ALIASES[name] || name;
-}
+const LINES = Object.fromEntries(NEWS_LINES.map((row) => [row.name, row.id]));
 
 const PREFERRED_SOURCES = [
   'Cruise line official press rooms and newsrooms (Tier 1)',
