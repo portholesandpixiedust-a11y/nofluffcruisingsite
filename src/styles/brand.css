@@ -71,6 +71,8 @@ h2.sec{font-family:var(--fd);font-size:clamp(21px,3vw,28px);text-transform:upper
 .card{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
 .card .body{padding:15px 17px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
 .kicker{font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.kicker a,.eyebrow a{color:inherit}
+.kicker a:hover,.eyebrow a:hover{color:var(--orange-ink)}
 .card h3{font-family:var(--fu);font-weight:700;font-size:17px;line-height:1.25;margin:0}
 .card h3 a{color:inherit;text-decoration:none}
 .card h3 a:hover{color:var(--orange-ink)}

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { normalizeContentDate } from './etDate.js';
+import { newsHubSlug } from './newsLines.js';
 
 function frontmatter(file) {
   const text = fs.readFileSync(file, 'utf8');
@@ -45,6 +46,10 @@ export function buildLastmodMap(root = process.cwd()) {
       if (!updated) continue;
       const slug = file.slice(0, -3);
       bump(`${prefix}${slug}/`, updated);
+      if (folder === 'news') {
+        const hub = newsHubSlug(grab(block, 'line'));
+        if (hub) bump(`/news/${hub}/`, updated);
+      }
       if (!sectionNewest || updated > sectionNewest) sectionNewest = updated;
       if (!newest || updated > newest) newest = updated;
     }
