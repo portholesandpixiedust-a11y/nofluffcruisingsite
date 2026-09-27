@@ -118,9 +118,9 @@ If you are on Pride of America, your hotel nights in Honolulu and your flight ho
 Nothing else published on this date. The next edition is Sep. 27.`,
   },
   '2026-09-27': {
-    description: 'Cruise news today, Sep. 27, 2026: Allure move-or-cancel offer, Hurricane Polo port cuts, a Norfolk delay, and Virgin status match.',
-    answer: 'On Sep. 27, 2026 five stories changed a booking or a perk. Selected Allure guests can move to Oct. 11 or cancel. Carnival Panorama drops Puerto Vallarta and Mazatlán for Hurricane Polo. Carnival Sunshine returns to Norfolk a day late and skips Bimini. Norwegian Escape docked in New York early. Virgin reopened status match through Oct. 31.',
-    summary: `Sep. 27, 2026 has five stories for anyone already booked. Open each link for the named source and the date it was checked. This page only restates those posts.
+    description: 'Cruise news today, Sep. 27, 2026: Grand Princess Polo cuts, Oasis skips Canaveral, Valiant Lady Bermuda day call, Allure, and Virgin status match.',
+    answer: 'On Sep. 27, 2026 eight stories changed a booking or a perk. Grand Princess drops La Paz, Guaymas, and Puerto Vallarta for Polo. Oasis of the Seas boards late and skips Port Canaveral. Valiant Lady cuts Bermuda to a day call. Allure, Panorama, Sunshine, Escape, and a Virgin status match were already up.',
+    summary: `Sep. 27, 2026 has eight stories for anyone already booked. Open each link for the named source and the date it was checked. This page only restates those posts.
 
 Selected Allure of the Seas guests for the Sep. 27 sailing can move to Oct. 11 or cancel. A move refunds this cruise fare, keeps a similar cabin, and covers non-refundable travel costs. A cancel refunds what you paid and adds a future cruise credit equal to the fare. If that email never arrived, you still sail.
 
@@ -130,6 +130,12 @@ Carnival Sunshine is now due in Norfolk on Monday Sep. 28, one day late, after s
 
 Norwegian Escape left Halifax at 5pm on Sep. 24, five hours early, to stay ahead of the same nor'easter. New York arrival was set for just after midnight on Sep. 26, about seven hours early. Halifax tours that could not shift were refunded onboard. Next up is a 16-night crossing to Barcelona.
 
-Virgin Voyages is extending Sailing Club and its VIP perks through Dec. 31, 2028. Status Match applications are open from Sep. 24 through Oct. 31, 2026 if you already hold airline, hotel, or another cruise line's status. A match can add Blue Extras on your next new booking. Check the form, then book only after Virgin approves you.`,
+Virgin Voyages is extending Sailing Club and its VIP perks through Dec. 31, 2028. Status Match applications are open from Sep. 24 through Oct. 31, 2026 if you already hold airline, hotel, or another cruise line's status. A match can add Blue Extras on your next new booking. Check the form, then book only after Virgin approves you.
+
+Grand Princess left Los Angeles on Sep. 25 and dropped La Paz on Sep. 29, Guaymas on Sep. 30, and Puerto Vallarta on Oct. 2 for Hurricane Polo. San Diego is an overnight from Sep. 26, and Mazatlán is added on Oct. 1. Cabo San Lucas is shortened. Cruise Industry News says a cancel pays a future cruise credit equal to 100 percent of base fare. If you sail, you get $100 onboard credit. Cruise Hive calls the cancel a refund. This page follows the future cruise credit.
+
+Oasis of the Seas boards Cape Liberty from 8pm to 10:30pm on Sep. 27 after a 10-hour nor'easter delay. Port Canaveral on Sep. 29 is cancelled. Nassau on Sep. 30 arrives at 7:30am. CocoCay on Oct. 1 stays. Royal credits Canaveral tours and one day of packages onboard. The Sep. 20 medical-delay post is a different sailing.
+
+Valiant Lady docks in New York around 4pm on Sep. 27. You can walk off around 5pm. The Bermuda cruise boards Sunday evening or Monday morning, sails around noon Monday, and keeps one Bermuda day from 9am to 4pm. Joining sailors get $200 Sailor Loot and $200 Future Voyage Credit per person.`,
   },
 };
