@@ -26,17 +26,19 @@ for (const [ymd, copy] of Object.entries(CRUISE_NEWS_TODAY)) {
 }
 
 const posts = loadNewsPosts();
-const now = new Date('2026-09-27T16:00:00-04:00');
+const now = new Date('2026-09-28T16:00:00-04:00');
 const model = buildNewsTodayModel(posts, now);
-check('build day is Sep 27 ET', model.today === '2026-09-27');
-check('Sep 27 has eight stories', model.edition('2026-09-27').posts.length === 8);
-check('Sep 27 edition is indexable', model.edition('2026-09-27').indexable === true);
+check('build day is Sep 28 ET', model.today === '2026-09-28');
+check('Sep 28 has three stories', model.edition('2026-09-28').posts.length === 3);
+check('Sep 28 edition is indexable', model.edition('2026-09-28').indexable === true);
+check('Sep 27 archive still has eight stories', model.edition('2026-09-27').posts.length === 8);
 check('every loaded news day has an indexable summary', model.days.every((ymd) => model.edition(ymd).indexable));
 
 const paths = newsTodayPublicPaths(posts, now);
 check('live URL is in the sitemap set', paths.has('/news/today/'));
 check('past archive is in the sitemap set', paths.has('/news/today/2026-09-19/'));
-check('current dated URL is not duplicated in the sitemap set', !paths.has('/news/today/2026-09-27/'));
+check('current dated URL is not duplicated in the sitemap set', !paths.has('/news/today/2026-09-28/'));
+check('Sep 27 archive is in the sitemap set', paths.has('/news/today/2026-09-27/'));
 
 const lateUtc = new Date('2026-09-27T03:30:00Z');
 const grouped = buildNewsTodayModel([{
