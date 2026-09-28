@@ -138,4 +138,17 @@ Oasis of the Seas boards Cape Liberty from 8pm to 10:30pm on Sep. 27 after a 10-
 
 Valiant Lady docks in New York around 4pm on Sep. 27. You can walk off around 5pm. The Bermuda cruise boards Sunday evening or Monday morning, sails around noon Monday, and keeps one Bermuda day from 9am to 4pm. Joining sailors get $200 Sailor Loot and $200 Future Voyage Credit per person.`,
   },
+  '2026-09-28': {
+    description: 'Cruise news for Sep. 28, 2026: Independence cuts Bermuda to a day, Brilliant Lady reroutes for Polo, and Celebrity changes a Concierge perk.',
+    answer: 'On Sep. 28, 2026 three stories published. Independence of the Seas held at Cape Liberty and cut its Bermuda overnight to a Tuesday day call. Brilliant Lady dropped three Mexico ports for a California week because of Hurricane Polo. Celebrity Concierge Class loses afternoon canapés, and the room-service delivery fee is waived after Sep. 21.',
+    summary: `Sep. 28, 2026 has three stories. Nothing on this date had published before these three. Open each link for the named source and the date it was checked. This page only restates those posts.
+
+Independence of the Seas stayed at Cape Liberty overnight on Sep. 26 after Captain Tor Olsen said harbor pilots were suspended until at least 10am Sunday. The working plan is a noon sail on Sep. 27 toward Bermuda. The Monday overnight becomes a Tuesday day call. Deep Arrival still lists a Thursday Oct. 1 arrival at 7am. Neither source published a compensation dollar amount. Royal-booked tours for the dropped overnight should show as onboard credit once the app updates. This sailing is separate from the Oasis, Vision, and Valiant Lady nor'easter posts.
+
+Brilliant Lady's Sep. 26 Los Angeles sailing dropped Cabo San Lucas on Sep. 28, Mazatlán on Sep. 29, and Puerto Vallarta on Sep. 30 because of Hurricane Polo. VV Insider's schedule calls San Francisco on Sep. 28 from 8am to 8pm, San Diego on Sep. 30 from 8am to 6pm, Catalina Island on Oct. 1 from 8am to 6pm by tender, and Ensenada on Oct. 2 from 8am to 5pm. The ship returns to Los Angeles at 6:30am on Oct. 3. Shore Things for the removed ports refund to the original payment. Cruise Hive confirms the three cancelled Mexico calls plus San Francisco, San Diego, and Ensenada. Catalina and the clocks are VV Insider's. Pack a jacket.
+
+Celebrity's Concierge Class page, checked Sep. 28, lists two complimentary water bottles on embarkation day and room service with the delivery fee waived. A 20 percent gratuity may still apply. Daily delectable delights is absent from that list. Cruise Hive dates the change to sailings that depart after Sep. 21 and puts the waived delivery fee at $9.95 per order. The welcome lunch and concierge service remain on the line's list.
+
+If you are on Independence of the Seas, recheck the app after 10am Sunday and plan Bermuda as one Tuesday. If you are on Brilliant Lady, clear the Mexico tours and confirm the California calls. If you booked Concierge Class on a sailing that leaves after Sep. 21, read the benefits page before you expect a canapé tray.`,
+  },
 };
