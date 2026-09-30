@@ -40,6 +40,15 @@ check('past archive is in the sitemap set', paths.has('/news/today/2026-09-19/')
 check('current dated URL is not duplicated in the sitemap set', !paths.has('/news/today/2026-09-28/'));
 check('Sep 27 archive is in the sitemap set', paths.has('/news/today/2026-09-27/'));
 
+const sep30Now = new Date('2026-09-30T12:00:00-04:00');
+const sep30 = buildNewsTodayModel(posts, sep30Now);
+check('Sep 30 build day is Sep 30 ET', sep30.today === '2026-09-30');
+check('Sep 30 has three stories', sep30.edition('2026-09-30').posts.length === 3);
+check('Sep 30 edition is indexable', sep30.edition('2026-09-30').indexable === true);
+const sep30Paths = newsTodayPublicPaths(posts, sep30Now);
+check('Sep 30 live URL is in the sitemap set', sep30Paths.has('/news/today/'));
+check('Sep 30 dated URL is not duplicated while it is current', !sep30Paths.has('/news/today/2026-09-30/'));
+
 const lateUtc = new Date('2026-09-27T03:30:00Z');
 const grouped = buildNewsTodayModel([{
   id: 'late',
