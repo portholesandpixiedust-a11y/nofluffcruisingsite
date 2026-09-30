@@ -43,7 +43,7 @@ check('Sep 27 archive is in the sitemap set', paths.has('/news/today/2026-09-27/
 const sep30Now = new Date('2026-09-30T12:00:00-04:00');
 const sep30 = buildNewsTodayModel(posts, sep30Now);
 check('Sep 30 build day is Sep 30 ET', sep30.today === '2026-09-30');
-check('Sep 30 has five stories', sep30.edition('2026-09-30').posts.length === 5);
+check('Sep 30 has eight stories', sep30.edition('2026-09-30').posts.length === 8);
 check('Sep 30 edition is indexable', sep30.edition('2026-09-30').indexable === true);
 const sep30Paths = newsTodayPublicPaths(posts, sep30Now);
 check('Sep 30 live URL is in the sitemap set', sep30Paths.has('/news/today/'));
