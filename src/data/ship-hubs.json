@@ -1,8 +1,9 @@
 {
   "carnival-paradise": {
-    "title": "Carnival Paradise: Specs, Class, CDC Score",
-    "description": "Carnival calls Paradise its last Fantasy-class ship. The line lists 71,925 gross tons, 2,124 guests, and a 1998 entry into service. CDC score 99 on 30 Jul 2026.",
-    "lead": "Carnival Paradise is the last Fantasy-class ship Carnival says it built. The ship page lists 71,925 gross tons, a guest capacity of 2,124, a length of 855 feet, and 920 crew. The fact sheet matches the tonnage and the guest count, and it lists 1998, Kvaerner Masa-Yards, and a Panama registry.",
+    "title": "Carnival Paradise Cruise Ship: Last Fantasy Class",
+    "description": "Carnival Paradise is the last Fantasy-class cruise ship Carnival says it built: 71,925 gross tons, 2,124 guests, in service since 1998. CDC score 99.",
+    "h1": "Carnival Paradise cruise ship",
+    "lead": "Carnival Paradise is the last Fantasy-class cruise ship Carnival says it built. The ship page lists 71,925 gross tons, a guest capacity of 2,124, a length of 855 feet, and 920 crew. The fact sheet matches the tonnage and the guest count, and it lists 1998, Kvaerner Masa-Yards, and a Panama registry.",
     "paragraphs": [
       "This page uses Carnival's published pages and the CDC green sheet. It does not describe a sailing we took."
     ],
@@ -88,9 +89,10 @@
     ]
   },
   "carnival-firenze": {
-    "title": "Carnival Firenze: Specs, Class, CDC Score",
-    "description": "Carnival took Firenze from Costa on 2 Feb 2024. The ship page lists 135,156 gross tons and 4,126 guests. A naming story said 5,000 guests. CDC score 98 on 12 Jan 2026.",
-    "lead": "Carnival Firenze joined Carnival from Costa Cruises on 2 Feb 2024. Carnival's president called Carnival Venezia her sister in that handover release. The current ship page lists 135,156 gross tons, a guest capacity of 4,126, a length of 1,061 feet, and 1,425 crew.",
+    "title": "Carnival Firenze Cruise Ship: Joined From Costa",
+    "description": "Carnival Firenze joined Carnival from Costa on 2 Feb 2024. The ship page lists 135,156 gross tons and 4,126 guests. First sailings left Long Beach.",
+    "h1": "Carnival Firenze cruise ship",
+    "lead": "Carnival Firenze is a Carnival cruise ship that joined the line from Costa Cruises on 2 Feb 2024. Carnival's president called Carnival Venezia her sister in that handover release. The current ship page lists 135,156 gross tons, a guest capacity of 4,126, a length of 1,061 feet, and 1,425 crew.",
     "paragraphs": [
       "Carnival's 25 Apr 2024 naming story calls Firenze a 5,000-guest ship. The ship page lists 4,126. Use 4,126 when you compare cabins. The rounded line is Carnival's own wording from the naming day.",
       "This page uses Carnival's published pages and the CDC green sheet. It does not describe a sailing we took."
@@ -173,9 +175,10 @@
     ]
   },
   "carnival-horizon": {
-    "title": "Carnival Horizon: Specs, Class, CDC Score",
-    "description": "Carnival lists Horizon at 133,500 gross tons and 3,960 guests, in service since 2018. Fincantieri calls it Vista class and also prints 133,596. CDC score 95 on 8 Feb 2026.",
-    "lead": "Carnival Horizon is a Vista-class ship. Fincantieri, the builder, calls it a sister to Carnival Vista and lists delivery in 2018. Carnival's ship page and fact sheet both list 133,500 gross tons, a guest capacity of 3,960, and 1,450 crew.",
+    "title": "Carnival Horizon Cruise Ship: Vista Class, 2018",
+    "description": "Carnival Horizon is a Vista-class cruise ship from 2018, sister to Carnival Vista. Carnival lists 133,500 gross tons and 3,960 guests. CDC score 95.",
+    "h1": "Carnival Horizon cruise ship",
+    "lead": "Carnival Horizon is a Vista-class cruise ship. Fincantieri, the builder, calls it a sister to Carnival Vista and lists delivery in 2018. Carnival's ship page and fact sheet both list 133,500 gross tons, a guest capacity of 3,960, and 1,450 crew.",
     "paragraphs": [
       "Fincantieri's product page says 133,500 tons in the introduction and prints 133,596 in the specification table on the same page. Carnival's public figure is 133,500. Use Carnival's number for the line's capacity claims, and treat 133,596 as the builder's table figure.",
       "Carnival.com lists length as 1,055 feet. Fincantieri lists length overall as 323.4 meters. This page does not convert one into the other.",
@@ -265,9 +268,10 @@
     ]
   },
   "carnival-spirit": {
-    "title": "Carnival Spirit: Specs, Class, CDC Score",
-    "description": "Carnival's fact sheet lists Spirit at 88,500 gross tons, double occupancy 2,124, in service since 2001. The ship page lists guest capacity 2,134. CDC score 99 on 8 Feb 2026.",
-    "lead": "Carnival Spirit entered service in 2001 from Kvaerner Masa-Yards, per Carnival's fact sheet. That sheet lists 88,500 gross tons and double occupancy of 2,124, with 930 team members. The ship page lists the same tonnage, the same crew count, a length of 963 feet, and a guest capacity of 2,134.",
+    "title": "Carnival Spirit Cruise Ship: Hawaii Port Change",
+    "description": "Carnival Spirit is a Carnival cruise ship in service since 2001. The 23 Sep 2026 Seattle sailing reordered its Hawaii ports. Fact sheet: 88,500 gross tons.",
+    "h1": "Carnival Spirit cruise ship",
+    "lead": "Carnival Spirit is a Carnival cruise ship that entered service in 2001 from Kvaerner Masa-Yards, per Carnival's fact sheet. That sheet lists 88,500 gross tons and double occupancy of 2,124, with 930 team members. The ship page lists the same tonnage, the same crew count, a length of 963 feet, and a guest capacity of 2,134.",
     "paragraphs": [
       "Those two Carnival pages disagree by 10 guests. The fact sheet says double occupancy 2,124. The ship page says guest capacity 2,134. This page does not pick a winner. Check the booking engine for the cabin you want.",
       "This database files the ship as Spirit class. Carnival's fact-sheet facts block does not print a class name. It does print the yard, the year, and the tonnage.",
@@ -355,9 +359,10 @@
     ]
   },
   "carnival-sunrise": {
-    "title": "Carnival Sunrise: Specs, Class, CDC Score",
-    "description": "Carnival's fact sheet lists Sunrise at 101,509 gross tons and 2,984 guests, entered service 1999. A 2018 Carnival release said Triumph would be renamed Sunrise. CDC score 100 on 12 Feb 2026.",
-    "lead": "Carnival Sunrise is the ship Carnival renamed from Carnival Triumph. A 31 Jul 2018 Carnival announcement said a Cadiz dry dock would lead to the new name and place the ship in the Sunshine class. Carnival's fact sheet now lists entered service as 1999, 101,509 gross tons, and double occupancy of 2,984.",
+    "title": "Carnival Sunrise Cruise Ship: Renamed From Triumph",
+    "description": "Carnival Sunrise is the cruise ship renamed from Carnival Triumph. Fact sheet: 101,509 gross tons, 2,984 guests, in service since 1999. CDC score 100.",
+    "h1": "Carnival Sunrise cruise ship",
+    "lead": "Carnival Sunrise is the cruise ship Carnival renamed from Carnival Triumph. A 31 Jul 2018 Carnival announcement said a Cadiz dry dock would lead to the new name and place the ship in the Sunshine class. Carnival's fact sheet now lists entered service as 1999, 101,509 gross tons, and double occupancy of 2,984.",
     "paragraphs": [
       "An earlier version of this page listed 2014. That year is wrong against Carnival's fact sheet, which lists 1999. This database still files the ship as Destiny class. Carnival's 2018 announcement said the renamed ship would join the Sunshine class. Those are two labels for one hull.",
       "The fact sheet's shipyard field reads Cadiz, Spain. The 2018 announcement describes Cadiz as the dry-dock yard for the rename, starting 1 Mar 2019. Do not read that field as a claim about the original builder. Carnival's fact sheet does not name the original yard.",
@@ -439,9 +444,10 @@
     ]
   },
   "wonder-of-the-seas": {
-    "title": "Wonder of the Seas: Specs and CDC Score",
-    "description": "Royal Caribbean's 11 Sep 2025 guide lists Wonder at 235,600 gross tons, 18 decks, and 5,734 guests at double occupancy. CDC score 99 on 13 Feb 2026. The guide's 'largest ship' line is stale.",
-    "lead": "Wonder of the Seas is an Oasis-class ship. Royal Caribbean's own size guide, published 11 Sep 2025, lists 235,600 gross tons, 18 decks, eight neighborhoods, 1,188 feet long, 215 feet wide, 5,734 guests at double occupancy, and a crew of 2,204.",
+    "title": "Wonder of the Seas Cruise Ship: Oasis Class Size",
+    "description": "Wonder of the Seas is an Oasis-class cruise ship: 235,600 gross tons and 5,734 guests at double occupancy. Royal Caribbean's largest-ship line is stale.",
+    "h1": "Wonder of the Seas cruise ship",
+    "lead": "Wonder of the Seas is an Oasis-class cruise ship. Royal Caribbean's own size guide, published 11 Sep 2025, lists 235,600 gross tons, 18 decks, eight neighborhoods, 1,188 feet long, 215 feet wide, 5,734 guests at double occupancy, and a crew of 2,204.",
     "paragraphs": [
       "That same guide still calls Wonder the largest cruise ship in the world. Treat that superlative as stale. Icon of the Seas is already in service in this database, and the guide's own date is 11 Sep 2025. This page uses the measurements and does not repeat 'largest' as a current fact.",
       "The guide does not print a maximum berth count above the 5,734 double-occupancy figure. This page does not repeat an older unsourced maximum.",
@@ -531,9 +537,10 @@
     ]
   },
   "disney-dream": {
-    "title": "Disney Dream: Specs, Class, CDC Score",
-    "description": "Disney's technical sheet lists Dream at 129,690 gross tons, delivered December 2010, built by Meyer Werft. The sheet has no guest count. CDC score 100 on 2 May 2026.",
-    "lead": "Disney Dream is grouped on this site with Disney Fantasy in the Dream class. Disney's technical information sheet lists 129,690 gross tons, a length of 339.8 meters (1,114.7 feet), builder Meyer Werft in Papenburg, keel laid August 2009, and delivery in December 2010.",
+    "title": "Disney Dream Cruise Ship: Delivered December 2010",
+    "description": "Disney Dream is a Dream-class cruise ship. Disney lists 129,690 gross tons and a December 2010 delivery. The sheet has no guest count. CDC score 100.",
+    "h1": "Disney Dream cruise ship",
+    "lead": "Disney Dream is a Disney cruise ship grouped on this site with Disney Fantasy in the Dream class. Disney's technical information sheet lists 129,690 gross tons, a length of 339.8 meters (1,114.7 feet), builder Meyer Werft in Papenburg, keel laid August 2009, and delivery in December 2010.",
     "paragraphs": [
       "That sheet does not print a guest count. This page does not repeat an older maximum, because that number is not on the sheet. This database still carries 2011 as the in-service year. The sheet lists delivery in December 2010 and does not print a maiden-voyage date.",
       "The sheet was retrieved from Disney Cruise Line Blog, which hosts the Disney document. Figures below are the ones printed on that sheet.",
@@ -615,9 +622,10 @@
     ]
   },
   "msc-poesia": {
-    "title": "MSC Poesia: Specs, Class, CDC Score",
-    "description": "MSC's technical sheet lists Poesia at 92,627 gross tons and 13 guest decks. Passenger counts disagree across MSC pages. A 15 Apr 2026 release added the Yacht Club. CDC score 97 on 23 Apr 2026.",
-    "lead": "MSC Poesia is a Musica-class ship. MSC's 15 Apr 2026 release says she is the second of the four Musica-class ships through a Palumbo Malta dry dock, after MSC Magnifica. The same release says the work added the MSC Yacht Club before Alaska sailings from Seattle.",
+    "title": "MSC Poesia Cruise Ship: 2026 Yacht Club Refit",
+    "description": "MSC Poesia is a Musica-class cruise ship. An Apr 2026 dry dock added the Yacht Club before Alaska sailings from Seattle. CDC score on this page is 97.",
+    "h1": "MSC Poesia cruise ship",
+    "lead": "MSC Poesia is a Musica-class cruise ship. MSC's 15 Apr 2026 release says she is the second of the four Musica-class ships through a Palumbo Malta dry dock, after MSC Magnifica. The same release says the work added the MSC Yacht Club before Alaska sailings from Seattle.",
     "paragraphs": [
       "MSC's technical sheet lists 92,627 gross tons, 16 decks including 13 for guests, length 293.80 meters, beam 32.20 meters, height 59.64 meters, and a maximum speed of 23 knots. It lists 3,223 passengers, 1,275 cabins, and about 987 crew.",
       "MSC's public ship pages do not agree with each other, or with that sheet, on the head count. The Canada page lists 3,013 passengers, about 987 crew, and 1,229 cabins. The Australia page lists 3,223 passengers, about 1,039 crew, and 1,223 cabins. An earlier version of this page listed 2,550 guests at double occupancy. That figure is not on these current MSC pages. Do not use 2,550.",
@@ -699,6 +707,188 @@
       {"claim": "92,627 tons. 3,013 passengers. About 987 crew. 1,229 cabins. Yacht Club with 63 suites from 23 Apr 2026. Butcher's Cut and Kaito named on the page.", "outlet": "MSC Cruises Canada", "tier": 1, "date": "27 Sep 2026", "url": "https://www.msccruises.ca/plan-a-cruise/ships/msc-poesia"},
       {"claim": "92,627 tons. 3,223 passengers. About 1,039 crew. 1,223 cabins. Yacht Club with 63 suites from 23 Apr 2026.", "outlet": "MSC Cruises Australia", "tier": 1, "date": "27 Sep 2026", "url": "https://www.msccruises.com.au/our-cruises/ships/msc-poesia"},
       {"claim": "Most recent score 97 on 23 Apr 2026.", "outlet": "CDC Vessel Sanitation Program green sheet", "tier": 1, "date": "27 Sep 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-mardi-gras": {
+    "title": "Mardi Gras Cruise Ship: Carnival Excel Since 2021",
+    "description": "Carnival Mardi Gras is an Excel-class Carnival cruise ship in service since 2021. This site's CDC tracker lists Mardi Gras at 98 from 11 Apr 2026.",
+    "h1": "Carnival Mardi Gras cruise ship",
+    "checked": "1 Oct 2026",
+    "lead": "Carnival Mardi Gras is an Excel-class Carnival Cruise Line ship. This database lists it in service since 2021. It does not list a home port or a guest count.",
+    "paragraphs": [
+      "The CDC tracker on this site has a row named Mardi Gras, under Carnival Cruise Lines, scored 98 from an inspection on 11 Apr 2026. That Green Sheet copy was retrieved 27 Sep 2026. This page uses the name Carnival Mardi Gras.",
+      "This page does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Line", "value": "Carnival Cruise Line", "source": "This database", "url": "/lines/carnival/", "checked": "1 Oct 2026"},
+      {"label": "Class", "value": "Excel", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Entered service", "value": "2021", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Status", "value": "In service", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "CDC score", "value": "98 on 11 Apr 2026, row name Mardi Gras", "source": "CDC tracker on this site", "url": "/trackers/cdc-scores/", "checked": "1 Oct 2026"}
+    ],
+    "cdc": {
+      "score": 98,
+      "inspected": "11 Apr 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx",
+      "note": "The Green Sheet row on this site uses the name Mardi Gras."
+    },
+    "related": [
+      {"href": "/trackers/cdc-scores/", "label": "CDC scores tracker, including the Mardi Gras row"}
+    ],
+    "faq": [
+      {"q": "What is Carnival Mardi Gras?", "a": "This database files Carnival Mardi Gras as an Excel-class Carnival Cruise Line ship in service since 2021. It does not list a home port or a guest count."},
+      {"q": "What CDC score does this site list?", "a": "The CDC tracker retrieved 27 Sep 2026 lists a Carnival ship named Mardi Gras at 98 from an inspection on 11 Apr 2026."}
+    ],
+    "sources": [
+      {"claim": "Most recent score 98 on 11 Apr 2026 for the Green Sheet row named Mardi Gras, Carnival Cruise Lines.", "outlet": "CDC Vessel Sanitation Program green sheet, via this site's CDC tracker retrieved 27 Sep 2026", "tier": 1, "date": "1 Oct 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "freedom-of-the-seas": {
+    "title": "Freedom of the Seas Cruise Ship: Southampton 2027",
+    "description": "Freedom of the Seas is a Freedom-class Royal Caribbean cruise ship from 2006, listing 3,934 guests. Summer 2027 Miami sailings move to Southampton.",
+    "h1": "Freedom of the Seas cruise ship",
+    "checked": "1 Oct 2026",
+    "lead": "Freedom of the Seas is a Freedom-class Royal Caribbean cruise ship that entered service in 2006. This database lists 3,934 guests at double occupancy, up to 4,515 guests, and 15 decks.",
+    "paragraphs": [
+      "This database says the ship is redeploying to Southampton for summer 2027 after more than 20 Miami sailings were cancelled. The guide that carries that claim cites The Independent and the New York Post.",
+      "A review on this site says Freedom sails primarily out of Miami, and that Southampton sailings have run Baltic itineraries. That review is a Cruise Critic roundup. It is not a sailing log. This page does not repeat its prices.",
+      "This page does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Line", "value": "Royal Caribbean", "source": "This database", "url": "/lines/royal-caribbean/", "checked": "1 Oct 2026"},
+      {"label": "Class", "value": "Freedom", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Entered service", "value": "2006", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Guests, double occupancy", "value": "3,934", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Maximum guests", "value": "4,515", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Decks", "value": "15", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Summer 2027", "value": "Southampton redeployment after cancelled Miami sailings", "source": "Guide on this site", "url": "/guides/royal-caribbean-leadership-just-confirmed/", "checked": "1 Oct 2026"},
+      {"label": "CDC score", "value": "94 on 12 Feb 2026", "source": "CDC tracker on this site", "url": "/trackers/cdc-scores/", "checked": "1 Oct 2026"}
+    ],
+    "cdc": {
+      "score": 94,
+      "inspected": "12 Feb 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/reviews/freedom-grandeur-and-independence-3-underrated-royal-caribbean-ships-w/", "label": "Freedom, Grandeur, and Independence review"},
+      {"href": "/guides/royal-caribbean-leadership-just-confirmed/", "label": "Summer 2027 Southampton redeployment"},
+      {"href": "/guides/royal-caribbean-cdc-health-inspection-scores-ranked/", "label": "Royal Caribbean CDC scores, including Freedom at 94"}
+    ],
+    "faq": [
+      {"q": "What is Freedom of the Seas?", "a": "This database files Freedom of the Seas as a Freedom-class Royal Caribbean cruise ship that entered service in 2006, with 3,934 guests at double occupancy and up to 4,515 guests."},
+      {"q": "Where is Freedom of the Seas sailing in 2027?", "a": "A guide on this site says more than 20 Miami sailings were cancelled for summer 2027 and the ship is redeploying to Southampton. That guide cites The Independent and the New York Post."},
+      {"q": "What CDC score does this site list?", "a": "The CDC tracker retrieved 27 Sep 2026 lists Freedom of the Seas at 94 from an inspection on 12 Feb 2026."}
+    ],
+    "sources": [
+      {"claim": "More than 20 Freedom of the Seas Miami sailings cancelled for summer 2027, ship redeployed to Southampton.", "outlet": "The Independent and New York Post, as cited in a guide on this site", "tier": 2, "date": "1 Oct 2026", "url": "/guides/royal-caribbean-leadership-just-confirmed/", "note": "The guide names both outlets. This page does not add a new report."},
+      {"claim": "Freedom sails primarily out of Miami and also runs Southampton Baltic itineraries in that review.", "outlet": "Review on this site, drawn from Cruise Critic", "tier": 2, "date": "1 Oct 2026", "url": "/reviews/freedom-grandeur-and-independence-3-underrated-royal-caribbean-ships-w/"},
+      {"claim": "Most recent score 94 on 12 Feb 2026.", "outlet": "CDC Vessel Sanitation Program green sheet, via this site's CDC tracker retrieved 27 Sep 2026", "tier": 1, "date": "1 Oct 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-dream": {
+    "title": "Carnival Dream Cruise Ship: Dream Class Since 2009",
+    "description": "Carnival Dream is a Dream-class Carnival cruise ship in service since 2009. This database lists 128,000 gross tons. CDC score 98 from 5 Jul 2026.",
+    "h1": "Carnival Dream cruise ship",
+    "checked": "1 Oct 2026",
+    "lead": "Carnival Dream is a Dream-class Carnival Cruise Line ship. This database lists it in service since 2009, at 128,000 gross tons. It does not list a home port or a guest count.",
+    "paragraphs": [
+      "The CDC tracker on this site lists Carnival Dream at 98 from an inspection on 5 Jul 2026. That Green Sheet copy was retrieved 27 Sep 2026.",
+      "No news post on this site names Carnival Dream, so the latest-news list on this page is empty.",
+      "This page does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Line", "value": "Carnival Cruise Line", "source": "This database", "url": "/lines/carnival/", "checked": "1 Oct 2026"},
+      {"label": "Class", "value": "Dream", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Entered service", "value": "2009", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Gross tonnage", "value": "128,000", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "CDC score", "value": "98 on 5 Jul 2026", "source": "CDC tracker on this site", "url": "/trackers/cdc-scores/", "checked": "1 Oct 2026"}
+    ],
+    "cdc": {
+      "score": 98,
+      "inspected": "5 Jul 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/trackers/cdc-scores/", "label": "CDC scores tracker, including Carnival Dream"}
+    ],
+    "faq": [
+      {"q": "What is Carnival Dream?", "a": "This database files Carnival Dream as a Dream-class Carnival Cruise Line ship in service since 2009, at 128,000 gross tons. It does not list a home port or a guest count."},
+      {"q": "What CDC score does this site list?", "a": "The CDC tracker retrieved 27 Sep 2026 lists Carnival Dream at 98 from an inspection on 5 Jul 2026."}
+    ],
+    "sources": [
+      {"claim": "Most recent score 98 on 5 Jul 2026.", "outlet": "CDC Vessel Sanitation Program green sheet, via this site's CDC tracker retrieved 27 Sep 2026", "tier": 1, "date": "1 Oct 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-jubilee": {
+    "title": "Carnival Jubilee Cruise Ship: Galveston Short Trips",
+    "description": "Carnival Jubilee is an Excel-class Carnival cruise ship in service since 2023. Carnival added regular 4- and 5-day Galveston cruises for 2028-29.",
+    "h1": "Carnival Jubilee cruise ship",
+    "checked": "1 Oct 2026",
+    "lead": "Carnival Jubilee is an Excel-class Carnival Cruise Line ship. This database lists it in service since 2023. It does not list a guest count.",
+    "paragraphs": [
+      "Carnival's 17 Sep 2026 release opened 2028-29 Galveston bookings with Jubilee's first regular four- and five-day sailings from Texas. Four-day Cozumel trips leave select Thursdays from 27 Apr 2028. Five-day Cozumel and Progreso trips leave select Saturdays and Mondays from 17 Apr 2028 through April 2029.",
+      "That release is about the 2028-29 season. This page does not turn it into a claim that Galveston is the ship's only home port today.",
+      "This page does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Line", "value": "Carnival Cruise Line", "source": "This database", "url": "/lines/carnival/", "checked": "1 Oct 2026"},
+      {"label": "Class", "value": "Excel", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Entered service", "value": "2023", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "2028-29 short cruises", "value": "Galveston, four- and five-day", "source": "Carnival News, 17 Sep 2026", "url": "https://www.carnival-news.com/2026/09/17/carnival-jubilee-debuts-first-ever-short-cruises-on-excel-class-ship-from-galveston", "checked": "1 Oct 2026"},
+      {"label": "CDC score", "value": "100 on 7 Mar 2026", "source": "CDC tracker on this site", "url": "/trackers/cdc-scores/", "checked": "1 Oct 2026"}
+    ],
+    "cdc": {
+      "score": 100,
+      "inspected": "7 Mar 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/trackers/cdc-scores/", "label": "CDC scores tracker, including Carnival Jubilee at 100"}
+    ],
+    "faq": [
+      {"q": "What is Carnival Jubilee?", "a": "This database files Carnival Jubilee as an Excel-class Carnival Cruise Line ship in service since 2023."},
+      {"q": "What short cruises did Carnival add?", "a": "Carnival's 17 Sep 2026 release opened regular four- and five-day Jubilee sailings from Galveston for 2028-29. Four-day trips call Cozumel. Five-day trips call Cozumel and Progreso."},
+      {"q": "What CDC score does this site list?", "a": "The CDC tracker retrieved 27 Sep 2026 lists Carnival Jubilee at 100 from an inspection on 7 Mar 2026."}
+    ],
+    "sources": [
+      {"claim": "2028-29 Galveston season opened 17 Sep 2026 with Jubilee's first regular 4- and 5-day sailings. Four-day Cozumel Thursdays from 27 Apr 2028. Five-day Cozumel and Progreso from 17 Apr 2028 through April 2029.", "outlet": "Carnival Cruise Line", "tier": 1, "date": "17 Sep 2026", "url": "https://www.carnival-news.com/2026/09/17/carnival-jubilee-debuts-first-ever-short-cruises-on-excel-class-ship-from-galveston"},
+      {"claim": "Most recent score 100 on 7 Mar 2026.", "outlet": "CDC Vessel Sanitation Program green sheet, via this site's CDC tracker retrieved 27 Sep 2026", "tier": 1, "date": "1 Oct 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
+    ]
+  },
+  "carnival-magic": {
+    "title": "Carnival Magic Cruise Ship: Dream Class, CDC 96",
+    "description": "Carnival Magic is a Dream-class Carnival cruise ship in service since 2011. CDC score 96 from 7 Jun 2026. News covers a 13 Sep 2026 full muster drill.",
+    "h1": "Carnival Magic cruise ship",
+    "checked": "1 Oct 2026",
+    "lead": "Carnival Magic is a Dream-class Carnival Cruise Line ship. This database lists it in service since 2011. It does not list a home port, a guest count, or a tonnage.",
+    "paragraphs": [
+      "A news post on this site says Carnival Magic ran a full muster drill on the 13 Sep 2026 departure. Cruise Hive is the source named in that post. The 26 to 28 Sep 2026 drill week in the same post is a different set of ships.",
+      "The CDC tracker on this site lists Carnival Magic at 96 from an inspection on 7 Jun 2026. That Green Sheet copy was retrieved 27 Sep 2026.",
+      "This page does not describe a sailing we took."
+    ],
+    "facts": [
+      {"label": "Line", "value": "Carnival Cruise Line", "source": "This database", "url": "/lines/carnival/", "checked": "1 Oct 2026"},
+      {"label": "Class", "value": "Dream", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Entered service", "value": "2011", "source": "This database", "url": "/ships/", "checked": "1 Oct 2026"},
+      {"label": "Muster drill", "value": "Full drill on the 13 Sep 2026 departure", "source": "News on this site", "url": "/news/carnival-full-in-person-muster-drills-five-ships-september-26-28/", "checked": "1 Oct 2026"},
+      {"label": "CDC score", "value": "96 on 7 Jun 2026", "source": "CDC tracker on this site", "url": "/trackers/cdc-scores/", "checked": "1 Oct 2026"}
+    ],
+    "cdc": {
+      "score": 96,
+      "inspected": "7 Jun 2026",
+      "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"
+    },
+    "related": [
+      {"href": "/trackers/cdc-scores/", "label": "CDC scores tracker, including Carnival Magic"}
+    ],
+    "faq": [
+      {"q": "What is Carnival Magic?", "a": "This database files Carnival Magic as a Dream-class Carnival Cruise Line ship in service since 2011. It does not list a home port, a guest count, or a tonnage."},
+      {"q": "What news does this site have?", "a": "A news post says Carnival Magic ran a full muster drill on the 13 Sep 2026 departure. Cruise Hive is the source named there."},
+      {"q": "What CDC score does this site list?", "a": "The CDC tracker retrieved 27 Sep 2026 lists Carnival Magic at 96 from an inspection on 7 Jun 2026."}
+    ],
+    "sources": [
+      {"claim": "Carnival Magic ran a full muster drill on the 13 Sep 2026 departure.", "outlet": "Cruise Hive", "tier": 2, "date": "15 Sep 2026", "url": "https://www.cruisehive.com/carnival-sends-safety-drill-advisory-to-guests-on-two-sailings/217208", "note": "Cited in the news post on this site. Single Tier 2 source for that earlier drill."},
+      {"claim": "Most recent score 96 on 7 Jun 2026.", "outlet": "CDC Vessel Sanitation Program green sheet, via this site's CDC tracker retrieved 27 Sep 2026", "tier": 1, "date": "1 Oct 2026", "url": "https://wwwn.cdc.gov/inspectionquerytool/inspectiongreensheetrpt.aspx"}
     ]
   }
 }
