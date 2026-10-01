@@ -13,7 +13,7 @@ const { sources = [], updated } = Astro.props;
           <span class={`tier t${s.tier}`}>TIER {s.tier}</span>
           <span class="claim">{s.claim}</span><br />
           <span class="src">
-            {s.url ? <a href={s.url} rel="noopener nofollow">{s.outlet}</a> : s.outlet}
+            {s.url ? <a href={s.url} rel={s.url.startsWith('http') ? 'noopener nofollow' : undefined}>{s.outlet}</a> : s.outlet}
             {s.date && <>, checked {s.date}</>}
             {s.note && <> &middot; {s.note}</>}
           </span>

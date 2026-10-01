@@ -1,6 +1,7 @@
 ---
-title: "Disney Wish Review: Is It Actually Worth It?"
-description: "An honest, segment-by-segment review of the Disney Wish — arrival, cabin, rotational dining, and the verdict on whether the premium is worth what you pay for a 4-night Bahamian sailing."
+title: "Disney Wish Review: 4 Nights From Port Canaveral"
+description: "Disney Wish cruise ship review of a 4-night Port Canaveral sailing: oceanview cabin, rotational dining, and whether the short Bahamas premium is worth it."
+updatedDate: 2026-10-01
 answer: "The Disney Wish is worth sailing again for people who love Disney, not the best value per night. Four nights, an oceanview stateroom, and an AC gripe that never got fixed. The theming and included extras, three rotational dinners, 24/7 room service, and twice-daily housekeeping, carry the sailing. The short itinerary and no drink package make the premium add up."
 presenter: Marlee
 publishDate: 2026-09-14

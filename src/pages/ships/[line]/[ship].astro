@@ -78,11 +78,15 @@ if (d.videoTour) {
   });
 }
 
-const seenLinks = new Set();
+const latestNews = news.map((n) => ({ href: `/news/${n.id}/`, label: n.data.title }));
+for (const item of hub?.related ?? []) {
+  const hit = latestNews.find((n) => n.href === item.href);
+  if (hit) hit.label = item.label;
+}
+const seenLinks = new Set(latestNews.map((item) => item.href));
 const onSite = [];
 if (hub) {
   const auto = [
-    ...news.map((n) => ({ href: `/news/${n.id}/`, label: n.data.title })),
     ...posts.map((p) => ({ href: `/reviews/${p.id}/`, label: p.data.title })),
     ...relatedGuides.map((g) => ({ href: `/guides/${g.id}/`, label: g.data.title })),
   ];
@@ -98,7 +102,7 @@ if (hub) {
   <div class="wrap">
     <nav class="chips" aria-label="Breadcrumb"><a class="chip" href="/ships/">All ships</a><a class="chip" href={`/lines/${d.line}/`}>{lineName}</a></nav>
     <span class="eyebrow">{lineName} &middot; {d.shipClass} class &middot; {d.status}</span>
-    <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 20px">{d.name}</h1>
+    <h1 style="font-family:var(--fd);text-transform:uppercase;font-size:clamp(30px,5vw,46px);line-height:1;margin:6px 0 20px">{hub?.h1 ?? d.name}</h1>
 
     {hub ? (
       <article>
@@ -116,12 +120,19 @@ if (hub) {
                 <tr>
                   <td>{f.label}</td>
                   <td>{f.value}</td>
-                  <td><a href={f.url} rel="noopener nofollow">{f.source}</a>, {f.checked}</td>
+                  <td><a href={f.url} rel={f.url.startsWith('http') ? 'noopener nofollow' : undefined}>{f.source}</a>, {f.checked}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+
+        {latestNews.length > 0 && (
+          <section class="reflist" style="max-width:70ch">
+            <h2>Latest news</h2>
+            <ul>{latestNews.map((item) => <li><a href={item.href}>{item.label}</a></li>)}</ul>
+          </section>
+        )}
 
         {d.videoTour ? (
           <section class="tour">
@@ -137,7 +148,7 @@ if (hub) {
         )}
 
         <div class="prose" style="max-width:70ch">
-          {hub.sections.map((section) => (
+          {hub.sections?.map((section) => (
             <section>
               <h2>{section.heading}</h2>
               {section.paragraphs.map((p) => <p>{p}</p>)}
@@ -147,13 +158,18 @@ if (hub) {
             </section>
           ))}
 
-          <h2>CDC score</h2>
-          <p>
-            The CDC Vessel Sanitation Program green sheet, checked 27 Sep 2026, lists {d.name} at {hub.cdc.score} from an inspection on {hub.cdc.inspected}.
-            The sheet says scores of 85 or lower are not satisfactory.
-            A score is one unannounced inspection. It is not a rating of every later sailing.
-          </p>
-          <p><a href={hub.cdc.url} rel="noopener nofollow">CDC green sheet</a></p>
+          {hub.cdc && (
+            <>
+              <h2>CDC score</h2>
+              <p>
+                The CDC Vessel Sanitation Program green sheet, checked 27 Sep 2026, lists {d.name} at {hub.cdc.score} from an inspection on {hub.cdc.inspected}.
+                The sheet says scores of 85 or lower are not satisfactory.
+                A score is one unannounced inspection. It is not a rating of every later sailing.
+              </p>
+              {hub.cdc.note && <p>{hub.cdc.note}</p>}
+              <p><a href={hub.cdc.url} rel="noopener nofollow">CDC green sheet</a></p>
+            </>
+          )}
         </div>
 
         {faq.length > 0 && (
@@ -184,7 +200,7 @@ if (hub) {
           </section>
         )}
 
-        <Sources sources={hub.sources} updated="27 Sep 2026" />
+        <Sources sources={hub.sources} updated={hub.checked ?? "27 Sep 2026"} />
       </article>
     ) : (
       <>
