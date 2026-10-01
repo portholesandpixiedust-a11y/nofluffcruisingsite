@@ -1,0 +1,152 @@
+---
+import Base from '../../layouts/Base.astro';
+import TrackerNav from '../../components/TrackerNav.astro';
+import { getCollection } from 'astro:content';
+import { byPublishDate } from '../../utils/byPublishDate.js';
+import { formatEasternDisplay, formatEasternISO } from '../../utils/etDate.js';
+import { HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from '../../utils/newsTags.js';
+
+const entries = (await getCollection('news'))
+  .filter((entry) => (entry.data.tags ?? []).includes(HURRICANE_RACHEL_TAG))
+  .sort(byPublishDate);
+
+/** Same freshness order as the sitemap: updated stamp, then the publish stamp. */
+const storyInstant = (data) => data.updatedAt ?? data.updatedDate ?? data.publishedAt ?? data.publishDate;
+
+const rows = entries.map((entry) => {
+  const change = entry.data.itineraryChange;
+  return {
+    ship: change?.ship || entry.data.ships?.[0] || entry.data.title,
+    line: entry.data.line || '',
+    sailing: change?.sailing || entry.data.sailing || '',
+    changed: change?.changed || entry.data.answer,
+    href: `/news/${entry.id}/`,
+    title: entry.data.title,
+    published: entry.data.publishDate,
+  };
+});
+
+const instants = entries.map((entry) => storyInstant(entry.data)).filter(Boolean);
+const updated = instants.reduce((max, date) => (!max || date > max ? date : max), null);
+const published = instants.reduce((min, date) => (!min || date < min ? date : min), null);
+const updatedISO = updated ? formatEasternISO(updated) : undefined;
+const publishedISO = published ? formatEasternISO(published) : undefined;
+const updatedLabel = updated ? formatEasternDisplay(updated) : '';
+const fmt = (value) => new Date(value).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+
+const description = 'Sailings No Fluff Cruising has already tied to Hurricane Rachel, with the ship, the line, the sailing, and what changed, each linked to the news post.';
+const pageUrl = new URL(HURRICANE_RACHEL_TRACKER_PATH, Astro.site).href;
+const authorUrl = new URL('/matthew/', Astro.site).href;
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Hurricane Rachel cruise tracker',
+    description,
+    url: pageUrl,
+    ...(publishedISO ? { datePublished: publishedISO } : {}),
+    ...(updatedISO ? { dateModified: updatedISO } : {}),
+    author: {
+      '@type': 'Person',
+      name: 'Matthew',
+      url: authorUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'No Fluff Cruising',
+      url: Astro.site?.href,
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Sailings tied to Hurricane Rachel',
+    numberOfItems: rows.length,
+    itemListElement: rows.map((row, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: `${row.ship}: ${row.changed}`,
+      url: new URL(row.href, Astro.site).href,
+    })),
+  },
+];
+---
+<Base
+  title="Hurricane Rachel Cruise Tracker"
+  description={description}
+  jsonld={jsonld}
+  breadcrumbs={[{ name: 'Trackers', url: '/trackers/' }, { name: 'Hurricane Rachel', url: HURRICANE_RACHEL_TRACKER_PATH }]}
+  author="Matthew"
+  published={publishedISO}
+  modified={updatedISO}
+>
+  <div class="wrap">
+    <span class="eyebrow">Trackers</span>
+    <h1 class="sec">Hurricane Rachel</h1>
+    <div class="rule"></div>
+    <TrackerNav current="rachel" />
+    <div class="byline">
+      <img src="/avatar.png" width="42" height="42" alt="" />
+      <div>
+        <strong><a href="/matthew/">Matthew</a></strong>
+        <span>No Fluff Cruising{updatedLabel && <> &middot; Last updated <time datetime={updatedISO}>{updatedLabel}</time></>}</span>
+      </div>
+    </div>
+    <div class="answer" style="max-width:70ch"><b>The short answer</b>This list is {entries.length} {entries.length === 1 ? 'sailing' : 'sailings'} already published in our news about Hurricane Rachel. Each row names the ship, the line, the sailing, and what changed for a booked guest, then links to the post. A later post appears here when it is tagged {HURRICANE_RACHEL_TAG}. Storm position and wind speed stay in the posts that cited them.</div>
+    <p style="max-width:70ch;margin-top:-6px">If you are booked on a ship in the table, Rachel means a Pacific Mexico call may already be off, or the line may be holding a backup route it has not published. The row is only as specific as that post. A replacement port, a refund, or onboard credit is in the row only when that post's sources named one. If your ship is not listed, we have not published a Rachel story for it. The line's own note can still arrive first.</p>
+
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Ship</th>
+            <th scope="col">Line</th>
+            <th scope="col">Sailing</th>
+            <th scope="col">What changed</th>
+            <th scope="col">Story</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.length === 0 && (
+            <tr>
+              <td colspan="5">No Hurricane Rachel sailings are published yet.</td>
+            </tr>
+          )}
+          {rows.map((row) => (
+            <tr>
+              <td>{row.ship}</td>
+              <td>{row.line}</td>
+              <td>{row.sailing || 'See the story'}</td>
+              <td>{row.changed}</td>
+              <td><a href={row.href}>{row.title}</a><span class="meta">{fmt(row.published)}</span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose" style="max-width:70ch">
+      <h2>What to do if your sailing is affected</h2>
+      <ul>
+        <li>Open the cruise line's app and the email on the booking. That note is the one for your cabin. Use the linked post to see which outlet reported the change, and the date on that report.</li>
+        <li>When a port is skipped, the port fees and government taxes for that call are typically refunded to your onboard account. That is the usual treatment. It is not a fare refund, and it is not an onboard credit. Check the statement in your account for the line item. The table names a credit only when the linked post's sources printed one.</li>
+        <li>If you bought travel insurance, read the policy for a missed port or an itinerary change. The policy says what it covers. A skipped port is not, by itself, a cancelled cruise.</li>
+        <li>If you have a flight to the ship or home from the return port, confirm the embarkation time and the return time in the app before you change the ticket. Do that even when the skipped port is in the middle of the cruise. The posts name a new arrival or return only when a source did.</li>
+      </ul>
+
+      <h2>How a sailing gets on this list</h2>
+      <p>Add <code>hurricane-rachel</code> to <code>tags</code> on the news post in <code>src/content/news/</code>. This page reads that tag. It does not keep a second list.</p>
+      <pre class="howto"><code>{`tags: [hurricane-rachel]`}</code></pre>
+      <p>When the post has an <code>itineraryChange</code> block, the row uses that ship, that sailing, and what changed. When it does not, the row uses the first ship on the post, the optional <code>sailing</code> field, and the short answer. Use <code>sailing</code> for a story that concerns a booking and does not yet record a port skip, a delay, or a swap.</p>
+      <p>Write the row from facts already in the post and its sources. Leave the tag off a mention that does not concern a sailing a guest is holding.</p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .scroller table{min-width:920px}
+  td .meta{display:block;margin-top:4px}
+  pre.howto{font-family:var(--fm);font-size:13px;line-height:1.45;background:var(--sunk);border:1px solid var(--line);border-radius:4px;padding:14px 16px;overflow:auto;margin:0 0 15px}
+  .prose code{font-family:var(--fm);font-size:.92em}
+</style>
