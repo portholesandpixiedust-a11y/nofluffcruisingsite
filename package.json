@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
+    "@vercel/analytics": "^2.0.1",
     "astro": "^5.18.2"
   },
   "type": "module",
