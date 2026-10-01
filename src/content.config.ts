@@ -61,6 +61,8 @@ const news = defineCollection({
   schema: z.object({
     ...articleBase,
     video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }).optional(),
+    tags: z.array(z.string()).default([]),
+    sailing: z.string().min(1).optional(),
     itineraryChange: z.object({
       kinds: z.array(z.enum(['port-skip', 'delay', 'swap'])).min(1),
       ship: z.string().min(1),

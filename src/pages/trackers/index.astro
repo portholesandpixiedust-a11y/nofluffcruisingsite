@@ -2,14 +2,21 @@
 import Base from '../../layouts/Base.astro';
 import TrackerNav from '../../components/TrackerNav.astro';
 ---
-<Base title="Cruise Trackers: Itinerary Changes and CDC Scores" description="Two reference lists for people who are already booked: recent itinerary changes from our news, and CDC Vessel Sanitation scores from the Green Sheet." breadcrumbs={[{name:"Trackers", url:"/trackers/"}]}>
+<Base title="Cruise Trackers" description="Reference lists for people who are already booked: Hurricane Rachel sailings from our news, recent itinerary changes, and CDC Vessel Sanitation scores from the Green Sheet." breadcrumbs={[{name:"Trackers", url:"/trackers/"}]}>
   <div class="wrap">
     <span class="eyebrow">Trackers</span>
     <h1 class="sec">Cruise trackers</h1>
     <div class="rule"></div>
     <TrackerNav current="index" />
-    <div class="answer" style="max-width:70ch"><b>The short answer</b>Two lists you can scan before you sail. Itinerary changes we have already published, and CDC sanitation scores taken from the CDC Green Sheet.</div>
-    <div class="grid g2c">
+    <div class="answer" style="max-width:70ch"><b>The short answer</b>Lists you can scan before you sail. Hurricane Rachel sailings from our news, itinerary changes we have already published, and CDC sanitation scores taken from the CDC Green Sheet.</div>
+    <div class="grid g3">
+      <a class="card" href="/trackers/hurricane-rachel/">
+        <div class="body">
+          <span class="kicker">From our news</span>
+          <h3>Hurricane Rachel</h3>
+          <p>Sailings we have tied to Hurricane Rachel, with the ship, the line, the sailing, and what changed. Each row links to the news post that names the source.</p>
+        </div>
+      </a>
       <a class="card" href="/trackers/itinerary-changes/">
         <div class="body">
           <span class="kicker">From our news</span>

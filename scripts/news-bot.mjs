@@ -109,6 +109,11 @@ Rules that override everything else:
    loses or gains, using only facts already in the answer"}. kinds may include port-skip,
    delay, and swap. Omit itineraryChange for new itinerary releases, ship news, policy,
    and anything that does not change a sailing the reader could already hold.
+10. If the story concerns Hurricane Rachel and a sailing a guest could already hold,
+    add "tags": ["hurricane-rachel"] and "ships": ["Ship name"]. The Hurricane Rachel
+    cruise tracker reads that tag. If you omit itineraryChange because no port skip,
+    delay, or swap is confirmed, also set "sailing" to the sailing window already in
+    the answer. Omit the tag when the storm is only background.
 
 Write in this voice, which is not negotiable:
 <voice>
@@ -168,6 +173,18 @@ export function validate(p, existingSlugs) {
   if (p.conflict && !(p.conflictNote || '').trim()) {
     problems.push('conflict posts need a conflictNote');
   }
+  const tags = Array.isArray(p.tags) ? p.tags : [];
+  if (p.tags != null && !Array.isArray(p.tags)) problems.push('tags must be an array');
+  else if (tags.some((tag) => typeof tag !== 'string' || !/^[a-z0-9-]+$/.test(tag))) {
+    problems.push('tags must be kebab-case');
+  }
+  if (tags.includes('hurricane-rachel') && p.itineraryChange == null) {
+    const ships = Array.isArray(p.ships) ? p.ships.filter((ship) => typeof ship === 'string' && ship.trim()) : [];
+    if (ships.length === 0) problems.push('hurricane-rachel stories need a ship');
+    if (typeof p.sailing !== 'string' || !p.sailing.trim()) {
+      problems.push('hurricane-rachel stories without itineraryChange need sailing');
+    }
+  }
   if (p.itineraryChange != null) {
     const change = p.itineraryChange;
     const allowed = new Set(['port-skip', 'delay', 'swap']);
@@ -188,6 +205,23 @@ export function validate(p, existingSlugs) {
     }
   }
   return problems;
+}
+
+function shipsFrontmatter(p) {
+  const ships = Array.isArray(p.ships) ? p.ships.filter((ship) => typeof ship === 'string' && ship.trim()) : [];
+  if (!ships.length) return '';
+  return `ships: [${ships.map((ship) => q(ship.trim())).join(', ')}]\n`;
+}
+
+function tagsFrontmatter(p) {
+  const tags = Array.isArray(p.tags) ? p.tags.filter((tag) => typeof tag === 'string' && /^[a-z0-9-]+$/.test(tag)) : [];
+  if (!tags.length) return '';
+  return `tags: [${tags.join(', ')}]\n`;
+}
+
+function sailingFrontmatter(p) {
+  if (p.itineraryChange || typeof p.sailing !== 'string' || !p.sailing.trim()) return '';
+  return `sailing: ${q(p.sailing.trim())}\n`;
 }
 
 function itineraryFrontmatter(p) {
@@ -227,8 +261,8 @@ answer: ${q(p.answer)}
 presenter: Matthew
 publishDate: ${today}
 line: ${q(canonicalLine(p.line))}
-topics: [${topics.join(', ')}]
-${itineraryFrontmatter(p)}${holdBlock}sources:
+${shipsFrontmatter(p)}topics: [${topics.join(', ')}]
+${tagsFrontmatter(p)}${sailingFrontmatter(p)}${itineraryFrontmatter(p)}${holdBlock}sources:
 ${sources}
 ---
 

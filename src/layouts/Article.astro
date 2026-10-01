@@ -8,6 +8,7 @@ import VideosReferenced from '../components/VideosReferenced.astro';
 import { easternCalendarDate, formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
 import { formatDayHeading } from '../utils/newsToday.js';
 import { newsHubSlug } from '../utils/newsLines.js';
+import { HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from '../utils/newsTags.js';
 
 const {
   entry,
@@ -124,6 +125,9 @@ const newsHub = schemaType === 'NewsArticle' ? newsHubSlug(d.line) : null;
       <div class="prose"><slot /></div>
 
       {newsHub && <p><a href={`/news/${newsHub}/`}>More {d.line} news</a></p>}
+      {(d.tags ?? []).includes(HURRICANE_RACHEL_TAG) && (
+        <p>This sailing is on the <a href={HURRICANE_RACHEL_TRACKER_PATH}>Hurricane Rachel cruise tracker</a>.</p>
+      )}
       {roundupHref && <p><a href={roundupHref}>{roundupLabel}</a></p>}
 
       {d.faq?.length > 0 && (

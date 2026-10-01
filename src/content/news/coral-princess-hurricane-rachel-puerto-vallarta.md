@@ -9,6 +9,7 @@ publishDate: 2026-09-30T18:20:00-04:00
 line: "Princess Cruises"
 ships: ["Coral Princess"]
 topics: [Itineraries, Ports]
+tags: [hurricane-rachel]
 itineraryChange:
   kinds: [port-skip]
   ship: "Coral Princess"

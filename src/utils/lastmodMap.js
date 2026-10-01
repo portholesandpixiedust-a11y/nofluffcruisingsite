@@ -3,6 +3,7 @@ import path from 'node:path';
 import { normalizeContentDate } from './etDate.js';
 import { newsHubSlug } from './newsLines.js';
 import { loadNewsPosts, newsTodayLastmods } from './newsToday.js';
+import { frontmatterHasTag, HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from './newsTags.js';
 
 function frontmatter(file) {
   const text = fs.readFileSync(file, 'utf8');
@@ -52,6 +53,10 @@ export function buildLastmodMap(root = process.cwd()) {
         if (hub) bump(`/news/${hub}/`, updated);
         if (/(^|\n)itineraryChange:/.test(block)) {
           bump('/trackers/itinerary-changes/', updated);
+          bump('/trackers/', updated);
+        }
+        if (frontmatterHasTag(block, HURRICANE_RACHEL_TAG)) {
+          bump(HURRICANE_RACHEL_TRACKER_PATH, updated);
           bump('/trackers/', updated);
         }
       }

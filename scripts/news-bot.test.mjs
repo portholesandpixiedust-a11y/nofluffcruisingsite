@@ -42,6 +42,18 @@ check('itinerary change rejects an unknown kind', validate({ ...withChange, itin
 check('itinerary change rejects a ship the post never names', validate({ ...good, itineraryChange: change }, new Set()).some((p) => p.includes('not named')));
 check('markdown includes itineraryChange', toMarkdown(withChange).includes('itineraryChange:') && toMarkdown(withChange).includes('port-skip, delay'));
 check('markdown omits itineraryChange when absent', !toMarkdown(good).includes('itineraryChange:'));
+check('untagged markdown omits tags', !toMarkdown(good).includes('tags:'));
+
+const rachelWatch = {
+  ...good,
+  tags: ['hurricane-rachel'],
+  ships: ['Brilliant Lady'],
+  sailing: '3 Oct 2026 Los Angeles sailing',
+  body: `${good.body}\n\nBrilliant Lady is still listed for Mexico while Virgin watches Hurricane Rachel.`,
+};
+check('rachel watch story passes', validate(rachelWatch, new Set()).length === 0);
+check('rachel watch story without a sailing is rejected', validate({ ...rachelWatch, sailing: '' }, new Set()).some((p) => p.includes('need sailing')));
+check('rachel tag is written into frontmatter', toMarkdown(rachelWatch).includes('tags: [hurricane-rachel]') && toMarkdown(rachelWatch).includes('sailing: "3 Oct 2026 Los Angeles sailing"'));
 
 // the real test: does the emitted frontmatter survive the site's own YAML parser?
 const md = toMarkdown(good);

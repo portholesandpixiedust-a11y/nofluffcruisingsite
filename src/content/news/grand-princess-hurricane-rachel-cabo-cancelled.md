@@ -9,6 +9,7 @@ publishDate: 2026-10-01T09:05:00-04:00
 line: "Princess Cruises"
 ships: ["Grand Princess"]
 topics: [Itineraries, Ports]
+tags: [hurricane-rachel]
 itineraryChange:
   kinds: [port-skip]
   ship: "Grand Princess"

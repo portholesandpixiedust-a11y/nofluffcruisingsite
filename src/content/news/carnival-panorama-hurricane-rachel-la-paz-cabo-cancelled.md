@@ -9,6 +9,7 @@ publishDate: 2026-10-01T08:55:00-04:00
 line: "Carnival Cruise Line"
 ships: ["Carnival Panorama"]
 topics: [Itineraries, Ports]
+tags: [hurricane-rachel]
 itineraryChange:
   kinds: [port-skip, swap]
   ship: "Carnival Panorama"
