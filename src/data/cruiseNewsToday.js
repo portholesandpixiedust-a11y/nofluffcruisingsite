@@ -174,4 +174,23 @@ Royal Caribbean opened its 2028 Alaska lineup on Anthem, Ovation, Serenade, and 
 
 If you sail Brilliant Lady on 3 Oct, keep the Mexico ports until Virgin names a new one, and pack a jacket. If your Coral Princess date shows Puerto Vallarta on 2 Oct, refresh the app before you keep a tour. If you want 2028 Alaska, Crown & Anchor can try today and everyone else uses Thursday 1 Oct. If you hold a 2027 Brilliant Lady Alaska date, reopen the booking and match the fjord and the Canadian port. If you sail Carnival or Princess in the Caribbean next year, check whether Celebration Key is on the route. If you are shopping a Princess cruise, the ChatGPT steps are in the full post. If you are on Harmony, keep Cozumel and the Oct. 1 return, and ask guest services before you assume a move. If you sail MSC, Sandy Cay is a 2028 island, and Ocean Cay is the call you can book now.`,
   },
+  '2026-10-02': {
+    description: 'Cruise news for Oct. 2, 2026: SpongeBob on Hero, Margaritaville 2028 ports, Disney dry dock, West Coast, Canada, and Japan.',
+    answer: 'On Oct. 2, 2026 six stories published. Hero of the Seas will stage The SpongeBob Musical in the Royal Theater from Miami in August 2027. Margaritaville opened 2028 bookings, with first calls in Limón and Colón. Disney listed dry dock changes on Wonder, Fantasy, and Magic. Carnival West Coast, Holland America Canada and New England, and Voyager Japan were up.',
+    summary: `Oct. 2, 2026 has six stories. Open each link for the named source and the date it was checked. This page only restates those posts.
+
+Carnival opened 2028/29 West Coast bookings on 1 Oct 2026 for Adventure, Legend, and Spirit. Late Cruise News, Cruise Industry News, and TravelPulse split Alaska, Hawaii, and Mexico across Seattle, San Francisco, and Long Beach. Spirit moves to Long Beach in October 2028. Cruise Hive adds guest counts. None of those reports prints a fare.
+
+Holland America opened May through October 2028 Canada and New England bookings on Volendam and Zuiderdam. The CNW release, 10:49 ET on 1 Oct 2026, says cruises run 7 to 14 days from Montréal, Québec City, Boston, New York, and Fort Lauderdale. Zuiderdam is the first post-Evolution ship in the region. The release prints no fare.
+
+Voyager of the Seas has Japan and Asia cruises in spring 2028. Cruise Industry News on 1 Oct 2026 describes routes from late February through April and uses Tokyo. TRAICY on 2 Oct 2026 prints Yokohama dates in March and April, and warns that the English text is a machine translation. Two departures are both printed on 10 Mar. No English line release for this spring program was found.
+
+Hero of the Seas will stage The SpongeBob Musical in the Royal Theater. The CNW release, 10:07 ET on 2 Oct 2026, sets the debut from Miami in August 2027 on 7-night Eastern and Western Caribbean cruises. Each cruise visits Perfect Day CocoCay. The release prints no runtime, no ticket price, and no reservation rule.
+
+Margaritaville at Sea opened 30 itineraries for 2028 on 1 Oct 2026. Islander adds first calls in Limón and Colón on eight-night cruises from Tampa that also call Grand Cayman. One printed date is 25 Jun 2028, five nights to Key West and Bimini. Beachcomber adds a Galveston trio of Cozumel, Progreso, and Veracruz. The release prints no fare. The Miami Herald puts the new eight-night cruises in September 2028, with a second sailing the following October. The line's release does not print those months.
+
+Disney Experiences, published 30 Sep 2026, lists dry dock changes. Wonder has more than 12 miles of new carpet and more than 100 projects in 14 days. Fantasy lists Ramone's Cantina, a spa update, and the Fantasy Tower Suite. Edge is refreshed on Wonder, Fantasy, and Magic. The page prints no fare change.
+
+If you booked Hero, the Royal Theater headline is The SpongeBob Musical, from Miami in August 2027. If you want 2028 Margaritaville, open Tampa for Islander or Galveston for Beachcomber. If you sail Wonder, Fantasy, or Magic, read the dry dock list before you board. The West Coast, Canada and New England, and Japan posts are the other three on this date.`,
+  },
 };
