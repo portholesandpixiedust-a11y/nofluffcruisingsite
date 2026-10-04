@@ -1,13 +1,14 @@
 ---
-title: "President's Cruise 2026 is underway on Icon of the Seas. No Bayley Q&A yet."
+title: "Bayley named the 2027 President's Cruise: Odyssey of the Seas from Rome."
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FPt1iSyeiCro%2Fmaxresdefault.jpg&w=1280&output=jpg"
 heroCredit: "Still: Royal Caribbean YouTube Short, \"Miami, do we have your attention?\" · https://www.youtube.com/watch?v=Pt1iSyeiCro"
-description: "As of about 8:15 AM ET on Oct 4, 2026, Royal Caribbean says the President's Cruise is underway on Icon of the Seas. The ship left Miami around 4:45 PM ET on Oct 3 and came back for an official drone show. Michael Bayley's Q&A has not been reported, and there are no leadership quotes from the ship yet."
-answer: "As of about 8:15 AM ET on Sunday, Oct 4, 2026, Royal Caribbean says the President's Cruise is underway on Icon of the Seas. The ship left Miami around 4:45 PM ET on Oct 3, came back for an official drone show, and two creators showed Central Park dressed as Spritz Park. Michael Bayley's Q&A has not been reported as held. There is no leadership quote from the ship yet. We will update this page after the Q&A."
+description: "On Oct 4, 2026, Michael Bayley revealed the 2027 President's Cruise onboard Icon of the Seas: Odyssey of the Seas, a 7-night Greek Isles sailing on September 19, 2027, from Rome, billed as celebrating 10 years. The Crown & Anchor page still lists only Icon in 2026. The Odyssey sailing is bookable and is not labeled a President's Cruise. Verified Q&A quotes are still out."
+answer: "On Oct 4, 2026, Michael Bayley revealed the 2027 President's Cruise from Icon of the Seas: Odyssey of the Seas, a 7-night Greek Isles cruise on September 19, 2027, from Rome, billed as celebrating 10 years. A passenger video and Royal Caribbean Blog both report it. The Crown & Anchor page still lists only the 2026 Icon sailing, and the bookable Odyssey itinerary is not labeled a President's Cruise. We are still waiting on verified Q&A quotes."
 presenter: Matthew
 publishDate: 2026-10-04T08:15:00-04:00
+updatedAt: 2026-10-04T14:50:00-04:00
 line: "Royal Caribbean"
-ships: ["Icon of the Seas"]
+ships: ["Icon of the Seas", "Odyssey of the Seas"]
 topics: [Ships, Company]
 sources:
   - claim: "Official President's Cruise page, seen Oct 3, 2026: the event is Oct 3, 2026 on Icon of the Seas, hosted by President and CEO Michael Bayley and other Royal Caribbean executives, and the page promises signature events to surprise moments."
@@ -15,7 +16,7 @@ sources:
     tier: 1
     date: "3 Oct 2026"
     url: "https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise"
-    note: "Tier 1 event page. It names the ship, the date, and the host. It does not print the Common Ground clock time."
+    note: "Rechecked Oct 4, 2026. The page still describes only the 2026 Icon sailing. It does not mention Odyssey of the Seas or September 19, 2027."
   - claim: "Official booking page for package IC07E479: 7-night Eastern Caribbean and Perfect Day sailing from Miami on Icon of the Seas, sail date Oct 3, 2026."
     outlet: "Royal Caribbean"
     tier: 1
@@ -142,14 +143,74 @@ sources:
     tier: 2
     date: "4 Oct 2026"
     url: "https://www.youtube.com/watch?v=7vOdPktcGLk"
-    note: "A creator upload. First sign of Bayley footage from the ship in this check. Not a verified quote."
+    note: "A creator upload from the morning check. Not a verified quote."
+  - claim: "First Class Blonde YouTube video, published Oct 4, 2026, title JUST ANNOUNCED 2027 PRESIDENTS CRUISE RCCL ROYAL CARIBBEAN. A passenger films a stage slide that reads ODYSSEY OF THE SEAS, 7-NIGHT GREEK ISLES, SEPTEMBER 19, 2027, ROME, ITALY, PRESIDENT'S CRUISE 2027, CELEBRATING 10 YEARS, and BOOK TODAY THROUGH THE ROYAL CARIBBEAN APP OR VISIT THE NEXTCRUISE TEAM."
+    outlet: "First Class Blonde / YouTube"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.youtube.com/watch?v=a3ERXLE8VCM"
+    note: "Passenger video of the onboard slide. With the Royal Caribbean Blog report the same day, the ship, date, Rome departure, 7-night Greek Isles routing, and 10-year billing are treated as confirmed. The slide text itself is this video."
+  - claim: "Royal Caribbean Blog, Matt Hochberg, updated October 4, 2026: while sailing the President's Cruise this year, Michael Bayley announced the next event on Odyssey of the Seas for the September 19, 2027 sailing. The 7-night cruise departs Rome and visits the Greek Isles and Southern Italy. Port stops in the article are Santorini, Ephesus, Mykonos, and Naples."
+    outlet: "Royal Caribbean Blog"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.royalcaribbeanblog.com/2026/10/04/royal-caribbean-just-revealed-its-biggest-loyalty-cruise-2027"
+    note: "Second source for the announcement and the attribution to Bayley. The port list is this article's. It is not on the filmed slide."
+  - claim: "Royal Caribbean itinerary page for sail date 2027-09-19: 7-night Greek Isles cruise from Rome (Civitavecchia) on Odyssey of the Seas. The page offers booking and does not use the words President's Cruise."
+    outlet: "Royal Caribbean"
+    tier: 1
+    date: "4 Oct 2026"
+    url: "https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19"
+    note: "Checked Oct 4, 2026. The sailing is on the site and bookable. It is not labeled a President's Cruise on this page or on the Crown & Anchor President's Cruise page."
+  - claim: "Luxury Properties International YouTube video, title Icon of the seas Common Ground with Michael Bayley President cruise. A single creator clip with an auto-transcript. In paraphrase only, Bayley reportedly said a newly added Royal Caribbean Group brand, not clearly named and likely Sandals, would keep its own identity while sharing efficiencies, and that it is very early days. He also reportedly told a Pinnacle guest that the $25 specialty dining credit is staying, that capacity limits Coastal Kitchen and the suite lounges, and that a rotating access program is being discussed."
+    outlet: "Luxury Properties International / YouTube"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.youtube.com/watch?v=to2_vAirW0U"
+    note: "One clip. Auto-transcript, not a verbatim quote. Not confirmed by Royal Caribbean or a second outlet. Do not treat the paraphrase as Bayley's words."
 ---
+
+## Update, Oct 4
+
+Michael Bayley named the next President's Cruise on Sunday, Oct 4, while this week's sailing is underway on [Icon of the Seas](/ships/royal-caribbean/icon-of-the-seas/).
+
+It is Odyssey of the Seas. Seven nights. Greek Isles. September 19, 2027. From Rome. The stage billed it as celebrating 10 years.
+
+Two reports match on those points. [First Class Blonde](https://www.youtube.com/watch?v=a3ERXLE8VCM) posted a passenger video on Oct 4 that films the stage slide. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/10/04/royal-caribbean-just-revealed-its-biggest-loyalty-cruise-2027), updated the same day, attributes the announcement to Bayley and describes the same ship, the same date, a 7-night sailing, and a Rome departure.
+
+The slide in the passenger video reads, line by line:
+
+- ODYSSEY OF THE SEAS
+- 7-NIGHT GREEK ISLES
+- SEPTEMBER 19, 2027
+- ROME, ITALY
+- PRESIDENT'S CRUISE 2027
+- CELEBRATING 10 YEARS
+- BOOK TODAY THROUGH THE ROYAL CARIBBEAN APP OR VISIT THE NEXTCRUISE TEAM
+
+The blog adds a port list the slide does not show: Santorini, Ephesus, Mykonos, and Naples. Treat that list as Royal Caribbean Blog's account of the cruise.
+
+If you want to book, read this part twice. The [Crown & Anchor President's Cruise page](https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise), rechecked Oct 4, still describes only the 2026 sailing on Icon of the Seas. It does not mention Odyssey or September 19, 2027. The [September 19, 2027 itinerary](https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19) is live on Royal Caribbean's site, as a 7-night Greek Isles cruise from Rome (Civitavecchia) on Odyssey of the Seas, and it offers a way to book. That page does not call the sailing a President's Cruise.
+
+So the week is named. The loyalty page has not caught up. If September 19, 2027 works for you, the Odyssey sailing is the one on the slide. Book it knowing the public page may still look like an ordinary Greek Isles cruise.
+
+### The Q&A, still unverified
+
+We are still waiting on verified quotes from Common Ground. We will keep updating this page when those words are pinned down.
+
+One creator clip is up. [Luxury Properties International](https://www.youtube.com/watch?v=to2_vAirW0U) posted a video titled as Common Ground with Michael Bayley on Icon. It is a single clip. The wording below paraphrases an auto-transcript. We are not printing it as his script.
+
+In that paraphrase, Bayley reportedly said a newly added brand under Royal Caribbean Group would keep its own identity while the companies share efficiencies, and that it is very early days. The clip does not clearly name the brand. The likely reading is Sandals. He also reportedly told a Pinnacle guest that the $25 specialty dining credit is staying, that capacity limits Coastal Kitchen and the suite lounges, and that a rotating access program is being discussed.
+
+That is one recording. Royal Caribbean has not confirmed it. A second source has not confirmed it. Do not plan a perk, or a Sandals booking, on this paraphrase.
+
+## What we knew Sunday morning
 
 Royal Caribbean says the President's Cruise is underway. A [Facebook video](https://www.facebook.com/royalcaribbean/videos/and-were-off-presidents-cruise-2026-is-officially-underway/1621708992821723/) posted about 1:00 AM ET on Sunday, Oct 4, 2026, puts it in the line's own words: "And we're off! President's Cruise 2026 is officially underway."
 
-This is a what-we-know-so-far story. It was checked at about 8:15 AM ET on Sunday. [Icon of the Seas](/ships/royal-caribbean/icon-of-the-seas/) left Miami on Saturday. Michael Bayley's onboard Q&A has not been reported as held. No Royal Caribbean executive has been quoted from the ship. We will update this page after the Q&A.
+The check below is the morning report, from about 8:15 AM ET, before the 2027 reveal above. [Icon of the Seas](/ships/royal-caribbean/icon-of-the-seas/) left Miami on Saturday.
 
-If you sail this line, that missing quote is the point. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/08/07/president-cruise-fan-cruise-events) says the Common Ground Q&A returns with "no filter or pre-screening." On the 2025 cruise he named this Icon sailing. The Sandals deal was announced Sep 22. On Cruise Critic, passengers are asking people onboard to tell leadership that entertainment is slipping. That request is chatter. None of the answers are in yet.
+[Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/08/07/president-cruise-fan-cruise-events) says the Common Ground Q&A returns with "no filter or pre-screening." On the 2025 cruise he named this Icon sailing. The Sandals deal was announced Sep 22. On Cruise Critic, passengers are asking people onboard to tell leadership that entertainment is slipping. That request is chatter. The 2027 ship is now in the update above. Verified answers from the Q&A are still not in.
 
 ## The sailing
 
@@ -183,17 +244,17 @@ The big named events were previewed before sail-away. None of them have been rep
 
 Bayley's [LinkedIn post](https://www.linkedin.com/posts/michael-bayley-982715335_presidents-cruise-oct-3-to-10-icon-activity-7505687331501232129-j_Ty) on Sep 15 is the preview in his own words: "Presidents Cruise ❤️ Oct. 3 to 10 ❤️ Icon of the Seas. Be there or be square. Starring Kool & the Gang, the Champagnator, along with Ken the Super Cruise Director, Bing Bong Walker, and me and the gang. Lots of fun and wonderfully ridiculous activities!"
 
-He wrote "be there or be square." The ship was there. The Q&A has not produced a sentence we can quote. An official [Facebook video](https://www.facebook.com/royalcaribbean/videos/president-ceo-michael-bayley-is-giving-you-an-exclusive-personal-sneak-peek-at-w/28689020227431012/) from about Oct 2 calls the week a personal sneak peek. He says, "See you Saturday!"
+He wrote "be there or be square." The ship was there. The Q&A still has not produced a sentence we can quote. The Oct 4 update above has the 2027 reveal, and it has a creator paraphrase we are not printing as his words. An official [Facebook video](https://www.facebook.com/royalcaribbean/videos/president-ceo-michael-bayley-is-giving-you-an-exclusive-personal-sneak-peek-at-w/28689020227431012/) from about Oct 2 calls the week a personal sneak peek. He says, "See you Saturday!"
 
-A passenger Facebook group post from Sep 29 says, verbatim, "The Common Ground With Michael Bayley event has been added to the App on Day 2 at 10:30am." Day 2 is Sunday. Comments on that [post](https://www.facebook.com/groups/803076765660564/posts/1076306575004247/) report a clash with a Top Tier event and guess that Top Tier moved to Day 3. That is one passenger report, plus comments. Royal Caribbean has not confirmed the 10:30 AM time. It has not confirmed a Day 3 move. As of this writing, Common Ground has not been reported as held.
+A passenger Facebook group post from Sep 29 says, verbatim, "The Common Ground With Michael Bayley event has been added to the App on Day 2 at 10:30am." Day 2 is Sunday. Comments on that [post](https://www.facebook.com/groups/803076765660564/posts/1076306575004247/) report a clash with a Top Tier event and guess that Top Tier moved to Day 3. That is one passenger report, plus comments. Royal Caribbean has not confirmed the 10:30 AM time. It has not confirmed a Day 3 move. At the morning check, Common Ground had not been reported as held. A later creator clip is titled as that Q&A. The words in it are unverified. See the update above.
 
 Overnight, a creator channel uploaded a video titled "Michael Bayley, Ken Rush on President cruise Icon of the seas." The [upload](https://www.youtube.com/watch?v=7vOdPktcGLk) has no description or transcript we could read. There is no quote in it for this story.
 
-## No leadership quotes yet
+## No verified Q&A quotes yet
 
-The gap is the part that matters to you. As of about 8:15 AM ET on Oct 4, Bayley's Q&A had not been reported as held. No executive quote has come off the ship. The official lines so far are the underway post, the drone-show caption, the Day 1 schedule, and Bayley's notes from before the gangway.
+The 2027 ship is the sentence we have from this week. Verified Q&A quotes are still the gap. At about 8:15 AM ET on Oct 4, Common Ground had not been reported as held. The official lines from before the reveal were the underway post, the drone-show caption, the Day 1 schedule, and Bayley's notes from before the gangway.
 
-Past cruises are why people wait on this one. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/08/07/president-cruise-fan-cruise-events) reports that in 2023 Bayley said a smaller ship class was being deeply considered, and that the class later became Discovery Class. On the 2025 cruise he named this Icon sailing and these dates. A sentence from this week would continue that pattern. We do not have one.
+Past cruises are why people wait on this one. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/08/07/president-cruise-fan-cruise-events) reports that in 2023 Bayley said a smaller ship class was being deeply considered, and that the class later became Discovery Class. On the 2025 cruise he named this Icon sailing and these dates. That pattern continued on Oct 4, with Odyssey of the Seas. The details are in the update above.
 
 Earlier President's Cruise answers, including the requests he has turned down on the record, are in [6 Things Royal Caribbean's CEO Refuses to Change](/guides/royal-caribbean-ceo-refuses-to-change/). That page is the old record. This sailing has not added a quote to it.
 
@@ -201,13 +262,13 @@ Earlier President's Cruise answers, including the requests he has turned down on
 
 These are the questions already sitting in public, before anyone on Icon has reported an answer.
 
-**Sandals.** On Sep 22, Royal Caribbean Group said it will buy a 50% stake in Sandals and Beaches for about $3 billion, with a close expected in early 2027. The [release](https://www.rclinvestor.com/content/uploads/2026/09/09222026-Royal-Caribbean-Group-and-Sandals-Resorts-Announce-Landmark-Partnership-to-Accelerate-Their-Leading-Vacation-Experiences.pdf) is the source. [Reuters](https://www.reuters.com/business/royal-caribbean-acquires-stake-resort-operator-sandals-3-billion-2026-09-23/) reported the same deal on Sep 23. The Sep 22 release says existing reservations, loyalty programs, resort operations, and cruise operations continue as usual. A cruise you have already booked stays on its own timeline. The open question fans want asked is what you can use later: loyalty points, a cruise-and-resort trip, or no new perk at all. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/) has reported a plan to link Royal Caribbean's loyalty program with Sandals. That report is one site. The release says the companies will explore deeper guest engagement. It does not name a new linked perk, and Bayley has not addressed the deal from the ship. The signed terms already on this site are in [5 Things Royal Caribbean Just Confirmed About Sandals](/guides/royal-caribbean-sandals-five-things-confirmed/) and the [Sep 23 news post](/news/royal-caribbean-sandals-50-percent-stake-confirmed/).
+**Sandals.** On Sep 22, Royal Caribbean Group said it will buy a 50% stake in Sandals and Beaches for about $3 billion, with a close expected in early 2027. The [release](https://www.rclinvestor.com/content/uploads/2026/09/09222026-Royal-Caribbean-Group-and-Sandals-Resorts-Announce-Landmark-Partnership-to-Accelerate-Their-Leading-Vacation-Experiences.pdf) is the source. [Reuters](https://www.reuters.com/business/royal-caribbean-acquires-stake-resort-operator-sandals-3-billion-2026-09-23/) reported the same deal on Sep 23. The Sep 22 release says existing reservations, loyalty programs, resort operations, and cruise operations continue as usual. A cruise you have already booked stays on its own timeline. The open question fans want asked is what you can use later: loyalty points, a cruise-and-resort trip, or no new perk at all. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/) has reported a plan to link Royal Caribbean's loyalty program with Sandals. That report is one site. The release says the companies will explore deeper guest engagement. It does not name a new linked perk. A later creator clip, covered in the Oct 4 update, reportedly touches a new brand. Those words are not verified. The signed terms already on this site are in [5 Things Royal Caribbean Just Confirmed About Sandals](/guides/royal-caribbean-sandals-five-things-confirmed/) and the [Sep 23 news post](/news/royal-caribbean-sandals-50-percent-stake-confirmed/).
 
 **Entertainment.** This part is passenger chatter. It is not a company statement. On Saturday, Cruise Critic poster cusematt4 asked people on this cruise to speak with leadership. The [post](https://boards.cruisecritic.com/topic/3127378-presidents-cruise-request-for-leadership-entertainment-decline/?do=findComment&comment=70441702) says: "Hi everyone - if anyone attending the President's Cruise has an opportunity to speak with leadership, could you please respectfully convey the disappointment many guests have expressed about the direction of Royal Caribbean's entertainment?" The same post says: "Moving away from those intimate venues toward just zero or one comedian performing in the main theater over an entire cruise feels like a huge loss." It also says: "Many are also disappointed by the shift from visiting professional entertainers to game shows with an additional charge, such as The Price Is Right." Later that afternoon the same poster wrote: "Oasis class ships just had them removed over the past 6 months with the rest set to be removed this year." He added that he "spoke to some ship management who said it's frustrating as these are the most popular venues aboard and this is strictly a budget cut from corporate." That management line is hearsay from one poster. Royal Caribbean has not confirmed it.
 
 Other replies are passengers answering the poster. mets123 told disappointed passengers to find another cruise line. AZ Squirrel called the shift toward "pay to play" game shows "pretty lame." The thread is the question some fans hope reaches the microphone. A comedy-club cut remains one poster's claim.
 
-**The 2027 cruise.** Bayley announced this Icon week on the 2025 President's Cruise. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2025/09/25/royal-caribbean-will-host-next-presidents-cruise-icon-of-the-seas-october-2026) says the line will "go all out" for the 10th President's Cruise in 2027. No ship and no itinerary for 2027 have been revealed on this sailing. If you are holding a week next fall, that announcement is the one to watch. It has not happened.
+**The 2027 cruise.** Bayley announced this Icon week on the 2025 President's Cruise. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2025/09/25/royal-caribbean-will-host-next-presidents-cruise-icon-of-the-seas-october-2026) had said the line will "go all out" for the 10th President's Cruise in 2027. That was the open question at the morning check. He answered it on Oct 4. Odyssey of the Seas, September 19, 2027, from Rome. The details, and the booking caveat, are in the update above.
 
 **Icon's next Miami chapter.** Separate from this cruise, Royal Caribbean's Oct 2 release says Hero of the Seas sails from Miami in August 2027 and will stage The SpongeBob Musical in the Royal Theater. The write-up is [Hero of the Seas will stage The SpongeBob Musical](/news/hero-of-the-seas-spongebob-musical/). [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/) has also reported that Hero takes Icon's Miami place from August 2027. Bayley has not been quoted on either point from this ship. If your Icon plans run past summer 2027, the home-port question is the one you would want asked. We do not have his answer.
 
@@ -217,11 +278,11 @@ The sailing just before this one is a different cruise. Icon's Sep 26 to Oct 3 t
 
 ## What you should do
 
-If you are on the ship, watch the app and the theater. Treat a Facebook comment about 10:30 AM as one passenger's report until the line, or a second source, says the Q&A happened.
+If you want the 2027 President's Cruise, look at Odyssey of the Seas on September 19, 2027, from Rome (Civitavecchia). The slide points you to the Royal Caribbean app or the NextCruise team. The [public itinerary](https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19) is live and offers booking. It does not say President's Cruise. The [Crown & Anchor page](https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise) still does not list it.
 
-If you are at home, wait for the quotes. We will update this story when Common Ground is reported, and when Bayley answers on the record.
+If you are waiting on what Bayley said in the Q&A about a new brand or the $25 dining credit, wait. One auto-transcript is not enough. We will keep updating when a second source, or a clean recording, pins the words down.
 
-Leave your booking alone on the strength of the Sandals headline or a Cruise Critic thread. The stake points at an early 2027 close. The entertainment posts are passengers. They are not a schedule change.
+Leave a current booking alone on the strength of the Sandals headline or a Cruise Critic thread. The stake points at an early 2027 close. The entertainment posts are passengers. They are not a schedule change.
 
 ## Related reading
 
