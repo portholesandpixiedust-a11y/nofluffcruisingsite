@@ -1,12 +1,12 @@
 ---
-title: "Bayley named the 2027 President's Cruise: Odyssey of the Seas from Rome."
+title: "Royal's booking page lists the Odyssey week Bayley named for 2027."
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FPt1iSyeiCro%2Fmaxresdefault.jpg&w=1280&output=jpg"
 heroCredit: "Still: Royal Caribbean YouTube Short, \"Miami, do we have your attention?\" · https://www.youtube.com/watch?v=Pt1iSyeiCro"
-description: "On Oct 4, 2026, Michael Bayley revealed the 2027 President's Cruise onboard Icon of the Seas: Odyssey of the Seas, a 7-night Greek Isles sailing on September 19, 2027, from Rome, billed as celebrating 10 years. The Crown & Anchor page still lists only Icon in 2026. The Odyssey sailing is bookable and is not labeled a President's Cruise. Verified Q&A quotes are still out."
-answer: "On Oct 4, 2026, Michael Bayley revealed the 2027 President's Cruise from Icon of the Seas: Odyssey of the Seas, a 7-night Greek Isles cruise on September 19, 2027, from Rome, billed as celebrating 10 years. A passenger video and Royal Caribbean Blog both report it. The Crown & Anchor page still lists only the 2026 Icon sailing, and the bookable Odyssey itinerary is not labeled a President's Cruise. We are still waiting on verified Q&A quotes."
+description: "Royal Caribbean's booking page lists Odyssey of the Seas from Rome on Sep 19 to 26, 2027, with Santorini, Ephesus, Mykonos, and Naples/Capri. The Crown & Anchor page still does not call it a President's Cruise. Two passenger recordings paraphrase Bayley on group brands, including Sandals, keeping their own identities. Verbatim Q&A quotes are still not in."
+answer: "Royal Caribbean's booking page now lists the week Michael Bayley named on Oct 4: Odyssey of the Seas, 7 nights from Rome (Civitavecchia), Sep 19 to 26, 2027, calling at Santorini, Ephesus (Kusadasi), Mykonos, and Naples/Capri, with two sea days. The page does not say President's Cruise, and the Crown & Anchor page still describes only Icon in 2026. Two passengers paraphrase him as saying group brands, Sandals included, keep their own identities. That is a paraphrase, not a verbatim quote."
 presenter: Matthew
 publishDate: 2026-10-04T08:15:00-04:00
-updatedAt: 2026-10-04T14:50:00-04:00
+updatedAt: 2026-10-04T19:30:00-04:00
 line: "Royal Caribbean"
 ships: ["Icon of the Seas", "Odyssey of the Seas"]
 topics: [Ships, Company]
@@ -16,7 +16,7 @@ sources:
     tier: 1
     date: "3 Oct 2026"
     url: "https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise"
-    note: "Rechecked Oct 4, 2026. The page still describes only the 2026 Icon sailing. It does not mention Odyssey of the Seas or September 19, 2027."
+    note: "Rechecked the evening of Oct 4, 2026. The event page still describes only the 2026 Icon sailing. A site menu mentions 2026-2027 cruises. The page does not mention Odyssey of the Seas or September 19, 2027."
   - claim: "Official booking page for package IC07E479: 7-night Eastern Caribbean and Perfect Day sailing from Miami on Icon of the Seas, sail date Oct 3, 2026."
     outlet: "Royal Caribbean"
     tier: 1
@@ -156,19 +156,71 @@ sources:
     date: "4 Oct 2026"
     url: "https://www.royalcaribbeanblog.com/2026/10/04/royal-caribbean-just-revealed-its-biggest-loyalty-cruise-2027"
     note: "Second source for the announcement and the attribution to Bayley. The port list is this article's. It is not on the filmed slide."
-  - claim: "Royal Caribbean itinerary page for sail date 2027-09-19: 7-night Greek Isles cruise from Rome (Civitavecchia) on Odyssey of the Seas. The page offers booking and does not use the words President's Cruise."
+  - claim: "Royal Caribbean itinerary page, rechecked the evening of Oct 4, 2026, sail date 2027-09-19 through 2027-09-26: 7-night Greek Isles cruise from Rome (Civitavecchia) on Odyssey of the Seas. Calls on the page include Santorini, where the page names Royal Beach Club Santorini, Ephesus (Kusadasi), Mykonos, and Naples/Capri, plus two sea days. The page offers booking and does not use the words President's Cruise."
     outlet: "Royal Caribbean"
     tier: 1
     date: "4 Oct 2026"
     url: "https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19"
-    note: "Checked Oct 4, 2026. The sailing is on the site and bookable. It is not labeled a President's Cruise on this page or on the Crown & Anchor President's Cruise page."
-  - claim: "Luxury Properties International YouTube video, title Icon of the seas Common Ground with Michael Bayley President cruise. A single creator clip with an auto-transcript. In paraphrase only, Bayley reportedly said a newly added Royal Caribbean Group brand, not clearly named and likely Sandals, would keep its own identity while sharing efficiencies, and that it is very early days. He also reportedly told a Pinnacle guest that the $25 specialty dining credit is staying, that capacity limits Coastal Kitchen and the suite lounges, and that a rotating access program is being discussed."
+    note: "Tier 1 for the ship, dates, ports, sea days, and the missing President's Cruise label. Deposit, bonus, and suite inventory are not on this page."
+  - claim: "Luxury Properties International YouTube video, title Icon of the seas Common Ground with Michael Bayley President cruise. One of two passenger recordings of the Common Ground Q&A. In paraphrase, Bayley said Royal Caribbean Group brands keep their own identities, there will be some synergy and efficiencies, it is early days, and Sandals will likely remain its own thing. The same clip, still alone on this point, paraphrases him telling a Pinnacle guest that the $25 specialty dining credit is staying, that capacity limits Coastal Kitchen and the suite lounges, and that a rotating access program is being discussed."
     outlet: "Luxury Properties International / YouTube"
     tier: 2
     date: "4 Oct 2026"
     url: "https://www.youtube.com/watch?v=to2_vAirW0U"
-    note: "One clip. Auto-transcript, not a verbatim quote. Not confirmed by Royal Caribbean or a second outlet. Do not treat the paraphrase as Bayley's words."
+    note: "Auto-transcript. The brand and Sandals substance matches Addy and Terry's recap, so that part is two passenger sources and still a paraphrase. The $25 dining credit remains this clip only."
+  - claim: "Cruising Aimee TikTok, Oct 4, 2026: passenger video of the 2027 President's Cruise reveal. Caption says the 2027 President cruise was just announced and tags Odyssey of the Seas."
+    outlet: "Cruising Aimee / TikTok"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.tiktok.com/@cruising_aimee/video/7692844512133057806"
+    note: "One of three additional passenger videos of the reveal slide, with Nicki on Deck and Countryfied Diva."
+  - claim: "Nicki on Deck TikTok, Oct 4, 2026: passenger video. Caption says the 2027 Royal Caribbean President's Cruise was just announced."
+    outlet: "Nicki on Deck / TikTok"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.tiktok.com/@nickiondeck/video/7692845336569728270"
+  - claim: "Countryfied Diva TikTok, Oct 4, 2026: passenger video. Caption says the 2027 Royal Caribbean President's Cruise has been announced and tags Odyssey of the Seas."
+    outlet: "Countryfied Diva / TikTok"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.tiktok.com/@countryfieddiva/video/7692847959444114718"
+  - claim: "Addy and Terry YouTube live recap, title Sunday Sip from The Ship. Royal Caribbean Presidents Cruise 2026 Q&A. Second passenger source for the Common Ground paraphrase: group brands keep their own identities, some synergy and efficiencies, early days, Sandals will likely remain its own thing. Their report alone, auto-transcribed and secondhand, covers a Mexico project taking years and needing permits, no ships coming to Tampa, Philadelphia and Cozumel homeport questions, executives onboard all week, another guest session on the next ship this week, a $200 deposit, an early booking bonus, suites already booked, and a room that mostly asked legitimate questions rather than a gripe session."
+    outlet: "Addy and Terry / YouTube"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.youtube.com/watch?v=pEayRRsDK9o"
+    note: "The brand paraphrase agrees with the Luxury Properties International clip. Everything else in this claim is their recap only. They do not confirm the $25 Pinnacle dining credit."
 ---
+
+## Update, Oct 4 evening
+
+You can book the week now. Royal Caribbean's [itinerary page](https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19), rechecked this evening, is Odyssey of the Seas on a 7-night Greek Isles cruise from Rome (Civitavecchia), September 19 to 26, 2027.
+
+The ports are on that page. Santorini, and the page names Royal Beach Club Santorini there. Ephesus (Kusadasi). Mykonos. Naples/Capri. Two sea days sit in the week.
+
+The label still lags the sailing. The [Crown & Anchor President's Cruise page](https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise), rechecked the same evening, still describes only the 2026 sailing on Icon of the Seas. The booking page does not call this Odyssey week a President's Cruise. The slide onboard did. Three more passengers filmed that slide on Oct 4: [Cruising Aimee](https://www.tiktok.com/@cruising_aimee/video/7692844512133057806), [Nicki on Deck](https://www.tiktok.com/@nickiondeck/video/7692845336569728270), and [Countryfied Diva](https://www.tiktok.com/@countryfieddiva/video/7692847959444114718).
+
+### What Bayley said (paraphrased)
+
+Common Ground started around 10:35 AM ET, according to creator posts. We still do not have his answers in his own script. Two independent passenger recordings match on the substance, so this part leaves the one-clip pile.
+
+[Luxury Properties International](https://www.youtube.com/watch?v=to2_vAirW0U) filmed the session. [Addy and Terry](https://www.youtube.com/watch?v=pEayRRsDK9o) recapped it live, in a video titled as a Sunday sip from the ship. Together, the substance is this. Royal Caribbean Group brands keep their own identities. There will be some synergy and some shared efficiencies. It is early days. Sandals will likely remain its own thing.
+
+That is a paraphrase from two passengers. It is not a line you can point to on a booking screen. If you were hoping the Sandals stake turned into a perk this week, you do not have that yet.
+
+### Still one recap
+
+The rest of this is Addy and Terry's live recap. It is auto-transcribed, and it is secondhand. They are telling you what they heard.
+
+On a Mexico project, they say he stressed that these things take years and need permits. A guest asked about Tampa. The answer they report is that no ships are coming there. Philadelphia and Cozumel came up as homeport questions. They say executives are onboard all week, so guests can still ask. They say another guest session about the next ship is planned this week.
+
+They also report 2027 booking mechanics: a $200 deposit, an early booking bonus, and suites already booked. Those details are their report. They are not printed on the itinerary page we checked this evening.
+
+They expected a gripe session. They say guests mostly asked legitimate questions.
+
+The $25 specialty dining credit stays a single clip. In the [Luxury Properties International](https://www.youtube.com/watch?v=to2_vAirW0U) recording, the paraphrase has him telling a Pinnacle guest that the credit is staying, that capacity limits Coastal Kitchen and the suite lounges, and that a rotating access program is being discussed. Addy and Terry do not confirm that. Do not plan the credit on one auto-transcript.
+
+We also still have no report that anyone asked him about the entertainment cuts passengers raised on Cruise Critic before the ship sailed.
 
 ## Update, Oct 4
 
@@ -188,21 +240,15 @@ The slide in the passenger video reads, line by line:
 - CELEBRATING 10 YEARS
 - BOOK TODAY THROUGH THE ROYAL CARIBBEAN APP OR VISIT THE NEXTCRUISE TEAM
 
-The blog adds a port list the slide does not show: Santorini, Ephesus, Mykonos, and Naples. Treat that list as Royal Caribbean Blog's account of the cruise.
+The blog adds a port list the slide does not show: Santorini, Ephesus, Mykonos, and Naples. That was the blog's list when this section was written. Royal Caribbean's booking page now prints the calls. The evening update above has them.
 
 If you want to book, read this part twice. The [Crown & Anchor President's Cruise page](https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise), rechecked Oct 4, still describes only the 2026 sailing on Icon of the Seas. It does not mention Odyssey or September 19, 2027. The [September 19, 2027 itinerary](https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19) is live on Royal Caribbean's site, as a 7-night Greek Isles cruise from Rome (Civitavecchia) on Odyssey of the Seas, and it offers a way to book. That page does not call the sailing a President's Cruise.
 
 So the week is named. The loyalty page has not caught up. If September 19, 2027 works for you, the Odyssey sailing is the one on the slide. Book it knowing the public page may still look like an ordinary Greek Isles cruise.
 
-### The Q&A, still unverified
+### The Q&A, as of the afternoon
 
-We are still waiting on verified quotes from Common Ground. We will keep updating this page when those words are pinned down.
-
-One creator clip is up. [Luxury Properties International](https://www.youtube.com/watch?v=to2_vAirW0U) posted a video titled as Common Ground with Michael Bayley on Icon. It is a single clip. The wording below paraphrases an auto-transcript. We are not printing it as his script.
-
-In that paraphrase, Bayley reportedly said a newly added brand under Royal Caribbean Group would keep its own identity while the companies share efficiencies, and that it is very early days. The clip does not clearly name the brand. The likely reading is Sandals. He also reportedly told a Pinnacle guest that the $25 specialty dining credit is staying, that capacity limits Coastal Kitchen and the suite lounges, and that a rotating access program is being discussed.
-
-That is one recording. Royal Caribbean has not confirmed it. A second source has not confirmed it. Do not plan a perk, or a Sandals booking, on this paraphrase.
+This section was one clip. Two passenger recordings now match on the brand comments. That paraphrase is in the evening update above. The $25 specialty dining credit is still only in the [Luxury Properties International](https://www.youtube.com/watch?v=to2_vAirW0U) clip. Verbatim quotes are still not in. We will keep updating when a clean recording pins the words.
 
 ## What we knew Sunday morning
 
@@ -210,7 +256,7 @@ Royal Caribbean says the President's Cruise is underway. A [Facebook video](http
 
 The check below is the morning report, from about 8:15 AM ET, before the 2027 reveal above. [Icon of the Seas](/ships/royal-caribbean/icon-of-the-seas/) left Miami on Saturday.
 
-[Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/08/07/president-cruise-fan-cruise-events) says the Common Ground Q&A returns with "no filter or pre-screening." On the 2025 cruise he named this Icon sailing. The Sandals deal was announced Sep 22. On Cruise Critic, passengers are asking people onboard to tell leadership that entertainment is slipping. That request is chatter. The 2027 ship is now in the update above. Verified answers from the Q&A are still not in.
+[Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/08/07/president-cruise-fan-cruise-events) says the Common Ground Q&A returns with "no filter or pre-screening." On the 2025 cruise he named this Icon sailing. The Sandals deal was announced Sep 22. On Cruise Critic, passengers are asking people onboard to tell leadership that entertainment is slipping. That request is chatter. The 2027 ship is in the updates above. A two-passenger paraphrase of the brand comments is in the evening update. Verbatim quotes are still not in.
 
 ## The sailing
 
@@ -262,7 +308,7 @@ Earlier President's Cruise answers, including the requests he has turned down on
 
 These are the questions already sitting in public, before anyone on Icon has reported an answer.
 
-**Sandals.** On Sep 22, Royal Caribbean Group said it will buy a 50% stake in Sandals and Beaches for about $3 billion, with a close expected in early 2027. The [release](https://www.rclinvestor.com/content/uploads/2026/09/09222026-Royal-Caribbean-Group-and-Sandals-Resorts-Announce-Landmark-Partnership-to-Accelerate-Their-Leading-Vacation-Experiences.pdf) is the source. [Reuters](https://www.reuters.com/business/royal-caribbean-acquires-stake-resort-operator-sandals-3-billion-2026-09-23/) reported the same deal on Sep 23. The Sep 22 release says existing reservations, loyalty programs, resort operations, and cruise operations continue as usual. A cruise you have already booked stays on its own timeline. The open question fans want asked is what you can use later: loyalty points, a cruise-and-resort trip, or no new perk at all. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/) has reported a plan to link Royal Caribbean's loyalty program with Sandals. That report is one site. The release says the companies will explore deeper guest engagement. It does not name a new linked perk. A later creator clip, covered in the Oct 4 update, reportedly touches a new brand. Those words are not verified. The signed terms already on this site are in [5 Things Royal Caribbean Just Confirmed About Sandals](/guides/royal-caribbean-sandals-five-things-confirmed/) and the [Sep 23 news post](/news/royal-caribbean-sandals-50-percent-stake-confirmed/).
+**Sandals.** On Sep 22, Royal Caribbean Group said it will buy a 50% stake in Sandals and Beaches for about $3 billion, with a close expected in early 2027. The [release](https://www.rclinvestor.com/content/uploads/2026/09/09222026-Royal-Caribbean-Group-and-Sandals-Resorts-Announce-Landmark-Partnership-to-Accelerate-Their-Leading-Vacation-Experiences.pdf) is the source. [Reuters](https://www.reuters.com/business/royal-caribbean-acquires-stake-resort-operator-sandals-3-billion-2026-09-23/) reported the same deal on Sep 23. The Sep 22 release says existing reservations, loyalty programs, resort operations, and cruise operations continue as usual. A cruise you have already booked stays on its own timeline. The open question fans want asked is what you can use later: loyalty points, a cruise-and-resort trip, or no new perk at all. [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/) has reported a plan to link Royal Caribbean's loyalty program with Sandals. That report is one site. The release says the companies will explore deeper guest engagement. It does not name a new linked perk. Two passenger recordings, in the evening update, paraphrase him as saying Sandals will likely stay its own brand. That is not a published perk, and it is not a verbatim quote. The signed terms already on this site are in [5 Things Royal Caribbean Just Confirmed About Sandals](/guides/royal-caribbean-sandals-five-things-confirmed/) and the [Sep 23 news post](/news/royal-caribbean-sandals-50-percent-stake-confirmed/).
 
 **Entertainment.** This part is passenger chatter. It is not a company statement. On Saturday, Cruise Critic poster cusematt4 asked people on this cruise to speak with leadership. The [post](https://boards.cruisecritic.com/topic/3127378-presidents-cruise-request-for-leadership-entertainment-decline/?do=findComment&comment=70441702) says: "Hi everyone - if anyone attending the President's Cruise has an opportunity to speak with leadership, could you please respectfully convey the disappointment many guests have expressed about the direction of Royal Caribbean's entertainment?" The same post says: "Moving away from those intimate venues toward just zero or one comedian performing in the main theater over an entire cruise feels like a huge loss." It also says: "Many are also disappointed by the shift from visiting professional entertainers to game shows with an additional charge, such as The Price Is Right." Later that afternoon the same poster wrote: "Oasis class ships just had them removed over the past 6 months with the rest set to be removed this year." He added that he "spoke to some ship management who said it's frustrating as these are the most popular venues aboard and this is strictly a budget cut from corporate." That management line is hearsay from one poster. Royal Caribbean has not confirmed it.
 
@@ -278,11 +324,13 @@ The sailing just before this one is a different cruise. Icon's Sep 26 to Oct 3 t
 
 ## What you should do
 
-If you want the 2027 President's Cruise, look at Odyssey of the Seas on September 19, 2027, from Rome (Civitavecchia). The slide points you to the Royal Caribbean app or the NextCruise team. The [public itinerary](https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19) is live and offers booking. It does not say President's Cruise. The [Crown & Anchor page](https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise) still does not list it.
+If you want the week Bayley named, open the [Odyssey itinerary](https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19) for September 19, 2027, from Rome (Civitavecchia). Royal's page lists Santorini, Ephesus (Kusadasi), Mykonos, and Naples/Capri, with two sea days, and you can book it there. The page does not say President's Cruise. The [Crown & Anchor page](https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise) still does not list it. The slide still points people to the app or the NextCruise team.
 
-If you are waiting on what Bayley said in the Q&A about a new brand or the $25 dining credit, wait. One auto-transcript is not enough. We will keep updating when a second source, or a clean recording, pins the words down.
+Two passengers paraphrase him on the brands. Sandals, in that paraphrase, likely stays its own thing. That is not a perk you can book tonight.
 
-Leave a current booking alone on the strength of the Sandals headline or a Cruise Critic thread. The stake points at an early 2027 close. The entertainment posts are passengers. They are not a schedule change.
+The $25 specialty dining credit, a $200 deposit, and an early booking bonus are still one recording each. Do not treat them as published policy.
+
+Leave a current booking alone on the strength of the Sandals headline or a Cruise Critic thread. The stake points at an early 2027 close. The entertainment posts are passengers. We still have no report that he was asked about those cuts.
 
 ## Related reading
 
