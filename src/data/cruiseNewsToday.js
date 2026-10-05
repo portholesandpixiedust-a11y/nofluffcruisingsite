@@ -194,9 +194,9 @@ Disney Experiences, published 30 Sep 2026, lists dry dock changes. Wonder has mo
 If you booked Hero, the Royal Theater headline is The SpongeBob Musical, from Miami in August 2027. If you want 2028 Margaritaville, open Tampa for Islander or Galveston for Beachcomber. If you sail Wonder, Fantasy, or Magic, read the dry dock list before you board. The West Coast, Canada and New England, and Japan posts are the other three on this date.`,
   },
   '2026-10-05': {
-    description: 'Cruise news for Oct. 5, 2026: Millennium swaps Kumamoto for Fukuoka, Reflection drops Bimini for CocoCay, and Brilliant Lady swaps Cabo for Ensenada.',
-    answer: 'On Oct. 5, 2026 three stories changed a port. Celebrity Millennium replaces Kumamoto with Fukuoka after the port closed. Celebrity Reflection drops Bimini for Friday at Perfect Day at CocoCay. Brilliant Lady swaps Cabo San Lucas for Ensenada and shifts the Mazatlán hours.',
-    summary: `Oct. 5, 2026 has three stories. Open each link for the named source and the date it was checked. This page only restates those posts.
+    description: 'Cruise news for Oct. 5, 2026: Labadee return still uncertain, Hero early sailings, and three port changes.',
+    answer: 'On Oct. 5, 2026 five stories published. Michael Bayley, as Royal Caribbean Blog prints him, left a Labadee return date open, with visits suspended through June 2027. Hero of the Seas gained two early sailings. Millennium, Reflection, and Brilliant Lady each changed a port.',
+    summary: `Oct. 5, 2026 has five stories. Open each link for the named source and the date it was checked. This page only restates those posts.
 
 Celebrity Millennium's sailing that leaves Seoul (Incheon) on Oct. 5 replaces Kumamoto with Fukuoka. Celebrity's guest letter says the Kumamoto port is closed to cruise ships after earthquake damage. Fukuoka is Thursday, Oct. 8, from 7:00am to 4:00pm. Kumamoto shore excursions booked through Celebrity are cancelled and refunded to the original form of payment. Fukuoka excursions are open in the app. This letter still lists Mt Fuji (Shimizu) on Oct. 15. That is a different departure from the September cruise that cut Shimizu.
 
@@ -204,6 +204,10 @@ Celebrity Reflection's Oct. 4 Fort Lauderdale sailing drops Bimini after a berth
 
 Brilliant Lady's Oct. 3 Los Angeles sailing swaps Cabo San Lucas for Ensenada. Virgin's Oct. 2 notice says residual swell from Hurricane Rachel made tendering into Cabo unsafe. Ensenada is Sunday, Oct. 4, from 7:30am to 2:00pm. Monday, Oct. 5, is a sea day. Mazatlán moves to 11:00am through 8:00pm on Oct. 6. Puerto Vallarta stays 8:30am to 5:00pm on Oct. 7. Cabo Shore Things refund to the original payment. Virgin says no packing change is needed.
 
-If you sail Millennium on Oct. 5, drop Kumamoto and look up Fukuoka tours. If you are on Reflection, plan CocoCay for Friday and let the Bimini refund post. If you are on Brilliant Lady, use the new Mazatlán hours and treat Cabo tours as cancelled.`,
+Hero of the Seas has two sailings before the Aug. 11, 2027 inaugural. Top Tier guests on the President's Cruise heard it on Icon of the Seas, and Royal Caribbean Blog published the email to booked inaugural guests the same morning. Aug. 1, 2027 is a 7-night Western Caribbean. Aug. 8, 2027 is a 3-night CocoCay getaway. Booking opens Wednesday afternoon, Oct. 7. Change fees are waived through Oct. 14 for a move to an earlier sailing, and suites are held until then. The email and the onboard announcer say Miami. A Crown & Anchor Facebook post shown in a passenger TikTok says Port Everglades. Whether Michael Bayley spoke about Hero from that stage is still unknown.
+
+Michael Bayley was asked about Labadee during a Q&A aboard Icon of the Seas on the President's Cruise. Royal Caribbean Blog, by Elizabeth Wright and updated Oct. 5, 2026, is the only outlet with his words. The blog says the line suspended Labadee visits through June 2027, extending a skip that began in April 2025, and that no ship is set to call before July 2027. He said he gets the question a lot and it is a bit depressing, that this pause has been longer, more violent, and more dangerous, and that the line cannot go back until it is confident the place is safe. The blog does not name the session. This site does not have passenger audio or a Royal press release.
+
+If you sail Millennium on Oct. 5, drop Kumamoto and look up Fukuoka tours. If you are on Reflection, plan CocoCay for Friday and let the Bimini refund post. If you are on Brilliant Lady, use the new Mazatlán hours and treat Cabo tours as cancelled. If you want an early Hero sailing, check Miami against Port Everglades before Oct. 7. If you wanted Labadee on a Western Caribbean cruise, treat the stop as closed through June 2027.`,
   },
 };
