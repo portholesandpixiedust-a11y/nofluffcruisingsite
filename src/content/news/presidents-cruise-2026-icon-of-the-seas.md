@@ -334,6 +334,7 @@ Leave a current booking alone on the strength of the Sandals headline or a Cruis
 
 ## Related reading
 
+- [They Expected a Gripe Session. They Got Greece.](/news/they-expected-a-gripe-session-they-got-greece/)
 - [6 Things Royal Caribbean's CEO Refuses to Change](/guides/royal-caribbean-ceo-refuses-to-change/)
 - [6 Royal Caribbean Predictions for 2027](/guides/royal-caribbean-predictions-for-2027/)
 - [5 Things Royal Caribbean Just Confirmed About Sandals](/guides/royal-caribbean-sandals-five-things-confirmed/)
