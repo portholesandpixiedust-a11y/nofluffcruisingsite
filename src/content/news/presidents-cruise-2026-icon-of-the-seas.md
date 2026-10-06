@@ -1,12 +1,12 @@
 ---
-title: "Royal's booking page lists the Odyssey week Bayley named for 2027."
+title: "Pinnacle's $25 credit stays, and Tampa is out. Odyssey 2027 is still unlabeled."
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FPt1iSyeiCro%2Fmaxresdefault.jpg&w=1280&output=jpg"
 heroCredit: "Still: Royal Caribbean YouTube Short, \"Miami, do we have your attention?\" · https://www.youtube.com/watch?v=Pt1iSyeiCro"
-description: "Royal Caribbean's booking page lists Odyssey of the Seas from Rome on Sep 19 to 26, 2027, with Santorini, Ephesus, Mykonos, and Naples/Capri. The Crown & Anchor page still does not call it a President's Cruise. Two passenger recordings paraphrase Bayley on group brands, including Sandals, keeping their own identities. Verbatim Q&A quotes are still not in."
-answer: "Royal Caribbean's booking page now lists the week Michael Bayley named on Oct 4: Odyssey of the Seas, 7 nights from Rome (Civitavecchia), Sep 19 to 26, 2027, calling at Santorini, Ephesus (Kusadasi), Mykonos, and Naples/Capri, with two sea days. The page does not say President's Cruise, and the Crown & Anchor page still describes only Icon in 2026. Two passengers paraphrase him as saying group brands, Sandals included, keep their own identities. That is a paraphrase, not a verbatim quote."
+description: "Nancy Ramos shut down the rumor that Pinnacle Club members lose the $25 dining credit on Icon, Quantum, and Oasis class ships. Three reports say Bayley ruled Discovery class out of Tampa because it will not fit under the Sunshine Skyway. The Crown & Anchor page, rechecked about 7:10 PM ET on Oct. 6, still shows only the Oct. 3, 2026 Icon sailing. Royal's booking page still lists Odyssey of the Seas from Rome on Sep. 19 to 26, 2027, without calling it a President's Cruise. Sunday's brand comments remain a two-passenger paraphrase."
+answer: "Nancy Ramos shut down the rumor that Pinnacle Club members lose the $25 dining credit, given in place of Coastal Kitchen, on Icon, Quantum, and Oasis class ships. Matt Hochberg says she ended the rumor. Three reports paraphrase Michael Bayley saying Discovery class will not fit under Tampa's Sunshine Skyway Bridge. The Crown & Anchor page, rechecked about 7:10 PM ET on Oct. 6, still lists only the Oct. 3, 2026 Icon sailing. Odyssey of the Seas from Rome, Sep. 19 to 26, 2027, is still on the booking page without a President's Cruise label. Sunday's brand comments are still a paraphrase."
 presenter: Matthew
 publishDate: 2026-10-04T08:15:00-04:00
-updatedAt: 2026-10-04T19:30:00-04:00
+updatedAt: 2026-10-06T19:10:00-04:00
 line: "Royal Caribbean"
 ships: ["Icon of the Seas", "Odyssey of the Seas"]
 topics: [Ships, Company]
@@ -190,7 +190,87 @@ sources:
     date: "4 Oct 2026"
     url: "https://www.youtube.com/watch?v=pEayRRsDK9o"
     note: "The brand paraphrase agrees with the Luxury Properties International clip. Everything else in this claim is their recap only. They do not confirm the $25 Pinnacle dining credit."
+  - claim: "Official President's Cruise page, rechecked about 7:10 PM ET on Oct. 6, 2026. The page still describes only the 2026 sailing on Icon of the Seas, seven nights from Miami, with St. Maarten, St. Thomas, and Perfect Day at CocoCay. It does not mention Odyssey of the Seas, September 19, 2027, or a 2027 President's Cruise."
+    outlet: "Royal Caribbean"
+    tier: 1
+    date: "6 Oct 2026"
+    url: "https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise"
+    note: "Same URL as the Oct. 3 and Oct. 4 checks. Still no 2027 Odyssey confirmation."
+  - claim: "Royal Caribbean Blog, Matt Hochberg, updated Oct. 5, 2026. Nancy Ramos is Royal Caribbean International's Assistant Vice President of Loyalty, Affinity, and Onboard Marketing. The article quotes her saying benefits stay at the brand level. It does not mention the $25 Pinnacle dining credit."
+    outlet: "Royal Caribbean Blog"
+    tier: 2
+    date: "5 Oct 2026"
+    url: "https://www.royalcaribbeanblog.com/2026/10/05/royal-caribbean-wont-merge-loyalty-benefits-celebrity-cruises"
+    note: "Printed source for her title and for the brand-benefit comments. Not a source for the dining credit."
+  - claim: "Royal Caribbean Blog YouTube, Matt Hochberg, 4:00 PM ET on Oct. 6, 2026. He says Nancy Ramos, at Common Ground on Sunday, shut down a rumor that Pinnacle Club members would lose the $25 dining credit on Icon, Quantum, and Oasis class ships. That credit is given in exchange for not using Coastal Kitchen. As heard on the auto-transcript, he calls the rumor a hundred percent not happening and says Ms. Ramos completely squashed it. The same video paraphrases Michael Bayley on Tampa. Discovery class will not fit under the Sunshine Skyway Bridge. Hochberg renders that answer as absolutely no chance. Single-source paraphrases on this video only, kept out of the verified sections, cover comedy, Galveston, Philadelphia, and Suite Lounge daytime access."
+    outlet: "Royal Caribbean Blog"
+    tier: 2
+    date: "6 Oct 2026"
+    url: "https://www.youtube.com/watch?v=ldEdXQbnH1s"
+    note: "Auto-transcript. The hundred-percent and squashed lines are Hochberg's spoken summary, not a printed quote and not Ramos's script. Absolutely no chance is his paraphrase of Bayley. Comedy, Galveston, Philadelphia, and the Suite Lounge are this video only."
+  - claim: "Nicki on Deck YouTube live, 11:59 AM ET on Oct. 6, 2026. Independent passenger report that Michael Bayley said the new Discovery class will not come to Tampa because the ships will not fit under the Sunshine Skyway Bridge."
+    outlet: "Nicki on Deck / YouTube"
+    tier: 2
+    date: "6 Oct 2026"
+    url: "https://www.youtube.com/watch?v=2L1SXOeEzkg"
+    note: "Second Oct. 6 account of the Tampa and Discovery class point, with the Royal Caribbean Blog video. Paraphrase. This live is not the source of the absolutely no chance wording."
+  - claim: "Addy and Terry YouTube recap from Oct. 4, 2026, used again for the Oct. 6 Tampa check. With the two Oct. 6 videos, their recap is the third report that Bayley ruled Discovery class out of Tampa because the new class will not fit under the Sunshine Skyway Bridge."
+    outlet: "Addy and Terry / YouTube"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.youtube.com/watch?v=pEayRRsDK9o"
+    note: "Earliest of the three Tampa reports. The Oct. 4 evening section on this page carried their answer as no ships coming. The class and the bridge are the detail this update is using them for. Absolutely no chance is not their wording."
+  - claim: "Luxury Properties International Common Ground clip, read again with the Oct. 6 Royal Caribbean Blog video. The person who addresses the $25 Pinnacle dining credit is Nancy Ramos. She shot down the rumor that the credit, given in exchange for not using Coastal Kitchen, was going away on Icon, Quantum, and Oasis class ships."
+    outlet: "Luxury Properties International / YouTube"
+    tier: 2
+    date: "4 Oct 2026"
+    url: "https://www.youtube.com/watch?v=to2_vAirW0U"
+    note: "Same clip cited above, where the credit line was still alone and the speaker was not named as Ramos. The Oct. 6 video identifies her and matches the substance. Auto-transcript. Paraphrase, not a verbatim Ramos quote."
 ---
+
+## Update, Oct. 6
+
+The $25 dining credit for Pinnacle Club stays. Nancy Ramos said so at Common Ground on Sunday, Oct. 4.
+
+She is Royal Caribbean International's assistant vice president of loyalty, affinity, and onboard marketing. [Royal Caribbean Blog printed that title on Oct. 5](https://www.royalcaribbeanblog.com/2026/10/05/royal-caribbean-wont-merge-loyalty-benefits-celebrity-cruises). That article quotes her on brand benefits. It does not mention this credit.
+
+The rumor was specific. Pinnacle members on Icon, Quantum, and Oasis class ships would lose the $25 dining credit they get in exchange for not using Coastal Kitchen. Two recordings now say the credit stays. [Luxury Properties International](https://www.youtube.com/watch?v=to2_vAirW0U) filmed the session. On Oct. 6, Matt Hochberg posted a [Royal Caribbean Blog video](https://www.youtube.com/watch?v=ldEdXQbnH1s) at 4:00 PM ET. He names Ramos as the person who shut the rumor down.
+
+As heard on that auto-transcribed video, he calls the rumor a hundred percent not happening, and he says Ms. Ramos completely squashed it. That is his spoken summary. It is not a printed quote. It is not Ramos's script.
+
+An earlier section on this page read that Luxury Properties clip as Bayley, and it left the credit on one recording. Use this update for the credit. The speaker is Ramos. The credit stays.
+
+The closer at the bottom of this page still says the credit is one recording. That was the Oct. 4 evening check. Skip that line. The $200 deposit and the early booking bonus are still Addy and Terry only.
+
+### No Discovery class for Tampa
+
+Discovery class will not call Tampa. Michael Bayley said the new class will not fit under the Sunshine Skyway Bridge.
+
+Three reports match on that substance. [Addy and Terry](https://www.youtube.com/watch?v=pEayRRsDK9o) covered it in their Oct. 4 recap. [Nicki on Deck](https://www.youtube.com/watch?v=2L1SXOeEzkg) covered it on a YouTube live at 11:59 AM ET on Oct. 6. Hochberg covered it on the Royal Caribbean Blog video at 4:00 PM ET the same day.
+
+Absolutely no chance is Hochberg's paraphrase of Bayley on that video. Do not treat it as a line Bayley printed.
+
+The Oct. 4 evening section on this page carried Addy and Terry's Tampa answer as no ships coming. The class and the bridge are the detail these three reports support.
+
+### Odyssey is still unlabeled
+
+The [Crown & Anchor President's Cruise page](https://www.royalcaribbean.com/crown-anchor-society/presidents-cruise), rechecked about 7:10 PM ET on Oct. 6, 2026, still describes only the Oct. 3, 2026 sailing on Icon of the Seas. It does not mention Odyssey of the Seas. It does not mention a 2027 President's Cruise.
+
+The week he named is still bookable. Royal Caribbean's [itinerary page](https://www.royalcaribbean.com/itinerary/7-night-greek-isles-from-rome-civitavecchia-on-odyssey-OY07ROM-3274971603?currencyCode=USD&sailDate=2027-09-19) is still Odyssey of the Seas, 7 nights from Rome (Civitavecchia), September 19 to 26, 2027. The calls are still Santorini, Ephesus (Kusadasi), Mykonos, and Naples/Capri, with two sea days. The page still does not say President's Cruise.
+
+The brand comments from Sunday are unchanged. Two passengers paraphrase him as saying group brands, Sandals included, keep their own identities. That remains a paraphrase, not a verbatim quote.
+
+### Unconfirmed, from one video
+
+This section is [Royal Caribbean Blog's Oct. 6 video](https://www.youtube.com/watch?v=ldEdXQbnH1s) only. It is auto-transcribed. Hochberg is paraphrasing what he heard. These are not verified facts.
+
+**Comedy.** He reads Bayley as saying the plan was not to remove comedy, that more comedy is coming, and that they took the venue away. He says Bayley seemed surprised that adult comedy is gone from Oasis class and from Legend. An unnamed executive, in that same telling, said there is still comedy on those ships.
+
+**Galveston.** The paraphrase is more ships, and bigger ships, after Perfect Day Mexico opens.
+
+**Philadelphia.** Not seen as a viable option. Baltimore is already served.
+
+**Suite Lounge.** An unnamed executive was pretty receptive to daytime access for Pinnacles who are restricted. Pretty receptive is Hochberg's paraphrase. It is not a published rule.
 
 ## Update, Oct 4 evening
 
