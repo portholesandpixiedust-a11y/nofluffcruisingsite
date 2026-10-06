@@ -210,4 +210,17 @@ Michael Bayley was asked about Labadee during a Q&A aboard Icon of the Seas on t
 
 If you sail Millennium on Oct. 5, drop Kumamoto and look up Fukuoka tours. If you are on Reflection, plan CocoCay for Friday and let the Bimini refund post. If you are on Brilliant Lady, use the new Mazatlán hours and treat Cabo tours as cancelled. If you want an early Hero sailing, check Miami against Port Everglades before Oct. 7. If you wanted Labadee on a Western Caribbean cruise, treat the stop as closed through June 2027.`,
   },
+  '2026-10-06': {
+    description: 'Cruise news for Oct. 6, 2026: Disney Believe\'s keel before the Oct. 7 reveal, an MSC and Royal Caribbean terminal in Naha, and Holland America\'s 2027 Alaska.',
+    answer: 'On Oct. 6, 2026 three stories published. Disney Believe\'s keel was laid on Sep. 29, and Disney says a livestream on Oct. 7 at 4:30pm ET names the homeport and itineraries. MSC and Royal Caribbean broke ground on a shared Naha terminal targeted for March 2028. Holland America set six ships for its 80th Alaska season in 2027.',
+    summary: `Oct. 6, 2026 has three stories. Open each link for the named source and the date it was checked. This page only restates those posts.
+
+Disney Believe's keel was laid at Meyer Werft in Papenburg on Sep. 29, 2026, with a coin showing Tinker Bell, the ship's bow character. Disney announced it on Oct. 5 to media aboard Disney Wish, where a scavenger hunt is teasing the ship. Disney named Trent Hitchcock as Believe's opening Cruise Director and confirmed hull 723. A livestream on Wednesday, Oct. 7, at 4:30pm ET on the Disney Parks channels is set to share the homeport, itineraries, venues, and entertainment. No source prints a booking date or fare. Disney still lists late 2027.
+
+MSC Cruises and Royal Caribbean Group, through the joint venture Cruise Port Naha G.K., broke ground on a new cruise terminal at Naha, Okinawa. Royal Caribbean Group's Oct. 5 release targets completion and the start of operations for March 2028. Ryukyu Shimpo dates the ceremony Oct. 2. The release prints no cost, no size, and no ship list.
+
+Holland America will sail six ships in Alaska from April through September 2027, its 80th year there: Eurodam, Koningsdam, Nieuw Amsterdam, Noordam, Westerdam, and Zaandam. The Oct. 5 release adds an eight-day Inside Passage roundtrip from Vancouver with Glacier Bay, brings back the 28-day Solstice cruise on Noordam from Seattle on June 6, and adds 72 rooms at Denali Lodge. It prints no fares.
+
+If you want a first-season Disney Believe cruise, wait for the Oct. 7 homeport before you price flights. If you hold a Naha call before spring 2028, plan on today's port setup. If you want Holland America's Solstice cruise, June 6, 2027 is the date to price.`,
+  },
 };
