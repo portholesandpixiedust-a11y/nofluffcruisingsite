@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { isRedirectSource } from '../utils/siteRedirects.js';
 
 const esc = (s = '') => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -6,7 +7,11 @@ export async function GET(context) {
   const site = context.site?.href ?? 'https://nofluffcruising.com/';
   const all = [];
   for (const [coll, route] of [['reviews', 'reviews'], ['guides', 'guides']]) {
-    for (const e of await getCollection(coll)) all.push({ e, route });
+    for (const e of await getCollection(coll)) {
+      // Keep the canonical guide or review. Skip paths vercel.json redirects.
+      if (isRedirectSource(`/${route}/${e.id}/`)) continue;
+      all.push({ e, route });
+    }
   }
   all.sort((a, b) => new Date(b.e.data.publishDate) - new Date(a.e.data.publishDate));
   const items = all.map(({ e, route }) => `    <item>

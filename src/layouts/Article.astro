@@ -10,6 +10,8 @@ import { easternCalendarDate, formatEasternDisplay, formatEasternISO } from '../
 import { formatDayHeading } from '../utils/newsToday.js';
 import { newsHubSlug } from '../utils/newsLines.js';
 import { HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from '../utils/newsTags.js';
+import { relatedEntries } from '../utils/relatedContent.js';
+import { isRedirectSource } from '../utils/siteRedirects.js';
 
 const {
   entry,
@@ -79,6 +81,13 @@ const faq = (d.faq?.length) ? {
 const jsonld = [article, video, faq].filter(Boolean);
 const topicLabel = (d.topics ?? []).filter(Boolean).join(' · ');
 const newsHub = schemaType === 'NewsArticle' ? newsHubSlug(d.line) : null;
+const relatedKind = schemaType === 'NewsArticle' ? 'news' : (sectionUrl === '/guides/' ? 'guides' : null);
+const related = relatedKind
+  ? relatedEntries(
+      entry,
+      (await getCollection(relatedKind)).filter((item) => !isRedirectSource(`/${relatedKind}/${item.id}/`)),
+    )
+  : [];
 const linkedShips = [];
 if (schemaType === 'NewsArticle' && d.ships?.length) {
   const shipEntries = await getCollection('ships');
@@ -137,6 +146,17 @@ if (schemaType === 'NewsArticle' && d.ships?.length) {
       )}
 
       <div class="prose"><slot /></div>
+
+      {related.length > 0 && (
+        <section class="reflist">
+          <h2>{relatedKind === 'news' ? 'Related stories' : 'Related guides'}</h2>
+          <ul>
+            {related.map((item) => (
+              <li><a href={`/${relatedKind}/${item.id}/`}>{item.data.title}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {linkedShips.length > 0 && (
         <section class="reflist">

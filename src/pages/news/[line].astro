@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import { byPublishDate } from '../../utils/byPublishDate.js';
+import { storiesForLine } from '../../utils/hubStories.js';
 import { canonicalLine, newsHubSlug } from '../../utils/newsLines.js';
 
 export async function getStaticPaths() {
@@ -24,9 +24,7 @@ export async function getStaticPaths() {
 
 const { lineName } = Astro.props;
 const lineEntry = (await getCollection('lines')).find((line) => line.data.name === lineName) ?? null;
-const posts = (await getCollection('news'))
-  .filter((post) => canonicalLine(post.data.line) === lineName)
-  .sort(byPublishDate);
+const posts = storiesForLine(await getCollection('news'), lineName);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
 const lineHref = lineEntry ? `/lines/${lineEntry.data.id}/` : null;
 const title = `${lineName} News`;
@@ -61,7 +59,7 @@ const jsonld = [{
       {lineHref && <> · <a href={lineHref}>{lineName} line page</a></>}
     </p>
 
-    <h2 class="sec" style="margin-top:30px">Latest</h2><div class="rule"></div>
+    <h2 class="sec" style="margin-top:30px">All stories</h2><div class="rule"></div>
     <div class="news-list">
       {posts.map((post) => (
         <article class="news-row">

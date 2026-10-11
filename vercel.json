@@ -60,5 +60,13 @@
       "destination": "/news/margaritaville/",
       "statusCode": 301
     }
+  ],
+  "headers": [
+    {
+      "source": "/rss.xml",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex" }
+      ]
+    }
   ]
 }
