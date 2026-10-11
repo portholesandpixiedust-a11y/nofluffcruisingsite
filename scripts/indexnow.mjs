@@ -13,6 +13,7 @@
 import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
+import { resolvePublicPath } from '../src/utils/siteRedirects.js';
 
 const HOST = 'nofluffcruising.com';
 const ORIGIN = `https://${HOST}`;
@@ -85,7 +86,10 @@ export function urlsForFile(file) {
     urls.add(`${ORIGIN}/reviews/`);
     urls.add(`${ORIGIN}/ships/`);
   }
-  return [...urls];
+  return [...urls].map((url) => {
+    const resolved = resolvePublicPath(url);
+    return resolved.startsWith('http') ? resolved : `${ORIGIN}${resolved.startsWith('/') ? resolved : `/${resolved}`}`;
+  });
 }
 
 export function changedFiles() {

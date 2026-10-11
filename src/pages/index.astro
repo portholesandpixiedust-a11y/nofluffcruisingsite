@@ -4,6 +4,7 @@ import Card from '../components/Card.astro';
 import NewsletterEmbed from '../components/NewsletterEmbed.astro';
 import { getCollection } from 'astro:content';
 import { byPublishDate as byDate } from '../utils/byPublishDate.js';
+import { canonicalLinks } from '../utils/siteRedirects.js';
 
 const guides = (await getCollection('guides')).sort(byDate);
 
@@ -13,9 +14,12 @@ const guides = (await getCollection('guides')).sort(byDate);
 // the Ship Reviews section. Add a new id here when a genuine ship review
 // publishes, or nothing will show up but Celebrity Beyond.
 const FEATURED_REVIEW_IDS = ['disney-wish-review', 'celebrity-beyond-review', 'virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change'];
-const reviews = (await getCollection('reviews'))
-  .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
-  .sort(byDate);
+const reviews = canonicalLinks(
+  (await getCollection('reviews'))
+    .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))
+    .sort(byDate),
+  (r) => `/reviews/${r.id}/`,
+);
 const news = (await getCollection('news')).sort(byDate).slice(0, 5);
 const ships = await getCollection('ships');
 const lines = await getCollection('lines');
@@ -89,8 +93,8 @@ const newsMeta = (n) => n.data.presenter + ' \u00b7 ' + fmt(n.data.publishDate);
       <h2 class="sec">Been aboard, here is the verdict</h2>
       <div class="rule"></div>
       <div class="grid g2c">
-        {reviews.map((r) => (
-          <Card href={'/reviews/' + r.id + '/'} title={r.data.title} description={r.data.description}
+        {reviews.map(({ entry: r, href }) => (
+          <Card href={href} title={r.data.title} description={r.data.description}
                 kicker={kicker(r.data)} videoId={r.data.video?.id}
                 meta={reviewMeta(r)} />
         ))}

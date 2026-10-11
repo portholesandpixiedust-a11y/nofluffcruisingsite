@@ -4,6 +4,7 @@ import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 import { byPublishDate } from '../../utils/byPublishDate.js';
 import { newsHubSlug } from '../../utils/newsLines.js';
+import { canonicalLinks } from '../../utils/siteRedirects.js';
 
 export async function getStaticPaths() {
   const lines = await getCollection('lines');
@@ -12,7 +13,10 @@ export async function getStaticPaths() {
 const { line } = Astro.props;
 const d = line.data;
 const ships = (await getCollection('ships')).filter((s)=>s.data.line===d.id).sort((a,b)=>(b.data.inService??0)-(a.data.inService??0));
-const posts = (await getCollection('reviews')).filter((p)=>p.data.line===d.name);
+const reviewLinks = canonicalLinks(
+  (await getCollection('reviews')).filter((p) => p.data.line === d.name),
+  (p) => `/reviews/${p.id}/`,
+);
 const news = (await getCollection('news')).filter((p)=>p.data.line===d.name).sort(byPublishDate);
 const fmt = (x) => new Date(x).toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
 const newsHub = newsHubSlug(d.name);
@@ -65,10 +69,10 @@ const jsonld = [{
       {newsHub && <p style="margin-top:16px"><a href={`/news/${newsHub}/`}>All {d.name} news</a></p>}
     </>)}
 
-    {posts.length > 0 && (<>
+    {reviewLinks.length > 0 && (<>
       <h2 class="sec" style="margin-top:30px">Reviews</h2><div class="rule"></div>
-      <div class="grid g3">{posts.map((p)=>(
-        <Card href={`/reviews/${p.id}/`} title={p.data.title} description={p.data.description} videoId={p.data.video.id} meta={fmt(p.data.publishDate)} />
+      <div class="grid g3">{reviewLinks.map(({ entry: p, href }) => (
+        <Card href={href} title={p.data.title} description={p.data.description} videoId={p.data.video.id} meta={fmt(p.data.publishDate)} />
       ))}</div>
     </>)}
   </div>

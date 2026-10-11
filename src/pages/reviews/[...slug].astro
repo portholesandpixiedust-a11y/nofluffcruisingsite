@@ -1,10 +1,14 @@
 ---
 import Article from '../../layouts/Article.astro';
 import { getCollection, render } from 'astro:content';
+import { isRedirectSource } from '../../utils/siteRedirects.js';
 
 export async function getStaticPaths() {
   const entries = await getCollection('reviews');
-  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+  // Old review files still sit in the collection. vercel.json 301s them, so they must not be routes.
+  return entries
+    .filter((entry) => !isRedirectSource(`/reviews/${entry.id}/`))
+    .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;
 const { Content } = await render(entry);

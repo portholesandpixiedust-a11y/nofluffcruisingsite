@@ -3,14 +3,11 @@ import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import VideoFacade from '../../../components/VideoFacade.astro';
 import Sources from '../../../components/Sources.astro';
-import { byPublishDate } from '../../../utils/byPublishDate.js';
 import { formatEasternISO, normalizeContentDate } from '../../../utils/etDate.js';
+import { mentionsShip, storiesForShip } from '../../../utils/hubStories.js';
 import { shipShortAnswer } from '../../../utils/shipShortAnswer.js';
 import { shipHub, shipPageIncludesProduct } from '../../../utils/shipHub.js';
-
-function mentionsShip(list, ship) {
-  return (list ?? []).some((s) => s === ship.id || s === ship.name);
-}
+import { canonicalLinks } from '../../../utils/siteRedirects.js';
 
 export async function getStaticPaths() {
   const ships = await getCollection('ships');
@@ -21,7 +18,10 @@ const d = ship.data;
 const hub = shipHub(d.id);
 const lines = await getCollection('lines');
 const lineName = lines.find((l) => l.data.id === d.line)?.data.name ?? d.line;
-const posts = (await getCollection('reviews')).filter((p) => mentionsShip(p.data.ships, d));
+const reviewLinks = canonicalLinks(
+  (await getCollection('reviews')).filter((p) => mentionsShip(p.data.ships, d)),
+  (p) => `/reviews/${p.id}/`,
+);
 const allGuides = await getCollection('guides');
 const taggedGuides = allGuides.filter((g) => mentionsShip(g.data.ships, d));
 const relatedGuides = hub
@@ -29,8 +29,7 @@ const relatedGuides = hub
   : allGuides.filter((g) => mentionsShip(g.data.ships, d) || (g.data.line && g.data.line === lineName)).slice(0, 4);
 const sisters = (await getCollection('ships')).filter((x) =>
   x.data.line === d.line && x.data.shipClass === d.shipClass && x.data.id !== d.id).slice(0, 4);
-const news = (await getCollection('news')).filter((n) =>
-  mentionsShip(n.data.ships, d)).sort(byPublishDate);
+const news = storiesForShip(await getCollection('news'), d);
 const shortAnswer = hub?.description ?? shipShortAnswer(d, lineName);
 const checked = normalizeContentDate(d.updated);
 const includeProduct = shipPageIncludesProduct(d.id);
@@ -87,7 +86,7 @@ const seenLinks = new Set(latestNews.map((item) => item.href));
 const onSite = [];
 if (hub) {
   const auto = [
-    ...posts.map((p) => ({ href: `/reviews/${p.id}/`, label: p.data.title })),
+    ...reviewLinks.map(({ entry: p, href }) => ({ href, label: p.data.title })),
     ...relatedGuides.map((g) => ({ href: `/guides/${g.id}/`, label: g.data.title })),
   ];
   for (const item of [...(hub.related ?? []), ...auto]) {
@@ -129,7 +128,7 @@ if (hub) {
 
         {latestNews.length > 0 && (
           <section class="reflist" style="max-width:70ch">
-            <h2>Latest news</h2>
+            <h2>News</h2>
             <ul>{latestNews.map((item) => <li><a href={item.href}>{item.label}</a></li>)}</ul>
           </section>
         )}
@@ -249,11 +248,11 @@ if (hub) {
           </section>
         )}
 
-        {(posts.length > 0 || d.coveredIn.length > 0) && (
+        {(reviewLinks.length > 0 || d.coveredIn.length > 0) && (
           <section class="reflist" style="max-width:70ch">
             <h2>Covered in</h2>
             <ul>
-              {posts.map((p)=> <li><a href={`/reviews/${p.id}/`}>{p.data.title}</a></li>)}
+              {reviewLinks.map(({ entry: p, href }) => <li><a href={href}>{p.data.title}</a></li>)}
               {d.coveredIn.map((v)=> <li><a class="vlink" href={`https://www.youtube.com/watch?v=${v.id}`} rel="noopener">{v.title}</a></li>)}
             </ul>
           </section>

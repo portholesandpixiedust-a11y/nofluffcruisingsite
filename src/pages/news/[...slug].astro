@@ -1,10 +1,13 @@
 ---
 import Article from '../../layouts/Article.astro';
 import { getCollection, render } from 'astro:content';
+import { isRedirectSource } from '../../utils/siteRedirects.js';
 
 export async function getStaticPaths() {
   const entries = await getCollection('news');
-  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+  return entries
+    .filter((entry) => !isRedirectSource(`/news/${entry.id}/`))
+    .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;
 const { Content } = await render(entry);
