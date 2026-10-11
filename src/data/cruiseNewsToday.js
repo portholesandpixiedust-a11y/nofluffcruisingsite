@@ -229,4 +229,17 @@ Holland America will sail six ships in Alaska from April through September 2027,
 
 If you are on Spirit, move a Thursday boarding plan and drop Cabo. If you are on one of the six drill sailings, plan to stand at your station before departure. If you are pricing Norwegian for later 2027 or for 2028, compare the live fare now. If you want a first-season Disney Believe cruise, wait for the Oct. 7 homeport before you price flights. If you hold a Naha call before spring 2028, plan on today's port setup. If you want Holland America's Solstice cruise, June 6, 2027 is the date to price.`,
   },
+  '2026-10-11': {
+    description: 'Cruise news for Oct. 11, 2026: Disney Believe sails from Port Everglades, Norwegian Aura arrives early, and Brilliant Lady loses Mexico.',
+    answer: 'On Oct. 11, 2026 three stories published. Disney Believe homeports at Port Everglades, with a maiden voyage on Dec. 18, 2027 and public booking on Oct. 19. Norwegian Aura adds two May 2027 Mediterranean sailings after an early delivery. Brilliant Lady swaps all three Mexican Riviera ports for California and Ensenada.',
+    summary: `Oct. 11, 2026 has three stories. Open each link for the named source and the date it was checked. This page only restates those posts.
+
+Disney Believe will homeport at Port Everglades in Fort Lauderdale. Disney and the port announced it on Oct. 7. The maiden voyage leaves Dec. 18, 2027, and the ship then sails four- and five-night Bahamas and Caribbean cruises with Castaway Cay, Lookout Cay, or both. Public booking opens Oct. 19, 2026. PAX lists earlier Castaway Club windows from Oct. 12 for Pearl members, each at 8am ET, and a non-refundable 10 percent deposit on the maiden voyage. New on board are Disney Encanto, Oaken's Table, and Gazelle. No fares are published.
+
+Norwegian Cruise Line expects Norwegian Aura to deliver early. On Oct. 9 it opened a 10-day Trieste to Athens cruise on May 2, 2027 and a nine-day return on May 12. Cruise Industry News says the maiden voyage had been May 21. Seven-day Eastern Caribbean cruises from Miami follow from June 2027. NCL prints no delivery date.
+
+Brilliant Lady's seven-night Oct. 10 sailing from Los Angeles skips Cabo San Lucas, Mazatlán, and Puerto Vallarta. Virgin's Oct. 9 notice cites Hurricane Rachel and Tropical Storm Simon. Santa Barbara on Oct. 12, San Diego on Oct. 13, and Ensenada on Oct. 14 replace them, and the ship still returns Oct. 17. Shore Things for dropped ports refund in full. Cruise Hive reports Sailor Loot and future cruise credit.
+
+If you want an early Disney Believe cruise, check your Castaway Club window. If you want NCL's newest ship first, price May 2. If you sail Brilliant Lady on Oct. 17, check Virgin's advisory page daily.`,
+  },
 };
