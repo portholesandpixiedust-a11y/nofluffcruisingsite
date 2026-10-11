@@ -39,11 +39,14 @@ const articleBase = {
   watchNext: videoRef.optional(),
 };
 
+const faq = z.array(z.object({ q: z.string(), a: z.string() })).default([]);
+
 const reviews = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/reviews' }),
   schema: z.object({
     ...articleBase,
     video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }),
+    faq,
   }),
 });
 
@@ -52,7 +55,7 @@ const guides = defineCollection({
   schema: z.object({
     ...articleBase,
     video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }).optional(),
-    faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    faq,
   }),
 });
 
