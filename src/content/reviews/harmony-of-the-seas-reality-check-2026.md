@@ -6,7 +6,7 @@ presenter: Matthew
 publishDate: 2026-10-11T14:45:00-04:00
 line: Royal Caribbean
 topics: [Ships, Value]
-ships: [Harmony of the Seas]
+ships: [harmony-of-the-seas]
 video:
   id: vwAcae9PRAU
   title: "Harmony of the Seas Gave me a Reality Check"

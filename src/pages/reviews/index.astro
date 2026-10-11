@@ -6,7 +6,7 @@ import { canonicalLinks } from '../../utils/siteRedirects.js';
 // Keep in sync with the same allowlist in src/pages/index.astro — the
 // auto-publish pipeline drops every approved video companion post into the
 // "reviews" collection whether or not it's a real per-ship review.
-const FEATURED_REVIEW_IDS = ['disney-wish-review', 'celebrity-beyond-review', 'virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change'];
+const FEATURED_REVIEW_IDS = ['disney-wish-review', 'celebrity-beyond-review', 'virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change', 'harmony-of-the-seas-reality-check-2026'];
 const entries = canonicalLinks(
   (await getCollection('reviews'))
     .filter((r) => FEATURED_REVIEW_IDS.includes(r.id))

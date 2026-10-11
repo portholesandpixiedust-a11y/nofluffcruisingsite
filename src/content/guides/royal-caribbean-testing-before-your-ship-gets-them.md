@@ -150,7 +150,7 @@ The cost is the room it takes. Each conversion removed a space someone loved.
 
 [Royal Caribbean Blog](https://www.royalcaribbeanblog.com/2026/09/04/new-casino-oasis-of-the-seas) counts eight ships with larger non-smoking casino space: Harmony, Utopia, Symphony, Allure, Radiance, Liberty, Ovation, and Freedom. Oasis of the Seas is next. The space outside Studio B is being converted. Blaze closed for good on 6 Sep 2026, and the Crown Lounge moves to Deck 15. Full opening is expected around 9 Nov 2026. Royal has not published an official list.
 
-Our own [Harmony of the Seas watch-along](/guides/harmony-of-the-seas-reality-check-2026/) has the expanded casino up close.
+Our own [Harmony of the Seas watch-along](/reviews/harmony-of-the-seas-reality-check-2026/) has the expanded casino up close.
 
 **What to do:** If your favorite lounge sits next to a casino, check that it still exists before you sail.
 
