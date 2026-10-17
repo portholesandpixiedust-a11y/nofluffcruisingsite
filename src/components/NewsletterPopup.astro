@@ -1,0 +1,258 @@
+---
+import {
+  DEFAULT_KLAVIYO_COMPANY_ID,
+  DEFAULT_KLAVIYO_LIST_ID,
+} from '../utils/briefingPopup.js';
+
+const companyId = String(import.meta.env.PUBLIC_KLAVIYO_COMPANY_ID || DEFAULT_KLAVIYO_COMPANY_ID).trim();
+const listId = String(import.meta.env.PUBLIC_KLAVIYO_LIST_ID || DEFAULT_KLAVIYO_LIST_ID).trim();
+---
+<div
+  id="nfc-briefing"
+  class="nfc-briefing"
+  hidden
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="nfc-briefing-title"
+  aria-describedby="nfc-briefing-desc"
+  data-company-id={companyId}
+  data-list-id={listId}
+>
+  <div class="nfc-briefing__backdrop" data-nfc-briefing-dismiss></div>
+  <div class="nfc-briefing__panel">
+    <button type="button" class="nfc-briefing__close" data-nfc-briefing-dismiss aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="nfc-briefing__mast">
+      <span class="nfc-briefing__eyebrow">Newsletter</span>
+      <h2 id="nfc-briefing-title">Your Cruise Briefing</h2>
+      <span class="nfc-briefing__rule" aria-hidden="true"></span>
+    </div>
+    <div class="nfc-briefing__body">
+      <p id="nfc-briefing-desc" class="nfc-briefing__desc">Join our newsletter for free cruise guides, deals worth booking, and freebies we only send to subscribers.</p>
+      <ul class="nfc-briefing__perks">
+        <li>
+          <span class="nfc-briefing__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 5.5h9.2A2.8 2.8 0 0 1 17 8.3V20H8.2A3.2 3.2 0 0 0 5 23.2V5.5z"></path>
+              <path d="M5 5.5A3.2 3.2 0 0 1 8.2 2.3H17"></path>
+            </svg>
+          </span>
+          Free cruise guides
+        </li>
+        <li>
+          <span class="nfc-briefing__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12.5 4H6v6.5l7.2 7.2a2 2 0 0 0 2.8 0l4.7-4.7a2 2 0 0 0 0-2.8L12.5 4z"></path>
+              <path d="M9 9h.01"></path>
+            </svg>
+          </span>
+          Deals worth booking
+        </li>
+        <li>
+          <span class="nfc-briefing__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3.5" y="10" width="17" height="10" rx="1.5"></rect>
+              <path d="M3.5 14.5h17"></path>
+              <path d="M12 10v10"></path>
+              <path d="M12 10c-1.6-3.4-5.2-3.6-5.2-1.4C6.8 10.4 10 10 12 10z"></path>
+              <path d="M12 10c1.6-3.4 5.2-3.6 5.2-1.4C17.2 10.4 14 10 12 10z"></path>
+            </svg>
+          </span>
+          Subscriber-only freebies
+        </li>
+      </ul>
+      <form class="nfc-briefing__form" novalidate>
+        <label class="nfc-briefing__label" for="nfc-briefing-email">Email</label>
+        <div class="nfc-briefing__row">
+          <input
+            id="nfc-briefing-email"
+            type="email"
+            name="email"
+            inputmode="email"
+            autocomplete="email"
+            spellcheck="false"
+            placeholder="you@example.com"
+            aria-describedby="nfc-briefing-error"
+            required
+          />
+          <button class="btn nfc-briefing__submit" type="submit">Get the Briefing</button>
+        </div>
+        <p id="nfc-briefing-error" class="nfc-briefing__error" role="alert" hidden></p>
+      </form>
+      <p id="nfc-briefing-success" class="nfc-briefing__success" role="status" tabindex="-1" hidden>You're in. Watch your inbox for the briefing.</p>
+      <div class="nfc-briefing__foot">
+        <button type="button" class="nfc-briefing__decline" data-nfc-briefing-dismiss>No thanks</button>
+        <a href="/privacy/">Privacy</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import {
+    BRIEFING_DELAY_MS,
+    briefingRequest,
+    briefingSeenThisSession,
+    isValidEmail,
+    loadBriefingRecord,
+    markBriefingSession,
+    saveBriefingRecord,
+    shouldShowBriefing,
+  } from '../utils/briefingPopup.js';
+
+  const root = document.getElementById('nfc-briefing');
+  if (root) {
+    const form = root.querySelector('form');
+    const input = root.querySelector('#nfc-briefing-email');
+    const submitBtn = root.querySelector('.nfc-briefing__submit');
+    const errorEl = root.querySelector('#nfc-briefing-error');
+    const successEl = root.querySelector('#nfc-briefing-success');
+    const declineBtn = root.querySelector('.nfc-briefing__decline');
+    const companyId = root.dataset.companyId || '';
+    const listId = root.dataset.listId || '';
+    const submitLabel = 'Get the Briefing';
+    let open = false;
+    let submitting = false;
+    let previouslyFocused = null;
+
+    const focusables = () =>
+      Array.from(
+        root.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((el) => !el.closest('[hidden]') && el.getAttribute('aria-hidden') !== 'true');
+
+    const onKey = (event) => {
+      if (!open) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        close();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const list = focusables();
+      if (list.length === 0) {
+        event.preventDefault();
+        return;
+      }
+      const first = list[0];
+      const last = list[list.length - 1];
+      const active = document.activeElement;
+      if (!root.contains(active)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+        return;
+      }
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    const close = () => {
+      if (!open) return;
+      open = false;
+      root.hidden = true;
+      document.body.classList.remove('nfc-briefing-open');
+      document.removeEventListener('keydown', onKey);
+      if (previouslyFocused && typeof previouslyFocused.focus === 'function') {
+        previouslyFocused.focus();
+      }
+    };
+
+    const showError = (message) => {
+      errorEl.hidden = false;
+      errorEl.textContent = message;
+      input.setAttribute('aria-invalid', 'true');
+    };
+
+    const clearError = () => {
+      errorEl.hidden = true;
+      errorEl.textContent = '';
+      input.removeAttribute('aria-invalid');
+    };
+
+    const show = () => {
+      if (open) return;
+      const state = loadBriefingRecord();
+      if (!shouldShowBriefing({ ...state, seenThisSession: briefingSeenThisSession() })) return;
+      saveBriefingRecord({ shows: state.shows + 1, subscribed: false });
+      markBriefingSession();
+      previouslyFocused = document.activeElement;
+      root.hidden = false;
+      open = true;
+      document.body.classList.add('nfc-briefing-open');
+      document.addEventListener('keydown', onKey);
+      const closeBtn = root.querySelector('.nfc-briefing__close');
+      if (closeBtn) closeBtn.focus();
+    };
+
+    root.querySelectorAll('[data-nfc-briefing-dismiss]').forEach((el) => {
+      el.addEventListener('click', (event) => {
+        event.preventDefault();
+        close();
+      });
+    });
+
+    input.addEventListener('input', () => {
+      if (input.getAttribute('aria-invalid') === 'true') clearError();
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (submitting) return;
+      const email = input.value.trim();
+      if (!isValidEmail(email)) {
+        showError('Enter a valid email address.');
+        input.focus();
+        return;
+      }
+      if (!companyId || !listId) {
+        showError("Signup isn't available right now. Please try again later.");
+        return;
+      }
+      submitting = true;
+      clearError();
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+      submitBtn.textContent = 'Sending…';
+      input.disabled = true;
+      try {
+        const req = briefingRequest({ email, companyId, listId });
+        const res = await fetch(req.url, {
+          method: 'POST',
+          headers: req.headers,
+          body: JSON.stringify(req.body),
+          credentials: 'omit',
+        });
+        if (res.status !== 202) throw new Error('subscribe');
+        const state = loadBriefingRecord();
+        saveBriefingRecord({ shows: state.shows, subscribed: true });
+        if (open) {
+          form.hidden = true;
+          if (declineBtn) declineBtn.hidden = true;
+          successEl.hidden = false;
+          successEl.focus();
+        }
+      } catch {
+        input.disabled = false;
+        showError("We couldn't add you just now. Please try again.");
+        input.focus();
+      } finally {
+        submitting = false;
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+        submitBtn.textContent = submitLabel;
+      }
+    });
+
+    const initial = loadBriefingRecord();
+    if (shouldShowBriefing({ ...initial, seenThisSession: briefingSeenThisSession() })) {
+      window.setTimeout(show, BRIEFING_DELAY_MS);
+    }
+  }
+</script>
