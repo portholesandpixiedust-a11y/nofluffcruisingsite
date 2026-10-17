@@ -185,18 +185,41 @@ footer.site a{color:var(--onnavy);text-decoration:none}
 .tour .hd p{font-family:var(--fm);font-size:11px;color:var(--ink-3);margin:4px 0 12px}
 .tour-none{border:1px dashed var(--line-2);border-radius:4px;padding:14px 16px;background:var(--sunk);font-size:15px;color:var(--ink-3);max-width:70ch;margin:0 0 24px}
 
-/* newsletter popup */
-.nfc-nl-popup{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:18px}
-.nfc-nl-popup[hidden]{display:none!important}
-.nfc-nl-popup__backdrop{position:absolute;inset:0;background:rgba(6,20,44,.62)}
-.nfc-nl-popup__panel{position:relative;z-index:1;width:min(440px,100%);background:var(--navy);color:var(--onnavy);border-radius:4px;padding:26px 24px 22px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}
-.nfc-nl-popup__panel h2{font-family:var(--fd);text-transform:uppercase;font-size:clamp(22px,4vw,28px);line-height:1.05;margin:0 0 10px;color:#fff}
-.nfc-nl-popup__panel p{margin:0 0 16px;font-size:15px;color:var(--onnavy-2)}
-.nfc-nl-popup__panel a{color:#fff}
-.nfc-nl-popup__close{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;border-radius:3px;background:transparent;color:#fff;font-size:26px;line-height:1;cursor:pointer;font-family:var(--fu)}
-.nfc-nl-popup__close:hover{background:rgba(255,255,255,.12)}
-body.nfc-nl-popup-open{overflow:hidden}
 .nl .nfc-nl-embed a{color:#fff}
+
+/* cruise briefing popup */
+.nfc-briefing{position:fixed;inset:0;z-index:80;display:grid;place-items:end center;padding:12px;padding-bottom:max(12px,env(safe-area-inset-bottom))}
+.nfc-briefing[hidden]{display:none!important}
+@media(min-width:640px){.nfc-briefing{place-items:center;padding:24px}}
+.nfc-briefing__backdrop{position:absolute;inset:0;background:rgba(6,20,44,.62)}
+.nfc-briefing__panel{position:relative;z-index:1;width:min(440px,100%);max-height:min(92vh,720px);overflow:auto;overscroll-behavior:contain;background:var(--surface);color:var(--ink);border-radius:4px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.nfc-briefing__close{position:absolute;top:6px;right:6px;z-index:2;width:44px;height:44px;border:0;border-radius:3px;background:transparent;color:#fff;font-size:28px;line-height:1;cursor:pointer;font-family:var(--fu)}
+.nfc-briefing__close:hover{background:rgba(255,255,255,.12)}
+.nfc-briefing__mast{background:var(--navy);color:var(--onnavy);padding:22px 56px 18px 22px}
+.nfc-briefing__eyebrow{font-family:var(--fu);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);display:block;margin:0 0 8px}
+.nfc-briefing__mast h2{font-family:var(--fd);text-transform:uppercase;font-size:clamp(26px,5vw,34px);line-height:1.02;margin:0;color:#fff}
+.nfc-briefing__rule{display:block;height:3px;width:46px;background:var(--orange);margin:12px 0 0}
+.nfc-briefing__body{padding:18px 22px 16px}
+.nfc-briefing__desc{margin:0 0 14px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.nfc-briefing__perks{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px}
+.nfc-briefing__perks li{display:flex;align-items:center;gap:10px;font-family:var(--fu);font-weight:600;font-size:14.5px;line-height:1.3;color:var(--ink)}
+.nfc-briefing__icon{width:34px;height:34px;border-radius:4px;background:var(--sunk);color:var(--orange-ink);display:grid;place-items:center;flex:none}
+.nfc-briefing__form{margin:0 0 4px}
+.nfc-briefing__row{display:flex;flex-direction:column;gap:8px}
+@media(min-width:480px){.nfc-briefing__row{flex-direction:row;align-items:stretch}.nfc-briefing__submit{white-space:nowrap}}
+.nfc-briefing__row input{flex:1;min-width:0;width:100%;font-family:var(--fu);font-size:16px;padding:11px 13px;border-radius:3px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
+.nfc-briefing__row input::placeholder{color:var(--ink-3)}
+.nfc-briefing__submit{width:100%}
+@media(min-width:480px){.nfc-briefing__submit{width:auto}}
+.nfc-briefing .btn[disabled]{opacity:.75;cursor:not-allowed}
+.nfc-briefing__error{margin:8px 0 0;font-family:var(--fu);font-size:13px;line-height:1.4;color:var(--orange-ink)}
+.nfc-briefing__success{margin:0 0 8px;padding:12px 14px;background:var(--sunk);border-left:4px solid var(--orange);border-radius:0 4px 4px 0;font-family:var(--fu);font-weight:600;font-size:15px;color:var(--ink)}
+.nfc-briefing__foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
+.nfc-briefing__decline{background:none;border:0;padding:10px 2px;font-family:var(--fu);font-size:13px;font-weight:600;color:var(--ink-3);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.nfc-briefing__decline:hover{color:var(--ink)}
+.nfc-briefing__foot a{font-family:var(--fu);font-size:13px;font-weight:600}
+.nfc-briefing__label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body.nfc-briefing-open{overflow:hidden}
 .nlform .btn[disabled]{opacity:.75;cursor:not-allowed}
 
 /* homepage news list */

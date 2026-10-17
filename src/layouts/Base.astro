@@ -4,6 +4,7 @@ import '../styles/news-list.css';
 import Analytics from '@vercel/analytics/astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import NewsletterPopup from '../components/NewsletterPopup.astro';
 
 const { title, description, jsonld = [], noindex = false, ogImage, ogTitle, breadcrumbs = [], published, modified, author, canonical: canonicalPath } = Astro.props;
 const path = Astro.url.pathname;
@@ -99,6 +100,7 @@ const graph = [org, site, crumbs, ...jsonld].filter(Boolean);
   <slot name="hero" />
   <main id="main"><slot /></main>
   <Footer />
+  <NewsletterPopup />
   <Analytics />
 </body>
 </html>
