@@ -1,0 +1,92 @@
+---
+import {
+  DEFAULT_KLAVIYO_COMPANY_ID,
+  DEFAULT_KLAVIYO_LIST_ID,
+} from '../utils/briefingPopup.js';
+
+const companyId = String(import.meta.env.PUBLIC_KLAVIYO_COMPANY_ID || DEFAULT_KLAVIYO_COMPANY_ID).trim();
+const listId = String(import.meta.env.PUBLIC_KLAVIYO_LIST_ID || DEFAULT_KLAVIYO_LIST_ID).trim();
+---
+<form class="nlform nfc-inline" novalidate data-company-id={companyId} data-list-id={listId}>
+  <label class="nfc-briefing__label" for="nfc-inline-email">Email</label>
+  <input
+    id="nfc-inline-email"
+    type="email"
+    name="email"
+    inputmode="email"
+    autocomplete="email"
+    spellcheck="false"
+    placeholder="you@example.com"
+    required
+  />
+  <button class="btn" type="submit">Subscribe</button>
+  <p class="nfc-inline__status" role="status" hidden></p>
+</form>
+
+<script>
+  import {
+    briefingRequest,
+    isValidEmail,
+    loadBriefingRecord,
+    saveBriefingRecord,
+  } from '../utils/briefingPopup.js';
+
+  const form = document.querySelector('.nfc-inline');
+  if (form) {
+    const input = form.querySelector('input');
+    const button = form.querySelector('button');
+    const status = form.querySelector('.nfc-inline__status');
+    const companyId = form.dataset.companyId || '';
+    const listId = form.dataset.listId || '';
+    const label = 'Subscribe';
+    let submitting = false;
+
+    const setStatus = (message, isError) => {
+      status.hidden = false;
+      status.textContent = message;
+      status.classList.toggle('is-error', isError);
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (submitting) return;
+      const email = input.value.trim();
+      if (!isValidEmail(email)) {
+        setStatus('Enter a valid email address.', true);
+        input.focus();
+        return;
+      }
+      if (!companyId || !listId) {
+        setStatus("Signup isn't available right now. Please try again later.", true);
+        return;
+      }
+      submitting = true;
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      button.textContent = 'Sending…';
+      input.disabled = true;
+      try {
+        const req = briefingRequest({ email, companyId, listId });
+        const res = await fetch(req.url, {
+          method: 'POST',
+          headers: req.headers,
+          body: JSON.stringify(req.body),
+          credentials: 'omit',
+        });
+        if (res.status !== 202) throw new Error('subscribe');
+        const state = loadBriefingRecord();
+        saveBriefingRecord({ shows: state.shows, subscribed: true });
+        input.value = '';
+        setStatus("You're in. Watch your inbox for the briefing.", false);
+      } catch {
+        setStatus("We couldn't add you just now. Please try again.", true);
+      } finally {
+        submitting = false;
+        input.disabled = false;
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+        button.textContent = label;
+      }
+    });
+  }
+</script>

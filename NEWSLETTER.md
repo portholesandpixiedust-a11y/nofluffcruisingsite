@@ -1,22 +1,31 @@
-# Newsletter
+# Newsletter (Klaviyo)
 
-Two signup paths. They do not share a form.
+Signup uses Klaviyo's client subscriptions API from the browser. There is no server route and no private API key. The site does not load Klaviyo's onsite script (`klaviyo.js`).
 
-## Inline signup (beehiiv)
+`POST https://a.klaviyo.com/client/subscriptions/?company_id=PUBLIC_KEY`
 
-The block at the bottom of `/` (`section.nl`) embeds a beehiiv subscribe form. It is not a popup. There is no Klaviyo onsite script (`klaviyo.js`) on the site.
+Header: `revision: 2026-10-15`
 
-Default form ID: `d769eb81-bf6c-442c-96b6-7097f59a9f52`
+The email is subscribed to the Email List with email marketing consent `SUBSCRIBED`.
 
-```html
-<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="FORM_ID"></script>
-```
+## Env vars
 
-Optional: set `PUBLIC_BEEHIIV_FORM_ID` in Vercel to override without a code change. Astro inlines `PUBLIC_*` at build time, so redeploy after changing it.
+Both values are public by design. Defaults live in `src/utils/briefingPopup.js` and are used when the env var is unset.
 
-File: `src/components/NewsletterEmbed.astro`
+| Env var | Default | What it is |
+| --- | --- | --- |
+| `PUBLIC_KLAVIYO_COMPANY_ID` | `VAgS5Z` | Klaviyo public API key / site ID (`company_id`) |
+| `PUBLIC_KLAVIYO_LIST_ID` | `Tx8Htx` | List ID for "Email List" |
 
-## Popup (Klaviyo)
+Set either var in Vercel only to override the default, then redeploy. Astro inlines `PUBLIC_*` at build time.
+
+## Inline form
+
+Bottom of `/` (`section.nl`). It stays in the page. It does not pop up. A successful subscribe sets `nfc-briefing-subscribed`, so the popup does not appear afterward.
+
+File: `src/components/NewsletterForm.astro`
+
+## Popup
 
 `Your Cruise Briefing` is mounted from `src/layouts/Base.astro`, so it can appear on any page.
 
@@ -26,26 +35,8 @@ File: `src/components/NewsletterEmbed.astro`
 - At most once per browser session (`sessionStorage` key `nfc-briefing-seen`, plus session cookie `nfc_briefing_seen`).
 - After a successful subscribe, `nfc-briefing-subscribed` is set and the popup does not return.
 
-Submission uses Klaviyo's client subscriptions API from the browser. There is no server route and no private API key.
+File: `src/components/NewsletterPopup.astro`
 
-`POST https://a.klaviyo.com/client/subscriptions/?company_id=PUBLIC_KEY`
+## Removed
 
-Header: `revision: 2026-10-15`
-
-The email is subscribed to the Email List with email marketing consent `SUBSCRIBED`.
-
-### Env vars
-
-Both values are public by design. Defaults live in `src/utils/briefingPopup.js` and are used when the env var is unset.
-
-| Env var | Default | What it is |
-| --- | --- | --- |
-| `PUBLIC_KLAVIYO_COMPANY_ID` | `VAgS5Z` | Klaviyo public API key / site ID (`company_id`) |
-| `PUBLIC_KLAVIYO_LIST_ID` | `Tx8Htx` | List ID for "Email List" |
-
-Set either var in Vercel only to override the default, then redeploy. `PUBLIC_*` values are inlined at build time.
-
-Files:
-
-- `src/components/NewsletterPopup.astro`
-- `src/utils/briefingPopup.js`
+The previous signup was a Beehiiv slide-in. `subscribe-forms.beehiiv.com/v3/loader.js` (form `d769eb81-bf6c-442c-96b6-7097f59a9f52`) injected a fixed panel at `z-index: 2147483647` with its own close button. That script lived in the homepage newsletter section, so the "inline" embed was the popup. It is removed. An earlier homepage-only popup component (`NewsletterPopup.astro` from September 2026) had already been unmounted; its leftover CSS and the `nfc-nl-dismissed` privacy note are gone too.

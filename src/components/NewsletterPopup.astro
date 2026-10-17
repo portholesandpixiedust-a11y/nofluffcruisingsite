@@ -92,12 +92,12 @@ const listId = String(import.meta.env.PUBLIC_KLAVIYO_LIST_ID || DEFAULT_KLAVIYO_
 <script>
   import {
     BRIEFING_DELAY_MS,
-    STORAGE,
     briefingRequest,
+    briefingSeenThisSession,
     isValidEmail,
-    mergeBriefingState,
-    parseBriefingCookie,
-    serializeBriefingCookie,
+    loadBriefingRecord,
+    markBriefingSession,
+    saveBriefingRecord,
     shouldShowBriefing,
   } from '../utils/briefingPopup.js';
 
@@ -115,73 +115,6 @@ const listId = String(import.meta.env.PUBLIC_KLAVIYO_LIST_ID || DEFAULT_KLAVIYO_
     let open = false;
     let submitting = false;
     let previouslyFocused = null;
-
-    const readCookie = (name) => {
-      const all = document.cookie ? document.cookie.split('; ') : [];
-      for (const part of all) {
-        const eq = part.indexOf('=');
-        const key = eq === -1 ? part : part.slice(0, eq);
-        if (key !== name) continue;
-        const raw = eq === -1 ? '' : part.slice(eq + 1);
-        try {
-          return decodeURIComponent(raw);
-        } catch {
-          return raw;
-        }
-      }
-      return '';
-    };
-
-    const writeCookie = (name, value, maxAge) => {
-      const age = maxAge == null ? '' : `; Max-Age=${maxAge}`;
-      document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; SameSite=Lax${age}`;
-    };
-
-    const readState = () => {
-      const cookie = parseBriefingCookie(readCookie(STORAGE.cookie));
-      let local = null;
-      try {
-        const rawShows = localStorage.getItem(STORAGE.shows);
-        local = {
-          shows: rawShows == null || rawShows === '' ? 0 : Number(rawShows),
-          subscribed: localStorage.getItem(STORAGE.subscribed) === '1',
-        };
-      } catch {
-        local = null;
-      }
-      return mergeBriefingState(local, cookie);
-    };
-
-    const writeState = (state) => {
-      const shows = Math.max(0, Math.floor(Number(state.shows) || 0));
-      const subscribed = Boolean(state.subscribed);
-      try {
-        localStorage.setItem(STORAGE.shows, String(shows));
-        if (subscribed) localStorage.setItem(STORAGE.subscribed, '1');
-        else localStorage.removeItem(STORAGE.subscribed);
-      } catch {
-        /* private mode: cookie still records the count */
-      }
-      writeCookie(STORAGE.cookie, serializeBriefingCookie({ shows, subscribed }), 60 * 60 * 24 * 400);
-    };
-
-    const seenThisSession = () => {
-      try {
-        if (sessionStorage.getItem(STORAGE.session) === '1') return true;
-      } catch {
-        /* fall through to the session cookie */
-      }
-      return readCookie(STORAGE.sessionCookie) === '1';
-    };
-
-    const markSession = () => {
-      try {
-        sessionStorage.setItem(STORAGE.session, '1');
-      } catch {
-        /* cookie covers the rest of this browser session */
-      }
-      writeCookie(STORAGE.sessionCookie, '1');
-    };
 
     const focusables = () =>
       Array.from(
@@ -245,10 +178,10 @@ const listId = String(import.meta.env.PUBLIC_KLAVIYO_LIST_ID || DEFAULT_KLAVIYO_
 
     const show = () => {
       if (open) return;
-      const state = readState();
-      if (!shouldShowBriefing({ ...state, seenThisSession: seenThisSession() })) return;
-      writeState({ shows: state.shows + 1, subscribed: false });
-      markSession();
+      const state = loadBriefingRecord();
+      if (!shouldShowBriefing({ ...state, seenThisSession: briefingSeenThisSession() })) return;
+      saveBriefingRecord({ shows: state.shows + 1, subscribed: false });
+      markBriefingSession();
       previouslyFocused = document.activeElement;
       root.hidden = false;
       open = true;
@@ -297,8 +230,8 @@ const listId = String(import.meta.env.PUBLIC_KLAVIYO_LIST_ID || DEFAULT_KLAVIYO_
           credentials: 'omit',
         });
         if (res.status !== 202) throw new Error('subscribe');
-        const state = readState();
-        writeState({ shows: state.shows, subscribed: true });
+        const state = loadBriefingRecord();
+        saveBriefingRecord({ shows: state.shows, subscribed: true });
         if (open) {
           form.hidden = true;
           if (declineBtn) declineBtn.hidden = true;
@@ -317,8 +250,8 @@ const listId = String(import.meta.env.PUBLIC_KLAVIYO_LIST_ID || DEFAULT_KLAVIYO_
       }
     });
 
-    const initial = readState();
-    if (shouldShowBriefing({ ...initial, seenThisSession: seenThisSession() })) {
+    const initial = loadBriefingRecord();
+    if (shouldShowBriefing({ ...initial, seenThisSession: briefingSeenThisSession() })) {
       window.setTimeout(show, BRIEFING_DELAY_MS);
     }
   }

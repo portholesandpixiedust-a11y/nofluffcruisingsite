@@ -185,7 +185,11 @@ footer.site a{color:var(--onnavy);text-decoration:none}
 .tour .hd p{font-family:var(--fm);font-size:11px;color:var(--ink-3);margin:4px 0 12px}
 .tour-none{border:1px dashed var(--line-2);border-radius:4px;padding:14px 16px;background:var(--sunk);font-size:15px;color:var(--ink-3);max-width:70ch;margin:0 0 24px}
 
-.nl .nfc-nl-embed a{color:#fff}
+.nfc-inline{align-items:center}
+.nfc-inline input{font-size:16px}
+.nl .nfc-inline__status{flex-basis:100%;margin:0;font-family:var(--fu);font-size:13px;font-weight:600;color:#fff}
+.nl .nfc-inline__status.is-error{color:var(--orange)}
+.nfc-inline .btn[disabled]{opacity:.75;cursor:not-allowed}
 
 /* cruise briefing popup */
 .nfc-briefing{position:fixed;inset:0;z-index:80;display:grid;place-items:end center;padding:12px;padding-bottom:max(12px,env(safe-area-inset-bottom))}
@@ -197,7 +201,7 @@ footer.site a{color:var(--onnavy);text-decoration:none}
 .nfc-briefing__close:hover{background:rgba(255,255,255,.12)}
 .nfc-briefing__mast{background:var(--navy);color:var(--onnavy);padding:22px 56px 18px 22px}
 .nfc-briefing__eyebrow{font-family:var(--fu);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);display:block;margin:0 0 8px}
-.nfc-briefing__mast h2{font-family:var(--fd);text-transform:uppercase;font-size:clamp(26px,5vw,34px);line-height:1.02;margin:0;color:#fff}
+.nfc-briefing__mast h2{font-family:var(--fd);text-transform:none;font-size:clamp(28px,5vw,36px);line-height:1.02;margin:0;color:#fff;letter-spacing:.01em}
 .nfc-briefing__rule{display:block;height:3px;width:46px;background:var(--orange);margin:12px 0 0}
 .nfc-briefing__body{padding:18px 22px 16px}
 .nfc-briefing__desc{margin:0 0 14px;font-size:16px;line-height:1.5;color:var(--ink-2)}
@@ -209,7 +213,7 @@ footer.site a{color:var(--onnavy);text-decoration:none}
 @media(min-width:480px){.nfc-briefing__row{flex-direction:row;align-items:stretch}.nfc-briefing__submit{white-space:nowrap}}
 .nfc-briefing__row input{flex:1;min-width:0;width:100%;font-family:var(--fu);font-size:16px;padding:11px 13px;border-radius:3px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
 .nfc-briefing__row input::placeholder{color:var(--ink-3)}
-.nfc-briefing__submit{width:100%}
+.nfc-briefing__submit{width:100%;text-transform:none;letter-spacing:.01em}
 @media(min-width:480px){.nfc-briefing__submit{width:auto}}
 .nfc-briefing .btn[disabled]{opacity:.75;cursor:not-allowed}
 .nfc-briefing__error{margin:8px 0 0;font-family:var(--fu);font-size:13px;line-height:1.4;color:var(--orange-ink)}

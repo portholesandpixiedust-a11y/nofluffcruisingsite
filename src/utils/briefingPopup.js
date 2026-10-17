@@ -104,6 +104,74 @@ export function briefingSubscriptionBody(email, listId) {
   };
 }
 
+function readCookieValue(name) {
+  const all = document.cookie ? document.cookie.split('; ') : [];
+  for (const part of all) {
+    const eq = part.indexOf('=');
+    const key = eq === -1 ? part : part.slice(0, eq);
+    if (key !== name) continue;
+    const raw = eq === -1 ? '' : part.slice(eq + 1);
+    try {
+      return decodeURIComponent(raw);
+    } catch {
+      return raw;
+    }
+  }
+  return '';
+}
+
+function writeCookieValue(name, value, maxAge) {
+  const age = maxAge == null ? '' : `; Max-Age=${maxAge}`;
+  document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; SameSite=Lax${age}`;
+}
+
+export function loadBriefingRecord() {
+  const cookie = parseBriefingCookie(readCookieValue(STORAGE.cookie));
+  let local = null;
+  try {
+    const rawShows = localStorage.getItem(STORAGE.shows);
+    local = {
+      shows: rawShows == null || rawShows === '' ? 0 : Number(rawShows),
+      subscribed: localStorage.getItem(STORAGE.subscribed) === '1',
+    };
+  } catch {
+    local = null;
+  }
+  return mergeBriefingState(local, cookie);
+}
+
+export function saveBriefingRecord(state) {
+  const shows = normalizeShows(state.shows);
+  const subscribed = Boolean(state.subscribed);
+  try {
+    localStorage.setItem(STORAGE.shows, String(shows));
+    if (subscribed) localStorage.setItem(STORAGE.subscribed, '1');
+    else localStorage.removeItem(STORAGE.subscribed);
+  } catch {
+    /* private mode: the cookie still records it */
+  }
+  writeCookieValue(STORAGE.cookie, serializeBriefingCookie({ shows, subscribed }), 60 * 60 * 24 * 400);
+  return { shows, subscribed };
+}
+
+export function briefingSeenThisSession() {
+  try {
+    if (sessionStorage.getItem(STORAGE.session) === '1') return true;
+  } catch {
+    /* session cookie covers the rest of the visit */
+  }
+  return readCookieValue(STORAGE.sessionCookie) === '1';
+}
+
+export function markBriefingSession() {
+  try {
+    sessionStorage.setItem(STORAGE.session, '1');
+  } catch {
+    /* cookie covers this browser session */
+  }
+  writeCookieValue(STORAGE.sessionCookie, '1');
+}
+
 export function briefingRequest({ email, companyId, listId }) {
   return {
     url: klaviyoClientSubscriptionsUrl(companyId),
