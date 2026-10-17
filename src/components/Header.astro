@@ -8,25 +8,107 @@ const nav = [
   { href: '/sources/', label: 'How we source' },
   { href: '/partner/', label: 'Partner with us' },
 ];
+const quoteHref = 'https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web';
+const watchHref = 'https://www.youtube.com/@nofluffcruising';
 ---
 <header class="site">
   <div class="wrap bar">
     <a class="brand" href="/">
-      <img src="/avatar.png" width="40" height="40" alt="" />
+      <img src="/avatar.png" width="32" height="32" alt="" />
       <span class="wm">No Fluff Cruising<small>Expert tips &middot; Ship reviews &middot; Ship tours</small></span>
     </a>
-    <nav class="main" aria-label="Main">
+    <nav id="site-nav" class="main" aria-label="Main">
       {nav.map((n) => (
         <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>
       ))}
+      <a class="nav-extra yt" href={watchHref} rel="noopener">
+        <svg viewBox="0 0 28 20" width="22" height="16" aria-hidden="true" focusable="false">
+          <rect width="28" height="20" rx="5" fill="#FF0000"></rect>
+          <path d="M11 5.6 L19 10 L11 14.4 Z" fill="#fff"></path>
+        </svg>
+        <span>Watch</span>
+      </a>
+      <a class="nav-extra quote" href={quoteHref} rel="noopener">Free Quote</a>
     </nav>
-    <a class="yt" href="https://www.youtube.com/@nofluffcruising" rel="noopener" title="Watch on YouTube">
-      <svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">
-        <rect width="28" height="20" rx="5" fill="#FF0000"></rect>
-        <path d="M11 5.6 L19 10 L11 14.4 Z" fill="#fff"></path>
-      </svg>
-      <span>Watch</span>
-    </a>
-    <a class="quote" href="https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web" rel="noopener">Free Quote</a>
+    <div class="bar-tools">
+      <a class="yt" href={watchHref} rel="noopener">
+        <svg viewBox="0 0 28 20" width="22" height="16" aria-hidden="true" focusable="false">
+          <rect width="28" height="20" rx="5" fill="#FF0000"></rect>
+          <path d="M11 5.6 L19 10 L11 14.4 Z" fill="#fff"></path>
+        </svg>
+        <span>Watch</span>
+      </a>
+      <a class="quote" href={quoteHref} rel="noopener">Free Quote</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Open menu</span>
+      </button>
+    </div>
   </div>
 </header>
+<noscript>
+  <style>
+    @media (max-width: 1040px) {
+      header.site nav.main { display: flex !important; position: static; max-height: none; }
+      header.site .nav-toggle { display: none !important; }
+    }
+  </style>
+</noscript>
+<script>
+  const header = document.querySelector('header.site');
+  const toggle = header?.querySelector('.nav-toggle');
+  const nav = document.getElementById('site-nav');
+  const label = toggle?.querySelector('.visually-hidden');
+  const mq = window.matchMedia('(max-width: 1040px)');
+
+  if (header && toggle && nav && label) {
+    const setOpen = (open) => {
+      header.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      label.textContent = open ? 'Close menu' : 'Open menu';
+    };
+
+    const closeIfMobile = () => {
+      if (mq.matches) setOpen(false);
+    };
+
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      setOpen(open);
+      if (open) {
+        const first = nav.querySelector('a');
+        if (first) first.focus();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !header.classList.contains('is-open')) return;
+      event.preventDefault();
+      setOpen(false);
+      toggle.focus();
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!header.classList.contains('is-open')) return;
+      if (event.target instanceof Node && !header.contains(event.target)) setOpen(false);
+    });
+
+    nav.addEventListener('click', (event) => {
+      if (event.target instanceof Element && event.target.closest('a')) closeIfMobile();
+    });
+
+    header.addEventListener('focusout', (event) => {
+      if (!header.classList.contains('is-open')) return;
+      const next = event.relatedTarget;
+      if (!(next instanceof Node) || !header.contains(next)) setOpen(false);
+    });
+
+    const onScroll = () => header.classList.toggle('is-compact', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    mq.addEventListener('change', () => {
+      if (!mq.matches) setOpen(false);
+    });
+  }
+</script>
