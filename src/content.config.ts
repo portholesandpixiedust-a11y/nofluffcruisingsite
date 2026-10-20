@@ -72,6 +72,7 @@ const news = defineCollection({
       sailing: z.string().min(1),
       changed: z.string().min(1),
     }).optional(),
+    faq,
   }),
 });
 
