@@ -539,6 +539,25 @@
     ]
   },
   {
+    "id": "norwegian-bella",
+    "name": "Norwegian Bella",
+    "line": "norwegian",
+    "shipClass": "Prima",
+    "status": "On order",
+    "homePorts": [],
+    "goodAt": [],
+    "watchFor": [],
+    "coveredIn": [],
+    "videoTour": null,
+    "updated": "2026-10-20",
+    "guests": 3921,
+    "grossTonnage": 170000,
+    "verdict": "NCL opened sales on 20 Oct 2026 for seven-day Barcelona cruises starting May 2028. The sale release does not give a delivery day.",
+    "sameAs": [
+      "https://www.ncl.com/cruise-ships/norwegian-bella"
+    ]
+  },
+  {
     "id": "norwegian-escape",
     "name": "Norwegian Escape",
     "line": "norwegian",
