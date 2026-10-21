@@ -335,4 +335,15 @@ MSC opened bookings for a 119-night 2029 World Cruise on MSC Magnifica. The pres
 
 If you want Norwegian Bella, use the sale release for the size and the Barcelona ports, and do not treat 2 May as a maiden date. If you are on Oasis, use the Wednesday 6 p.m. Halifax departure and check your documents. If you are on Spirit, Cartagena is the port, and the Puntarenas money in the new report is the tour refund. If you want the MSC world cruise, open the booking before you treat any price as real.`,
   },
+  '2026-10-21': {
+    description: 'Cruise news for Oct. 21, 2026: Hero of the Seas includes 9 pools and 17 dining spots, and arrives in Miami in summer 2027.',
+    answer: 'On Oct. 21, 2026 one story published. Royal Caribbean says Hero of the Seas includes 9 pools, 9 whirlpools, and 17 dining spots, and arrives in Miami in summer 2027. The linked page also prints 28 dining venues and 17 complimentary eateries. The things-to-do page says 16 free of 28. No fare or new booking day is in the post.',
+    summary: `Oct. 21, 2026 has one story. Open the link for the named source and the date it was checked. This page only restates that post.
+
+Royal Caribbean posted on X at 10:58 a.m. ET on 21 Oct 2026 that Hero of the Seas includes 9 pools, 9 whirlpools, 17 dining spots, shows and entertainment, and dozens of thrills. The post says the ship arrives in Miami in summer 2027. The link opens the US ship page. That page prints nine pools and 28 dining venues in the introduction, and 17 complimentary eateries in the included block. The things-to-do page says 28 dining spots, including 16 free. A 6 Oct guide says 17 included options and 11 specialty options. The Japan ship page says 40 or more restaurants and bars. The 9 whirlpools in the X post are not repeated in the included paragraph on the page the link opens.
+
+The ship page says August 2027 in Miami, on 7-night Eastern and Western Caribbean cruises, and every sailing includes Perfect Day at CocoCay. A 6 Oct sales PDF prints Miami dates, including a 7-night western cruise on 1 Aug 2027 and 3-night CocoCay cruises on 8 Aug and 11 Aug. Cruise Industry News on 9 Oct says 1 Aug leaves Fort Lauderdale and 8 Aug leaves Port Everglades. The 30 Mar release opened booking on 1 Apr for Crown & Anchor and 2 Apr for the public. Today's post does not print a fare or a new booking day. Meyer Turku prints 250,800 gross tons and 365 meters. The Japan page prints 248,663 gross tons, 364 meters, 5,654 guests at double occupancy, and a maximum of 7,600. Cruise Industry News prints 5,610 passengers. Those size figures do not match. The Japan page says the capacity numbers are as announced in October 2026 and can change.
+
+If you are pricing Hero of the Seas, count nine pools as included and treat specialty dining as extra. Read the early-sailings post before you assume the first week leaves Miami.`,
+  },
 };

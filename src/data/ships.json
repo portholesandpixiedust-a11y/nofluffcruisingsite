@@ -90,6 +90,29 @@
     ]
   },
   {
+    "id": "hero-of-the-seas",
+    "name": "Hero of the Seas",
+    "line": "royal-caribbean",
+    "shipClass": "Icon",
+    "status": "Under construction",
+    "homePorts": ["Miami"],
+    "goodAt": [
+      "Nine pools included in the fare"
+    ],
+    "watchFor": [
+      "Free dining is 17 on the 21 Oct post and 16 of 28 on the things-to-do page"
+    ],
+    "coveredIn": [],
+    "videoTour": null,
+    "updated": "2026-10-21",
+    "maxGuests": 7600,
+    "decks": 20,
+    "verdict": "Royal Caribbean's 21 Oct 2026 post says nine pools and 17 dining spots are included. The ship arrives in Miami in summer 2027. The linked page also prints 28 dining venues.",
+    "sameAs": [
+      "https://www.royalcaribbean.com/cruise-ships/hero-of-the-seas"
+    ]
+  },
+  {
     "id": "wonder-of-the-seas",
     "name": "Wonder of the Seas",
     "line": "royal-caribbean",
