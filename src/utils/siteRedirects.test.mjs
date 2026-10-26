@@ -58,6 +58,11 @@ check(
 );
 
 const vercel = JSON.parse(readFileSync(new URL('../../vercel.json', import.meta.url), 'utf8'));
+const rssHeader = (vercel.headers ?? []).find((rule) => rule.source === '/rss.xml');
+check(
+  'rss.xml is served with X-Robots-Tag noindex',
+  rssHeader?.headers?.some((header) => header.key === 'X-Robots-Tag' && header.value === 'noindex'),
+);
 for (const rule of vercel.redirects ?? []) {
   check(`vercel source stays out of the sitemap: ${rule.source}`, isRedirectSource(rule.source));
   check(`vercel source resolves: ${rule.source}`, !isRedirectSource(resolvePublicPath(rule.source)));

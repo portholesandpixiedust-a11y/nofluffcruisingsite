@@ -16,6 +16,7 @@
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { easternCalendarDate, formatEasternISO } from '../src/utils/etDate.js';
+import { publicInstant } from '../src/utils/publicInstant.js';
 import { NEWS_LINES, canonicalLine } from '../src/utils/newsLines.js';
 
 const NEWS_DIR = 'src/content/news';
@@ -236,7 +237,7 @@ function itineraryFrontmatter(p) {
 }
 
 export function toMarkdown(p, { held = false } = {}) {
-  const today = formatEasternISO(new Date());
+  const today = formatEasternISO(publicInstant(new Date()));
   const topics = (p.topics || []).filter(Boolean).slice(0, 2);
   const sources = p.sources.map((s) => {
     const rows = [

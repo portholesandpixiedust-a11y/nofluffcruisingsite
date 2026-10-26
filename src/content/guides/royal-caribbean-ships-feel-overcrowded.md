@@ -4,6 +4,7 @@ description: "A watch-along for the No Fluff Cruising video on Royal Caribbean's
 answer: "Royal Caribbean Group counts capacity at two guests per cabin, so a load factor over 100% means some cabins held a third or fourth guest. The group reported 110.2% for the second quarter of 2026. Applied to Star of the Seas, which holds 5,610 guests at two per cabin, that is about 6,200 guests, plus more than 2,300 crew. Summer runs fullest: 112.1% in the third quarter of 2025. For a less crowded sailing, the video points to late January, February, early November and early December."
 presenter: Matthew
 publishDate: 2026-10-13T09:30:00-04:00
+updatedDate: 2026-10-26
 line: Royal Caribbean
 topics: [Ships, Value]
 ships: [Star of the Seas, Icon of the Seas, Legend of the Seas, Hero of the Seas]
@@ -26,11 +27,12 @@ sponsor:
   url: "https://nofluffcruising.membercruises.com/home-page?utm_source=youtube&utm_medium=qr&utm_campaign=nofluffcruising&utm_content=on_web"
   blurb: "A Dream Vacations advisor team that has helped more than 75,000 clients save money on their cruises. A sailing at 112% feels different from one at 108%, and they help you weigh that before you book. Every booking carries a Best Price Guarantee."
 sources:
-  - claim: "Royal Caribbean Group second-quarter 2026 earnings release, 28 Jul 2026, as cited in the video and its description: load factor of 110.2%; a footnote says a percentage in excess of 100% indicates that three or more passengers occupied some cabins; booking volumes above last year and 2027 pacing ahead of historical levels; 2.4 million guests in the quarter, up 6%; onboard and other revenue of $1.488 billion over 14.96 million passenger cruise days."
-    outlet: "Royal Caribbean Group (SEC filing)"
+  - claim: "Second-quarter 2026 earnings release, 28 Jul 2026. The statistics table prints occupancy of 110.2% for the quarter ended 30 Jun 2026. The narrative rounds load factor to 110%. The load-factor footnote says a percentage in excess of 100% indicates that three or more passengers occupied some cabins. Passenger cruise days are 14,962,211. Passengers carried are 2,399,066, described in the release as 2.4 million guests, up 6%. Onboard and other revenue is $1,488 million."
+    outlet: "Royal Caribbean Group earnings release, filed with the SEC"
     tier: 1
     date: "28 Jul 2026"
-    note: "Figures as read in the video. The release was not re-read for this companion."
+    url: "https://www.sec.gov/Archives/edgar/data/884887/000088488726000036/a2026q2earningsrelease.htm"
+    note: "Read 26 Oct 2026 from the filing, not from the video. About $99 a guest a day is $1,488 million divided by 14,962,211 passenger cruise days."
   - claim: "Royal Caribbean Group filings, as cited in the video: load factor of 112.1% in Q3 2025, 107.8% in Q4 2025 and 108.5% in Q1 2026; 108.5% for 2024 and 109.7% for 2025; onboard and other revenue was about 30% of 2025 total revenue."
     outlet: "Royal Caribbean Group (SEC filings)"
     tier: 1
@@ -56,6 +58,12 @@ watchNext:
 ---
 
 You are not imagining it. That pool deck really is busier than the brochure math. Royal Caribbean's own SEC filings say its ships sailed 110.2% full in the second quarter of 2026, and the video explains how a ship gets past 100% and what you can do about it before you book.
+
+## What the 28 Jul 2026 filing says
+
+The 110.2% figure is not only a line in the video. Royal Caribbean Group's earnings release for the quarter ended 30 Jun 2026 is on the SEC site, and the statistics table prints occupancy of 110.2%. The narrative in that same release rounds the load factor to 110%. The footnote says a percentage over 100% means three or more passengers occupied some cabins. The table lists 14,962,211 passenger cruise days and 2,399,066 passengers carried. The release calls that 2.4 million guests, up 6% from a year earlier. Onboard and other revenue on the income statement is $1,488 million. Set against those passenger cruise days, that is about $99 a guest a day. The quarterly load factors later in this guide are still the ones read in the video. This section is the part checked against the filing.
+
+The release is [Royal Caribbean Group, 28 Jul 2026](https://www.sec.gov/Archives/edgar/data/884887/000088488726000036/a2026q2earningsrelease.htm).
 
 The video opens with a dare: guess how many guests Royal puts on Star of the Seas on an average sailing. Say it out loud. The answer is in section 2, and again at the end.
 

@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
 import { formatDayHeading, formatDayShort } from '../utils/newsToday.js';
+import { commitInstant, publicInstant } from '../utils/publicInstant.js';
 import { newsHubSlug } from '../utils/newsLines.js';
 
 const { edition, model, mode } = Astro.props;
@@ -15,10 +16,17 @@ const description = edition.description
   || (edition.posts.length
     ? `Cruise news for ${formatDayShort(edition.ymd)}. ${edition.posts.length} stories, each linking to the full post.`
     : `Cruise news today. No new story has published yet on ${headingDate}.`);
-const publishedISO = edition.published ? formatEasternISO(edition.published) : null;
-const modifiedISO = edition.modified ? formatEasternISO(edition.modified) : null;
-const publishedLabel = edition.published ? formatEasternDisplay(edition.published) : null;
-const modifiedLabel = edition.modified ? formatEasternDisplay(edition.modified) : null;
+const shownInstant = (post) => (post?.published
+  ? publicInstant(post.published, { commit: commitInstant(`src/content/news/${post.id}.md`) })
+  : null);
+const oldest = edition.posts?.[edition.posts.length - 1];
+const newest = edition.posts?.[0];
+const publishedInstant = shownInstant(oldest);
+const modifiedInstant = shownInstant(newest);
+const publishedISO = publishedInstant ? formatEasternISO(publishedInstant) : null;
+const modifiedISO = modifiedInstant ? formatEasternISO(modifiedInstant) : null;
+const publishedLabel = publishedInstant ? formatEasternDisplay(publishedInstant) : null;
+const modifiedLabel = modifiedInstant ? formatEasternDisplay(modifiedInstant) : null;
 const showUpdated = publishedISO && modifiedISO && publishedISO !== modifiedISO;
 const paragraphs = edition.summary ? edition.summary.split(/\n\n+/).map((p) => p.trim()).filter(Boolean) : [];
 const lines = [...new Set(edition.posts.map((post) => post.line).filter(Boolean))];
@@ -60,7 +68,7 @@ const dayHref = (ymd) => (ymd === model.today ? '/news/today/' : `/news/today/${
   title={title}
   description={description}
   jsonld={jsonld}
-  noindex={!edition.indexable}
+  noindex={!edition.indexable || (!isLive && canonicalPath !== `/news/today/${edition.ymd}/`)}
   canonical={canonicalPath}
   breadcrumbs={crumbs}
   published={publishedISO}

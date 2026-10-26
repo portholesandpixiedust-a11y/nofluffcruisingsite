@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import { isRedirectSource } from '../utils/siteRedirects.js';
+import { entryPublishInstant } from '../utils/publicInstant.js';
 
 const esc = (s = '') => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -18,7 +19,7 @@ export async function GET(context) {
       <title>${esc(e.data.title)}</title>
       <link>${site}${route}/${e.id}/</link>
       <guid>${site}${route}/${e.id}/</guid>
-      <pubDate>${new Date(e.data.publishDate).toUTCString()}</pubDate>
+      <pubDate>${entryPublishInstant(e.data.publishDate, `src/content/${route}/${e.id}.md`).toUTCString()}</pubDate>
       <description>${esc(e.data.description)}</description>
     </item>`).join('\n');
   return new Response(`<?xml version="1.0" encoding="UTF-8"?>
@@ -28,5 +29,5 @@ export async function GET(context) {
     <description>Expert cruise tips, ship reviews and ship tours. Every claim named and dated.</description>
     <language>en-us</language>
 ${items}
-</channel></rss>`, { headers: { 'Content-Type': 'application/xml' } });
+</channel></rss>`, { headers: { 'Content-Type': 'application/xml', 'X-Robots-Tag': 'noindex' } });
 }

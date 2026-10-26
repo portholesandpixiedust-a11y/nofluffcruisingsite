@@ -4,6 +4,7 @@ import TrackerNav from '../../components/TrackerNav.astro';
 import { getCollection } from 'astro:content';
 import { byPublishDate } from '../../utils/byPublishDate.js';
 import { formatEasternDisplay, formatEasternISO } from '../../utils/etDate.js';
+import { entryPublishInstant } from '../../utils/publicInstant.js';
 import { HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from '../../utils/newsTags.js';
 
 const entries = (await getCollection('news'))
@@ -11,7 +12,10 @@ const entries = (await getCollection('news'))
   .sort(byPublishDate);
 
 /** Same freshness order as the sitemap: updated stamp, then the publish stamp. */
-const storyInstant = (data) => data.updatedAt ?? data.updatedDate ?? data.publishedAt ?? data.publishDate;
+const storyInstant = (entry) => entryPublishInstant(
+  entry.data.updatedAt ?? entry.data.updatedDate ?? entry.data.publishedAt ?? entry.data.publishDate,
+  `src/content/news/${entry.id}.md`,
+);
 
 const rows = entries.map((entry) => {
   const change = entry.data.itineraryChange;
@@ -26,7 +30,7 @@ const rows = entries.map((entry) => {
   };
 });
 
-const instants = entries.map((entry) => storyInstant(entry.data)).filter(Boolean);
+const instants = entries.map((entry) => storyInstant(entry)).filter(Boolean);
 const updated = instants.reduce((max, date) => (!max || date > max ? date : max), null);
 const published = instants.reduce((min, date) => (!min || date < min ? date : min), null);
 const updatedISO = updated ? formatEasternISO(updated) : undefined;

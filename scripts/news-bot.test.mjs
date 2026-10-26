@@ -57,6 +57,9 @@ check('rachel tag is written into frontmatter', toMarkdown(rachelWatch).includes
 
 // the real test: does the emitted frontmatter survive the site's own YAML parser?
 const md = toMarkdown(good);
+const stamp = md.match(/^publishDate:\s*(.+)$/m)?.[1];
+check('bot publishDate is not in the future', stamp && Date.parse(stamp) <= Date.now() + 2000);
+check('bot publishDate keeps a numeric offset', /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/.test(stamp || ''));
 await writeFile('src/content/news/__bot-test__.md', md);
 let built = false;
 try { execSync('npx astro build', { stdio: 'pipe' }); built = true; } catch (e) { console.log(String(e.stdout).slice(-600)); }

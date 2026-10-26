@@ -80,6 +80,42 @@ if (missing.length) console.error(missing.slice(0, 20).join('\n'));
 check(`no sitemap URL is an HTML refresh redirect (${refresh.length})`, refresh.length === 0);
 if (refresh.length) console.error(refresh.slice(0, 20).join('\n'));
 
+const now = Date.now() + 2000;
+const futureDates = [];
+const httpLocs = [];
+for (const file of sitemapFiles) {
+  const xml = fs.readFileSync(file, 'utf8');
+  for (const loc of locs(xml)) {
+    if (loc.startsWith('http://')) httpLocs.push(loc);
+  }
+  for (const match of xml.matchAll(/<(?:lastmod|news:publication_date)>([^<]+)<\/(?:lastmod|news:publication_date)>/g)) {
+    const stamp = Date.parse(match[1]);
+    if (Number.isNaN(stamp) || stamp > now) futureDates.push(`${path.basename(file)} ${match[1]}`);
+  }
+}
+check('every sitemap URL uses https', httpLocs.length === 0);
+if (httpLocs.length) console.error(httpLocs.slice(0, 20).join('\n'));
+check(`no sitemap date is in the future (${futureDates.length})`, futureDates.length === 0);
+if (futureDates.length) console.error(futureDates.slice(0, 20).join('\n'));
+
+const newsSitemapPath = sitemapFiles.find((file) => path.basename(file) === 'news-sitemap.xml');
+check('news sitemap was built', Boolean(newsSitemapPath));
+if (newsSitemapPath) {
+  const newsXml = fs.readFileSync(newsSitemapPath, 'utf8');
+  const publicationDates = [...newsXml.matchAll(/<news:publication_date>([^<]+)<\/news:publication_date>/g)].map((match) => match[1]);
+  check('news sitemap has publication dates', publicationDates.length > 0);
+  check(
+    'news publication dates use an Eastern offset',
+    publicationDates.every((stamp) => /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/.test(stamp)),
+  );
+  const oct26 = [...newsXml.matchAll(/<loc>([^<]*\/news\/(?:harmony-of-the-seas-nassau-cococay-order-october-2026|msc-virtuosa-southampton-overnight-la-rochelle-le-havre-october-2026|ventura-southampton-delay-cherbourg-cancelled-october-2026)\/)<\/loc>[\s\S]*?<news:publication_date>([^<]+)<\/news:publication_date>/g)];
+  check('26 Oct stories are in the news sitemap', oct26.length === 3);
+  check(
+    '26 Oct publication dates are the 09:07 ET commit, not 10:20 or 11:05',
+    oct26.length === 3 && oct26.every((match) => match[2] === '2026-10-26T09:07:43-04:00'),
+  );
+}
+
 const absent = [
   '/reviews/every-royal-caribbean-ships-cdc-health-inspection-score-ranked-2026/',
   '/reviews/royal-caribbean-crown-and-anchor-tiers-what-each-one-is-worth-in-2026/',
@@ -94,6 +130,7 @@ for (const pathname of [
   '/guides/royal-caribbean-crown-anchor-tiers/',
   '/guides/royal-caribbean-slots-vs-video-poker/',
   '/reviews/virgin-voyages-resilient-lady-the-real-cost-after-the-gratuities-change/',
+  '/news/msc-status-match-ends-spain-france-italy/',
   '/news/brilliant-lady-cabo-ensenada-hurricane-rachel/',
   '/news/celebrity-millennium-kumamoto-fukuoka/',
   '/news/celebrity-reflection-bimini-perfect-day-cocacay/',
@@ -121,11 +158,20 @@ function hrefPath(href) {
 
 const htmlFiles = walk(dist).filter((file) => file.endsWith('.html'));
 const linkHits = [];
+const noindexInSitemap = [];
+const presentPaths = new Set(pageLocs.map((loc) => new URL(loc).pathname));
 for (const file of htmlFiles) {
   const rel = `/${path.relative(dist, file).split(path.sep).join('/')}`;
   const pagePath = rel.endsWith('/index.html') ? rel.slice(0, -'index.html'.length) : rel;
-  if (isRedirectSource(pagePath)) continue;
   const html = fs.readFileSync(file, 'utf8');
+  const robots = html.match(/name="robots" content="([^"]*)"/);
+  if (robots && robots[1].includes('noindex')) {
+    const bare = pagePath.endsWith('/') ? pagePath : `${pagePath}/`;
+    if (presentPaths.has(pagePath) || presentPaths.has(bare) || presentPaths.has(bare.replace(/\/$/, ''))) {
+      noindexInSitemap.push(pagePath);
+    }
+  }
+  if (isRedirectSource(pagePath)) continue;
   for (const match of html.matchAll(/\shref="([^"]*)"/g)) {
     const target = hrefPath(match[1]);
     if (target && isRedirectSource(target)) linkHits.push(`${pagePath} -> ${target}`);
@@ -133,6 +179,30 @@ for (const file of htmlFiles) {
 }
 check(`built pages do not link at redirect sources (${linkHits.length})`, linkHits.length === 0);
 if (linkHits.length) console.error(linkHits.slice(0, 30).join('\n'));
+check(`no sitemap URL is noindex (${noindexInSitemap.length})`, noindexInSitemap.length === 0);
+if (noindexInSitemap.length) console.error(noindexInSitemap.slice(0, 30).join('\n'));
+
+const datedArchives = [...presentPaths].filter((pathname) => /^\/news\/today\/\d{4}-\d{2}-\d{2}\/?$/.test(pathname));
+const datedNoindex = [];
+for (const pathname of datedArchives) {
+  const file = outputFile(pathname);
+  const html = file ? fs.readFileSync(file, 'utf8') : '';
+  if (!html.includes('noindex')) datedNoindex.push(pathname);
+}
+check('dated news archives in the sitemap are not noindex pages', datedNoindex.length === datedArchives.length);
+check('sitemap keeps /news/today/', presentPaths.has('/news/today/'));
+
+const todayDated = path.join(dist, 'news', 'today');
+const todayFolders = fs.existsSync(todayDated)
+  ? fs.readdirSync(todayDated).filter((name) => /^\d{4}-\d{2}-\d{2}$/.test(name))
+  : [];
+const indexedDatedDuplicates = todayFolders.filter((ymd) => {
+  const html = fs.readFileSync(path.join(todayDated, ymd, 'index.html'), 'utf8');
+  const canonical = html.match(/rel="canonical" href="([^"]+)"/);
+  const pointsAtLive = canonical && canonical[1].endsWith('/news/today/');
+  return pointsAtLive && (!html.includes('noindex') || presentPaths.has(`/news/today/${ymd}/`));
+});
+check('the current dated archive is noindex and stays out of the sitemap', indexedDatedDuplicates.length === 0);
 
 const sourceRoots = ['src/content', 'src/pages', 'src/layouts', 'src/components', 'src/data'];
 const stubFiles = new Set([

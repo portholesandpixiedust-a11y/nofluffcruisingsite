@@ -3,7 +3,8 @@ import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import VideoFacade from '../../../components/VideoFacade.astro';
 import Sources from '../../../components/Sources.astro';
-import { formatEasternISO, normalizeContentDate } from '../../../utils/etDate.js';
+import { formatEasternISO } from '../../../utils/etDate.js';
+import { publicInstant } from '../../../utils/publicInstant.js';
 import { mentionsShip, storiesForShip } from '../../../utils/hubStories.js';
 import { shipShortAnswer } from '../../../utils/shipShortAnswer.js';
 import { shipHub, shipPageIncludesProduct } from '../../../utils/shipHub.js';
@@ -31,7 +32,7 @@ const sisters = (await getCollection('ships')).filter((x) =>
   x.data.line === d.line && x.data.shipClass === d.shipClass && x.data.id !== d.id).slice(0, 4);
 const news = storiesForShip(await getCollection('news'), d);
 const shortAnswer = hub?.description ?? shipShortAnswer(d, lineName);
-const checked = normalizeContentDate(d.updated);
+const checked = publicInstant(d.updated);
 const includeProduct = shipPageIncludesProduct(d.id);
 
 const jsonld: any[] = [];
