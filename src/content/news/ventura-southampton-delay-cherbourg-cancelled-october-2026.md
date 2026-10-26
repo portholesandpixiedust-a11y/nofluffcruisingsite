@@ -5,7 +5,7 @@ heroCredit: "Photo: P.Cartwright · Cruise Hive · https://www.cruisehive.com/po
 description: "P&O's Ventura left Southampton a day late, on Sunday 25 Oct 2026, and the cruise is now 6 nights. Cherbourg is cancelled. The credit is one day, for a future P&O booking, not cash."
 answer: "Cruise Hive and Cruise Mummy print a P&O email that moves Ventura's embarkation from Saturday 24 Oct 2026 to Sunday 25 Oct. The cruise is now 6 nights. Cherbourg is cancelled. Porto, Lisbon, and Vigo stay, and the ship is still due back on Saturday 31 Oct. The compensation both articles describe is a future cruise credit for one day of the fare, usable on a future P&O booking, not cash. The email quotes do not mention drink packages or Wi-Fi."
 presenter: Matthew
-publishDate: 2026-10-26T09:35:00-04:00
+publishDate: 2026-10-26T09:07:43-04:00
 line: "P&O Cruises"
 ships: ["Ventura"]
 topics: [Itineraries, Ports, Money]

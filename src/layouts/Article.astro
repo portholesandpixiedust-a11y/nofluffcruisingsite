@@ -7,6 +7,7 @@ import Sponsor from '../components/Sponsor.astro';
 import WatchNext from '../components/WatchNext.astro';
 import VideosReferenced from '../components/VideosReferenced.astro';
 import { easternCalendarDate, formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
+import { publicInstant, commitInstant } from '../utils/publicInstant.js';
 import { formatDayHeading } from '../utils/newsToday.js';
 import { newsHubSlug } from '../utils/newsLines.js';
 import { HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from '../utils/newsTags.js';
@@ -22,8 +23,20 @@ const {
   preferredSource = false,
 } = Astro.props;
 const d = entry.data;
-const published = d.publishedAt ?? d.publishDate;
-const updated = d.updatedAt ?? d.updatedDate ?? published;
+const contentFolder = schemaType === 'NewsArticle'
+  ? 'news'
+  : sectionUrl === '/reviews/'
+    ? 'reviews'
+    : sectionUrl === '/guides/'
+      ? 'guides'
+      : null;
+const contentPath = entry.filePath || (contentFolder ? `src/content/${contentFolder}/${entry.id}.md` : null);
+const contentCommit = commitInstant(contentPath);
+const statedPublished = d.publishedAt ?? d.publishDate;
+const statedUpdated = d.updatedAt ?? d.updatedDate ?? statedPublished;
+const published = publicInstant(statedPublished, { commit: contentCommit });
+let updated = publicInstant(statedUpdated, { commit: contentCommit });
+if (updated && published && updated.getTime() < published.getTime()) updated = published;
 const publishedISO = formatEasternISO(published);
 const updatedISO = formatEasternISO(updated);
 const publishedLabel = formatEasternDisplay(published);

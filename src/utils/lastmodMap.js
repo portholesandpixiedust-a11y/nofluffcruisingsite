@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { normalizeContentDate } from './etDate.js';
+import { publicInstant, commitInstant } from './publicInstant.js';
 import { newsHubSlug } from './newsLines.js';
 import { loadNewsPosts, newsTodayLastmods } from './newsToday.js';
 import { frontmatterHasTag, HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from './newsTags.js';
@@ -43,8 +43,12 @@ export function buildLastmodMap(root = process.cwd()) {
     for (const file of fs.readdirSync(dir)) {
       if (!file.endsWith('.md')) continue;
       const block = frontmatter(path.join(dir, file));
-      const published = normalizeContentDate(grab(block, 'publishedAt') || grab(block, 'publishDate'));
-      const updated = normalizeContentDate(grab(block, 'updatedAt') || grab(block, 'updatedDate')) ?? published;
+      const publishedRaw = grab(block, 'publishedAt') || grab(block, 'publishDate');
+      const updatedRaw = grab(block, 'updatedAt') || grab(block, 'updatedDate');
+      const rel = `src/content/${folder}/${file}`;
+      const commit = commitInstant(rel);
+      const published = publicInstant(publishedRaw, { commit });
+      const updated = publicInstant(updatedRaw || publishedRaw, { commit }) ?? published;
       if (!updated) continue;
       const slug = file.slice(0, -3);
       bump(`${prefix}${slug}/`, updated);
@@ -74,7 +78,7 @@ export function buildLastmodMap(root = process.cwd()) {
   const cdcFile = path.join(root, 'src/data/cdc-scores-source.json');
   if (fs.existsSync(cdcFile)) {
     const source = JSON.parse(fs.readFileSync(cdcFile, 'utf8'));
-    const retrieved = normalizeContentDate(source.retrieved);
+    const retrieved = publicInstant(source.retrieved);
     bump('/trackers/cdc-scores/', retrieved);
     bump('/trackers/', retrieved);
   }
@@ -84,7 +88,7 @@ export function buildLastmodMap(root = process.cwd()) {
     const ships = JSON.parse(fs.readFileSync(shipsFile, 'utf8'));
     let shipsNewest = null;
     for (const ship of ships) {
-      const updated = normalizeContentDate(ship.updated);
+      const updated = publicInstant(ship.updated);
       if (!updated) continue;
       bump(`/ships/${ship.line}/${ship.id}/`, updated);
       if (!shipsNewest || updated > shipsNewest) shipsNewest = updated;

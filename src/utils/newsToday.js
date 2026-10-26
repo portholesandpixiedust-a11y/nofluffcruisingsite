@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { CRUISE_NEWS_TODAY } from '../data/cruiseNewsToday.js';
 import { easternCalendarDate, normalizeContentDate } from './etDate.js';
+import { entryPublishInstant } from './publicInstant.js';
 
 export const SUMMARY_MIN_WORDS = 150;
 
@@ -85,14 +86,20 @@ export function newsTodayPublicPaths(posts, now = new Date()) {
   return paths;
 }
 
+function shownPublished(post) {
+  if (!post?.published) return null;
+  return entryPublishInstant(post.published, `src/content/news/${post.id}.md`);
+}
+
 export function newsTodayLastmods(posts, now = new Date()) {
   const model = buildNewsTodayModel(posts, now);
   const map = new Map();
   const live = model.edition(model.today);
-  const liveDate = live.modified ?? (model.latest ? model.edition(model.latest).modified : null);
+  const livePost = live.posts[0] ?? (model.latest ? model.edition(model.latest).posts[0] : null);
+  const liveDate = shownPublished(livePost);
   if (liveDate) map.set('/news/today/', liveDate);
   for (const ymd of model.days) {
-    const modified = model.edition(ymd).modified;
+    const modified = shownPublished(model.edition(ymd).posts[0]);
     if (modified) map.set(`/news/today/${ymd}/`, modified);
   }
   return map;

@@ -5,7 +5,7 @@ heroCredit: "Photo: P.Cartwright · Cruise Hive · https://www.cruisehive.com/ms
 description: "MSC Virtuosa's 24 Oct 2026 Southampton cruise left at 7:00 p.m. Sunday, not 8:00 p.m. Saturday. La Rochelle and Le Havre are cancelled. Vigo is added Thursday, 8:00 a.m. to 6:00 p.m."
 answer: "Cruise Hive and Cruise Mummy print a letter put in MSC Virtuosa staterooms after guests boarded on Saturday 24 Oct 2026. The ship stayed overnight and was due to leave at 7:00 p.m. Sunday. La Rochelle on Monday is a sea day because of the weather. Le Havre on Friday is a sea day because of strikes. Vigo is added Thursday 29 Oct, 8:00 a.m. to 6:00 p.m. Bilbao and A Coruña stay. The cruise is still 7 nights, back in Southampton on Saturday 31 Oct. MSC tours for the two French ports refund to the onboard account. The letter quotes do not print a fare refund."
 presenter: Matthew
-publishDate: 2026-10-26T10:20:00-04:00
+publishDate: 2026-10-26T09:07:43-04:00
 line: "MSC Cruises"
 ships: ["MSC Virtuosa"]
 topics: [Itineraries, Ports]

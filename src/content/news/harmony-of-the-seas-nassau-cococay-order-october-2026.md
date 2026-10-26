@@ -5,7 +5,7 @@ heroCredit: "Photo: fitzcrittle · Cruise Hive · https://www.cruisehive.com/har
 description: "Harmony of the Seas' 24 Oct 2026 Port Canaveral cruise still calls Nassau and CocoCay. Nassau moved to Sunday. CocoCay moved to Tuesday. Royal Caribbean tours move with the day or refund to SeaPass."
 answer: "Cruise Hive and TravelPulse say Royal Caribbean reordered Harmony of the Seas' 5-night cruise that left Port Canaveral on Saturday 24 Oct 2026. Both ports stay. TravelPulse says Nassau moved from Tuesday 27 Oct to Sunday 25 Oct, and that the departure and return dates stay. Cruise Hive prints the hours: Nassau Sunday 7:30 a.m. to 5:30 p.m., a sea day Monday, and Perfect Day at CocoCay Tuesday 7:00 a.m. to 5:00 p.m. Royal Caribbean tours move to the new day or refund to SeaPass. No newsroom post turned up."
 presenter: Matthew
-publishDate: 2026-10-26T11:05:00-04:00
+publishDate: 2026-10-26T09:07:43-04:00
 line: "Royal Caribbean"
 ships: ["Harmony of the Seas"]
 topics: [Itineraries, Ports]

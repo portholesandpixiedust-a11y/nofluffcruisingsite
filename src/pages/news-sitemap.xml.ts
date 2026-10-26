@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import { formatEasternISO } from '../utils/etDate.js';
+import { entryPublishInstant } from '../utils/publicInstant.js';
 
 export const prerender = true;
 
@@ -18,11 +19,12 @@ export async function GET(context) {
   const cutoff = Date.now() - 2 * 24 * 60 * 60 * 1000;
   const posts = (await getCollection('news'))
     .map((entry) => {
-      const published = entry.data.publishedAt ?? entry.data.publishDate;
+      const stated = entry.data.publishedAt ?? entry.data.publishDate;
+      const published = entryPublishInstant(stated, `src/content/news/${entry.id}.md`);
       return { entry, published };
     })
-    .filter((row) => row.published && new Date(row.published).getTime() >= cutoff)
-    .sort((a, b) => new Date(b.published).getTime() - new Date(a.published).getTime())
+    .filter((row) => row.published && row.published.getTime() >= cutoff)
+    .sort((a, b) => b.published.getTime() - a.published.getTime() || (a.entry.id < b.entry.id ? 1 : -1))
     .slice(0, 1000);
 
   const urls = posts.map(({ entry, published }) => `  <url>
