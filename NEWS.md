@@ -18,6 +18,17 @@ Posts that change a sailing someone could already hold (a port skip, a delay, or
 
 Add the block in the news pull request. The field shape is on the tracker page.
 
+## Answer box, FAQ, and affected sailings
+
+Every news post needs two snippet fields. Do not leave them for a later edit.
+
+- `tldr`: exactly two sentences. Name who, the ship, the dates, and what changes for a booked guest. The news template prints this under the H1. `summary` is an accepted alias. If both are missing, the page falls back to `description`.
+- `faq`: exactly three questions. Each answer is 40 to 50 words and uses only facts already in that post. The template prints them as a question list and emits FAQPage JSON-LD. The same `faq` shape already works on guides.
+
+Optional `affected` rows render as a table with columns Ship, Dates, Ports, and Change. Use them when the story changes sailings someone could already hold. Each cell repeats a fact already in the post. Leave `affected` off for a new ship, a policy note, or anything that does not name all four cells.
+
+The author byline on a news story is Matthew, with a link to `/matthew/`.
+
 ## Reviewing an old hold
 
 Older conflict drafts may still sit in `src/content/news-holds/`. They are not published.

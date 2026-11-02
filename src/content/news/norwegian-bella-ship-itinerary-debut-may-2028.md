@@ -1,11 +1,12 @@
 ---
-title: "Norwegian Bella ship debut and itinerary open for May 2028"
+title: "Norwegian Bella: 7-day Barcelona cruises from May 2028"
 heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fcontent.presspage.com%2Fuploads%2F2627%2F723964da-6b3a-4038-9722-33a736ab35a2%2F1920_norwegianbellaaerial6.jpg&w=1280&output=jpg"
 heroCredit: "Rendering: Norwegian Cruise Line · NCL newsroom · https://www.ncl.com/no/en/newsroom/norwegian-bella/"
-description: "Norwegian Bella opens for sale on 20 Oct 2026. NCL's final Prima-class ship starts seven-day Barcelona cruises in May 2028. Specs, ports, and open questions."
+description: "Norwegian Bella opened for sale on 20 Oct 2026. Seven-day cruises from Barcelona start in May 2028 and call Rome, Florence, Salerno, Marseille, and Palma."
 answer: "Norwegian Cruise Line opened Norwegian Bella for sale on 20 Oct 2026. The sixth and final Prima-class ship is about 1,129 feet and 170,000 gross tons, with 3,921 guests at double occupancy. Seven-day Mediterranean cruises from Barcelona start in May 2028. The sale release does not name a delivery day or a maiden voyage."
 presenter: Matthew
 publishDate: 2026-10-20T11:10:00-04:00
+updatedAt: 2026-11-02T09:45:00-05:00
 line: "Norwegian Cruise Line"
 ships: ["Norwegian Bella"]
 topics: [Ships, Itineraries]

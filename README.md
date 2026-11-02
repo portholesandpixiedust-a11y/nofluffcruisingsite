@@ -27,7 +27,7 @@ Blocking it silently defeats the entire AEO strategy and nothing in analytics wi
 - Video companion post: a markdown file in `src/content/posts/`. See the Crown & Anchor
   post for the frontmatter shape, including the `sources` array that renders the citation block.
 - Guide: `src/content/guides/` (supports a `faq` array which emits FAQPage schema).
-- News: `src/content/news/`.
+- News: `src/content/news/`. Include `tldr` (two sentences under the headline) and `faq` (three questions, each answer 40 to 50 words). Optional `affected` rows render the ship, dates, ports, and change as a table. See `NEWS.md`.
 - Itinerary changes: add an `itineraryChange` block to a news post (port skip, delay, or swap). The page `/trackers/itinerary-changes/` reads that block. Leave it off for announcements that do not change a sailing someone already holds. See that page for the fields.
 - CDC scores: `src/data/cdc-scores.json`, refreshed with `node scripts/fetch-cdc-scores.mjs` from the CDC Green Sheet. Do not type scores by hand.
 - Ships: one object in `src/data/ships.json` generates a full ship page.
@@ -39,7 +39,7 @@ Blocking it silently defeats the entire AEO strategy and nothing in analytics wi
 src/content.config.ts   collection schemas, including the sources/tier shape
 src/data/               ship + line database, drives all /ships/ pages
 src/styles/brand.css    brand tokens sampled from the channel banner and avatar
-src/layouts/Article.astro   emits Article + VideoObject + FAQPage JSON-LD
+src/layouts/Article.astro   emits NewsArticle or Article + VideoObject + FAQPage JSON-LD
 src/components/Sources.astro    the tiered citation block
 public/robots.txt       AI crawlers explicitly allowed
 public/llms.txt         site map written for language models

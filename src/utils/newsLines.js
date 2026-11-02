@@ -19,6 +19,14 @@ export const NEWS_LINES = [
   { name: 'Cunard', id: 'cunard', hub: 'cunard' },
   { name: 'Holland America', id: 'holland-america', hub: 'holland-america' },
   { name: 'Silversea', id: 'silversea', hub: 'silversea' },
+  { name: 'Ambassador Cruise Line', id: 'ambassador', hub: 'ambassador' },
+  { name: 'P&O Cruises', id: 'p-and-o', hub: 'p-and-o' },
+  { name: 'Havila Voyages', id: 'havila', hub: 'havila' },
+  { name: 'Marella Cruises', id: 'marella', hub: 'marella' },
+  { name: 'TUI Cruises', id: 'tui', hub: 'tui' },
+  { name: 'Explora Journeys', id: 'explora', hub: 'explora' },
+  { name: 'Viking', id: 'viking', hub: 'viking' },
+  { name: 'Villa Vie Residences', id: 'villa-vie', hub: 'villa-vie' },
 ];
 
 // Short labels already used in older posts. Stored line names follow lines.json.

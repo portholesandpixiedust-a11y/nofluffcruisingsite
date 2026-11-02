@@ -4,20 +4,20 @@ heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fi0.wp.com%2Fwp.travelmarketreport
 heroCredit: "Photo: Royal Caribbean · Travel Market Report · https://www.travelmarketreport.com/canada/cruises/articles/royal-caribbean-cancels-labadee-visits-through-april-2028-amid-haiti-unrest"
 description: "A 30 Oct 2026 agent email, as Royal Caribbean Blog prints it, takes Labadee off 44 itineraries through April 2028. The public travel page, read 2 Nov, still says December 2026."
 answer: "Royal Caribbean Blog says agents were told on 30 Oct 2026 that Labadee comes off 44 itineraries through April 2028, across nine ships. A new port or a sea day depends on the sailing. The blog says prepaid Royal Caribbean shore excursions refund automatically. The travel-updates page, read 2 Nov, still covers only the rest of 2026."
+tldr: "Royal Caribbean told agents on 30 Oct 2026 that Labadee comes off 44 itineraries through April 2028, on nine ships including Adventure, Allure, and Harmony of the Seas. A prepaid Royal Caribbean shore excursion refunds automatically, and the public travel page, read 2 Nov, still covers only the rest of 2026."
 presenter: Matthew
 publishDate: 2026-11-02T08:18:00-05:00
+updatedAt: 2026-11-02T09:45:00-05:00
 line: "Royal Caribbean"
 ships: ["Adventure of the Seas", "Allure of the Seas", "Explorer of the Seas", "Freedom of the Seas", "Harmony of the Seas", "Independence of the Seas", "Serenade of the Seas", "Star of the Seas", "Symphony of the Seas"]
 topics: [Itineraries, Ports]
 faq:
   - q: "Is Labadee cancelled on your cruise?"
-    a: "Only if your sailing is one of the 44 in the Royal Caribbean Blog list updated 30 Oct 2026. The blog names nine ships and says the notice runs through April 2028. A ship on that list can still have other cruises that never included Labadee. Open your booking. The public travel-updates page, read 2 Nov 2026, still describes a suspension for the rest of 2026 and does not mention April 2028."
-  - q: "What do you get instead?"
-    a: "It depends on the date. In the blog's lists, one Allure group from 4 July through 24 Oct 2027 gets Nassau, and one Adventure date, 23 July 2027, gets Cozumel. Harmony on 19 Feb 2028 gets Nassau. Star of the Seas on 19 Dec 2027 trades Labadee and Falmouth for Costa Maya and Cozumel. Some notes also move a sea day or a port time. The blog does not print one replacement for every ship."
+    a: "Your Labadee call is off only if the sailing is one of the 44 itineraries in the Royal Caribbean Blog list updated 30 Oct 2026. That note covers nine ships through April 2028. The public travel-updates page, read 2 Nov 2026, still describes a suspension for the rest of 2026."
+  - q: "What replaces Labadee?"
+    a: "The 30 Oct blog gives no single replacement for every date. Allure dates from 4 July through 24 Oct 2027 get Nassau. Adventure on 23 July 2027 gets Cozumel. Harmony on 19 Feb 2028 gets Nassau. Star of the Seas on 19 Dec 2027 gets Costa Maya and Cozumel."
   - q: "Do you get the cruise fare back?"
-    a: "The blog does not print a fare refund. It says any prepaid shore excursion booked through Royal Caribbean will be refunded automatically. It does not print a dollar amount, a number of days, or a rule for a tour you bought from someone else. Travel Market Report on 31 Oct prints the same email lines and does not add a fare refund."
-  - q: "How does this sit with the June 2027 report?"
-    a: "An earlier post on this site records a 5 Oct 2026 Royal Caribbean Blog report that visits stayed off through June 2027. The 30 Oct blog says that three months ago the line had cancelled visits through July 2027. This note does not choose June or July. The new date in the 30 Oct blog is April 2028."
+    a: "The blog prints no fare refund. It says a prepaid shore excursion booked through Royal Caribbean is refunded automatically. It prints no dollar amount and no rule for a tour you bought elsewhere. Travel Market Report on 31 Oct prints the same email lines and adds no fare refund."
 sources:
   - claim: "Royal Caribbean travel-updates page, read 2 Nov 2026: the Labadee block is stamped Last Updated January 29, 2026, 5:00 p.m. EDT. The heading is All Labadee sailings through December 2026. The text says the line has suspended all visits to Labadee for the remainder of 2026 while it monitors the situation with its Global Security and Intelligence team, that itinerary modifications are communicated directly to affected guests ahead of their sailings, and that guests should check back. The page does not mention April 2028, a ship name, a replacement port, or a shore-excursion refund."
     outlet: "Royal Caribbean"

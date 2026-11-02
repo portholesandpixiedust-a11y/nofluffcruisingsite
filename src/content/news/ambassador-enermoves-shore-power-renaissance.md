@@ -4,20 +4,20 @@ heroImage: "https://wsrv.nl/?url=https%3A%2F%2Feu-images.contentstack.com%2Fv3%2
 heroCredit: "Photo: Andy Humbert · Seatrade Cruise News · https://www.seatrade-cruise.com/environmental-health/ambassador-fits-shore-power-system-to-renaissance"
 description: "Ambassador signed EnerMoves to fit shore power on Renaissance. Seatrade puts the finish in an October and November 2027 dry dock. Ambience and Ambition come later. No fare is printed."
 answer: "Ambassador signed EnerMoves to install shore power on Renaissance. Seatrade says commissioning is part of a dry dock in October and November 2027. Travel Weekly calls that yard period autumn 2027. A similar fit is planned for Ambience in November and December 2027, and for Ambition in autumn 2028. No fare and no cancelled sailing are printed."
+tldr: "Ambassador signed EnerMoves to fit shore power on Renaissance, with final installation in a scheduled dry dock in October and November 2027. Ambience is planned for November and December 2027 and Ambition for autumn 2028, and no page prints a cancelled sailing or a fare."
 presenter: Matthew
 publishDate: 2026-11-02T08:42:00-05:00
+updatedAt: 2026-11-02T09:45:00-05:00
 line: "Ambassador Cruise Line"
 ships: ["Renaissance", "Ambience", "Ambition"]
 topics: [Ships]
 faq:
-  - q: "When can Renaissance plug in?"
-    a: "Seatrade on 30 Oct 2026, Cruise Industry News on 31 Oct, and TTG on 29 Oct say final installation and commissioning happen in a scheduled dry dock in October and November 2027. Travel Weekly on 29 Oct says the same dry dock is in autumn 2027 and does not print the two month names. None of the pages says the ship can connect before that yard period."
-  - q: "What about Ambience and Ambition?"
-    a: "Seatrade, Travel Weekly, and TTG say a second EnerMoves contract is planned for Ambience during a dry dock in November and December 2027, and a further installation is planned for Ambition in autumn 2028. Cruise Industry News prints those windows and spells the second ship Ambiance. The other three pages spell it Ambience."
-  - q: "Does this cancel a cruise you already hold?"
-    a: "No page checked here prints a cancelled departure, a moved port, or a fare. The reports call the 2027 and 2028 dates scheduled dry docks. A dry-dock month is not a list of sailings taken off sale. Open the date you hold before you treat it as cancelled."
-  - q: "Which ship is the French one?"
-    a: "Travel Weekly and TTG say Renaissance serves the French market in summer and runs winter Caribbean fly-cruises for British, French, and Dutch passengers. Both say she joined after the January 2025 merger with Compagnie Française de Croisières. TTG says Ambience and Ambition are the adult-only, no-fly ships from UK ports. Seatrade does not print that split."
+  - q: "When can Renaissance connect to shore power?"
+    a: "Seatrade on 30 Oct 2026, Cruise Industry News on 31 Oct, and TTG on 29 Oct put final installation in a dry dock in October and November 2027. Travel Weekly calls that dock autumn 2027 and skips the month names. No page says Renaissance can connect before the yard."
+  - q: "When do Ambience and Ambition get the same plug?"
+    a: "Seatrade, Travel Weekly, and TTG plan a second EnerMoves contract for Ambience in a November and December 2027 dry dock, and Ambition in autumn 2028. Cruise Industry News prints those windows and spells the middle ship Ambiance. The other three pages spell it Ambience."
+  - q: "Does the contract cancel a cruise you hold?"
+    a: "No page checked here prints a cancelled departure, a moved port, or a fare. The reports call the 2027 and 2028 dates scheduled dry docks. A dry-dock month is not the list of sailings taken off sale. Open your date if it falls in those months."
 sources:
   - claim: "Seatrade Cruise News, Holly Payne, 30 Oct 2026: Ambassador Cruise Line signed a contract with EnerMoves for a shore power connection system on Renaissance. Work has started. Final installation and commissioning are expected in the ship's scheduled dry dock in October/November 2027. Retrofitting the ship-to-shore connection is described as a particular challenge, and EnerMoves was selected for its approach to that interface. A second contract is planned for a similar system on Ambience during a dry dock in November/December 2027, and a further installation is planned for Ambition in autumn 2028. The caption on the lead photo says Ambassador ships have advanced food-waste and sewage treatment systems and IMO Tier III exhaust emission control, SCR technology, and credits the photo to Andy Humbert. The caption does not name Renaissance, does not mention EnerMoves, and does not date the frame."
     outlet: "Seatrade Cruise News"
