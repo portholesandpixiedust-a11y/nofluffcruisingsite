@@ -125,6 +125,12 @@ h1.sec,h2.sec{font-family:var(--fd);font-size:clamp(21px,3vw,28px);text-transfor
 article{max-width:70ch;margin:0 auto}
 article h1,h1.masthead{font-family:var(--fd);font-size:clamp(24px,6.4vw,40px);line-height:1.05;text-transform:uppercase;margin:4px 0 14px;text-wrap:balance;overflow-wrap:anywhere}
 h1.masthead{margin:4px 0 16px}
+.crumbs{font-family:var(--fu);font-size:13px;line-height:1.45;color:var(--ink-2);margin:0 0 16px}
+.crumbs ol{display:flex;flex-wrap:wrap;align-items:center;list-style:none;margin:0;padding:0}
+.crumbs li{display:flex;align-items:center;gap:6px;min-width:0}
+.crumbs li+li{margin-left:6px}
+.crumbs a{color:inherit}
+.crumbs [aria-current="page"]{color:var(--ink);font-weight:600}
 .answer{background:var(--sunk);border-left:4px solid var(--orange);border-radius:0 4px 4px 0;padding:16px 20px;font-size:18px;line-height:1.55;margin:0 0 22px}
 .answer b{font-family:var(--fu);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-ink);display:block;margin-bottom:7px}
 .preferred{border:1px solid var(--line);border-radius:4px;padding:14px 16px;margin:0 0 22px;background:var(--surface)}

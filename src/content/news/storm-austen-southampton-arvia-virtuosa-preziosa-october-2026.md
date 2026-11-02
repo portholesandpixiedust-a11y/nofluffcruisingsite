@@ -4,8 +4,10 @@ heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fwww.cruisehive.com%2Fwp-content%2
 heroCredit: "Photo: Martin Augustus · Cruise Hive · https://www.cruisehive.com/storm-austen-forces-three-cruise-ships-into-southampton-early/221580"
 description: "ABP lists Arvia and MSC Virtuosa into Southampton at 7:00 p.m. Thursday 22 Oct, and MSC Preziosa at 9:30 p.m. Cruise Hive says the next Preziosa sailing leaves at 6:00 p.m. Friday."
 answer: "Associated British Ports lists Arvia and MSC Virtuosa arriving in Southampton at 7:00 p.m. on Thursday 22 Oct 2026, and MSC Preziosa at 9:30 p.m. MSC Preziosa is listed to leave at 6:00 p.m. Friday from the City terminal. Cruise Hive says that Friday departure had been 8:00 p.m., and that boarding guests must be at the terminal by 2:00 p.m. The port calls the times provisional."
+tldr: "Associated British Ports lists Arvia and MSC Virtuosa into Southampton at 7:00 p.m. on Thursday 22 Oct 2026, and MSC Preziosa at 9:30 p.m. MSC Preziosa is listed to leave at 6:00 p.m. Friday from the City terminal, and booked guests were told to be at the terminal by 2:00 p.m."
 presenter: Matthew
 publishDate: 2026-10-22T08:45:00-04:00
+updatedAt: 2026-11-02T09:45:00-05:00
 line: "MSC Cruises"
 ships: ["Arvia", "MSC Virtuosa", "MSC Preziosa"]
 topics: [Itineraries, Ports]
@@ -15,14 +17,12 @@ itineraryChange:
   sailing: "Southampton calls on Thursday 22 Oct 2026, with MSC Preziosa leaving Friday 23 Oct"
   changed: "ABP's Southampton cruise feed, read 22 Oct 2026, lists Arvia and MSC Virtuosa arriving at 7:00 p.m. Thursday and MSC Preziosa at 9:30 p.m. Thursday. Arvia is listed to leave at 5:00 p.m. Friday from the Ocean terminal. MSC Virtuosa is listed to leave at 8:00 p.m. Saturday from Horizon. MSC Preziosa is listed to leave at 6:00 p.m. Friday from City. Cruise Hive says the Thursday arrivals replace a Friday morning arrival for Arvia and MSC Preziosa and a Saturday morning arrival for MSC Virtuosa, and that MSC told Preziosa guests to be at City Cruise Terminal by 2:00 p.m. Friday because an 8:00 p.m. departure moved to 6:00 p.m. The port calls the times provisional."
 faq:
-  - q: "What time do Arvia, MSC Virtuosa, and MSC Preziosa arrive in Southampton?"
-    a: "Associated British Ports' cruise feed, read 22 Oct 2026, lists Arvia and MSC Virtuosa at 7:00 p.m. Thursday 22 Oct, and MSC Preziosa at 9:30 p.m. the same evening. Arvia is on berth 46, the Ocean terminal. MSC Virtuosa is on berth 102, Horizon. MSC Preziosa is on berth 101, City. The schedule page says the list is provisional. Cruise Hive says those Thursday arrivals are early."
-  - q: "What time does MSC Preziosa leave Southampton on Friday?"
-    a: "The same ABP feed lists MSC Preziosa departing at 6:00 p.m. on Friday 23 Oct from the City terminal. Cruise Hive, Melissa Mayntz, 22 Oct, says MSC told booked guests to be at City Cruise Terminal no later than 2:00 p.m., and that the sailing had been due to leave at 8:00 p.m. No MSC newsroom post for that alert was found. The feed stamps the Preziosa arrival and departure fields 22/10/2026 12:05:22."
-  - q: "Why are the ships coming in on Thursday?"
-    a: "Cruise Hive attributes the early arrivals to Storm Austen. The Met Office media centre, 10:47 a.m. UK time on 21 Oct, issued an amber wind warning for Cornwall, the Isles of Scilly, and parts of West Devon, and said a yellow wind warning runs from Thursday evening into Friday. A Met Office warnings page read 22 Oct lists Southampton inside a yellow wind warning and says the warnings may be out of date. The port feed does not print a reason."
-  - q: "Do the next cruises change ports?"
-    a: "Cruise Hive says Arvia's next cruise is a 14-night transatlantic from Southampton to Barbados, and that MSC Preziosa and MSC Virtuosa next sail Northern Europe. It says no itinerary changes are confirmed yet for those sailings. The Friday departure clock for MSC Preziosa is the change that article does print. Read the line's message before you treat a port list as final."
+  - q: "What time do Arvia, Virtuosa, and Preziosa arrive?"
+    a: "The Associated British Ports feed, read 22 Oct 2026, lists Arvia and MSC Virtuosa at 7:00 p.m. Thursday and MSC Preziosa at 9:30 p.m. Arvia uses berth 46, the Ocean terminal. MSC Virtuosa uses berth 102, Horizon. MSC Preziosa uses berth 101, City. The page calls the list provisional."
+  - q: "What time does MSC Preziosa leave on Friday?"
+    a: "The same feed lists MSC Preziosa leaving at 6:00 p.m. Friday 23 Oct from the City terminal. A guest alert in the 22 Oct report says be there by 2:00 p.m. The earlier departure was 8:00 p.m. Both fields are stamped 22/10/2026 12:05:22. No MSC newsroom post was found."
+  - q: "Do the next cruises lose ports?"
+    a: "The 22 Oct report says Arvia next sails a 14-night transatlantic from Southampton to Barbados, and MSC Preziosa and MSC Virtuosa next sail Northern Europe. Those sailings have no confirmed port changes yet. The Friday clock for MSC Preziosa is the change it prints. Check the line's message."
 sources:
   - claim: "Associated British Ports Southampton cruise XML, the feed loaded by the cruise ship schedule page, read 22 Oct 2026. ARVIA, visit 14683172, arrival 22-Oct-26 19:00, departure 23-Oct-26 17:00, berth 46, agent CARNIVAL UK, arrival field stamped 22/10/2026 13:47:37, departure field stamped 21/10/2026 13:08:08. MSC VIRTUOSA, visit 14683405, arrival 22-Oct-26 19:00, departure 24-Oct-26 20:00, berth 102, agent DENHOLM PORT SERVICES LTD, arrival field stamped 22/10/2026 13:45:41, departure field stamped 20/10/2026 15:35:06. MSC PREZIOSA, visit 14683353, arrival 22-Oct-26 21:30, departure 23-Oct-26 18:00, berth 101, agent DENHOLM PORT SERVICES LTD, both fields stamped 22/10/2026 12:05:22. QUEEN MARY 2, visit 14683474, arrival 23-Oct-26 06:00, departure 23-Oct-26 16:00, berth 38/9. The feed does not print a weather reason, an original arrival day, a terminal arrival deadline, or a guest count. The file does not label the time zone on those stamps."
     outlet: "Associated British Ports"

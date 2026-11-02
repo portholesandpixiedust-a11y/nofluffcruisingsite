@@ -5,11 +5,18 @@ import { execSync } from 'node:child_process';
 let fails = 0;
 const check = (name, cond) => { console.log(`${cond ? 'PASS' : 'FAIL'}  ${name}`); if (!cond) fails++; };
 
+const faqAnswer = Array.from({ length: 45 }, (_, index) => `fact${index + 1}`).join(' ');
 const good = {
   slug: 'test-story-slug',
   title: 'Carnival raises gratuities to $18.50 "per day"',
   description: 'A test description under 155 characters.',
+  tldr: 'Carnival changes the daily gratuity on this test sailing today for booked guests. The second sentence names the ship date and the money impact before anyone sails.',
   answer: 'A test answer of roughly forty to sixty words that opens the page and answers the headline directly, with no preamble at all, for testing purposes only. It names the fact, the date, and the ship, and it stays inside the range every published cruise story is expected to hit on this site today.',
+  faq: [
+    { q: 'What changed for a booked guest?', a: faqAnswer },
+    { q: 'Which ship and date does this cover?', a: faqAnswer },
+    { q: 'What should you check before you sail?', a: faqAnswer },
+  ],
   line: 'Carnival',
   topics: ['Money', 'Policy'],
   body: '## What changed?\n\nA test body with a table.\n\n| A | B |\n|---|---|\n| 1 | 2 |',
@@ -41,6 +48,9 @@ check('itinerary change passes when the ship is in the post', validate(withChang
 check('itinerary change rejects an unknown kind', validate({ ...withChange, itineraryChange: { ...change, kinds: ['weather'] } }, new Set()).some((p) => p.includes('itineraryChange.kinds')));
 check('itinerary change rejects a ship the post never names', validate({ ...good, itineraryChange: change }, new Set()).some((p) => p.includes('not named')));
 check('markdown includes itineraryChange', toMarkdown(withChange).includes('itineraryChange:') && toMarkdown(withChange).includes('port-skip, delay'));
+check('markdown includes tldr and faq', toMarkdown(good).includes('tldr:') && toMarkdown(good).includes('faq:'));
+check('faq of two questions is rejected', validate({ ...good, faq: good.faq.slice(0, 2) }, new Set()).some((p) => p.includes('faq needs 3')));
+check('markdown omits affected when absent', !toMarkdown(good).includes('\naffected:'));
 check('markdown omits itineraryChange when absent', !toMarkdown(good).includes('itineraryChange:'));
 check('untagged markdown omits tags', !toMarkdown(good).includes('tags:'));
 

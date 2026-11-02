@@ -65,6 +65,15 @@ const news = defineCollection({
     ...articleBase,
     video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }).optional(),
     tags: z.array(z.string()).default([]),
+    // Two-sentence snippet under the H1. `summary` is accepted as an alias.
+    tldr: z.string().min(1).optional(),
+    summary: z.string().min(1).optional(),
+    affected: z.array(z.object({
+      ship: z.string().min(1),
+      dates: z.string().min(1),
+      ports: z.string().min(1),
+      change: z.string().min(1),
+    })).default([]),
     sailing: z.string().min(1).optional(),
     itineraryChange: z.object({
       kinds: z.array(z.enum(['port-skip', 'delay', 'swap'])).min(1),

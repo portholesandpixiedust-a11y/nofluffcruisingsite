@@ -62,7 +62,10 @@ const SCHEMA = `Return ONLY a JSON object, no prose and no code fence, shaped ex
   "slug": "kebab-case-url-slug",
   "title": "Headline, sentence case, under 70 characters",
   "description": "One sentence for search results and social cards, under 155 characters",
+  "tldr": "Exactly two sentences under the headline. Name who, the ship, the dates, and what changes for a booked guest.",
   "answer": "40 to 60 words answering the headline directly. This is the first thing on the page.",
+  "faq": [{"q":"Question a booked guest would ask","a":"40 to 50 words using only facts already in the answer and body"}],
+  "affected": [{"ship":"Ship name already in the post","dates":"Dates already in the post","ports":"Ports already in the post","change":"What the booked guest loses or gains"}],
   "line": "One of: ${Object.keys(LINES).join(' | ')}",
   "topics": ["one or two of: Itineraries, Ships, Ports, Policy, Money, Loyalty, Destinations, Sustainability, Dining, Drinks"],
   "body": "Markdown body, 300 to 600 words, a longer rewrite in site voice (not a paste of the source). Use ## subheadings, and prefer a question-style H2 when the section answers a question. No H1. Tables allowed. Credit every outlet by name in the prose where a claim appears.",
@@ -104,13 +107,14 @@ Rules that override everything else:
    ship names, cancellations, passenger impact), set "conflict": true, explain in
    conflictNote, still include sources for each side, and still return the draft. Do not
    pick a winner quietly.
-9. If, and only if, the story changes a specific sailing already on sale (a port skip,
+9. Include tldr (exactly two sentences) and faq (exactly three questions). Each faq answer is 40 to 50 words and uses only facts already in the answer and body. If the story names ships, dates, ports, and a guest-facing change, you may add affected rows with those four fields. Omit affected when you do not have all four.
+10. If, and only if, the story changes a specific sailing already on sale (a port skip,
    a delay, or a swap), add "itineraryChange": {"kinds":["port-skip"],"ship":"Ship name",
    "sailing":"sailing window already in the answer","changed":"what the booked passenger
    loses or gains, using only facts already in the answer"}. kinds may include port-skip,
    delay, and swap. Omit itineraryChange for new itinerary releases, ship news, policy,
    and anything that does not change a sailing the reader could already hold.
-10. If the story concerns Hurricane Rachel and a sailing a guest could already hold,
+11. If the story concerns Hurricane Rachel and a sailing a guest could already hold,
     add "tags": ["hurricane-rachel"] and "ships": ["Ship name"]. The Hurricane Rachel
     cruise tracker reads that tag. If you omit itineraryChange because no port skip,
     delay, or swap is confirmed, also set "sailing" to the sailing window already in
@@ -149,10 +153,40 @@ ${SCHEMA}`;
 /** YAML-safe double-quoted scalar. */
 const q = (s) => `"${String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, ' ').trim()}"`;
 
+function wordCount(value) {
+  return String(value || '').trim().split(/\s+/).filter(Boolean).length;
+}
+
 export function validate(p, existingSlugs) {
   const problems = [];
-  for (const f of ['slug', 'title', 'description', 'answer', 'line', 'body']) {
+  for (const f of ['slug', 'title', 'description', 'tldr', 'answer', 'line', 'body']) {
     if (!p[f] || typeof p[f] !== 'string' || !p[f].trim()) problems.push(`missing ${f}`);
+  }
+  if (typeof p.tldr === 'string' && p.tldr.trim()) {
+    const tldrWords = wordCount(p.tldr);
+    if (tldrWords < 20 || tldrWords > 80) problems.push(`tldr is ${tldrWords} words; need about two sentences`);
+    if (p.tldr.includes('—')) problems.push('tldr contains an em dash');
+  }
+  if (!Array.isArray(p.faq) || p.faq.length !== 3) problems.push('faq needs 3 questions');
+  else for (const item of p.faq) {
+    if (!item?.q || typeof item.q !== 'string' || !item.q.trim() || !item?.a || typeof item.a !== 'string' || !item.a.trim()) {
+      problems.push('a faq item is missing q or a');
+      continue;
+    }
+    const answerWords = wordCount(item.a);
+    if (answerWords < 40 || answerWords > 50) problems.push(`faq answer is ${answerWords} words; need 40 to 50`);
+    if (`${item.q} ${item.a}`.includes('—')) problems.push('faq contains an em dash');
+  }
+  if (p.affected != null) {
+    if (!Array.isArray(p.affected) || p.affected.length === 0) problems.push('affected must be a non-empty list');
+    else for (const row of p.affected) {
+      for (const field of ['ship', 'dates', 'ports', 'change']) {
+        if (!row?.[field] || typeof row[field] !== 'string' || !row[field].trim()) problems.push(`affected missing ${field}`);
+      }
+      if (`${row?.ship || ''} ${row?.dates || ''} ${row?.ports || ''} ${row?.change || ''}`.includes('—')) {
+        problems.push('affected contains an em dash');
+      }
+    }
   }
   if (!/^[a-z0-9-]+$/.test(p.slug || '')) problems.push('slug is not kebab-case');
   if (existingSlugs.has(p.slug)) problems.push('slug already exists');
@@ -225,6 +259,16 @@ function sailingFrontmatter(p) {
   return `sailing: ${q(p.sailing.trim())}\n`;
 }
 
+function faqFrontmatter(p) {
+  if (!Array.isArray(p.faq) || p.faq.length === 0) return '';
+  return `faq:\n${p.faq.map((item) => `  - q: ${q(item.q)}\n    a: ${q(item.a)}`).join('\n')}\n`;
+}
+
+function affectedFrontmatter(p) {
+  if (!Array.isArray(p.affected) || p.affected.length === 0) return '';
+  return `affected:\n${p.affected.map((row) => `  - ship: ${q(row.ship)}\n    dates: ${q(row.dates)}\n    ports: ${q(row.ports)}\n    change: ${q(row.change)}`).join('\n')}\n`;
+}
+
 function itineraryFrontmatter(p) {
   const change = p.itineraryChange;
   if (!change) return '';
@@ -258,12 +302,13 @@ export function toMarkdown(p, { held = false } = {}) {
   return `---
 title: ${q(p.title)}
 description: ${q(p.description)}
+tldr: ${q(p.tldr)}
 answer: ${q(p.answer)}
 presenter: Matthew
 publishDate: ${today}
 line: ${q(canonicalLine(p.line))}
 ${shipsFrontmatter(p)}topics: [${topics.join(', ')}]
-${tagsFrontmatter(p)}${sailingFrontmatter(p)}${itineraryFrontmatter(p)}${holdBlock}sources:
+${tagsFrontmatter(p)}${sailingFrontmatter(p)}${faqFrontmatter(p)}${affectedFrontmatter(p)}${itineraryFrontmatter(p)}${holdBlock}sources:
 ${sources}
 ---
 

@@ -9,7 +9,7 @@ import VideosReferenced from '../components/VideosReferenced.astro';
 import { easternCalendarDate, formatEasternDisplay, formatEasternISO } from '../utils/etDate.js';
 import { publicInstant, commitInstant } from '../utils/publicInstant.js';
 import { formatDayHeading } from '../utils/newsToday.js';
-import { newsHubSlug } from '../utils/newsLines.js';
+import { canonicalLine, newsHubSlug } from '../utils/newsLines.js';
 import { HURRICANE_RACHEL_TAG, HURRICANE_RACHEL_TRACKER_PATH } from '../utils/newsTags.js';
 import { relatedEntries } from '../utils/relatedContent.js';
 import { isRedirectSource } from '../utils/siteRedirects.js';
@@ -42,7 +42,9 @@ const updatedISO = formatEasternISO(updated);
 const publishedLabel = formatEasternDisplay(published);
 const updatedLabel = formatEasternDisplay(updated);
 const showUpdated = new Date(updated).getTime() !== new Date(published).getTime();
-const authorUrl = new URL(`/${d.presenter.toLowerCase()}/`, Astro.site).href;
+const isNews = schemaType === 'NewsArticle';
+const authorName = isNews ? 'Matthew' : d.presenter;
+const authorUrl = new URL(`/${authorName.toLowerCase()}/`, Astro.site).href;
 const logoUrl = new URL('/avatar.png', Astro.site).href;
 // Hero: an explicit image wins, then the video's own thumbnail (real photography of a real
 // presenter, which is the point), then the channel's wake shot as a branded fallback.
@@ -50,6 +52,10 @@ const hero = d.heroImage ?? (d.video ? `https://i.ytimg.com/vi/${d.video.id}/max
 // maxresdefault does not exist for every upload; hqdefault always does.
 const heroFallback = d.video && !d.heroImage ? `https://i.ytimg.com/vi/${d.video.id}/hqdefault.jpg` : null;
 const heroCredit = d.heroCredit ?? (d.video && !d.heroImage ? `Still from the No Fluff Cruising video "${d.video.title}" on YouTube.` : null);
+const imageUrl = hero.startsWith('http') ? hero : new URL(hero, Astro.site).href;
+const tldrText = [d.tldr, d.summary]
+  .map((value) => (typeof value === 'string' ? value.trim() : ''))
+  .find(Boolean) || (isNews ? String(d.description || '').trim() : '');
 const newsDay = schemaType === 'NewsArticle' ? easternCalendarDate(published) : null;
 const todayKey = newsDay ? easternCalendarDate(new Date()) : null;
 const roundupHref = newsDay ? (newsDay === todayKey ? '/news/today/' : `/news/today/${newsDay}/`) : null;
@@ -63,7 +69,7 @@ const article = {
   dateModified: updatedISO,
   author: {
     '@type': 'Person',
-    name: d.presenter,
+    name: authorName,
     url: authorUrl,
     sameAs: ['https://www.youtube.com/@nofluffcruising'],
   },
@@ -73,8 +79,19 @@ const article = {
     url: Astro.site?.href,
     logo: { '@type': 'ImageObject', url: logoUrl, width: 256, height: 256 },
   },
-  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).href,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': new URL(Astro.url.pathname, Astro.site).href,
+  },
   citation: (d.sources ?? []).map((s) => s.outlet),
+  ...(isNews ? {
+    image: [{
+      '@type': 'ImageObject',
+      url: imageUrl,
+      width: 1280,
+      height: 720,
+    }],
+  } : {}),
 };
 const video = d.video ? {
   '@context': 'https://schema.org',
@@ -93,7 +110,13 @@ const faq = (d.faq?.length) ? {
 } : null;
 const jsonld = [article, video, faq].filter(Boolean);
 const topicLabel = (d.topics ?? []).filter(Boolean).join(' · ');
-const newsHub = schemaType === 'NewsArticle' ? newsHubSlug(d.line) : null;
+const newsHub = isNews ? newsHubSlug(d.line) : null;
+const lineLabel = canonicalLine(d.line);
+const articleCrumbs = [
+  { name: section, url: sectionUrl },
+  ...(newsHub ? [{ name: `${lineLabel} Cruise News`, url: `/news/${newsHub}/` }] : []),
+  { name: d.title, url: Astro.url.pathname },
+];
 const relatedKind = schemaType === 'NewsArticle' ? 'news' : (sectionUrl === '/guides/' ? 'guides' : null);
 const related = relatedKind
   ? relatedEntries(
@@ -116,21 +139,37 @@ if (schemaType === 'NewsArticle' && d.ships?.length) {
 }
 ---
 <Base title={d.title} description={d.description} jsonld={jsonld} ogImage={hero}
-      breadcrumbs={[{name: section, url: sectionUrl}, {name: d.title, url: Astro.url.pathname}]}
+      breadcrumbs={articleCrumbs}
       published={publishedISO}
       modified={updatedISO}
-      author={d.presenter}>
+      author={authorName}>
   <div class="wrap">
     <article>
+      {isNews && (
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            {articleCrumbs.map((crumb) => (
+              <li>
+                <span aria-hidden="true">/</span>
+                {crumb.url === Astro.url.pathname
+                  ? <span aria-current="page">{crumb.name}</span>
+                  : <a href={crumb.url}>{crumb.name}</a>}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
       <span class="eyebrow">
         {d.line ? (newsHub ? <a href={`/news/${newsHub}/`}>{d.line}</a> : d.line) : (topicLabel || kind)}
         {d.line && topicLabel ? ` · ${topicLabel}` : ''}
       </span>
       <h1>{d.title}</h1>
+      {tldrText && <div class="answer"><b>TL;DR</b>{tldrText}</div>}
       <div class="byline">
         <img src="/avatar.png" width="42" height="42" alt="" />
         <div>
-          <strong><a href={authorUrl}>{d.presenter}</a></strong>
+          <strong><a href={authorUrl}>{authorName}</a></strong>
           <span>No Fluff Cruising &middot; <time datetime={publishedISO}>{publishedLabel}</time>{showUpdated && <> &middot; Updated <time datetime={updatedISO}>{updatedLabel}</time></>}</span>
         </div>
       </div>
@@ -143,6 +182,35 @@ if (schemaType === 'NewsArticle' && d.ships?.length) {
       </figure>
 
       <div class="answer"><b>The short answer</b>{d.answer}</div>
+
+      {isNews && d.affected?.length > 0 && (
+        <section class="affected" aria-labelledby="affected-h">
+          <h2 id="affected-h">Sailings affected</h2>
+          <div class="tablewrap">
+            <table>
+              <caption class="visually-hidden">Ship, dates, ports, and what changed</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Ship</th>
+                  <th scope="col">Dates</th>
+                  <th scope="col">Ports</th>
+                  <th scope="col">Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                {d.affected.map((row) => (
+                  <tr>
+                    <th scope="row">{row.ship}</th>
+                    <td>{row.dates}</td>
+                    <td>{row.ports}</td>
+                    <td>{row.change}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
 
       {preferredSource && (
         <p class="preferred">

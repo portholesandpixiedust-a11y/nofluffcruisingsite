@@ -4,8 +4,10 @@ heroImage: "https://wsrv.nl/?url=https%3A%2F%2Fcmg-cmg-tv-10090-prod.cdn.arcpubl
 heroCredit: "Photo: KIRO 7 News Seattle · https://www.kiro7.com/news/local/norwegian-joy-cruise-ship-passengers-left-stranded-hours/544a3ef4-a329-45e6-8f4c-a0db4da9a506/"
 description: "KIRO 7 reported Norwegian Joy guests waiting hours at the Seattle cruise terminal on 2 Oct 2026 for an immigration and customs check after leaving Vancouver. The Oct 1 daily had already flagged a face-to-face inspection."
 answer: "On 2 Oct 2026, KIRO 7 reported Norwegian Joy guests waiting hours at the Seattle cruise terminal because no one could board during an immigration and customs check after a Vancouver start. A passenger account of the 1 Oct Freestyle Daily says the ship had already told guests that Seattle would be a face-to-face Customs and Border Protection inspection. KIRO said it was still waiting on Norwegian and customs. Cruise Fever, dated 3 Oct, reported a passenger account of a 2.5-hour customs line at Pier 66."
+tldr: "On 2 Oct 2026, KIRO 7 reported Norwegian Joy guests waiting hours at the Seattle terminal because boarding stopped for an immigration and customs check after a Vancouver start. The planned Seattle window was 1:30 p.m. to 7:30 p.m., and Cruise Fever reported a 2.5-hour customs line at Pier 66."
 presenter: Matthew
 publishDate: 2026-10-04T09:10:00-04:00
+updatedAt: 2026-11-02T09:45:00-05:00
 line: "Norwegian Cruise Line"
 ships: ["Norwegian Joy"]
 topics: [Itineraries, Ports]
@@ -15,6 +17,13 @@ itineraryChange:
   ship: "Norwegian Joy"
   sailing: "1 Oct 2026 Vancouver to Los Angeles"
   changed: "KIRO 7 reported guests waiting hours at the Seattle terminal on 2 Oct 2026 during an immigration and customs check. The published timetable listed Seattle from 1:30pm to 7:30pm."
+faq:
+  - q: "Why did Norwegian Joy hold boarding in Seattle?"
+    a: "KIRO 7's transcript, published 3 Oct 2026, says dozens of people waited hours at the Seattle terminal and could not board during an immigration and customs check. Guests said the ship left Vancouver to clear immigration in Seattle. KIRO was still waiting on Norwegian and customs."
+  - q: "Did the ship warn you before Seattle?"
+    a: "A passenger account of the 1 Oct 2026 Freestyle Daily says every guest had to attend a face-to-face Customs and Border Protection inspection in Seattle. Guests going ashore were told to carry what they needed until the inspection finished. The daily was the warning. The pier line ran long."
+  - q: "What was the planned Seattle window?"
+    a: "Cruise Timetables lists Seattle on Friday 2 Oct from 1:30 p.m. to 7:30 p.m. on the 6-night cruise from Vancouver to Los Angeles. That page records no wait. Cruise Fever, dated 3 Oct, reports a 2.5-hour customs line at Pier 66 and says Joy later made the Astoria call."
 sources:
   - claim: "KIRO 7 video report, headline 'Norwegian Joy cruise ship passengers left stranded for hours,' publish time 2026-10-03T06:31:05Z, with this transcript: dozens of people trying to board a Norwegian cruise had to wait hours; a viewer called from the Seattle cruise terminal around 7 o'clock that night; people waiting in line said no one was allowed on the ship because of an immigration and customs check; they said they left from Vancouver, B.C., and were taken to Seattle to clear immigration; a woman who has been cruising for 40 years said this is not a normal night and said, 'This immigration process is so unusual and so I don't really know. I have my own theory as to what's going on.'; the cruise was supposed to head south toward Los Angeles, then Mexico and the Caribbean islands; KIRO said it was reaching out to Norwegian Cruise Line and to Immigration and Customs and would report when it heard back. The transcript does not name Pier 66, a wait in hours beyond 'hours,' or a missing-guest count"
     outlet: "KIRO 7 News Seattle"

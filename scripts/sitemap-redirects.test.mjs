@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { isRedirectSource, resolvePublicPath, sitemapAllows } from '../src/utils/siteRedirects.js';
+import { loadNewsPosts, newsTodayPublicPaths } from '../src/utils/newsToday.js';
 import { storiesForLine, storiesForShip } from '../src/utils/hubStories.js';
 import { loadMarkdownEntries } from '../src/utils/contentFrontmatter.js';
 import { newsHubSlug } from '../src/utils/newsLines.js';
@@ -109,11 +110,18 @@ if (newsSitemapPath) {
     publicationDates.every((stamp) => /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/.test(stamp)),
   );
   const oct26 = [...newsXml.matchAll(/<loc>([^<]*\/news\/(?:harmony-of-the-seas-nassau-cococay-order-october-2026|msc-virtuosa-southampton-overnight-la-rochelle-le-havre-october-2026|ventura-southampton-delay-cherbourg-cancelled-october-2026)\/)<\/loc>[\s\S]*?<news:publication_date>([^<]+)<\/news:publication_date>/g)];
-  check('26 Oct stories are in the news sitemap', oct26.length === 3);
+  const oct26Stamp = '2026-10-26T09:07:43-04:00';
+  const within48Hours = Date.parse(oct26Stamp) >= Date.now() - 2 * 24 * 60 * 60 * 1000;
   check(
-    '26 Oct publication dates are the 09:07 ET commit, not 10:20 or 11:05',
-    oct26.length === 3 && oct26.every((match) => match[2] === '2026-10-26T09:07:43-04:00'),
+    within48Hours ? '26 Oct stories are in the news sitemap' : '26 Oct stories age out of the 48-hour news sitemap',
+    within48Hours ? oct26.length === 3 : oct26.length === 0,
   );
+  if (within48Hours) {
+    check(
+      '26 Oct publication dates are the 09:07 ET commit, not 10:20 or 11:05',
+      oct26.length === 3 && oct26.every((match) => match[2] === oct26Stamp),
+    );
+  }
 }
 
 const absent = [
@@ -190,7 +198,11 @@ for (const pathname of datedArchives) {
   if (!html.includes('noindex')) datedNoindex.push(pathname);
 }
 check('dated news archives in the sitemap are not noindex pages', datedNoindex.length === datedArchives.length);
-check('sitemap keeps /news/today/', presentPaths.has('/news/today/'));
+const expectLiveToday = newsTodayPublicPaths(loadNewsPosts()).has('/news/today/');
+check(
+  expectLiveToday ? 'sitemap keeps /news/today/' : 'sitemap omits /news/today/ while the live edition is too thin to index',
+  presentPaths.has('/news/today/') === expectLiveToday,
+);
 
 const todayDated = path.join(dist, 'news', 'today');
 const todayFolders = fs.existsSync(todayDated)

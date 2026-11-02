@@ -53,6 +53,12 @@ changes. Anything that changes what a booked passenger pays or experiences.
 Not news here: deals and discount roundups, listicles, celebrity sightings,
 anything already covered in an existing post on this site.
 
+## The top of a news post
+
+- `tldr` is two sentences under the headline. Name who, the ship, the dates, and what changes for the person who is booked.
+- `faq` is three questions. Each answer is 40 to 50 words. Use only facts already in the post.
+- `affected` is optional. Each row names the ship, the dates, the ports, and the change. Skip the row when you do not have all four.
+
 ## The close
 
 Where it helps, end with what the reader should do about it. Check a booking, compare

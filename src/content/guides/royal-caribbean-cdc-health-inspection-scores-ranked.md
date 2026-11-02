@@ -1,9 +1,10 @@
 ---
-title: "Every Royal Caribbean Ship's CDC Health Inspection Score, Ranked (2026)"
-description: "All 28 Royal Caribbean ships' CDC health inspection scores for 2026, ranked from the fleet's lowest score to a perfect 100, pulled straight from the CDC's own database."
+title: "Royal Caribbean CDC scores ranked: low is 92 in 2026"
+description: "Nine of 28 Royal Caribbean ships scored 100 on the latest CDC inspection. Brilliance of the Seas is lowest at 92. Pass mark is 86. Checked 29 Aug 2026."
 answer: "All 28 Royal Caribbean ships passed their most recent CDC health inspection. Nine scored a perfect 100, the fleet average is 97.7, and the lowest score in the fleet — Brilliance of the Seas at 92 — is still six points clear of the CDC's own pass mark of 86."
 presenter: Matthew
 publishDate: 2026-09-12
+updatedAt: 2026-11-02T09:45:00-05:00
 line: Royal Caribbean
 ships: []
 topics:
