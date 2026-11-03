@@ -55,6 +55,8 @@ const guides = defineCollection({
   schema: z.object({
     ...articleBase,
     video: z.object({ id: z.string(), title: z.string(), duration: z.string().optional() }).optional(),
+    // Two-sentence TL;DR. News posts use the same field. Optional so older guides stay valid.
+    tldr: z.string().min(1).optional(),
     faq,
   }),
 });
