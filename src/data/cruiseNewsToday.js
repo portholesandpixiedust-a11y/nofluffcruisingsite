@@ -397,4 +397,17 @@ Norwegian Cruise Line Holdings reported third-quarter revenue of $2.9 billion an
 
 If you want Carnival in Australia after March 2028, the ships in this release are Splendor from Sydney and Encounter from Brisbane, on sale now, with no fare printed. If you have a St. Vincent call this season, nothing in the concession moves your pier time. If you want the Disney Adventure film, look on 28 Nov and do not assume your country is on the list. If you want a later Norwegian sailing, the slides say second-half 2027 and all of 2028 are on the early-booking plan.`,
   },
+  '2026-11-05': {
+    description: 'Nov. 5 cruise news: Mein Schiff 3 loses 14 Nov, MSC Opera\'s Grand Voyage is cancelled, and Azamara opens 85 cruises.',
+    answer: 'On Nov. 5, 2026 three stories published. TUI cancelled Mein Schiff 3\'s cruise from 14 to 28 Nov and printed no refund. MSC\'s 4 Nov statement cancels Opera\'s Grand Voyage, refunds the fare, and plans a 16 Nov La Romana arrival. Azamara opened 85 winter 2028-29 cruises, with Onward back in Africa.',
+    summary: `Nov. 5, 2026 has three stories. Open each link for the named source and the date it was checked. This page only restates those posts.
+
+TUI's notice, stamped 5 Nov 2026 at 10:00 am with no time zone on the page, cancels Mein Schiff 3's cruise from 14 to 28 Nov 2026. The ship has been at the Lloyd shipyard in Bremerhaven since 1 Nov, and the work is taking longer than planned. Nordsee-Zeitung names the cruise Zauberhaftes Norwegen. Cruise Industry News calls the next sailing a four-night cruise from Bremerhaven to Kiel via Oslo on 28 Nov. Nordsee-Zeitung says that short cruise leaves the Columbuskaje and arrives in Kiel on 2 Dec. TUI's notice does not name those ports and prints no refund. The earlier yard note on this site is the 29 Oct stamp. Today's notice is the cancellation.
+
+Schiffe und Kreuzfahrten prints an MSC Cruises Deutschland statement dated 4 Nov 2026. It cancels MSC Opera's Grand Voyage because technical problems need more work and extensive inspections. Affected guests get a full refund of the cruise fare plus connected costs. The statement prints no cap and no future cruise credit. Arrival in La Romana is planned for 16 November, with no year and no clock in the statement. The article puts guest service there on 16 Nov 2026. Hamburger Abendblatt's 5 Nov update reports the same cancellation and cites that site. It says embarkations in Civitavecchia, Genoa, and Livorno were not kept. The articles also report a passenger-free crossing from Malta. Those words are not in the quoted statement.
+
+Azamara's release, datelined Miami on 4 Nov 2026, unveils 85 cruises on Journey, Onward, Pursuit, and Quest from 29 Oct 2028 through 19 May 2029. The counts are 81 countries, 210 ports, 94 overnights, and more than 200 late nights. Onward returns to Africa and the Indian Ocean, with Jamestown, Saint Helena, on 12 Dec 2028. Travel Weekly says the cruises go on sale. The release prints a 30 percent Early Booking Bonus on every stateroom category and says the bonus is not available on Grand Voyages. No fare is printed. The release quotes Mike Pawlus. Travel Weekly puts the same sentences on David Siewers.
+
+If you hold the Norway cruise, read TUI's message before you assume a refund. If you hold the Opera Grand Voyage, the printed refund is the fare plus connected costs. If you want a 2028 Azamara date, open the ship name first. Onward has Saint Helena.`,
+  },
 };
