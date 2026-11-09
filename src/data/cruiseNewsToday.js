@@ -410,4 +410,17 @@ Azamara's release, datelined Miami on 4 Nov 2026, unveils 85 cruises on Journey,
 
 If you hold the Norway cruise, read TUI's message before you assume a refund. If you hold the Opera Grand Voyage, the printed refund is the fare plus connected costs. If you want a 2028 Azamara date, open the ship name first. Onward has Saint Helena.`,
   },
+  '2026-11-09': {
+    description: 'Nov. 9 cruise news: Legend arrives in Fort Lauderdale, Pride and Adventure sail 30 minutes earlier, and Discovery 2 adds three paid venues.',
+    answer: 'On Nov. 9, 2026 three stories published. Royal Caribbean says Legend of the Seas arrived in Fort Lauderdale on 7 Nov, with a 3-night CocoCay trip opening the season and naming on 11 Nov. Cruise Hive says 47 Pride sailings and 23 Adventure sailings leave 30 minutes earlier. Marella priced three new Discovery 2 venues.',
+    summary: `Nov. 9, 2026 has three stories. Open each link for the named source and the date it was checked. This page only restates those posts.
+
+Royal Caribbean's release, datelined Miami on 7 Nov 2026, says Legend of the Seas arrived in Fort Lauderdale that day, ahead of its first sailing from Port Everglades. The release says a 3-night trip to Perfect Day at CocoCay opens the Caribbean season and does not print that sail date. Seatrade on 8 Nov calls the trip Sunday's getaway. The Points Guy says that Sunday sailing returns on 11 Nov. Naming stays 11 Nov, with Gen. Lori J. Robinson as godmother. The release lists 6-night Western Caribbean and 8-night Southern Caribbean vacations from Fort Lauderdale, and every one visits CocoCay. It prints no guest count and no fare. The September godmother post on this site already had the 11 Nov date.
+
+Cruise Hive on 6 Nov 2026 is the only source for the Carnival times. Forty-seven Carnival Pride sailings from Baltimore move from 4:30 p.m. to 4:00 p.m. The window starts 6 Dec 2026, covers the rest of December, and runs from 3 Jan through 21 Nov 2027. The 10 Jan and 31 Oct 2027 trips stay at 4:30 p.m. Both are 14-night Carnival Journeys. Twenty-three Carnival Adventure departures from Sydney move from 3:30 p.m. to 3:00 p.m. The 2026 dates are 4, 7, and 27 Dec. The post lists the 2027 Sydney dates. Not every Sydney cruise changes. Routes and port calls stay as they were. No Carnival newsroom post was found.
+
+TUI's 6 Nov 2026 release says four new venues open on Marella Discovery 2 by early 2027 as the ship becomes adults-only. Amplify Karaoke is from £14.95 per room per hour. Red Handed is £16.95 per person. The Lost Luggage Bureau is £19.95 per person, with three cocktails included. The Loft is included and needs no booking. Seatrade and Cruise Industry News print the same prices. Cruise Industry News says the adults-only plan was announced in June. The release does not name the first adults-only sailing.
+
+If you hold Legend from Fort Lauderdale, match the 3-night, the 6-night, or the 8-night before you lock a flight. If your Pride or Adventure date is on the list, plan for the earlier sailaway and read the boarding pass. If you are on Discovery 2 in early 2027, budget the three pound fees or use The Loft.`,
+  },
 };
