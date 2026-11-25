@@ -501,6 +501,19 @@ Holland America's release, Seattle, 20 Nov 2026 at 5:32 a.m. ET, lists Eurodam's
 
 If you hold Mein Schiff 3 on 28 Nov, the notice says the cruise sails and does not print a clock. If your 2027 Carnival cruise calls Celebration Key or Half Moon Cay, the drink-package month in the post is February 2027. If you want Eurodam in Asia, the five new ports are the ones named above, and no fare is printed.`,
   },
+  '2026-11-23': {
+    description: 'Nov. 23 cruise news: Navigator calls Langkawi, Marella codes run through 1 Dec, and Princess lists island drink rules.',
+    answer: 'On Nov. 23, 2026 three stories published. Navigator of the Seas made a first Langkawi call on 21 Nov, and LADA dates Disney Adventure\'s first call to 31 Dec. Marella and TUI River Black Friday codes run through 1 Dec, with different cabin-only rules. Princess terms already list Half Moon Cay drinks and add Celebration Key on 1 Feb 2027.',
+    summary: `Nov. 23, 2026 has three stories. Open each link for the named source and the date it was checked. This page only restates those posts.
+
+Seatrade Cruise News, Holly Payne, on 21 Nov, says Navigator of the Seas called Langkawi for the first time that day. The cruise left Singapore on 19 Nov, called Penang on 20 Nov and Langkawi on 21 Nov, then Phuket on 22 Nov, and it is due back in Singapore on 24 Nov. The article prints no port clock and no fare. Langkawi Development Authority told Seatrade that Disney Adventure's first call is 31 Dec 2026, and it projected 150,000 to 200,000 passenger movements through December 2027. That range is the authority's. A Royal Caribbean itinerary address opened on 23 Nov redirected to a search page, so this page does not take a date from it.
+
+TUI's newsroom post, dated 20 Nov 2026, opens Marella and TUI River Black Friday bookings from 20 Nov through 1 Dec 2026. Marella codes are BFSAIL200 and BFSAIL300, for £200 or £300 off selected sailings from 1 Jan 2027 through 30 April 2028. The ocean terms, read 23 Nov, require at least seven nights, exclude cabin-only, and do not print midnight. River code BFRIVER is £200 from £2,500 or £300 from £3,500, on cruises of at least six nights in 2027, and those terms include cabin-only and stop at midnight on Tuesday 1 Dec. Free river upgrades show as £0 and have no cash alternative. The codes do not combine.
+
+Princess Plus beverage terms, read 23 Nov, already list drinks at Half Moon Cay and Princess Cays, and they add Celebration Key on 1 Feb 2027. A drink over $15 at Celebration Key is the full menu price. At Half Moon Cay, Plus terms charge the difference over $15. The Half Moon Cay page limits the package to the side of the island where the ship arrives. Cruise Industry News on 21 Nov and Cruise Critic on 22 Nov date Half Moon Cay to 23 Nov. The Princess pages do not print that date. A package bought on or after 22 July 2025 caps 15 drinks each 24 hours. Carnival's February date for both islands is a separate post.
+
+If you are at Half Moon Cay, check which side of the island the ship uses. If you want a Marella code, the terms leave out cabin-only and want seven nights. If you were on Navigator from Singapore on 19 Nov, Seatrade's Langkawi day is 21 Nov and it prints no clock.`,
+  },
   '2026-11-24': {
     description: 'Nov. 24 cruise news: Princess Black Friday bookings run through 27 Nov, Royal Caribbean\'s second-guest offer runs through 7 Dec, and Marina classes are $49.',
     answer: 'On Nov. 24, 2026 three stories published. Princess terms limit a fare cut, an instant-savings table, and a deposit cut to bookings from 24 Nov through 27 Nov. Royal Caribbean keeps 60 percent off a second guest, and free third and fourth guests on select sailings, through 7 Dec. Oceania prices Marina Chef\'s Studio classes at $49 from 25 Nov.',
