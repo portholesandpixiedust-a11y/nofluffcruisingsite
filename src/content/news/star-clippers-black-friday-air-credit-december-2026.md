@@ -57,7 +57,7 @@ The from-prices are category 6 advance-purchase fares, per person, double occupa
 
 Star Clipper's five-night Corsica and Italy cruise on 31 May 2027 is from $1,790, plus a $300 air credit. Star Clipper's seven-night Antigua roundtrip on 13 Mar 2027 is from $2,010, plus a $400 air credit.
 
-Four December 2026 rows say there is limited time to arrange air, and they say to call to book. They are Star Flyer on 12 Dec 2026, Treasure Islands, 7 nights, from $2,010; Star Clipper on 19 Dec, Panama to Costa Rica, 7 nights, from $2,010; Star Flyer on 19 Dec, Leeward Islands, 7 nights, from $2,010; and Star Clipper on 26 Dec, Costa Rica and Panama, 7 nights, from $2,210. Those are the same category 6 from-prices.
+Four December 2026 rows say there is limited time to arrange air, and they say to call to book. They are Star Flyer on 12 Dec 2026, Treasure Islands (Yoga), 7 nights, from $2,010; Star Clipper on 19 Dec, Panama to Costa Rica Christmas Cruise, 7 nights, from $2,010; Star Flyer on 19 Dec, Leeward Islands Christmas Cruise, 7 nights, from $2,010; and Star Clipper on 26 Dec, Costa Rica and Panama New Year's Cruise, 7 nights, from $2,210. Those are the same category 6 from-prices.
 
 ## The Canadian page, and a different line in the trade story
 
